@@ -1,11 +1,11 @@
-text: |
-  The Driver Assistance Display shall present vehicle speed, active turn signal indication, and high-priority alerts.
-  Information presented shall be readable at a glance and not obstruct primary driving controls.
-links: []
-ASIL: QM
-Verification Method: Review
-normative: true
-reviewers:
-  - Melanie
-  - Joao
-reviewed: null
+URD-001:
+  active: true
+  derived: false
+  header: ''
+  level: 1.0
+  links: []
+  normative: true
+  ref: ''
+  reviewed: null
+  text: ''
+
