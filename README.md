@@ -3,7 +3,7 @@
 Documentation of our journey building an autonomous vehicle platform using PiRacer as part of the SEAME automotive program.
 
 ## Team: DrivaPi (Team04)
-Hugo, João, Bernardo, Miguel, Melanie
+Hugo, Gaspar, Bernardo, Miguel, Melanie
 
 ## What We're Building
 
