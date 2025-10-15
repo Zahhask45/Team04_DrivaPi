@@ -2,4 +2,4 @@ settings:
   digits: 3
   itemformat: yaml
   prefix: URD
-  sep: ''
+  sep: '-'
