@@ -1,7 +1,7 @@
 # Day [X] - SEAME Automotive Journey
 
 **Date:** [Month DD, YYYY]
-**Team:** Hugo, João, Bernardo, Miguel, Melanie
+**Team:** Hugo, Gaspar, Bernardo, Miguel, Melanie
 **Stand-Up:** [📋 standups/YYYY-MM-DD.md](standups/YYYY-MM-DD.md)
 
 ---
