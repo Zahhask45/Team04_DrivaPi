@@ -3,4 +3,4 @@ settings:
   itemformat: yaml
   parent: SWD
   prefix: LLTC
-  sep: ''
+  sep: '-'
