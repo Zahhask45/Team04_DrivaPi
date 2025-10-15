@@ -49,7 +49,7 @@ We conduct two daily sessions to stay synchronized:
 - **Morning:** Quick sync when team is complete (~10 min)
 - **Evening:** Progress review before departure (~15 min)
 - **Facilitator:** Melanie
-- **Scribe rotation:** João → Hugo → Melanie → Bernardo → Miguel
+- **Scribe rotation:** Gaspar → Hugo → Melanie → Bernardo → Miguel
 
 All stand-ups documented in `/documents/standups/`
 
@@ -107,7 +107,7 @@ See our [Stand-Up Guide](documents/standups/stand-up-guide.md) for details.
 ## Team Roles
 
 - **Hugo:** Hardware assembly and custom fabrication
-- **João:** Operating system and development environment
+- **Gaspar:** Operating system and development environment
 - **Bernardo:** Hardware integration and testing
 - **Miguel:** GitHub project, Agile/Scrum methodologies
 - **Melanie:** GUI development and team coordination
