@@ -2,7 +2,6 @@
 
 **Date:** [Month DD, YYYY]
 **Team:** Hugo, Gaspar, Bernardo, Miguel, Melanie
-**Stand-Up:** [📋 standups/YYYY-MM-DD.md](standups/YYYY-MM-DD.md)
 
 ---
 
