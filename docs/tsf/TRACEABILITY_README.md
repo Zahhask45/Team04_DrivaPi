@@ -62,6 +62,17 @@ Notes
 - Server-side encryption options:
   - Set `TRACEABILITY_S3_SSE=AES256` to use SSE-S3.
   - Set `TRACEABILITY_KMS_KEY` to a KMS key ARN/id to use SSE-KMS.
+
+Manifest and helper
+-------------------
+
+The workflow writes a small JSON manifest `traceability-manifest.json` alongside the uploaded files. The manifest includes `ref`, `timestamp`, and the object keys for the CSV and report. To fetch the latest manifest from S3 you can use the included helper:
+
+```bash
+scripts/get_latest_traceability_manifest.sh <bucket-name> [prefix]
+```
+
+The helper requires the AWS CLI and appropriate permissions (same put/get rights as above).
 # Traceability checker
 
 This repository includes a simple, dependency-free traceability checker at `scripts/traceability_check.py`.
