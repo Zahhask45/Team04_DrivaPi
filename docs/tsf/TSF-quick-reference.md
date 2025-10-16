@@ -1,37 +1,5 @@
 TSF Quick Reference
 
-A short cheat-sheet for the team. Use this for day-to-day work with requirements and traceability.
-
-Terminology
-
-- URD: User Requirements Document (high-level user needs)
-- SRD: System Requirements Document (system-level requirements)
-- SWD: Software Requirements Document (software-level requirements)
-- LLTC: Low-Level Technical Components / testable lower-level requirements
-- ASIL: Automotive Safety Integrity Level (A, B, C, D) — D is highest
-
-Minimal requirement YAML fields (example)
-
-```yaml
-SWD-001:
-  header: "Short title"
-  text: |
-    Full description...
-  level: 1.0
-  active: true
-  derived: false
-  normative: true
-  links: []
-  ref: "SWD-001"
-  reviewers:
-    - name: "Reviewer Name"
-  reviewed: ""  # filled by trudag upon approval
-```
-
-See [TSF requirement template](TSF-requirement-template.md) for a field-by-field explanation, examples and validation tips.
-
-TSF Quick Reference — one page
-
 Purpose
 -------
 Quick cheat-sheet for authors and reviewers working with `reqs/` and the Trustable workflow.
@@ -88,3 +56,5 @@ References
 Notes
 -----
 This cheat-sheet is intentionally concise. For full TSF compliance and confidence scoring, follow the training pack and use trudag to produce a Trustable Report.
+
+See [TSF requirement template](TSF-requirement-template.md) for a field-by-field explanation, examples and validation tips.
