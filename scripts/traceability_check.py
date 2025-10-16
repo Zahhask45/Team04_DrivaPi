@@ -12,6 +12,8 @@ import sys
 from pathlib import Path
 import re
 import csv
+import json
+import time
 
 
 def parse_req_file(path: Path):
@@ -195,6 +197,32 @@ def main(argv):
                 md.write(f'- {cat}: {len(category_map.get(cat, []))} links\n')
 
     print(f'markdown report written to {report_md}')
+
+    # write a small JSON manifest summarizing generated artifacts
+    manifest = {
+        'generated_at': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()),
+        'matrix': str(out_path),
+        'report': str(report_md),
+        'by_category': by_category,
+        'categories': {},
+        'counts': {
+            'files_scanned': len(files),
+            'links_extracted': links_found,
+            'broken': len(broken),
+            'orphaned': len(orphaned),
+        }
+    }
+
+    if by_category:
+        for cat in sorted(category_map.keys()):
+            cat_path = out_path.parent / f'traceability-matrix-{cat}.csv'
+            manifest['categories'][cat] = str(cat_path)
+
+    manifest_path = out_path.parent / 'traceability-manifest.json'
+    with manifest_path.open('w', encoding='utf-8') as mf:
+        json.dump(manifest, mf, indent=2)
+
+    print(f'manifest written to {manifest_path}')
 
     if fail_on_unlinked and (broken or orphaned):
         print('Failing due to --fail-on-unlinked: found broken links or orphaned requirements')
