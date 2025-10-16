@@ -55,6 +55,18 @@ All stand-ups documented in `/documents/standups/`
 
 See our [Stand-Up Guide](documents/standups/stand-up-guide.md) for details.
 
+## Requirements & TSF onboarding
+
+We follow the Trustable Software Framework (TSF) approach for requirements, traceability and release baselining. For authors and reviewers:
+
+- Training and quick-start: `docs/tsf/TSF-training.md`
+- Requirements management workflow: `docs/tsf/REQS_WORKFLOW.md`
+- Quick reference (cheat-sheet): `docs/tsf/TSF-quick-reference.md`
+- Templates: `reqs/templates/` (use `scripts/new_req.py <category> <ID>` to bootstrap new reqs)
+- Linter: `scripts/reqs_lint.py` — run as a local pre-check or CI gate
+
+Follow the workflow doc for authoring, review, approval and creating Trustable reports with trudag.
+
 ## Progress Timeline
 
 **Day 1 (Oct 8, 2025):** Hardware setup, assembly started, technology research
