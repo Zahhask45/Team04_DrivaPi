@@ -71,9 +71,11 @@ def parse_req_file(path: Path):
     return req_id, links
 
 
-def find_all_reqs(reqs_dir: Path):
+def find_all_reqs(reqs_dir: Path, include_templates: bool = False):
     files = sorted([p for p in reqs_dir.rglob('*.yml') if p.name != '.doorstop.yml'] +
                    [p for p in reqs_dir.rglob('*.yaml') if p.name != '.doorstop.yml'])
+    if not include_templates:
+        files = [p for p in files if 'templates' not in p.parts]
     return files
 
 
@@ -84,7 +86,9 @@ def main(argv):
 
     reqs_dir = Path(argv[1])
     out_path = Path('artifacts/traceability-matrix.csv')
+    report_md = Path('artifacts/traceability-report.md')
     fail_on_unlinked = False
+    include_templates = False
     if '--output' in argv:
         try:
             out_path = Path(argv[argv.index('--output') + 1])
@@ -93,12 +97,14 @@ def main(argv):
             return 2
     if '--fail-on-unlinked' in argv:
         fail_on_unlinked = True
+    if '--include-templates' in argv:
+        include_templates = True
 
     if not reqs_dir.exists():
         print('Path not found:', reqs_dir)
         return 2
 
-    files = find_all_reqs(reqs_dir)
+    files = find_all_reqs(reqs_dir, include_templates=include_templates)
     if not files:
         print('No YAML files found under', reqs_dir)
         return 0
@@ -126,23 +132,43 @@ def main(argv):
 
     print(f'Found {len(files)} requirements files; {links_found} links extracted; matrix written to {out_path}')
 
-    # report missing/unlinked requirements if requested
-    if fail_on_unlinked:
-        unlinked = []
-        # any req_id that never appears as a target?
-        target_ids = {r['target_id'] for r in records}
-        for f in files:
-            rid = Path(f).stem
-            if rid not in target_ids and rid not in (r['req_id'] for r in records):
-                # if the requirement neither links to others nor is linked-to, it's isolated
-                unlinked.append(rid)
+    # generate a human-friendly markdown report
+    target_ids = {r['target_id'] for r in records}
+    source_ids = {r['req_id'] for r in records}
+    all_req_ids = set()
+    for f in files:
+        # prefer top-level ID if available else filename stem
+        rid, _ = parse_req_file(f)
+        all_req_ids.add(rid)
 
-        if unlinked:
-            print('Unlinked requirements (neither linking nor linked-to):')
-            for u in sorted(unlinked):
-                print(' -', u)
-            print('Failing due to --fail-on-unlinked')
-            return 3
+    # broken links: targets that do not exist in all_req_ids
+    broken = sorted([t for t in target_ids if t not in all_req_ids])
+
+    # orphans: requirements that neither link to others nor are linked-to
+    orphaned = sorted([r for r in sorted(all_req_ids) if r not in source_ids and r not in target_ids])
+
+    with report_md.open('w', encoding='utf-8') as md:
+        md.write('# Traceability report\n\n')
+        md.write(f'- scanned files: {len(files)}\n')
+        md.write(f'- links extracted: {links_found}\n')
+        md.write('\n## Broken links\n\n')
+        if not broken:
+            md.write('No broken targets detected.\n')
+        else:
+            for b in broken:
+                md.write(f'- {b}\n')
+        md.write('\n## Orphaned requirements\n\n')
+        if not orphaned:
+            md.write('No orphaned requirements detected.\n')
+        else:
+            for o in orphaned:
+                md.write(f'- {o}\n')
+
+    print(f'markdown report written to {report_md}')
+
+    if fail_on_unlinked and (broken or orphaned):
+        print('Failing due to --fail-on-unlinked: found broken links or orphaned requirements')
+        return 3
 
     return 0
 
