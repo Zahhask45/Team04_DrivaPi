@@ -1,0 +1,30 @@
+name: Requirements checks
+
+on:
+  pull_request:
+  push:
+    branches: [ main, master, 18-requirements-definition-and-documentation ]
+
+jobs:
+  reqs-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install minimal tools
+        run: |
+          python -m pip install --upgrade pip
+
+      - name: Run requirements linter
+        run: |
+          python3 scripts/reqs_lint.py reqs --verbose --ignore-templates
+
+      - name: Run traceability checker
+        run: |
+          python3 scripts/traceability_check.py reqs --fail-on-unlinked
