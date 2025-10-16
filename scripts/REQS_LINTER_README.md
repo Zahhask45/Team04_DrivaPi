@@ -72,8 +72,6 @@ Example:
 python3 scripts/new_req.py swd SWD-002
 ```
 
-If you prefer not to use Makefiles, stick to the Python helper above. The `scripts/new_req.py` command is the supported way to bootstrap new requirement files; you can add your own project helpers if your team prefers a different workflow.
-
 Contact
 -------
 For questions about TSF workflow integration or the linter rules, link to `docs/tsf/TSF-requirement-template.md` and the Trustable docs in `docs/tsf/`.
