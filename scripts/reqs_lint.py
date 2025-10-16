@@ -98,11 +98,12 @@ def check_file(path: Path, verbose: bool = False):
 
 def main(argv):
     if len(argv) < 2:
-        print('Usage: reqs_lint.py <reqs_dir> [--verbose]')
+        print('Usage: reqs_lint.py <reqs_dir> [--verbose] [--ignore-templates]')
         return 2
 
     reqs_dir = Path(argv[1])
     verbose = '--verbose' in argv or '-v' in argv
+    ignore_templates = '--ignore-templates' in argv
 
     if not reqs_dir.exists():
         print('Path not found:', reqs_dir)
@@ -111,6 +112,8 @@ def main(argv):
     # find YAML files but skip Doorstop config files (named .doorstop.yml)
     files = [p for p in reqs_dir.rglob('*.yml') if p.name != '.doorstop.yml'] + \
             [p for p in reqs_dir.rglob('*.yaml') if p.name != '.doorstop.yml']
+    if ignore_templates:
+        files = [p for p in files if 'templates' not in p.parts]
     if not files:
         print('No YAML files found under', reqs_dir)
         return 0
