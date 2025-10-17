@@ -1,0 +1,13 @@
+file,missing_fields,gh_issue_command
+reqs/lltc/LLTC-001.yml,text;ASIL;Verification Method,"gh issue create --title ""Fix requirement fields for LLTC-001.yml"" --body ""The required fields are missing in `reqs/lltc/LLTC-001.yml`. Missing: text;ASIL;Verification Method.
+
+Please update the file to include the required fields: text, ASIL, Verification Method, reviewers."" --label requirements,tsf"
+reqs/srd/SRD-001.yml,text;ASIL;Verification Method,"gh issue create --title ""Fix requirement fields for SRD-001.yml"" --body ""The required fields are missing in `reqs/srd/SRD-001.yml`. Missing: text;ASIL;Verification Method.
+
+Please update the file to include the required fields: text, ASIL, Verification Method, reviewers."" --label requirements,tsf"
+reqs/swd/SWD-001.yml,text;ASIL;Verification Method,"gh issue create --title ""Fix requirement fields for SWD-001.yml"" --body ""The required fields are missing in `reqs/swd/SWD-001.yml`. Missing: text;ASIL;Verification Method.
+
+Please update the file to include the required fields: text, ASIL, Verification Method, reviewers."" --label requirements,tsf"
+reqs/urd/URD-001.yml,text;ASIL;Verification Method,"gh issue create --title ""Fix requirement fields for URD-001.yml"" --body ""The required fields are missing in `reqs/urd/URD-001.yml`. Missing: text;ASIL;Verification Method.
+
+Please update the file to include the required fields: text, ASIL, Verification Method, reviewers."" --label requirements,tsf"
