@@ -45,7 +45,7 @@ Review and approval
 
 ```bash
 # inside a Python environment where trudag is available
-trudag --door manage set-item reqs/swd/SWD-123.yml
+trudag manage set-item reqs/swd/SWD-123.yml
 ```
 
 - The `trudag` command may update metadata (including `reviewed`) depending on the Doorstop adapter and configuration. Verify the file change is in the PR.
@@ -83,8 +83,8 @@ Appendix: sample CI job (pseudo)
 - job: ReleaseTrustable
   needs: [LintReqs]
   script:
-    - trudag --door manage migrate
-    - trudag --door report export --output artifacts/trustable-report-${CI_COMMIT_TAG}.zip
+  - trudag manage migrate
+  - trudag export --artifact artifacts/trustable-report-${CI_COMMIT_TAG}.zip -P "DrivePi"
   artifacts:
     paths:
       - artifacts/trustable-report-${CI_COMMIT_TAG}.zip
