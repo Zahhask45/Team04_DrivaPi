@@ -1,3 +1,0 @@
-req_id,target_id,link_type,source_file
-SWD-001,SWD-001,ref,reqs/swd/SWD-001.yml
-SWD-002,SWD-002,ref,reqs/swd/SWD-002.yml
