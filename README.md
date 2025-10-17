@@ -77,7 +77,7 @@ See our [Stand-Up Guide](documents/standups/stand-up-guide.md) for details.
 
 **Day 6 (Oct 15, 2025):** AGL running (Wi‑Fi pending), camera connected, Qt deployment and TSF→SDV automation in progress.
 *[Stand-up: documents/standups/2025-10-15.md]*
-
+ 
 ## Current Sprint
 
 **Sprint 1:** October 13-25, 2025
