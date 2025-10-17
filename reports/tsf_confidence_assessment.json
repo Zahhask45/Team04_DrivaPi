@@ -1,0 +1,14 @@
+{
+  "overall_confidence": 51.0,
+  "detailed_scores": {
+    "requirements_structure": 85,
+    "requirements_completeness": 0.0,
+    "process_documentation": 60,
+    "project_documentation": 85,
+    "software_development": 40,
+    "hardware_evidence": 70
+  },
+  "assessment_date": "2025-10-17 13:45",
+  "tsf_methodology": "Eclipse Foundation Official",
+  "project": "DrivePi Team04"
+}

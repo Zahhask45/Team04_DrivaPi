@@ -23,7 +23,7 @@ python3 scripts/apply_trudag_shims.py
 - Run the lint:
 
 ```bash
-.venv/bin/trudag --door manage lint
+.venv/bin/trudag manage lint
 ```
 
 2) Using Docker (recommended for reproducibility)
@@ -34,7 +34,7 @@ python3 scripts/apply_trudag_shims.py
 ./scripts/run_trudag_docker.sh
 ```
 
-This builds a Python 3.11 image, installs Trustable/Doorstop from source, applies small compatibility patches, and runs `trudag --door manage lint` inside the container. The container approach avoids local environment issues.
+This builds a Python 3.11 image, installs Trustable/Doorstop from source, applies small compatibility patches, and runs `trudag manage lint` inside the container. The container approach avoids local environment issues.
 
 Notes
 - The repo contains `scripts/reqs_lint.py` — a lightweight, repo-local linter that verifies required fields and link consistency. It's used in CI workflows.

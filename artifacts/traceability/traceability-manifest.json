@@ -1,0 +1,18 @@
+{
+  "generated_at": "2025-10-17T12:45:27Z",
+  "matrix": "artifacts/traceability/traceability-matrix.csv",
+  "report": "artifacts/traceability-report.md",
+  "by_category": true,
+  "categories": {
+    "lltc": "artifacts/traceability/traceability-matrix-lltc.csv",
+    "srd": "artifacts/traceability/traceability-matrix-srd.csv",
+    "swd": "artifacts/traceability/traceability-matrix-swd.csv",
+    "urd": "artifacts/traceability/traceability-matrix-urd.csv"
+  },
+  "counts": {
+    "files_scanned": 4,
+    "links_extracted": 4,
+    "broken": 0,
+    "orphaned": 0
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "generated_at": "2025-10-17T12:44:11.127523Z",
+  "paths": {
+    "forward": "artifacts/traceability/traceability-matrix-forward.csv",
+    "backward": "artifacts/traceability/traceability-matrix-backward.csv"
+  },
+  "counts": {
+    "files_scanned": 0,
+    "links_extracted": 0
+  }
+}

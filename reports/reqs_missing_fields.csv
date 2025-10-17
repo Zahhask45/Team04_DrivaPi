@@ -1,0 +1,5 @@
+file,missing_fields
+reqs/lltc/LLTC-001.yml,text;ASIL;Verification Method
+reqs/srd/SRD-001.yml,text;ASIL;Verification Method
+reqs/swd/SWD-001.yml,text;ASIL;Verification Method
+reqs/urd/URD-001.yml,text;ASIL;Verification Method
