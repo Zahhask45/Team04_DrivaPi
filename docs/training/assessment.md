@@ -1,8 +1,8 @@
 # TSF Team Assessment Quiz & Lab
 
-**Purpose:** Validate team understanding of TSF principles, automotive standards, and project implementation  
-**Duration:** 45-60 minutes (30 min quiz + 15-30 min practical lab)  
-**Passing Score:** 80% (16/20 questions)  
+**Purpose:** Validate team understanding of TSF principles, automotive standards, and project implementation
+**Duration:** 45-60 minutes (30 min quiz + 15-30 min practical lab)
+**Passing Score:** 80% (16/20 questions)
 **Format:** Individual quiz, pair programming lab
 
 ---
@@ -93,8 +93,8 @@
 
 **Q13. What command checks requirements for format errors?**
 - [ ] A) `doorstop check`
-- [ ] B) `python scripts/reqs_lint.py`
-- [ ] C) `trudag validate`
+- [ ] B) `python scripts/reqs_lint.py` (deprecated)
+- [ ] C) `trudag manage lint`
 - [ ] D) `git lint`
 
 **Q14. How should a Software Requirement (SWD) relate to a System Requirement (SRD)?**
@@ -122,7 +122,7 @@
 **Q17. What tool generates the traceability matrix in CI?**
 - [ ] A) `doorstop`
 - [ ] B) `trudag`
-- [ ] C) `scripts/traceability_check.py`
+- [ ] C) `scripts/traceability_check.py` (deprecated)
 - [ ] D) `pytest`
 
 **Q18. What does `gap-report.csv` identify?**
@@ -164,7 +164,7 @@
    - `reviewers: [your-name]`
    - `reviewed: ''` (empty until approved)
 
-3. Validate with linter: `python scripts/reqs_lint.py`
+3. Validate with official linter: `trudag manage lint` (and run `doorstop` for Doorstop checks)
 4. Check Doorstop: `doorstop`
 
 **Success Criteria:**
@@ -187,7 +187,12 @@
    - `links: [URD-002]` ← **This creates traceability!**
    - `reviewers: [your-name]`
 
-3. Run traceability check: `python scripts/traceability_check.py`
+3. Run traceability/exports using official tooling (trudag/doorstop). Example:
+
+```bash
+trudag manage migrate
+trudag report export --output artifacts/trustable-report.zip
+```
 4. Check the generated `artifacts/traceability-matrix.csv`
 
 **Success Criteria:**

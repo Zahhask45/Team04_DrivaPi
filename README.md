@@ -62,8 +62,9 @@ We follow the Trustable Software Framework (TSF) approach for requirements, trac
 - Training and quick-start: `docs/tsf/TSF-training.md`
 - Requirements management workflow: `docs/tsf/REQS_WORKFLOW.md`
 - Quick reference (cheat-sheet): `docs/tsf/TSF-quick-reference.md`
-- Templates: `reqs/templates/` (use `scripts/new_req.py <category> <ID>` to bootstrap new reqs)
-- Linter: `scripts/reqs_lint.py` — run as a local pre-check or CI gate
+- Templates: `reqs/templates/` (create new items using Doorstop or copy templates manually; e.g. `doorstop add SWD` or `cp reqs/templates/SWD-template.yml reqs/swd/SWD-001.yml`)
+ - Templates: `reqs/templates/` (use Doorstop interactive mode or copy templates from `reqs/templates/` to create new items)
+ - Linter: Use the official TSF tools for validation — `trudag manage lint` and `doorstop` are the supported commands. Convenience helper scripts were previously present in the repository but have been removed to enforce an official-only workflow; see `docs/ops/trudag-official.md` for guidance and optional restore instructions.
 
 Follow the workflow doc for authoring, review, approval and creating Trustable reports with trudag.
 

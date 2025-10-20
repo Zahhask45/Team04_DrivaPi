@@ -44,7 +44,7 @@ Traceability & approvals
 
 Useful commands
 ---------------
-- Lint YAMLs: `python3 scripts/reqs_lint.py reqs --verbose`
+- Lint YAMLs: `trudag manage lint` (legacy `scripts/reqs_lint.py` removed)
 - trudag migrate (Doorstop backend): `trudag manage migrate`
 - trudag set review: `trudag manage set-item <path-to-yml>`
 

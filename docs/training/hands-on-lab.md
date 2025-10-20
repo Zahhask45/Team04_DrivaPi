@@ -35,12 +35,14 @@ Lab steps
          WHEN: the payload is submitted
          THEN: the system rejects it and logs the error code 400
 
-2) Run the linter
+2) Run the official validation steps
 
- - Run the linter in the repository root. To skip template warnings during the lab run use `--ignore-templates`:
+ - Run the official tools in the repository root. If you prefer a reproducible environment, use the Docker runner described in `docs/guides/requirements/trudag-usage.md`.
 
  ```bash
- python3 scripts/reqs_lint.py reqs --verbose --ignore-templates --check-links
+ # Validate structure and content with official tools
+ trudag manage lint
+ doorstop
  ```
 
  - Expected outcome:
@@ -54,9 +56,12 @@ Lab steps
   - Duration: ~30–60 minutes.
 
   Objectives
-  - Author a valid requirement using provided templates or `scripts/new_req.py`.
-  - Run and fix issues reported by `scripts/reqs_lint.py`.
-  - Create a traceability mapping and verify it with `scripts/traceability_check.py`.
+  - Author a valid requirement using provided templates or Doorstop interactive mode.
+  - Run and fix issues reported by the official tools (`trudag manage lint` and `doorstop`).
+  - Create a traceability mapping and verify it using the official `trudag report export` (CI produces a traceability CSV/manifest under `artifacts/`).
+   - Author a valid requirement using Doorstop interactive mode or `reqs/templates/`.
+   - Run and fix issues reported by `trudag manage lint` and `doorstop`.
+   - Produce traceability reports using `trudag report export` and Doorstop/trudag commands.
   - Mark the requirement `reviewed:` and create a baseline commit/PR.
 
   Prerequisites
@@ -73,20 +78,20 @@ Lab steps
   git checkout -b lab/req-authoring-<yourname>
   ```
 
-  2) Bootstrap a requirement
+   2) Bootstrap a requirement
 
-  Option A — use the helper:
+   Option A — use Doorstop interactive mode (preferred):
 
-  ```bash
-  python3 scripts/new_req.py swd SWD-999
-  # creates reqs/swd/SWD-999.yml from the template
-  ```
+   ```bash
+   doorstop add SWD
+   doorstop edit SWD-999
+   ```
 
-  Option B — copy template and edit
+   Option B — copy template and edit (manual):
 
-  ```
-  cp reqs/templates/SWD-template.yml reqs/swd/SWD-999.yml
-  ```
+   ```
+   cp reqs/templates/SWD-template.yml reqs/swd/SWD-999.yml
+   ```
 
   Minimal YAML example (what the linter expects):
 
@@ -106,13 +111,15 @@ Lab steps
         THEN: the system rejects it and logs a 400 error
   ```
 
-  3) Run the linter (skip template noise during the lab)
+   3) Run the official checks (skip template noise by using options on trudag if available)
 
-  ```bash
-  python3 scripts/reqs_lint.py reqs --verbose --ignore-templates --check-links
-  ```
+   ```bash
+   trudag manage lint
+   # doorstop to check Doorstop layout
+   doorstop
+   ```
 
-  - Expected: `OK: no issues found` for a clean file set.
+   - Expected: no errors from `trudag manage lint` for a clean file set.
   - If issues appear, fix the YAML (top-level ID, `ref:`, `reviewers:` block, acceptance presence) and re-run.
 
   4) Create a minimal linked LLTC placeholder (traceability demo)
@@ -122,13 +129,15 @@ Lab steps
   # edit header/text/ref to LLTC-999 and commit
   ```
 
-  5) Run the traceability checker
+   5) Produce traceability and Trustable reports using official tooling
 
-  ```bash
-  python3 scripts/traceability_check.py reqs --output artifacts/traceability --by-category
-  ```
+   ```bash
+   # Update Doorstop structure for trudag, then use trudag to export reports
+   trudag manage migrate
+   trudag report export --output artifacts/trustable-report.zip
+   ```
 
-  - Expected artifacts: `artifacts/traceability/` (per-category CSVs), `artifacts/traceability-report.md`, `artifacts/traceability-manifest.json`.
+   - Expected artifacts: `artifacts/` contains Trustable report exports and any CI-collected traceability outputs.
   - If the checker reports orphaned requirements or broken links, inspect the source YAMLs and `links:` entries.
 
   6) Mark reviewed and baseline
