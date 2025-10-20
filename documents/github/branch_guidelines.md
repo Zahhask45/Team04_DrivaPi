@@ -40,7 +40,7 @@ git checkout -b feat/pb-X-my-task-description
 
 **5 - Clean Up: The feature branch must be deleted immediately after a successful merge** to keep the repository history clean.
 
-### 4- Workflow Diagram
+## 4- Workflow Diagram
 The following diagram illustrates the required process for integrating code:
 ```mermaid
 graph TD
