@@ -27,9 +27,17 @@ git checkout main
 git pull origin main
 git checkout -b feat/pb-X-my-task-description
 ```
+<br>
+
 **2 - Develop & Commit:** Work and commit changes locally on the feature branch.
+<br>
+
 **3 - Ready for Review:** Once the work is complete, local tests pass, and the code is ready for review, **push the feature branch** to GitHub and create a **Pull Request (PR)** targeting the `main` branch.
+<br>
+
 **4 - Review and Merge:** The PR must be reviewed and receive the **minimum required approvals** (as defined in PB-6). Once approved, the PR is merged using the **Squash and Merge** or **Rebase and Merge** option (to be decided by the Scrum Master).
+<br>
+
 **5 - Clean Up: The feature branch must be deleted immediately after a successful merge** to keep the repository history clean.
 
 ### 4- Workflow Diagram
