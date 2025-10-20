@@ -14,28 +14,32 @@ python -m pip install --upgrade pip
 python -m pip install trustable doorstop pyyaml
 ```
 
-- If you're on Python 3.14, Doorstop may import `distutils`. Run the included shim script to apply local compatibility shims:
+ - If you're on Python 3.14, Doorstop may import `distutils`. Use an isolated Python 3.11 environment (virtualenv or Docker) to avoid compatibility issues.
 
-```bash
-python3 scripts/apply_trudag_shims.py
-```
+ - Run the lint with the official tool:
 
-- Run the lint:
-
-```bash
-.venv/bin/trudag manage lint
-```
+ ```bash
+ .venv/bin/trudag manage lint
+ ```
 
 2) Using Docker (recommended for reproducibility)
 
-- Build and run the container (helper script):
+Build and run the container using the same image/configuration as CI (recommended for reproducibility).
 
-```bash
-./scripts/run_trudag_docker.sh
+Options:
+
+- Use the CI image referenced in `.github/workflows/reqs-checks.yml` — this ensures the same Python version and pinned deps.
+- Or build a small local image using this example Dockerfile (not checked into the repo):
+
+```dockerfile
+# FROM python:3.11-slim
+# RUN pip install --no-cache-dir trustable doorstop
+# WORKDIR /work
+# ENTRYPOINT ["trudag"]
 ```
 
-This builds a Python 3.11 image, installs Trustable/Doorstop from source, applies small compatibility patches, and runs `trudag manage lint` inside the container. The container approach avoids local environment issues.
+Then run the container with a bind mount to your local checkout and invoke `trudag manage lint` inside it. This avoids local environment issues and reproduces CI behavior.
 
-Notes
-- The repo contains `scripts/reqs_lint.py` — a lightweight, repo-local linter that verifies required fields and link consistency. It's used in CI workflows.
-- The Dockerfile applies temporary patches to the installed Trustable package to work around small upstream API mismatches. Remove these patches when upstream fixes are released.
+ Notes
+ - This repository follows an official-only tool policy: prefer `trudag` + `doorstop` for all requirement validation and reporting. Some convenience helpers existed previously but were removed from the main tree to avoid divergence; see `docs/ops/trudag-official.md` for archival/restore instructions if you need them.
+ - The Dockerfile or CI may apply temporary compatibility shims; those are implementation details of the CI container and not part of the official workflow.

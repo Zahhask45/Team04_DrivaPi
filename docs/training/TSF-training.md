@@ -123,7 +123,7 @@ When applying TSF to a project we collect and present evidence across the follow
 ---
 
 ## 7. Hands-on exercises (recommended)
-1. Run the `scripts/reqs_lint.py` linter against `reqs/` and fix issues in one sample file.
+1. Validate requirements using the official TSF tools (run `trudag manage lint` and `doorstop`), and fix issues in one sample file.
 2. Create a sample traceability matrix linking one user requirement to a system and software requirement and a simple test case.
 3. Run a small integration test and attach the test log as an artifact in a requirement `links:` field.
 
@@ -132,7 +132,7 @@ When applying TSF to a project we collect and present evidence across the follow
 ## Quick reference (one page)
 - File naming: `reqs/<category>/<ID>.yml` where `<ID>` is like `SWD-001`.
 - Required fields: top-level ID mapping, `header:`, `text:`, `ref: <ID>`, `reviewers: - name: '...'`, `reviewed: <git-sha | null>`.
-- Use the linter: `python3 scripts/reqs_lint.py reqs --verbose`.
+- Use the official linter: `trudag manage lint` (and run `doorstop` for Doorstop checks).
 - For baselining: use the approval process defined in the project (record the reviewer and commit SHA into `reviewed`).
 
 ---

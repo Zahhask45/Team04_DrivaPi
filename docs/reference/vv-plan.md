@@ -4,7 +4,7 @@ This document provides a practical, repository-focused Verification & Validation
 
 > Assumptions
 > - "Requirement" refers to YAML files under `reqs/` following the TSF templates.
-> - Traceability matrix (CSV + manifest) is produced by `scripts/traceability_check.py` and stored in `artifacts/` by CI.
+ - Traceability matrix (CSV + manifest) is produced by CI using the official tooling (for example `trudag` with a `doorstop` backend) and stored in `artifacts/` by CI.
 > - The VV activities below are intended as guidance; adapt to project risk, contractual, or regulatory needs.
 
 ## How to use this file
@@ -89,7 +89,7 @@ Checklist for authors/reviewers
 - `artifacts/verification/reports/` — human-readable test reports and review minutes (PDF/MD)
 - `artifacts/verification/coverage/` — coverage reports
 - `artifacts/verification/bench/` — HIL/bench logs and calibration data (if applicable)
-- `artifacts/traceability/` — output of `scripts/traceability_check.py` (matrix CSVs, manifest.json, report.md)
+- `artifacts/traceability/` — traceability outputs produced by CI (matrix CSVs, manifest.json, report.md) using `trudag`/`doorstop` or equivalent official tools
 
 ## Mapping: requirement → evidence (example YAML snippet)
 Add a `links:` entry in a requirement that references an artifact stored in `artifacts/`:
@@ -102,12 +102,12 @@ links:
 
 CI and automation notes
 - CI already publishes the traceability manifest and report to Actions artifacts. For long-term retention, configure the repository CN as documented in `docs/tsf/TRACEABILITY_README.md` to enable S3 retention.
-- For ASIL C/D, prefer creating a baseline PR and tag (scripts/baseline_reqs.py) and store the tag/PR number in the requirement `reviewed:` or `baseline:` fields.
+- For ASIL C/D, prefer creating a baseline PR and tag via the normal Git workflow and record the tag/PR number in the requirement `reviewed:` or `baseline:` fields. Do this using the official toolchain (for example, `trudag manage migrate` and CI-driven baselining) rather than adding repository-local helper scripts.
 
 ## Next steps and templates
 - Use this file as a living template; iterate with engineering and safety teams.
 - Optional: create ASIL-specific PR templates that require certain checklist items before merging.
-- Optional: automate mapping enforcement in `scripts/traceability_check.py` so that requirements without required evidence fail the CI for higher ASILs.
+- Optional: automate mapping enforcement in CI using official tooling (for example, run `trudag`/`doorstop` checks or small Python CI jobs kept under `.github/` rather than adding repository-local operational helpers). Requirements without required evidence can then fail the CI for higher ASILs.
 
 ## Appendix: Example quick mapping
 - ASIL A: unit tests + peer review

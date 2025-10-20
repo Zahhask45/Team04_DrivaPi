@@ -10,7 +10,7 @@ General (all ASILs)
 - [ ] `acceptance:` present with GIVEN/WHEN/THEN style items
 - [ ] `reviewers:` includes at least one reviewer and `reviewed:` set when approved
 - [ ] `links:` include design or test artifacts where applicable
-- [ ] Linter (`scripts/reqs_lint.py`) run and pass locally
+-- [ ] Linter (`trudag manage lint`) run and pass locally (`scripts/reqs_lint.py` was deprecated and removed)
 
 ASIL-specific additions
 - ASIL A
