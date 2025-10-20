@@ -1,97 +1,290 @@
-# TSF Requirements Management (DrivaPi Team04)
+# Requirements Workflow
 
-This document describes the recommended workflow for using trudag and Doorstop to manage requirements in DrivaPi, aligned with Eclipse TSF and ISO 26262 expectations.
+**Version:** 2.0
+**Date:** October 20, 2025
 
-## Hierarchy (V-model)
+---
 
-Create the reqs directory and V-model folders (URD → SRD → SWD → LLTC):
+## 📋 Official Tools
 
+- ✅ **trudag** - TSF validation, management, and reporting
+- ✅ **doorstop** - Structured requirements backend
+
+---
+
+## 🔄 Complete Workflow
+
+### 1️⃣ Create Requirement
+
+#### Option A: Doorstop (Interactive)
 ```bash
-mkdir -p reqs
-doorstop create URD ./reqs/urd --prefix URD
-doorstop create SRD ./reqs/srd --parent URD --prefix SRD
-doorstop create SWD ./reqs/swd --parent SRD --prefix SWD
-doorstop create LLTC ./reqs/lltc --parent SWD --prefix LLTC
+# Add interactive requirement
+doorstop add SWD
+
+# Edit created requirement
+doorstop edit SWD-002
 ```
 
-## Creating items (trudag)
-
-Prefer `trudag manage create-item` to create new items so the tool can track provenance and scoring:
-
+#### Option B: Manual (Copy Template)
 ```bash
-trudag manage create-item SRD 001 ./reqs/srd/
-trudag manage create-item SWD 001 ./reqs/swd/
-trudag manage create-item LLTC 001 ./reqs/lltc/
+# Copy template
+cp reqs/templates/SWD-template.yml reqs/swd/SWD-002.yml
+
+# Edit file
+nano reqs/swd/SWD-002.yml
+
+# Fill ALL mandatory fields:
+# - ref: SWD-002
+# - header: "Title"
+# - text: "The system SHALL..."
+# - ASIL: B
+# - Verification Method: Unit Test
+# - links: [SRD-001]
+# - reviewers: [name + email]
+# - reviewed: ''
 ```
 
-## Linking items (traceability)
+---
 
-Create backward and forward links. Example using Doorstop link:
+### 2️⃣ Validate Requirement
 
 ```bash
-doorstop link SWD001 SRD001    # SWD -> parent SRD
-doorstop link LLTC001 SWD001   # LLTC -> SWD (test verifies SWD)
+# Official TSF validation
+trudag manage lint
+
+# If errors, fix and validate again
 ```
 
-## YAML model (required fields)
+**Common errors:**
+- ❌ `ref:` doesn't match filename
+- ❌ Missing mandatory fields
+- ❌ Links to non-existent requirements
+- ❌ Invalid YAML format
 
-Each requirement YAML item should include at minimum:
+---
 
-- `text`: requirement statement (string, markdown)
-- `links`: list of related item ids (parent, children, tests)
-- `ASIL`: string (A|B|C|D|QM)
-- `Verification Method`: string (Unit Test|Integration Test|Review|Formal Analysis)
-- `reviewed`: null or Git SHA set by trudag after approval
+### 3️⃣ Create Traceability Links
 
-Example:
+```bash
+# Link SWD to SRD (child → parent)
+doorstop link SWD-002 SRD-001
+
+# Or edit YAML manually:
+# links: [SRD-001]
+
+# Validate links
+trudag manage lint
+```
+
+**V-Model Hierarchy:**
+```
+URD (User) → SRD (System) → SWD (Software) → LLTC (Tests)
+```
+
+---
+
+### 4️⃣ Review & Approval
+
+#### Review Process
+
+1. **Author creates requirement** → Commit and Push
+```bash
+git add reqs/swd/SWD-002.yml
+git commit -m "feat: Add SWD-002 - Battery monitoring"
+git push origin feature/SWD-002
+```
+
+2. **Reviewer validates**
+```bash
+# Pull branch
+git pull origin feature/SWD-002
+
+# Validate
+trudag manage lint
+
+# Review content manually
+cat reqs/swd/SWD-002.yml
+```
+
+3. **Official approval (trudag)**
+```bash
+# Approve requirement (updates 'reviewed' field)
+trudag manage set-item reqs/swd/SWD-002.yml
+
+# Commit approval
+git add reqs/swd/SWD-002.yml
+git commit -m "review: Approve SWD-002"
+git push
+```
+
+---
+
+### 5️⃣ Baseline (Release)
+
+```bash
+# 1. Migrate Doorstop structure
+trudag manage migrate
+
+# 2. Validate everything
+trudag manage lint
+
+# 3. Create baseline tag
+git tag -a BASELINE-SWD-V1.0 -m "SWD baseline v1.0 - approved"
+git push origin BASELINE-SWD-V1.0
+
+# 4. Export Trustable report
+trudag report export --output artifacts/DrivaPi-trustable-v1.0.zip
+
+# 5. Commit artifacts
+git add artifacts/
+git commit -m "release: Trustable report v1.0"
+git push
+```
+
+---
+
+## 📝 Validation Checklist
+
+### Before Commit
+- [ ] `trudag manage lint` → No errors
+- [ ] Mandatory fields filled
+- [ ] `ref:` = filename
+- [ ] Correct links (parent exists)
+- [ ] Reviewers assigned
+- [ ] Text uses "shall" for requirements
+
+### Before Approval
+- [ ] Requirement technically correct
+- [ ] Testable (clear acceptance criteria)
+- [ ] No ambiguities
+- [ ] Traceability links verified
+- [ ] Correct ASIL
+
+### Before Baseline
+- [ ] All requirements approved (`reviewed` != '')
+- [ ] `trudag manage lint` → No errors
+- [ ] Associated tests created (LLTC)
+- [ ] Trustable report exported
+
+---
+
+## 🔧 Commands by Phase
+
+### Initial Setup
+```bash
+# Install official tools
+pip install doorstop pyyaml
+
+# Install Trustable
+git clone https://gitlab.com/CodethinkLabs/trustable/trustable.git /tmp/trustable
+cd /tmp/trustable && git checkout 2025.9.16 && pip install .
+```
+
+### Daily Development
+```bash
+# Validate requirements
+trudag manage lint
+
+# Create requirement
+doorstop add SWD
+
+# Link requirements
+doorstop link SWD-002 SRD-001
+
+# Approve
+trudag manage set-item reqs/swd/SWD-002.yml
+```
+
+### Release/Baseline
+```bash
+# Migrate structure
+trudag manage migrate
+
+# Validate all
+trudag manage lint
+
+# Tag baseline
+git tag -a BASELINE-SWD-V1.0 -m "Baseline"
+
+# Export report
+trudag report export --output artifacts/trustable.zip
+```
+
+---
+
+## 📊 Doorstop Structure
+
+Each category has a `.doorstop.yml`:
 
 ```yaml
-text: |
-  The software shall read the CAN message ID 0x100 and update the internal vehicle speed variable within 50 ms.
-links:
-  - SRD001
-ASIL: B
-Verification Method: Unit Test
-reviewed: null
+# reqs/swd/.doorstop.yml
+settings:
+  digits: 3
+  itemformat: yaml
+  parent: SRD        # Parent category
+  prefix: SWD        # ID prefix
+  sep: '-'
 ```
 
-## Lint and governance
+---
 
-Before approval, run the trudag linter to detect suspect links and unreviewed items:
+## 🎯 Complete Example
 
+### 1. Create SWD-002
+```bash
+cp reqs/templates/SWD-template.yml reqs/swd/SWD-002.yml
+```
+
+### 2. Edit SWD-002.yml
+```yaml
+SWD-002:
+  ref: SWD-002
+  header: "Battery voltage ADC reading"
+  text: |
+    The software SHALL read battery voltage via ADC channel 0
+    with 12-bit resolution at 10Hz sampling rate.
+  ASIL: B
+  Verification Method: Unit Test
+  links: [SRD-001]
+  reviewers:
+    - name: "John Silva"
+      email: "john@team.com"
+  reviewed: ''
+  active: true
+  derived: false
+  normative: true
+  level: 1.0
+```
+
+### 3. Validate
 ```bash
 trudag manage lint
 ```
 
-After human review, approve an item (this should set `reviewed` to the commit SHA):
-
+### 4. Commit
 ```bash
-trudag manage set-item SWD001
-git add reqs
-git commit -m "REQS: Approve SWD001 (reviewed)"
+git add reqs/swd/SWD-002.yml
+git commit -m "feat: Add SWD-002 - Battery ADC reading"
+git push
 ```
 
-## Baseline (Git)
-
-When the set of requirements is approved and `reviewed` is set, create an annotated tag:
-
+### 5. Approve (after review)
 ```bash
-git tag -a BASELINE-SWD-V1.0 -m "SWD baseline v1.0 - approved"
-git push origin BASELINE-SWD-V1.0
+trudag manage set-item reqs/swd/SWD-002.yml
+git add reqs/swd/SWD-002.yml
+git commit -m "review: Approve SWD-002"
+git push
 ```
 
-## Exporting artifacts (optional)
+---
 
-Use trudag artifact export to create an archive of the graph for audit:
+## 📖 References
 
-```python
-from pathlib import Path
-from trudag.dotstop.core.artifact import Artifact
+- **Training:** `docs/training/TSF-training.md`
+- **Quick Ref:** `docs/training/quick-reference.md`
+- **Templates:** `reqs/templates/`
+- **Trustable Docs:** https://codethinklabs.gitlab.io/trustable/trustable/
 
-# Example (pseudo):
-# Artifact.export_to(graph, 'DrivaPi', Path('drivapi.trustable'))
-```
+---
 
-## Examples included
-
-This repo includes sample items under `reqs/urd`, `reqs/srd`, `reqs/swd`, and `reqs/lltc` to get started.
+**Last Updated:** October 20, 2025
