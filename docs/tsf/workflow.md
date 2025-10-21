@@ -98,7 +98,7 @@ git push origin feature/swd-042
 
 1. Go to GitHub
 2. Create PR from your branch
-3. Add template checklist (`.github/PULL_REQUEST_TEMPLATE.md`)
+3. Add template checklist
 4. Request 2 reviewers (ASIL B+)
 
 ### Evidence Checklist
