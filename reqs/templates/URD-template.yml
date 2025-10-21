@@ -7,13 +7,15 @@ URD-000:
     This requirement describes what the end user needs from the system.
     Use clear, non-technical language that stakeholders can understand.
 
+  # TSF Type: Expectation (A Request, but not a Claim)
+
   # ASIL Level: QM (no safety) / A (lowest) / B / C / D (highest)
   ASIL: QM
 
   # Verification Method: Review / User Acceptance Test / Demonstration
   Verification Method: User Acceptance Test
 
-  # Links to parent requirements (URD has no parent - top of V-model)
+  # Links to parent requirements (URD is a root Expectation, no parents)
   links: []
 
   # Reviewers (at least one required)
@@ -21,7 +23,8 @@ URD-000:
     - name: "Reviewer Name"
       email: "reviewer@example.com"
 
-  # Reviewed: empty until approved, then filled with git commit SHA
+  # Reviewed: Empty string means "Suspect" until reviewed and approved.
+  # TSF tooling fills this with a Git SHA upon review.
   reviewed: ''
 
   # Standard Doorstop fields

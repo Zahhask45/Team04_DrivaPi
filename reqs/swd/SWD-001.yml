@@ -1,4 +1,3 @@
-## Software Requirement (SWD-001)
 SWD-001:
   ref: SWD-001
   header: "Convert CAN speed data for display"
@@ -6,19 +5,44 @@ SWD-001:
     The software SHALL convert raw CAN speed data (0.1 km/h units) to
     integer km/h and update the display module within 50ms of receipt.
 
+  # TSF Type: Assertion (Both a Request and a Claim)
+
   ASIL: B
   Verification Method: Unit Test
+
+  # Links: Connects to its parent Assertion
   links:
     - SRD-001
+
   reviewers:
     - name: "Carol Developer"
       email: "carol@example.com"
+
+  # Reviewed: Empty string means "Suspect"
   reviewed: ''
+
   active: true
   derived: false
   normative: true
   level: 3.0
+
+  # --- Added for completeness (based on template) ---
+  rationale: |
+    The raw CAN signal uses a scaling factor (0.1) for precision, which
+    must be converted to a simple integer for the display. The 50ms
+    budget provides sufficient time for processing within the 100ms
+    system-level deadline.
+
   acceptance:
-    - GIVEN: raw CAN value 123
-      WHEN: conversion executed
-      THEN: software yields 12 km/h and calls display update
+    - GIVEN: The software receives raw CAN data '200' (representing 20.0 km/h)
+      WHEN: The conversion function is called
+      THEN: The display module's update function SHALL be called with the integer value '20'
+    - GIVEN: The conversion function is called
+      WHEN: The function is executing
+      THEN: It SHALL complete within its 50ms time budget
+
+  # TSF Artifact Type: Qualification (links to implementation)
+  artifact:
+    - type: code
+      path: src/processing/speed_converter.cpp
+      description: Implementation of the conversion logic.
