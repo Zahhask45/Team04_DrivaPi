@@ -1,7 +1,7 @@
-# TSF Training Guide - DrivaPi
+# TSF Training Guide - DrivaPi (Complete)
 
-**Prerequisites:** Complete `docs/tsf/workflows.md` first
-**Evidence-Based:** Hands-on lab with verifiable outputs
+**Prerequisites:** Complete `docs/tsf/start.md` first
+**Foundation:** Eclipse Trustable Software Framework
 
 ---
 
@@ -9,8 +9,9 @@
 
 By the end of this training, you will:
 
-✅ Understand TSF principles and evidence-based development
-✅ Know ISO 26262 basics and ASIL levels
+✅ Understand TSF theoretical model (Statements, Links, DAGs)
+✅ Know TSF methodology (6 key areas of evidence)
+✅ Apply ISO 26262 basics and ASIL levels
 ✅ Write requirements following V-Model
 ✅ Create and maintain traceability
 ✅ Use official tools (`trudag` + `doorstop`)
@@ -18,244 +19,499 @@ By the end of this training, you will:
 
 ---
 
-## 🎓 Training Modules
+## 🎯 Module 1: TSF Theoretical Model (45 min)
 
-### Module 1: TSF Fundamentals (30 min)
+### 1.1 Core Principle
 
-#### What is TSF?
+> **"Trust in software must be based on evidence, not assumptions"**
 
-**TSF (Trustable Software Framework)** is an evidence-based approach to software development.
+TSF is designed for software where **safety, security, performance, availability, and reliability** are critical.
 
-**Core Principle:** Trust in software must be based on evidence, not assumptions.
+### 1.2 Statements - The Building Blocks
 
-**Key Concepts:**
+**Definition:** A Statement is a definitive expression with meaningful interpretations when considered True or False.
 
-1. **Statements** - Requirements, claims, expectations
-2. **Links** - Traceability between statements
-3. **Evidence** - Artifacts proving statements are true
-4. **Review** - SME validation of statements
+#### ✅ Good Statement Example
+
+```
+"The Trustable project provides tools that are implemented in Python."
+```
+
+**Why it's good:**
+- If **True**: Trustable offers Python tooling
+- If **False**: Trustable has no Python tools (maybe other languages)
+- Clear, unambiguous, testable
+
+#### ❌ Bad Statement Example
+
+```
+"Trustable should be written in Python."
+```
+
+**Why it's bad:**
+- Who thinks it should be Python?
+- What parts should be Python?
+- Unclear when True or False
+
+### 1.3 Statement Writing Guidelines
+
+**Statements should:**
+- ✅ Use indicative mood (not subjunctive)
+- ✅ Use third person perspective
+- ✅ Use present tense
+- ✅ Be affirmative (not negative)
+- ✅ Be single sentences
+- ✅ Be specific and testable
+
+**Example for DrivaPi:**
+```yaml
+SWD-042:
+  text: "The software SHALL read battery voltage via ADC channel 0
+         with 12-bit resolution at 1 Hz sampling rate"
+```
+
+### 1.4 Links - Logical Implications
+
+**Definition:** A Link from Statement A to Statement B means **A logically implies B**.
+
+**Remember:** "B is a necessary but not sufficient condition for A"
+
+**Convention:**
+- Statement A = **parent**
+- Statement B = **child**
 
 **Example:**
 ```
-Statement: "System SHALL display speed within 100ms"
-Evidence:  Test log showing 95ms average response time
-Review:    Approved by John Doe on 2025-10-20
+Parent:  "The HMI SHALL display speed"
+  ↓ (implies)
+Child:   "The system SHALL provide speed data to HMI"
 ```
 
-#### TSF Graph Structure
-
-```
-URD-001: "User needs speed display"
-   ↓ (links to)
-SRD-001: "System shall show speed on HMI"
-   ↓ (links to)
-SWD-001: "Qt widget updates every 100ms"
-   ↓ (links to)
-LLTC-001: "Test: Widget refresh time < 100ms"
+**In YAML:**
+```yaml
+SWD-001:
+  text: "Qt widget SHALL display speed..."
+  links: [SRD-001]  # ← SRD-001 is the parent (implied by this)
 ```
 
-This is a **V-Model** - requirements flow down, verification flows up.
+### 1.5 Trustable Graphs (DAGs)
 
-#### Evidence Types
+**Definition:** The set of all Statements and their Links forms a **Directed Acyclic Graph (DAG)**.
 
-1. **Requirements Evidence:**
-   - YAML files with `reviewed:` field
-   - Git commit SHA proving who/when approved
-   - PR approval logs
+**Why Acyclic?** No circular arguments allowed!
 
-2. **Design Evidence:**
-   - Architecture diagrams
-   - Interface specifications
-   - Design review notes
+```
+URD-001 (User need: Display speed)
+   ↓ (implies)
+SRD-001 (System: HMI shows speed)
+   ↓ (implies)
+SWD-001 (Software: Qt widget reads CAN)
+   ↓ (implies)
+LLTC-001 (Test: Verify widget timing)
+```
 
-3. **Implementation Evidence:**
-   - Source code
-   - Code review approvals
-   - Static analysis reports
+This is a **Trustable Graph** - a DAG of Statements about DrivaPi.
 
-4. **Test Evidence:**
-   - Test results (JUnit XML)
-   - Coverage reports
-   - Test execution logs
+### 1.6 Classifying Statements
 
-#### TSF vs Traditional Development
+**Based on Links:**
 
-| Traditional | TSF |
-|-------------|-----|
-| "Requirement approved" | `reviewed: 'git-sha-abc123'` |
-| "Tests passed" | JUnit XML + coverage report |
-| "Code reviewed" | PR approval + checklist |
-| "Requirements linked" | Doorstop graph + matrix CSV |
+| Type | Definition | Has Parents? | Has Children? |
+|------|------------|--------------|---------------|
+| **Request** | Statement with children | Maybe | Yes |
+| **Claim** | Statement with parents | Yes | Maybe |
+| **Expectation** | Request but not Claim | No | Yes |
+| **Assertion** | Both Request and Claim | Yes | Yes |
+| **Premise** | Claim but not Request | Yes | No |
 
-**Key Difference:** Everything is verifiable and traceable.
+**Visual:**
+```
+Expectation (URD-001)
+   ↓ links to
+Assertion (SRD-001, SWD-001)  ← Has both parents and children
+   ↓ links to
+Premise (LLTC-001)
+```
 
-#### Official Tools Only
+**In DrivaPi:**
+- **URD** = Expectations (top-level user needs)
+- **SRD/SWD** = Assertions (middle reasoning)
+- **LLTC** = Premises (test cases, bottom)
 
-**Why?**
-- Maintained by Eclipse Foundation
-- Auditable and reproducible
-- No custom code to maintain
-- Community support
+### 1.7 Exercise: Identify Statement Types
 
-**Tools:**
-- `trudag` - Trustable DAG (requirements graph)
-- `doorstop` - Requirements backend
+Classify these statements:
+
+1. **URD-001:** "User SHALL be able to view vehicle speed"
+   - Has children? **Yes** (SRD-001)
+   - Has parents? **No**
+   - Type: **Expectation** ✅
+
+2. **SWD-001:** "Qt widget SHALL read CAN speed at 10Hz"
+   - Has children? **Yes** (LLTC-001)
+   - Has parents? **Yes** (SRD-001)
+   - Type: **Assertion** ✅
+
+3. **LLTC-001:** "Test SHALL verify widget updates <100ms"
+   - Has children? **No**
+   - Has parents? **Yes** (SWD-001)
+   - Type: **Premise** ✅
 
 ---
 
-### Module 2: ISO 26262 Basics (20 min)
+## 🔬 Module 2: TSF Methodology (60 min)
 
-#### What is ISO 26262?
+TSF methodology has **6 key areas** for collecting evidence:
 
-International standard for **functional safety** in automotive systems.
+### 2.1 Six Areas of Evidence Collection
 
-**Purpose:** Reduce risk of system failures that could cause harm.
-
-#### V-Model Lifecycle
-
-```
-        Concept → Design → Implementation
-          ↓         ↓          ↓
-        URD  →  SRD  →  SWD  →  Code
-          ↑         ↑          ↑
-      UAT   ←  SIT  ←  UT   ←  Tests
-```
-
-**Left side:** Requirements (what to build)
-**Right side:** Verification (prove it works)
-
-#### ASIL Levels (Automotive Safety Integrity Level)
-
-| ASIL | Risk | Examples | Verification Effort |
-|------|------|----------|---------------------|
-| QM | No safety impact | Entertainment | Basic testing |
-| A | Low | Rear lights | Unit tests + review |
-| B | Low-Medium | Brake lights | + Integration tests |
-| C | Medium | ABS, ESC | + System tests + coverage |
-| D | High | Airbags, steering | + Independent review + HIL |
-
-#### ASIL Determination
-
-**Formula:** Severity × Exposure × Controllability = ASIL
-
-**Example: Speedometer failure**
-- Severity: S2 (minor injury possible)
-- Exposure: E4 (high probability)
-- Controllability: C2 (easily controllable)
-- **Result:** ASIL B
+#### 1. Provenance
+**What:** Where software comes from, who produced it, what claims they make
 
 **For DrivaPi:**
-- Most features: ASIL A or B
-- Critical safety: ASIL C (e.g., emergency stop)
-- Non-safety: QM (e.g., display themes)
+- Repository: `https://github.com/SEAME-pt/Team04_DrivaPi`
+- Authors: Team04 (Hugo, João, Bernardo, Miguel, Melanie)
+- License: Educational (SEAME Program)
+- Git commit SHAs for traceability
 
-#### Verification Requirements by ASIL
-
-**ASIL A:**
-- 1 peer review
-- Unit tests (if software)
-- Traceability to parent
-
-**ASIL B:**
-- 2 reviewers (domain + technical)
-- Unit + integration tests
-- Design review
-- Static analysis
-
-**ASIL C:**
-- Independent reviewer (non-author)
-- System tests
-- Code coverage >80%
-- Formal test reports
-
-**ASIL D:**
-- Formal sign-off
-- HIL testing
-- Full traceability audit
-- Independent verification team
-
----
-
-### Module 3: Requirements Engineering (30 min)
-
-#### Good Requirement Characteristics
-
-**SMART Requirements:**
-- **S**pecific - Clear and unambiguous
-- **M**easurable - Testable with pass/fail criteria
-- **A**chievable - Technically feasible
-- **R**elevant - Supports project goals
-- **T**imebound - Has performance constraints
-
-#### Writing Requirements
-
-**Use "SHALL" for mandatory requirements:**
+**Evidence:**
 ```yaml
-# Good:
-text: "The system SHALL display speed in km/h ±1 km/h"
-
-# Bad:
-text: "The system should show speed quickly"
+artifact:
+  - type: provenance
+    path: .git/logs/HEAD
+    description: Git history showing all contributors
 ```
 
-**Be Specific:**
-```yaml
-# Good:
-text: "The software SHALL sample sensor at 10 Hz with timeout of 100ms"
+#### 2. Construction
+**What:** How to build, install, and run it correctly
 
-# Bad:
-text: "The software will read sensor regularly"
+**For DrivaPi:**
+- Build instructions: `docs/GETTING_STARTED.md`
+- Dependencies: Python 3.11+, trudag, doorstop
+- Build artifacts: Compiled code, reports
+- Checksums: Verify correct build
+
+**Evidence:**
+```yaml
+artifact:
+  - type: construction
+    path: docs/GETTING_STARTED.md
+    description: Reproducible build instructions
+  - type: construction
+    path: artifacts/baselines/BASELINE-V1.0.tar.gz
+    description: Complete build archive with checksums
 ```
 
-**Include Units:**
-```yaml
-# Good:
-text: "Temperature SHALL be displayed in °C with accuracy ±0.5°C"
+#### 3. Change
+**What:** How to update it, confidence it won't break/regress
 
-# Bad:
-text: "Temperature shown accurately"
+**For DrivaPi:**
+- Change management: Git + GitHub PRs
+- Regression tests: CI runs on every PR
+- Baseline comparisons: Before/after metrics
+- Release notes: Document all changes
+
+**Evidence:**
+```yaml
+artifact:
+  - type: change
+    path: .github/workflows/tsf-validation.yml
+    description: CI pipeline prevents regressions
+  - type: change
+    path: artifacts/baselines/
+    description: Baseline comparison data
 ```
 
-#### V-Model Decomposition
+#### 4. Expectations
+**What:** What software is expected to do and must not do
 
-**URD (User Requirement):**
+**For DrivaPi:**
+- Functional expectations: URD, SRD requirements
+- Non-functional: Performance, safety limits
+- Constraints: What it must NOT do (safety)
+
+**Evidence:**
+```yaml
+artifact:
+  - type: expectation
+    path: reqs/urd/URD-001.yml
+    description: User expectation for speed display
+```
+
+#### 5. Results
+**What:** What software actually does vs expectations
+
+**For DrivaPi:**
+- Test results: JUnit XML, coverage reports
+- Performance measurements: Timing, latency
+- Actual behavior: Logs, telemetry
+
+**Evidence:**
+```yaml
+artifact:
+  - type: result
+    path: artifacts/verification/tests/LLTC-001-junit.xml
+    description: Test execution results (5/5 passed)
+```
+
+#### 6. Confidence
+**What:** Overall confidence based on all evidence above
+
+**For DrivaPi:**
+- Requirements reviewed: 85% (target: 100%)
+- Tests passing: 70/70 (target: maintain 100%)
+- Coverage: 80% (target: 85%+)
+- Traceability: 100% (maintained)
+
+**Evidence:**
+```yaml
+# Generated by trudag
+artifact:
+  - type: confidence
+    path: artifacts/traceability/matrix.csv
+    description: Complete traceability matrix
+  - type: confidence
+    path: artifacts/verification/coverage/report.html
+    description: Code coverage 82%
+```
+
+### 2.2 TSF Methodology: 5-Stage Iterative Process
+
+You can tackle these in any order, iteratively:
+
+#### Stage 1: Setting Expectations
+
+**What:** Stakeholders agree on critical requirements
+
+**Who:** Consumers, Contributors, Others (regulators)
+
+**Output:** Expectations (Requests without parents)
+
+**For DrivaPi:**
 ```yaml
 URD-001:
   header: "Display vehicle speed"
-  text: "The user SHALL be able to view current vehicle speed on the dashboard"
-  ASIL: B
+  text: "The user SHALL be able to view current vehicle speed on dashboard"
+  # This is an Expectation - it's a Request (has children) but not a Claim
 ```
 
-**SRD (System Requirement):**
-```yaml
-SRD-001:
-  header: "HMI speed display"
-  text: "The system SHALL display vehicle speed on the HMI with accuracy ±1 km/h, updated every 100ms"
-  links: [URD-001]  # Traces to parent
-  ASIL: B
-```
+#### Stage 2: Providing Evidence
 
-**SWD (Software Requirement):**
-```yaml
-SWD-001:
-  header: "Qt speed widget"
-  text: "The software SHALL implement a Qt widget that reads speed from CAN bus at 10 Hz and updates display within 100ms"
-  links: [SRD-001]  # Traces to parent
-  ASIL: B
-```
+**What:** Measure properties using Artifacts
 
-**LLTC (Test Case):**
+**Two types:**
+
+**Validation** (algorithmic):
+- Properties of transient artifacts
+- Example: Test results, performance metrics
+- Automated: CI runs tests, records results
+
+**Reference** (SME review):
+- Properties of persistent artifacts
+- Example: Design docs, source code quality
+- Manual: Expert reviews and approves
+
+**Evidence Definition:** Premises supported by Artifacts
+
+**For DrivaPi:**
 ```yaml
 LLTC-001:
-  header: "Test speed display timing"
-  text: "Test SHALL verify Qt widget updates within 100ms when CAN speed message received"
-  links: [SWD-001]  # Traces to parent
-  ASIL: B
+  text: "Test SHALL verify speed widget updates within 100ms"
+  artifact:
+    - type: test
+      path: tests/unit/test_speed_widget.cpp
+      description: Test implementation (Reference)
+    - type: test
+      path: artifacts/verification/tests/LLTC-001-junit.xml
+      description: Test results (Validation)
 ```
 
-#### Acceptance Criteria
+#### Stage 3: Documenting Assumptions
 
-**Format:** GIVEN / WHEN / THEN
+**What:** Requirements that cannot be satisfied within project scope
+
+**Example:** "System requires Raspberry Pi 5"
+- We don't build Raspberry Pi
+- We assume it exists and works
+
+**Assumptions:** Premises with NO justification (dangling)
+
+**For DrivaPi:**
+```yaml
+ASSUMPTION-001:
+  text: "Raspberry Pi 5 hardware is available and functional"
+  # No links, no artifacts - this is an Assumption
+  # We don't prove this, we assume it
+```
+
+**Why Important:** Transparency! Users know what they must provide.
+
+#### Stage 4: Recording Reasoning
+
+**What:** Intermediate logical steps between Expectations and Evidence
+
+**Why:** Avoid large undocumented leaps in logic
+
+**Output:** Assertions (middle layer)
+
+**Qualification:** Assertions can be qualified by complex Artifacts
+
+**For DrivaPi:**
+```yaml
+SRD-001:
+  text: "System SHALL display speed with ±1 km/h accuracy, updated every 100ms"
+  links: [URD-001]  # Parent: User expectation
+  # This SRD is an Assertion - it connects user need to software implementation
+
+SWD-001:
+  text: "Qt widget SHALL read CAN speed at 10 Hz and update display"
+  links: [SRD-001]  # Parent: System requirement
+  # This SWD is also an Assertion - middle reasoning
+```
+
+#### Stage 5: Assessing Confidence
+
+**What:** Score Evidence, calculate scores recursively
+
+**Process:**
+1. Score Evidence (SME review + validation)
+2. Calculate scores for all Statements
+3. Identify where to focus effort next
+
+**For DrivaPi:**
+- Evidence scored: Pass/Fail, or 0-100%
+- Propagate up the DAG
+- Low scores → need more work
+
+### 2.3 Modification: Suspect vs Reviewed
+
+**Problem:** How do we know a Statement and its score are still valid after changes?
+
+**Solution:** Suspect marking
+
+**Suspect:** Statement or Link that changed and needs re-review
+
+**Convention:**
+- **Suspect:** Needs human review
+- **Reviewed/Clear:** Human verified
+
+**In YAML:**
+```yaml
+SWD-001:
+  reviewed: ''              # Suspect (empty)
+  reviewed: 'abc123...'     # Reviewed (git SHA)
+```
+
+**Workflow:**
+1. Create Statement → Mark reviewed
+2. Modify Statement → Mark Suspect (reviewed: '')
+3. Human reviews → Mark reviewed (trudag manage set-item)
+
+---
+
+## 🚗 Module 3: Automotive Standards (ISO 26262) (30 min)
+
+### 3.1 ISO 26262 Overview
+
+**Purpose:** Functional safety for road vehicles
+
+**Goal:** Reduce risk of system failures causing harm
+
+**V-Model:** Requirements → Implementation → Verification
+
+### 3.2 ASIL Levels
+
+**ASIL = Automotive Safety Integrity Level**
+
+**Determination:** Severity × Exposure × Controllability
+
+| ASIL | Risk | Examples | Verification |
+|------|------|----------|--------------|
+| **QM** | None | Radio | Basic review |
+| **A** | Low | Rear lights | + Unit tests |
+| **B** | Low-Med | Brake lights | + Integration + 2 reviewers |
+| **C** | Medium | ABS | + System tests + coverage + independent review |
+| **D** | High | Airbags | + HIL + formal sign-off |
+
+### 3.3 ASIL for DrivaPi
+
+**Typical assignments:**
+```
+Display features → ASIL A
+Sensor processing → ASIL B
+Motor control → ASIL B
+Emergency stop → ASIL C (if implemented)
+Configuration → QM
+```
+
+---
+
+## 📝 Module 4: Requirements Engineering with TSF (45 min)
+
+### 4.1 Writing Good Requirements as Statements
+
+**Remember Statement rules:**
+- Indicative mood
+- Third person
+- Present tense
+- Affirmative
+- Single sentence
+- Testable!
+
+**Use "SHALL" for mandatory:**
+```yaml
+text: "The system SHALL display speed in km/h ±1 km/h, updated every 100ms"
+```
+
+### 4.2 V-Model Decomposition (TSF Applied)
+
+**URD (Expectation):**
+```yaml
+URD-001:
+  ref: URD-001
+  header: "Display vehicle speed"
+  text: "The user SHALL be able to view current vehicle speed on the dashboard"
+  links: []  # Expectation - no parents
+  # This is a Request (has children below)
+```
+
+**SRD (Assertion):**
+```yaml
+SRD-001:
+  ref: SRD-001
+  header: "HMI speed display"
+  text: "The system SHALL display vehicle speed on HMI with accuracy ±1 km/h, updated every 100ms"
+  links: [URD-001]  # Claim (has parent) AND Request (has children)
+  # This is an Assertion
+```
+
+**SWD (Assertion):**
+```yaml
+SWD-001:
+  ref: SWD-001
+  header: "Qt speed widget"
+  text: "The software SHALL implement Qt widget reading CAN speed at 10 Hz, updating display within 100ms"
+  links: [SRD-001]  # Claim AND Request
+  # Another Assertion
+```
+
+**LLTC (Premise + Evidence):**
+```yaml
+LLTC-001:
+  ref: LLTC-001
+  header: "Test speed display timing"
+  text: "Test SHALL verify Qt widget updates within 100ms when CAN speed message received"
+  links: [SWD-001]  # Claim (has parent), no children
+  # This is a Premise
+  artifact:
+    - type: test
+      path: tests/unit/test_speed_widget.cpp
+    - type: test
+      path: artifacts/verification/tests/LLTC-001-junit.xml
+  # With artifacts, this Premise becomes Evidence
+```
+
+### 4.3 Acceptance Criteria (GIVEN/WHEN/THEN)
 
 ```yaml
 acceptance:
@@ -270,214 +526,148 @@ acceptance:
 
 ---
 
-### Module 4: Traceability (20 min)
+## 🔗 Module 5: Traceability in TSF Context (30 min)
 
-#### Why Traceability Matters
+### 5.1 Traceability = DAG Structure
 
-**Benefits:**
-1. **Coverage:** Ensure all user needs are met
-2. **Impact Analysis:** Know what's affected by changes
-3. **Verification:** Prove requirements are tested
-4. **Audit:** Show compliance with standards
+**Traceability is built-in!** Every Link creates traceability.
 
-#### Bidirectional Traceability
-
-**Forward:** User needs → Implementation
+**Bidirectional automatically:**
 ```
-URD-001 → SRD-001 → SWD-001 → Code → LLTC-001
+Parent (SRD-001) ←→ Child (SWD-001)
 ```
 
-**Backward:** Tests → Requirements
-```
-LLTC-001 → SWD-001 → SRD-001 → URD-001
-```
+Doorstop maintains both directions.
 
-**Example:**
-```yaml
-# Child explicitly links to parent
-SWD-001:
-  links: [SRD-001]
+### 5.2 Generating Traceability Matrix
 
-# Doorstop automatically maintains reverse links
-# SRD-001 knows SWD-001 is a child
-```
-
-#### Traceability Matrix
-
-**Generated automatically:**
 ```bash
-trudag report export --output artifacts/traceability.zip
+trudag manage migrate
+trudag report export --output artifacts/trace.zip
 ```
 
-**Contains:**
-```csv
-req_id,header,type,parent_links,child_links,verification,reviewed
-URD-001,Display speed,URD,[],[SRD-001],UAT,abc123
-SRD-001,HMI speed,SRD,[URD-001],[SWD-001],System Test,def456
-SWD-001,Qt widget,SWD,[SRD-001],[LLTC-001],Unit Test,ghi789
-LLTC-001,Test widget,LLTC,[SWD-001],[],Unit Test,jkl012
-```
+**Matrix shows:**
+- All Statements
+- Their classifications (Expectation, Assertion, Premise)
+- Parent/child Links
+- Evidence attached
+- Review status
 
-#### Coverage Gaps
+### 5.3 Coverage Analysis
 
-**Example gap:**
-```
-URD-002: "Display battery voltage"
-  ↓ (no SRD!)
-  Missing system requirement
-```
-
-**Detection:**
-```bash
-trudag report export
-# Check report for:
-# - Requirements with no children
-# - Requirements with no tests
-# - Orphaned requirements
-```
+**Questions to ask:**
+- Any Expectations without children? (Unimplemented needs)
+- Any Assertions without Evidence chain? (Missing tests)
+- Any Premises without Artifacts? (Should be Assumptions or need Evidence)
+- Any Assumptions that should be satisfied? (Work needed)
 
 ---
 
-### Module 5: Verification & Validation (20 min)
+## ✅ Module 6: Verification & Validation (30 min)
 
-#### V&V Strategy by ASIL
+### 6.1 V&V in TSF Terms
+
+**Validation:** Evidence collection (algorithmic)
+- Run tests
+- Measure performance
+- Record results as Artifacts
+
+**Verification:** Reference + Review (SME)
+- Review design
+- Review code quality
+- Sign off requirements
+
+### 6.2 Evidence Collection by ASIL
 
 **ASIL A:**
-```
-Requirement → Unit Test → Review → Approve
-```
+- Premise + Artifact (test) = Evidence
+- 1 reviewer
 
 **ASIL B:**
-```
-Requirement → Unit Test → Integration Test →
-Design Review → Static Analysis → Approve
-```
+- Evidence + Integration tests
+- 2 reviewers
+- Static analysis
 
 **ASIL C:**
-```
-Requirement → Unit Test → Integration Test →
-System Test → Coverage Report → Independent Review → Approve
-```
+- Evidence + System tests + Coverage
+- Independent reviewer
+- Formal test reports
 
-#### Test Levels
-
-**Unit Tests:**
-- Test individual functions/modules
-- Mock dependencies
-- Fast execution
-- Example: Test Qt widget rendering
-
-**Integration Tests:**
-- Test component interactions
-- Real or stubbed dependencies
-- Medium execution time
-- Example: Test HMI + CAN bus integration
-
-**System Tests:**
-- Test complete system
-- Real hardware/environment
-- Slow execution
-- Example: Test speed display on actual vehicle
-
-#### Evidence Collection
-
-**Store in:** `artifacts/verification/`
-
-**Structure:**
-```
-artifacts/verification/
-├── tests/
-│   ├── LLTC-001-junit.xml     # Unit test results
-│   └── LLTC-002-integration.xml
-├── reviews/
-│   ├── SWD-001-review.md      # Review notes
-│   └── SRD-005-signoff.pdf
-└── coverage/
-    └── coverage-report.html    # Code coverage
-```
-
-**Link from requirement:**
-```yaml
-SWD-001:
-  artifact:
-    - type: test
-      path: artifacts/verification/tests/LLTC-001-junit.xml
-    - type: review
-      path: artifacts/verification/reviews/SWD-001-review.md
-```
+**ASIL D:**
+- All above + HIL tests
+- Formal sign-off
+- Complete baseline
 
 ---
 
-### Module 6: Documentation (10 min)
+## 🛠️ Module 7: Official Tools (30 min)
 
-#### Required Documentation
+### 7.1 trudag (Trustable DAG)
 
-**Per Requirement:**
-- YAML file with mandatory fields
-- Traceability links
-- Acceptance criteria
-- Review evidence
-
-**Per Sprint:**
-- Traceability matrix
-- Coverage report
-- Verification summary
-
-**Per Baseline:**
-- Trustable report (ZIP)
-- All verification artifacts
-- Release notes
-
-#### Baseline Process
-
-**When to Baseline:**
-- End of sprint
-- Before major changes
-- Release preparation
-
-**Steps:**
-1. Validate all requirements
-2. Generate traceability report
-3. Create git tag
-4. Archive artifacts
-5. Document coverage
-
-**Evidence:**
-```
-BASELINE-V1.0/
-├── trustable-report.zip
-├── traceability-matrix.csv
-├── verification-artifacts.tar.gz
-└── release-notes.md
-```
-
----
-
-### Module 7: Hands-On Lab (60 min)
-
-#### Lab Objective
-
-Create a complete V-Model requirement chain with evidence.
-
-#### Lab Scenario
-
-**Feature:** Display battery voltage on HMI
-
-**Requirements:**
-1. URD: User needs to see battery voltage
-2. SRD: System displays voltage with accuracy
-3. SWD: Software reads ADC and updates Qt widget
-4. LLTC: Test voltage display accuracy and timing
-
-#### Lab Steps
-
-**Step 1: Create URD (10 min)**
+**Purpose:** Manage Trustable Graphs
 
 ```bash
-# Create user requirement
-doorstop add URD
+# Validate Statements and Links
+trudag manage lint
 
-# Edit URD-002
+# Update DAG structure
+trudag manage migrate
+
+# Export Trustable report
+trudag report export --output report.zip
+
+# Approve Statement (mark reviewed)
+trudag manage set-item reqs/swd/SWD-001.yml
+```
+
+### 7.2 doorstop (Requirements Backend)
+
+**Purpose:** Create and manage Statements
+
+```bash
+# Create Statement
+doorstop add SWD
+
+# Edit Statement
+doorstop edit SWD-001
+
+# Create Link
+doorstop link SWD-001 SRD-001
+
+# Validate structure
+doorstop
+```
+
+### 7.3 Why Official Tools Only
+
+- Maintained by Eclipse Foundation
+- Auditable and reproducible
+- No custom code to maintain
+- Community support
+- TSF-compliant by design
+
+---
+
+## 🎓 Module 8: Hands-On Lab (90 min)
+
+### Lab Objective
+
+Create complete V-Model chain with TSF concepts applied.
+
+### Scenario: Battery Voltage Display
+
+You'll create:
+1. **URD-002** (Expectation)
+2. **SRD-002** (Assertion)
+3. **SWD-002** (Assertion)
+4. **LLTC-002** (Premise + Evidence)
+
+### Lab Steps
+
+#### Step 1: Create Expectation (URD)
+
+```bash
+doorstop add URD
 doorstop edit URD-002
 ```
 
@@ -485,10 +675,10 @@ doorstop edit URD-002
 URD-002:
   ref: URD-002
   header: "Display battery voltage"
-  text: "The user SHALL be able to view the current battery voltage on the main dashboard to monitor battery health"
+  text: "The user SHALL be able to view current battery voltage on main dashboard to monitor battery health"
   ASIL: A
   Verification Method: User Acceptance Test
-  links: []
+  links: []  # Expectation - no parents
   reviewers:
     - name: "Your Name"
       email: "you@example.com"
@@ -497,30 +687,28 @@ URD-002:
     - GIVEN: battery connected and system powered
       WHEN: user views main dashboard
       THEN: battery voltage SHALL be visible with unit (V)
+  active: true
+  derived: false
+  normative: true
+  level: 1.0
 ```
 
-```bash
-# Validate
-trudag manage lint
-doorstop
-```
-
-**Step 2: Create SRD (10 min)**
+#### Step 2: Create First Assertion (SRD)
 
 ```bash
 doorstop add SRD
 doorstop edit SRD-002
-doorstop link SRD-002 URD-002
+doorstop link SRD-002 URD-002  # Create Link!
 ```
 
 ```yaml
 SRD-002:
   ref: SRD-002
   header: "HMI battery voltage display"
-  text: "The system SHALL display battery voltage on the HMI with accuracy ±0.1V, sampled at 1 Hz"
+  text: "The system SHALL display battery voltage on HMI with accuracy ±0.1V, sampled at 1 Hz"
   ASIL: A
   Verification Method: System Test
-  links: [URD-002]
+  links: [URD-002]  # This makes it an Assertion (Claim + Request)
   reviewers:
     - name: "Your Name"
       email: "you@example.com"
@@ -529,9 +717,13 @@ SRD-002:
     - GIVEN: battery voltage is 12.0V
       WHEN: system reads voltage
       THEN: display SHALL show 12.0V ±0.1V within 1 second
+  active: true
+  derived: false
+  normative: true
+  level: 1.0
 ```
 
-**Step 3: Create SWD (10 min)**
+#### Step 3: Create Second Assertion (SWD)
 
 ```bash
 doorstop add SWD
@@ -546,7 +738,7 @@ SWD-002:
   text: "The software SHALL read battery voltage via ADC channel 0 with 12-bit resolution at 1 Hz and update Qt BatteryWidget"
   ASIL: A
   Verification Method: Unit Test
-  links: [SRD-002]
+  links: [SRD-002]  # Assertion
   reviewers:
     - name: "Your Name"
       email: "you@example.com"
@@ -555,9 +747,13 @@ SWD-002:
     - GIVEN: ADC configured for channel 0
       WHEN: readVoltage() called
       THEN: SHALL return voltage as float within 100ms
+  active: true
+  derived: false
+  normative: true
+  level: 1.0
 ```
 
-**Step 4: Create LLTC (10 min)**
+#### Step 4: Create Premise with Evidence (LLTC)
 
 ```bash
 doorstop add LLTC
@@ -572,11 +768,21 @@ LLTC-002:
   text: "Test SHALL verify battery voltage reader accuracy and timing"
   ASIL: A
   Verification Method: Unit Test
-  links: [SWD-002]
+  links: [SWD-002]  # Premise (Claim only, no children)
   reviewers:
     - name: "Your Name"
       email: "you@example.com"
   reviewed: ''
+
+  # This makes it Evidence (Premise + Artifacts)
+  artifact:
+    - type: test
+      path: tests/unit/test_battery_reader.cpp
+      description: Unit test implementation
+    - type: test
+      path: artifacts/verification/tests/LLTC-002-junit.xml
+      description: Test results (5/5 passed)
+
   test_procedure:
     setup:
       - Mock ADC with known voltage (12.0V)
@@ -588,152 +794,178 @@ LLTC-002:
       - step: 2
         action: Measure execution time
         expected: Completes in <100ms
+
+  active: true
+  derived: false
+  normative: true
+  level: 1.0
 ```
 
-**Step 5: Validate Chain (5 min)**
+#### Step 5: Validate DAG
 
 ```bash
-# Validate all requirements
 trudag manage lint
 doorstop
-
-# Should show:
-# URD-002 → SRD-002 → SWD-002 → LLTC-002 (complete chain)
 ```
 
-**Step 6: Generate Traceability (5 min)**
+**Check:**
+- All Statements valid?
+- All Links valid?
+- DAG structure correct?
+
+#### Step 6: Generate Trustable Report
 
 ```bash
-# Update structure
 trudag manage migrate
-
-# Export report
 trudag report export --output artifacts/lab-report.zip
 
-# Extract and view
 cd artifacts/
 unzip lab-report.zip -d lab-report/
-cd lab-report/
-cat matrix.csv
+cat lab-report/matrix.csv
 ```
 
-**Step 7: Mark Reviewed (5 min)**
+**Verify:**
+- URD-002: Expectation (Request, no parents)
+- SRD-002: Assertion (Claim + Request)
+- SWD-002: Assertion (Claim + Request)
+- LLTC-002: Evidence (Premise + Artifacts)
+
+#### Step 7: Mark Reviewed
 
 ```bash
-# Get current SHA
-git rev-parse HEAD
-
-# Approve URD-002
 trudag manage set-item reqs/urd/URD-002.yml
-
-# Repeat for others
 trudag manage set-item reqs/srd/SRD-002.yml
 trudag manage set-item reqs/swd/SWD-002.yml
 trudag manage set-item reqs/lltc/LLTC-002.yml
 ```
 
-**Step 8: Commit Lab Work (5 min)**
+### Lab Success Criteria
 
-```bash
-git add reqs/
-git commit -m "lab: Complete TSF training lab
-
-Created full V-Model chain:
-- URD-002: User requirement (battery voltage)
-- SRD-002: System requirement (HMI display)
-- SWD-002: Software requirement (ADC reader)
-- LLTC-002: Test case (verify accuracy)
-
-Traceability: 100%
-Validation: Passed"
-
-git push
-```
-
-#### Lab Success Criteria
-
-- [ ] All 4 requirements created (URD, SRD, SWD, LLTC)
-- [ ] All links valid (child → parent)
+- [ ] 4 Statements created (URD, SRD, SWD, LLTC)
+- [ ] Links form valid DAG
 - [ ] `trudag manage lint` passes
 - [ ] `doorstop` passes
-- [ ] Traceability matrix shows complete chain
-- [ ] All requirements marked reviewed
-- [ ] Work committed to git
+- [ ] Matrix shows: 1 Expectation, 2 Assertions, 1 Evidence
+- [ ] All marked reviewed
 
 ---
 
-## 📊 Training Assessment
+## 📚 Module 9: Documentation & Baselines (30 min)
 
-### Quiz (20 questions)
+### 9.1 Required Documentation
 
-See `docs/archive/TSF-quiz.md` for full quiz.
+**Per Requirement:**
+- YAML with all mandatory fields
+- TSF classification (Expectation/Assertion/Premise/Evidence)
+- Links (parents)
+- Artifacts (if Evidence)
+- Review evidence (`reviewed:` field)
 
-**Key Questions:**
-1. What are the 3 components of a Trustable Graph?
-2. What does ASIL stand for?
-3. How do you link a child requirement to parent?
-4. What command validates requirements?
-5. What field proves a requirement is reviewed?
+**Per Sprint:**
+- Traceability matrix (DAG visualization)
+- Coverage report
+- Confidence scores
 
-**Passing Score:** 16/20 (80%)
+**Per Baseline:**
+- Trustable report (ZIP)
+- All verification artifacts
+- Provenance records
 
-### Practical Assessment
+### 9.2 Baseline Process
 
-**Task:** Create a new feature requirement chain
+```bash
+# Validate everything
+trudag manage lint
+doorstop
 
-1. URD: "Display engine temperature"
-2. SRD: "HMI shows temperature ±1°C"
-3. SWD: "Read CAN message ID 0x101"
-4. LLTC: "Test temperature display"
+# Generate Trustable report
+trudag report export --output artifacts/baselines/BASELINE-V1.0.zip
 
-**Time Limit:** 30 minutes
+# Create git tag
+git tag -a BASELINE-V1.0 -m "Baseline v1.0
 
-**Must:**
-- Pass validation
-- Complete traceability
-- Mark reviewed
-- Generate report
+Requirements: 110 total
+- 30 Expectations (URD)
+- 50 Assertions (SRD/SWD)
+- 30 Evidence (LLTC with artifacts)
 
----
+Traceability: 100%
+Reviewed: 100%
+Confidence: High
 
-## 📚 Additional Resources
+TSF Methodology Applied:
+- Provenance: Git history
+- Construction: Reproducible builds
+- Change: CI/CD regression tests
+- Expectations: Complete DAG
+- Results: All tests passing
+- Confidence: 85% coverage
 
-### Official Documentation
-- Trustable: https://codethinklabs.gitlab.io/trustable/trustable/
-- Doorstop: https://doorstop.readthedocs.io/
-- ISO 26262: https://www.iso.org/standard/68383.html
+Date: $(date +%Y-%m-%d)"
 
-### Team Resources
-- Quick Reference: `docs/tsf/reference.md`
-- Workflows: `docs/tsf/workflow.md`
-- Evidence Guide: `docs/tsf/evidence.md`
-
----
-
-## ✅ Training Completion
-
-After completing this training, you should be able to:
-
-- [x] Explain TSF principles
-- [x] Determine appropriate ASIL levels
-- [x] Write SMART requirements
-- [x] Create V-Model traceability
-- [x] Use trudag and doorstop
-- [x] Generate evidence
-- [x] Create baselines
-
+git push origin BASELINE-V1.0
+```
 
 ---
 
-**Next Steps:**
-1. Review `docs/tsf/workflow.md` for daily tasks
-2. Start contributing to real requirements
-3. Participate in weekly traceability reviews
-4. Mentor new team members
+## 🎯 Module 10: Summary & Next Steps (15 min)
 
-**Questions?** Ask in team standup or review documentation.
+### Key Takeaways
+
+1. **TSF Model:**
+   - Statements = building blocks
+   - Links = logical implications
+   - DAG = Trustable Graph
+
+2. **TSF Classification:**
+   - Expectation = Request without parents (URD)
+   - Assertion = Request + Claim (SRD/SWD)
+   - Premise = Claim without children (LLTC)
+   - Evidence = Premise + Artifacts
+
+3. **TSF Methodology (6 areas):**
+   - Provenance
+   - Construction
+   - Change
+   - Expectations
+   - Results
+   - Confidence
+
+4. **Daily Practice:**
+   - Write Statements (not just requirements)
+   - Create Links (build DAG)
+   - Collect Evidence (Artifacts)
+   - Review and mark reviewed
+   - Generate Trustable reports
+
+### Next Steps
+
+1. **Review:** docs/TSF_REFERENCE.md
+2. **Practice:** Create requirements daily
+3. **Validate:** Run trudag + doorstop always
+4. **Evidence:** Link artifacts systematically
+5. **Baseline:** Regular snapshots
+
+### Resources
+
+- **TSF Official:** https://codethinklabs.gitlab.io/trustable/trustable/
+- **Doorstop:** https://doorstop.readthedocs.io/
+- **ISO 26262:** https://www.iso.org/standard/68383.html
+
+---
+
+**Training Complete! 🎉**
+
+You now understand:
+- TSF theoretical foundation
+- TSF methodology
+- Automotive standards
+- Practical implementation
+
+**Continue with:** docs/WORKFLOWS.md for daily operations
 
 ---
 
 **Last Updated:** October 2025
+**Version:** 2.0 (Complete with TSF Theory)
 **Maintained By:** DrivaPi Team
