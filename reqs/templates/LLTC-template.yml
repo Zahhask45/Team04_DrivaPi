@@ -1,8 +1,8 @@
 LLTC-000:
   ref: LLTC-000
-  header: "Test case short title"
+  header: "Test case for SWD-000"
   text: |
-    Test case to verify [SWD requirement ID].
+    Test case to verify [SWD-000].
 
     This test case SHALL verify that the software requirement is correctly
     implemented by executing specific test procedures and validating results.
@@ -19,6 +19,9 @@ LLTC-000:
     - Performance within specified limits
     - No unexpected errors or warnings
 
+  # TSF Type: Premise (A Claim, but not a Request)
+  # When "validated" by the artifacts below, this Premise becomes Evidence.
+
   # ASIL Level: Must match parent SWD requirement
   ASIL: B
 
@@ -26,8 +29,9 @@ LLTC-000:
   Verification Method: Unit Test
 
   # Links to parent SWD requirement(s) being tested
+  # Corrected to link to SWD-000 for a consistent chain
   links:
-    - SWD-001
+    - SWD-000
 
   # Reviewers
   reviewers:
@@ -36,7 +40,7 @@ LLTC-000:
     - name: "QA Lead"
       email: "qa.lead@example.com"
 
-  # Reviewed: empty until approved
+  # Reviewed: Empty string means "Suspect"
   reviewed: ''
 
   # Standard Doorstop fields
@@ -95,16 +99,17 @@ LLTC-000:
     - Error conditions
     - Performance requirements
 
-  # Artifacts: Link to test implementation and results
+  # TSF Artifact Type: Validation / Reference (forms Evidence)
+  # These artifacts provide the "Evidence" that this Premise is True.
   artifact:
     - type: test
       path: tests/unit/test_temperature_reader.cpp
-      description: Test implementation
+      description: Test implementation (Reference)
 
     - type: test
       path: artifacts/verification/tests/LLTC-000-results.xml
-      description: Test execution results (JUnit format)
+      description: Test execution results (Validation)
 
     - type: test
       path: artifacts/verification/reports/LLTC-000-coverage.html
-      description: Code coverage report
+      description: Code coverage report (Validation)

@@ -245,7 +245,6 @@ trudag report export --output artifacts/baseline-v1.0.zip
 
 ### Training
 - **[training.md](docs/tsf/training.md)** - Full training guide
-- **Pull Request Template** - `.github/PULL_REQUEST_TEMPLATE.md`
 
 ---
 
@@ -377,7 +376,7 @@ ASIL B: 20%  (Medium risk)
 
 1. **Setup**: Follow `docs/tsf/start.md`
 2. **Create Requirement**: Use `docs/tsf/workflow.md`
-3. **Submit PR**: Use `.github/PULL_REQUEST_TEMPLATE.md`
+3. **Submit PR**
 4. **Get Review**: 2 reviewers required (ASIL B+)
 
 ### Requirement Workflow

@@ -18,6 +18,8 @@ SWD-000:
     with 12-bit resolution, sampling at 10Hz, and SHALL timeout after 100ms
     if no response is received."
 
+  # TSF Type: Assertion (Both a Request and a Claim)
+
   # ASIL Level: QM (no safety) / A (lowest) / B / C / D (highest)
   ASIL: B
 
@@ -25,8 +27,9 @@ SWD-000:
   Verification Method: Unit Test
 
   # Links to parent SRD requirement(s)
+  # Corrected to link to SRD-000 for a consistent chain
   links:
-    - SRD-001
+    - SRD-000
 
   # Reviewers (at least 2 for ASIL B+)
   reviewers:
@@ -35,7 +38,7 @@ SWD-000:
     - name: "SW Architect"
       email: "architect@example.com"
 
-  # Reviewed: empty until approved
+  # Reviewed: Empty string means "Suspect"
   reviewed: ''
 
   # Standard Doorstop fields
@@ -66,7 +69,8 @@ SWD-000:
     - Third-party library versions
     - Hardware abstraction layer APIs
 
-  # Artifacts: Link to design docs, code, tests
+  # TSF Artifact Type: Qualification
+  # These artifacts "Qualify" the Assertion, linking to implementation.
   artifact:
     - type: design
       path: docs/architecture/software-design.md
@@ -79,7 +83,3 @@ SWD-000:
     - type: code
       path: src/sensors/temperature_reader.h
       description: Interface header
-
-    - type: test
-      path: tests/unit/test_temperature_reader.cpp
-      description: Unit tests
