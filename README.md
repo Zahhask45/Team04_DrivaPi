@@ -56,34 +56,6 @@ Hugo, João, Bernardo, Miguel, Melanie
 └── .dotstop.dot          # TSF traceability graph
 ```
 
----
-
-## 🚀 Quick Start
-
-### Setup TSF (15 min)
-
-```bash
-# Clone
-git clone https://github.com/SEAME-pt/Team04_DrivaPi.git
-cd Team04_DrivaPi
-
-# Install trudag
-python3 -m venv .venv
-source .venv/bin/activate
-pip install pyyaml
-git clone https://gitlab.com/CodethinkLabs/trustable/trustable.git /tmp/trustable
-cd /tmp/trustable && git checkout 2025.9.16 && pip install . && cd -
-
-# Validate
-trudag manage lint
-trudag score
-trudag publish --output-dir artifacts/trustable-report
-```
-
-**Complete guide:** [docs/tsf/start.md](docs/tsf/start.md)
-
----
-
 ## 📋 TSF Documentation
 
 | Doc | When to Use | Time |
@@ -94,22 +66,6 @@ trudag publish --output-dir artifacts/trustable-report
 | **[training.md](docs/tsf/training.md)** | Understand TSF/ISO 26262 theory | 1-2h |
 | **[evidence.md](docs/tsf/evidence.md)** | Link artifacts | Reference |
 
-### Essential Commands
-
-```bash
-source .venv/bin/activate                        # ALWAYS first
-trudag manage create-item SWD 042 reqs/swd      # Create requirement (uses id:)
-trudag manage create-link SWD-042 SRD-015       # Link (child→parent)
-trudag manage lint                               # Validate AND update index
-
-# --- Reviewer Actions ---
-trudag manage set-item SWD-042                   # Update tool's internal state (e.g., clear 'Unreviewed' status in lint)
-nano reqs/swd/SWD-042.md                       # Manually edit 'reviewed:' field for human audit trail
-git add ... && git commit ...                  # Commit BOTH changes (.md file and potentially .dotstop.dot)
-# --- End Reviewer Actions ---
-
-trudag publish --output-dir artifacts/trustable-report  # Generate report
-```
 ---
 
 ## 👥 Team Practices

@@ -12,7 +12,6 @@ Before you begin, ensure both pair members have:
 1.  Cloned the `Team04_DrivaPi` repository.
 2.  Activated the virtual environment: `source .venv/bin/activate`.
 3.  Installed and working TSF tools (`trudag --version`).
-4.  Change to working branch  `git checkout docs/17-tsf-fundamentals-and-automotive-standards-training`.
 
 see [start.md](start.md) for setup instructions.
 
@@ -94,7 +93,7 @@ The **Author** performs these steps. The Reviewer observes.
     ```bash
     git push -u origin feat/URD-002-battery-monitor
     ```
-    Go to GitHub, create a **Pull Request (PR)** to the **18-requirements-definition-and-documentation** branch, and assign it to the **Reviewer**.
+    Go to GitHub, create a **Pull Request (PR)** and assign it to the **Reviewer**.
 
 ### Task 3: The (CI/CD) Reviewer Validates (5 min)
 
@@ -160,8 +159,8 @@ Now, the **Reviewer** takes control.
 1.  **Merge:** On GitHub, the **Reviewer** formally approves the PR and clicks **"Merge Pull Request"**.
 2.  **Final Verification (Both):**
     ```bash
-    git checkout main
-    git pull origin main
+    git checkout master
+    git pull origin master
     trudag publish --output-dir artifacts/trustable-report
     ```
     Open `artifacts/trustable-report/dashboard.md` and verify the new requirements appear correctly.

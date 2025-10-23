@@ -10,6 +10,10 @@
 ### 1. Install trudag (5 min)
 
 ```bash
+# Clone
+git clone git@github.com:SEAME-pt/Team04_DrivaPi.git
+cd Team04_DrivaPi
+
 # Create virtual environment
 python3 -m venv .venv
 source .venv/bin/activate
@@ -20,7 +24,7 @@ pip install --upgrade pip pyyaml
 # Install trudag (official TSF tool)
 git clone https://gitlab.com/CodethinkLabs/trustable/trustable.git /tmp/trustable
 cd /tmp/trustable
-git checkout 2025.9.16
+git checkout v2025.09.16
 pip install .
 cd -
 
@@ -28,6 +32,10 @@ cd -
 trudag --version
 ```
 
+Note: If you have some issues with `pip install `, try upgrading pip first:
+```bash
+pip install --upgrade pip
+```
 ---
 
 ## ✅ Verification Checklist

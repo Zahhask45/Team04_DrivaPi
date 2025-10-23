@@ -116,7 +116,7 @@ with 12-bit resolution every 100 milliseconds.
 ```
 
 **Why good?**
-- Uses SHALL (mandatory)
+- Uses SHALL (it is a mandatory statement)
 - Specific interface (I2C 0x48)
 - Clear metric (12-bit)
 - Defined timing (100ms)
@@ -129,7 +129,7 @@ The system should read temperature quickly.
 ```
 
 **Why bad?**
-- "should" is ambiguous (use SHALL)
+- "should" is ambiguous (use SHALL, HAS TO, NEEDS, MUST)
 - "quickly" is not measurable
 - No interface specified
 - **Not testable!**
