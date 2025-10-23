@@ -1,8 +1,7 @@
 # Day [X] - SEAME Automotive Journey
 
 **Date:** [Month DD, YYYY]
-**Team:** Hugo, João, Bernardo, Miguel, Melanie
-**Stand-Up:** [📋 standups/YYYY-MM-DD.md](standups/YYYY-MM-DD.md)
+**Team:** Hugo, Gaspar, Bernardo, Miguel, Melanie
 
 ---
 
@@ -14,23 +13,23 @@
 
 ## Team Progress
 
-### Hugo - Hardware & Fabrication
-- ✅ [Done]
-- 🔄 [In progress]
-
-### João - OS & Development Environment
-- ✅ [Done]
-- 🔄 [In progress]
-
 ### Bernardo - Hardware Integration & Testing
 - ✅ [Done]
 - 🔄 [In progress]
 
-### Miguel - GitHub Project & Agile/Scrum
+### Gaspar - OS & Development Environment
+- ✅ [Done]
+- 🔄 [In progress]
+
+### Hugo - Hardware & Fabrication
 - ✅ [Done]
 - 🔄 [In progress]
 
 ### Melanie - GUI & Team Coordination
+- ✅ [Done]
+- 🔄 [In progress]
+
+### Miguel - GitHub Project & Agile/Scrum
 - ✅ [Done]
 - 🔄 [In progress]
 
