@@ -123,7 +123,7 @@ cp -r artifacts/trustable-report artifacts/baselines/v1.0-$(date +%Y%m%d)
 # 5. Commit and push
 git add artifacts/baselines/
 git commit -m "baseline: Create V1.0 baseline"
-git push origin main --tags
+git push origin master --tags
 ```
 
 ---
