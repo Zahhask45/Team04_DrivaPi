@@ -84,8 +84,10 @@ ASIL: <ASIL>
 Verification Method: <VERIFICATION_METHOD>
 
 # Links: Connects to parent Assertion
-links:
-  - <PARENT_REF>
+parents:
+  - ref: <PARENT_REF>
+children:
+  - ref: <CHILD_REF>
 
 reviewers:
   - name: "<REVIEWER_NAME>"
@@ -97,6 +99,7 @@ derived: false
 normative: true
 level: <LEVEL>
 ---
+<STATEMENT>
 ```
 
 **Required fields:**
@@ -108,7 +111,8 @@ level: <LEVEL>
 - `verification_method:` - How to test
 - `reviewers:` - At least 1 (2 for ASIL B+)
 - `reviewed: ''` - Empty until approval
-- `links:` - At least 1 parent link (except URD)
+- `parents: ` - At least 1 parent requirement (except URD)
+- `children:` - Child requirements (except LLTC)
 - `normative: true` - Always true (obligatory)
 - `active: true` - Always true (active requirement)
 - `derived:` - if derived from another requirement (usually false)
