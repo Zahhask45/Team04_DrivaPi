@@ -1,8 +1,6 @@
 # TSF Hands-on Lab and Assessment
 
-**Objective:** Completing this lab certifies you as an official
-
-**TSF Reviewer** for the DrivaPi's project.
+**Objective:** Completing this lab certifies you as an official **TSF Reviewer** for the DrivaPi's project.
 
 **Format:** Work in pairs. Decide who will be the "Author" and who will be the "Reviewer".
 
