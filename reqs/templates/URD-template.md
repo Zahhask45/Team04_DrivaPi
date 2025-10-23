@@ -4,13 +4,14 @@ header: "<HEADER>"
 text: |
   <DESCRIPTION>
 
-# TSF Type: Expectation (A Request, but not a Claim)
+# TSF Type: Assertion (Both a Request and a Claim)
 
 ASIL: <ASIL>
 Verification Method: <VERIFICATION_METHOD>
 
-# Links to derived assertions
-links: []
+# Links: Connects to parent Assertion
+links:
+  - <PARENT_REF>
 
 reviewers:
   - name: "<REVIEWER_NAME>"
@@ -20,5 +21,5 @@ reviewed: ''  # Manually fill on PR approval
 active: true
 derived: false
 normative: true
-level: 1.0
+level: 3.0
 ---
