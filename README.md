@@ -98,13 +98,18 @@ trudag publish --output-dir artifacts/trustable-report
 
 ```bash
 source .venv/bin/activate                        # ALWAYS first
-trudag manage create-item SWD 042 reqs/swd      # Create requirement
+trudag manage create-item SWD 042 reqs/swd      # Create requirement (uses id:)
 trudag manage create-link SWD-042 SRD-015       # Link (child→parent)
-trudag manage lint                               # Validate
-trudag manage set-item SWD-042                   # Mark as reviewed
+trudag manage lint                               # Validate AND update index
+
+# --- Reviewer Actions ---
+trudag manage set-item SWD-042                   # Update tool's internal state (e.g., clear 'Unreviewed' status in lint)
+nano reqs/swd/SWD-042.md                       # Manually edit 'reviewed:' field for human audit trail
+git add ... && git commit ...                  # Commit BOTH changes (.md file and potentially .dotstop.dot)
+# --- End Reviewer Actions ---
+
 trudag publish --output-dir artifacts/trustable-report  # Generate report
 ```
-
 ---
 
 ## 👥 Team Practices
