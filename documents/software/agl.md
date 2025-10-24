@@ -3,9 +3,9 @@
 
 ## I. Executive Summary
 
-This report summarizes the successful build and configuration of a custom Automotive Grade Linux (AGL) distribution image based on the Trout (v16.0) branch.
+This report summarizes the successful build and configuration of a custom Automotive Grade Linux (AGL) distribution image based on the Trout (v20.0.1) branch.
 The process leveraged the Yocto Project/OpenEmbedded framework to cross-compile the complete software stack for the Raspberry Pi 5 architecture (aarch64).
-The resultant image incorporates advanced feature sets designed for comprehensive in-vehicle infotainment (IVI) and development purposes.
+The resultant image incorporates minimal features.
 
 ---
 
