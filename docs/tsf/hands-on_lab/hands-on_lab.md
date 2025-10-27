@@ -35,7 +35,7 @@ The **Author** performs these steps. The Reviewer observes.
 
 1.  **Create the Branch:**
     ```bash
-    git checkout -b feat/URD-002-battery-monitor
+    git checkout -b feat/URD-999-battery-monitor
     ```
 
 2.  **Activate Environment:**
@@ -45,11 +45,11 @@ The **Author** performs these steps. The Reviewer observes.
 
 3.  **Create the URD (Expectation):**
     ```bash
-    trudag manage create-item URD 002 reqs/urd
+    trudag manage create-item URD 999 reqs/urd
     ```
 
-4.  **Edit the URD:** Open `reqs/urd/URD-002.md`. **Use `id:` not `ref:`**.
-    * **id:** `URD-002`
+4.  **Edit the URD:** Open `reqs/urd/URD-999.md`. **Use `id:` not `ref:`**.
+    * **id:** `URD-999`
     * **header:** "Low Battery Alert for User"
     * **text:** "The system SHALL visually alert the user on the dashboard when the battery voltage drops below 10.5V."
     * **ASIL:** `A`
@@ -58,21 +58,21 @@ The **Author** performs these steps. The Reviewer observes.
 
 5.  **Create the SRD (Assertion):**
     ```bash
-    trudag manage create-item SRD 002 reqs/srd
+    trudag manage create-item SRD 999 reqs/srd
     ```
 
-6.  **Edit the SRD:** Open `reqs/srd/SRD-002.md`. Use `id:`.
-    * **id:** `SRD-002`
+6.  **Edit the SRD:** Open `reqs/srd/SRD-999.md`. Use `id:`.
+    * **id:** `SRD-999`
     * **header:** "Continuous Battery Voltage Monitoring"
     * **text:** "The system SHALL read the ADC voltage sensor (pin ADC1_IN1) at a frequency of 1Hz and report the value in millivolts."
     * **ASIL:** `A`
-    * **links:** `- URD-002`
+    * **links:** `- URD-999`
     * **reviewers:** Add the name and email of your partner (the Reviewer).
     * **reviewed:** `''`
 
 7.  **Link the Requirements (Traceability):**
     ```bash
-    trudag manage create-link SRD-002 URD-002
+    trudag manage create-link SRD-999 URD-999
     ```
 
 ### Task 2: The Author Validates and Submits the PR (10 min)
@@ -85,13 +85,13 @@ The **Author** performs these steps. The Reviewer observes.
 
 2.  **Commit Changes:**
     ```bash
-    git add reqs/urd/URD-002.md reqs/srd/SRD-002.md .dotstop.dot
-    git commit -m "feat(reqs): Add URD-002 and SRD-002 for battery monitoring"
+    git add reqs/urd/URD-999.md reqs/srd/SRD-999.md .dotstop.dot
+    git commit -m "feat(reqs): Add URD-999 and SRD-999 for battery monitoring"
     ```
 
 3.  **Push and Pull Request:**
     ```bash
-    git push -u origin feat/URD-002-battery-monitor
+    git push -u origin feat/URD-999-battery-monitor
     ```
     Go to GitHub, create a **Pull Request (PR)** and assign it to the **Reviewer**.
 
@@ -108,7 +108,7 @@ Now, the **Reviewer** takes control.
 1.  **Get the Branch:**
     ```bash
     git fetch origin
-    git checkout feat/URD-002-battery-monitor
+    git checkout feat/URD-999-battery-monitor
     ```
 
 2.  **Activate Environment:**
@@ -116,7 +116,7 @@ Now, the **Reviewer** takes control.
     source .venv/bin/activate
     ```
 
-3.  **Critical Review:** Check the files `URD-002.md` and `SRD-002.md`.
+3.  **Critical Review:** Check the files `URD-999.md` and `SRD-999.md`.
     * Text clear, testable, unambiguous?
     * ASIL `A` appropriate?
     * Link correct (SRD -> URD)?
@@ -124,15 +124,15 @@ Now, the **Reviewer** takes control.
 
 4.  **Approve - Step 1: Update Tool State:** Run `set-item` for both requirements to clear the "Unreviewed" status internally.
     ```bash
-    trudag manage set-item URD-002
-    trudag manage set-item SRD-002
+    trudag manage set-item URD-999
+    trudag manage set-item SRD-999
     # Since we just created the link, consider marking it reviewed too:
-    # trudag manage set-link SRD-002 URD-002
+    # trudag manage set-link SRD-999 URD-999
     # OR use set-item with --links if applicable:
-    # trudag manage set-item URD-002 --links
-    # trudag manage set-item SRD-002 --links
+    # trudag manage set-item URD-999 --links
+    # trudag manage set-item SRD-999 --links
     ```
-5.  **Approve - Step 2: Manually Edit Files:** Open *both* `reqs/urd/URD-002.md` and `reqs/srd/SRD-002.md`. Manually change the `reviewed:` field in each.
+5.  **Approve - Step 2: Manually Edit Files:** Open *both* `reqs/urd/URD-999.md` and `reqs/srd/SRD-999.md`. Manually change the `reviewed:` field in each.
     ```yaml
     reviewed: "YYYY-MM-DD - Approved by [Your Name] <[Your Email]>"
     ```
@@ -141,12 +141,12 @@ Now, the **Reviewer** takes control.
     ```bash
     trudag manage lint
     ```
-    *(Ensure no "Unreviewed" or "Suspect" warnings appear for URD-002/SRD-002)*
+    *(Ensure no "Unreviewed" or "Suspect" warnings appear for URD-999/SRD-999)*
 
 7.  **Commit Both Approval Changes:** Add the manually edited `.md` files AND any changes `set-item` made to `.dotstop.dot`.
     ```bash
-    git add reqs/urd/URD-002.md reqs/srd/SRD-002.md .dotstop.dot # Add all changed files
-    git commit -m "review(reqs): Approve URD-002 and SRD-002"
+    git add reqs/urd/URD-999.md reqs/srd/SRD-999.md .dotstop.dot # Add all changed files
+    git commit -m "review(reqs): Approve URD-999 and SRD-999"
     ```
 
 8.  **Push the Approval:**
