@@ -25,7 +25,7 @@ Based on analysis (GitHub Issue #59) and `trudag` CLI documentation, the team cl
 
 ## 💯 How Scores are Determined
 
-The **"Trustable Score"** (0.0 to 1.0) for each requirement reflects the team's confidence in its truth, based on evidence. Scores originate at the lowest levels (Evidence/Premises, like LLTCs) and are propagated upwards by `trudag score` / `trudag publish`.
+The **"Trustable Score"** (0.0 to 1.0) for each requirement reflects the team's confidence in its truth, based on evidence. Scores originate at the lowest levels (Evidence/Premises, like low level test cases (LLTCs)) and are propagated upwards by `trudag score` / `trudag publish`.
 
 There are **two primary ways** a requirement gets its initial score:
 
@@ -37,7 +37,7 @@ There are **two primary ways** a requirement gets its initial score:
 ```yaml
 ---
 id: LLTC-042
-# ... header, text, ASIL, reviewed ...
+# ... header, text, Automotive Safety Integrity Level (ASIL), reviewed ...
 references: # Artifacts the SME reviews
   - type: "file"
     path: tests/unit/test_temperature.cpp
@@ -136,7 +136,7 @@ These are common types of evidence relevant to DrivaPi and the artifacts that re
 **Artifacts:** `.cpp`, `.h`, `.rs` files in `src/`.
 **Linked In:** SWD requirements.
 
-**Example (using references:):**
+**Example (using references):**
 ```yaml
 ---
 id: SWD-042
@@ -242,8 +242,8 @@ docs/design/
 
 ### 4. Review (Human Validation)
 
-**What:** Evidence of human review (PRs, commit hashes). Complements the manual `reviewed:` field.
-**Artifacts:** URLs to PRs, specific Git commit SHAs.
+**What:** Evidence of human review (Pull requests (PRs), commit hashes). Complements the manual `reviewed:` field.
+**Artifacts:** URLs to PRs, specific Git commit Secure Hash Algorithms (SHAs).
 **Linked In:** Any requirement type (URD, SRD, SWD, LLTC).
 
 **Example (using references:):**
@@ -279,7 +279,7 @@ score:
 **Artifacts:** Report files (`artifacts/verification/static-analysis/`, `artifacts/verification/coverage/`, e.g., `.xml`, `.txt`, `.info`).
 **Linked In:** SWD requirements related to the analyzed code.
 
-**Example (using references: and evidence:):**
+**Example (using references and evidence):**
 ```yaml
 ---
 id: SWD-042
@@ -316,7 +316,7 @@ artifacts/verification/
 ### 6. Compliance (Standards)
 
 **What:** Documentation proving adherence to standards (ISO 26262, etc.).
-**Artifacts:** Documents detailing HARA, ASIL justifications (`docs/standards/`).
+**Artifacts:** Documents detailing Hazard Analysis and Risk Assessment (HARA), ASIL justifications (`docs/standards/`).
 **Linked In:** Requirements where ASIL or standard compliance is relevant (URD, SRD, SWD).
 
 **Example (using references:):**
@@ -433,8 +433,6 @@ score: # Manual SME score (can override or complement automated score)
 
 ## 📁 Naming Conventions
 
-*(These conventions remain valid)*
-
 ### Test Results
 
 ```
@@ -468,8 +466,6 @@ speed_widget.lcov
 ---
 
 ## ✅ Checklist by ASIL
-
-*(This checklist remains valid; ensure `references:` links and appropriate scoring are used)*
 
 ### ASIL A (DrivaPi display features)
 
