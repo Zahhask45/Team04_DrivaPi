@@ -26,7 +26,7 @@ The team exceeded expectations by delivering a solid foundation of hardware, sof
 - Detailed Bill of Materials (BOM) and complete connection diagrams
 
 ### 2. Technical Implementation
-- **Transition from Raspberry Pi OS to Automotive Grade Linux (AGL)** successfully donce - mounted in microSD card
+- **Transition from Raspberry Pi OS to Automotive Grade Linux (AGL)** successfully done - mounted in microSD card
 - **Rust control system** implemented and functional for PiRacer
 - In-depth study of microcontrollers for future integration
 - Qt application developed and tested on Raspberry Pi OS
@@ -218,7 +218,6 @@ Sprint 1 demonstrated that **Team04 DrivaPi** possesses:
 3. **Establish CAN Bus communication**
 4. **Qt running natively on AGL**
 5. **Cross-compilation configured and documented**
-6. **First iteration of basic autonomous control**
 
 ---
 
