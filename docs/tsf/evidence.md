@@ -17,7 +17,7 @@ Based on analysis (GitHub Issue #59) and `trudag` CLI documentation, the team cl
 1. **`references:` Block:** Standard method for linking passive artifacts (files, URLs). Provides context for human review and traceability links in reports. **Does not automatically contribute to scores.**
 2. **`evidence:` Block:** Exclusively for configuring custom automated validators. Requires writing validator code to automatically calculate a score based on artifact content. Not for passive linking.
 3. **`score:` Block:** Used for recording manual Subject Matter Expert (SME) scores based on their review of the Statement and linked references.
-4. **Deprecated `artifact:` Block:** Not standard for `trudag` and should not be used.
+4. **Deprecated `artifact:` Block:** Not standard for `trudag` and should not be used (team-specific decision; official docs may still reference it, but we prefer `references:` and `evidence:` for clarity).
 
 **Implementation:** This document details usage for `references:`, `evidence:`, and `score:`.
 
