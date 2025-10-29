@@ -42,20 +42,32 @@ env/
 # Note: Keep .dotstop.dot for tracking
 # .dotstop.dot
 
-# Artifacts (generated files - except baselines)
+# Artifacts (generated files - KEEP verification artifacts for evidence linking)
+# TSF Verification Artifacts (COMMIT THESE - needed for evidence linking)
+!artifacts/verification/
+!artifacts/verification/**
+
+# Traceability reports (regenerated, don't commit)
 artifacts/traceability/*.csv
 artifacts/traceability/*.md
 artifacts/traceability/*.json
+# except for
 !artifacts/traceability/.gitkeep
+
+# Reports (regenerated, don't commit)
 artifacts/reports/*.md
 artifacts/reports/*.json
 artifacts/reports/*.csv
+# except for
 !artifacts/reports/.gitkeep
+
+# Keep Trustable reports for review
+!artifacts/trustable-report/
+!artifacts/trustable-report/**
 
 # Keep baselines (important for audit trail)
 !artifacts/baselines/
-!artifacts/baselines/*.tar.gz
-!artifacts/baselines/*.zip
+!artifacts/baselines/**
 
 # Build artifacts
 *.o
