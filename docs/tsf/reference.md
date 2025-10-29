@@ -216,7 +216,7 @@ evidence:
 
 ---
 
-## 📦 Evidence Linking (NEW)
+## 📦 Evidence Linking
 
 **Use `references:` block (NOT deprecated `artifact:` block):**
 
