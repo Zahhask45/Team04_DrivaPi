@@ -51,12 +51,14 @@ env/
 artifacts/traceability/*.csv
 artifacts/traceability/*.md
 artifacts/traceability/*.json
+# except for
 !artifacts/traceability/.gitkeep
 
 # Reports (regenerated, don't commit)
 artifacts/reports/*.md
 artifacts/reports/*.json
 artifacts/reports/*.csv
+# except for
 !artifacts/reports/.gitkeep
 
 # Keep Trustable reports for review
