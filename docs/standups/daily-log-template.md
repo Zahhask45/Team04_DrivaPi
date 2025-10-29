@@ -1,7 +1,7 @@
 # Day [X] - SEAME Automotive Journey
 
 **Date:** [Month DD, YYYY]
-**Team:** Hugo, Gaspar, Bernardo, Miguel, Melanie
+**Team:** Bernardo, Gaspar, Hugo, Melanie, Miguel
 
 ---
 
