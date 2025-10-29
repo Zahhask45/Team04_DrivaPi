@@ -1,6 +1,3 @@
-### 2. TSF Evidence Guide (Updated with note on artifact: deprecation being team-specific)
-
-```markdown
 # TSF Evidence Guide
 
 **Goal:** How to link artifacts (evidence), configure automated validation, and understand scoring using the `trudag` tool.

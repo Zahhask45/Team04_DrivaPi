@@ -1,7 +1,3 @@
-
-### 6. TSF Workflows
-
-```markdown
 # TSF Workflows
 
 **3 main workflows you'll always use**
