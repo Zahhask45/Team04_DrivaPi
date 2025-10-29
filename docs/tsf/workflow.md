@@ -1,3 +1,7 @@
+
+### 6. TSF Workflows
+
+```markdown
 # TSF Workflows
 
 **3 main workflows you'll always use**
@@ -360,6 +364,8 @@ git add reqs/
 git commit -m "docs(swd): Add evidence links for SWD-100"
 git push
 ```
+
+**Note on CI Artifacts:** If CI generates general files (e.g., pytest-results.xml), use custom scripts for per-ID outputs (e.g., LLTC-100-junit.xml) to match naming conventions for direct linking.
 
 ### Step 7: Calculate Scores
 
