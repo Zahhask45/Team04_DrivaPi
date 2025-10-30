@@ -1,18 +1,19 @@
 # TSF Evidence Guide
 
 **Goal:** How to link artifacts (evidence), configure automated validation, and understand scoring using the `trudag` tool.
+
 **Principle:** Each claim (Statement) needs verifiable proof. Confidence (Score) is derived from evidence assessment.
 
-> **Commands:** See [reference.md](reference.md)
-> **Workflow:** See [workflow.md](workflow.md)
+> **Commands:** See reference.md
+> **Workflows:** See workflow.md
 
 ---
 
-## 📝 Spike Summary: Clarifying Linking Syntax (references: vs. evidence:)
+## Spike Summary: Clarifying Linking Syntax
 
-**Date:** October 28, 2025
+**Date:** October 30, 2025
 
-Based on analysis (GitHub Issue #59) and `trudag` CLI documentation, the team clarifies syntax usage:
+Based on analysis and `trudag` CLI documentation, the team clarifies syntax usage:
 
 1. **`references:` Block:** Standard method for linking passive artifacts (files, URLs). Provides context for human review and traceability links in reports. **Does not automatically contribute to scores.**
 2. **`evidence:` Block:** Exclusively for configuring custom automated validators. Requires writing validator code to automatically calculate a score based on artifact content. Not for passive linking.
@@ -23,7 +24,7 @@ Based on analysis (GitHub Issue #59) and `trudag` CLI documentation, the team cl
 
 ---
 
-## 💯 How Scores are Determined
+## How Scores Are Determined
 
 The **"Trustable Score"** (0.0 to 1.0) for each requirement reflects the team's confidence in its truth, based on evidence. Scores originate at the lowest levels (Evidence/Premises, like low level test cases (LLTCs)) and are propagated upwards by `trudag score` / `trudag publish`.
 
@@ -37,7 +38,7 @@ There are **two primary ways** a requirement gets its initial score:
 ```yaml
 ---
 id: LLTC-042
-# ... header, text, Automotive Safety Integrity Level (ASIL), reviewed ...
+# ... header, text, ASIL, reviewed ...
 references: # Artifacts the SME reviews
   - type: "file"
     path: tests/unit/test_temperature.cpp
@@ -95,7 +96,7 @@ evidence: # Configure automated check
 
 ---
 
-## 📋 SME Scoring Guidance (for score: block)
+## SME Scoring Guidance (for score: block)
 
 Since manual scoring is subjective, establishing team guidelines is crucial. Consider these factors when assigning a score (0.0 - 1.0):
 
@@ -126,7 +127,7 @@ Since manual scoring is subjective, establishing team guidelines is crucial. Con
 
 ---
 
-## 📊 Evidence Types & Artifacts
+## Evidence Types & Artifacts
 
 These are common types of evidence relevant to DrivaPi and the artifacts that represent them.
 
@@ -347,7 +348,7 @@ docs/standards/
 
 ---
 
-## 🔗 How to Link Evidence & Configure Validation
+## How to Link Evidence & Configure Validation
 
 ### Method 1: Linking Passive Artifacts (Using references:)
 
@@ -431,7 +432,7 @@ score: # Manual SME score (can override or complement automated score)
 
 ---
 
-## 📁 Naming Conventions
+## Naming Conventions
 
 ### Test Results
 
@@ -465,7 +466,7 @@ speed_widget.lcov
 
 ---
 
-## ✅ Checklist by ASIL
+## Checklist by ASIL
 
 ### ASIL A (DrivaPi display features)
 
@@ -504,7 +505,7 @@ speed_widget.lcov
 
 ---
 
-## 🎯 Best Practices
+## Best Practices
 
 1. **Link evidence using the `references:` block** as you create/generate it for human traceability.
 2. **Use paths relative to repo root** in `path:` for portability.
@@ -519,7 +520,7 @@ speed_widget.lcov
 
 ---
 
-## 🔄 Evidence Workflow
+## Evidence Workflow
 
 ```bash
 # 1. Create/Edit requirement
@@ -565,7 +566,7 @@ trudag publish --output-dir artifacts/trustable-report
 
 ---
 
-**More info:**
+**More information:**
 - Commands → [reference.md](reference.md)
 - Workflows → [workflow.md](workflow.md)
 - Theory → [training.md](training.md)
