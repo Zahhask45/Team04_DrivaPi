@@ -2,14 +2,15 @@
 
 ## Summary and Research Context
 
-The core objective of Goal 5: GenAI Pair Programming in the SEA:ME module is to integrate a Generative AI assistant to boost productivity and implement best practices for code review.
+The core objective of Goal 5: GenAI Pair Programming in the SEA:ME module is to integrate a Generative Artificial Inteligence (AI) assistant to boost productivity and implement best practices for code review.
 
 Our initial research identified three main candidates: GitHub Copilot, Tabnine, and General-Purpose LLMs (Gemini/ChatGPT). The subsequent analysis, combined with the confirmation that the team has access to GitHub Copilot Pro, significantly streamlines the selection.
 <br>
 * **Selected Tool: GitHub Copilot Pro**
-* **Development Environment: SDV Eclipse**
-<br>
+* **Development Environment: Software Defined Vehicle (SDV) Eclipse**
+
 ## Justification for the Choice: GitHub Copilot Pro
+
 The choice of GitHub Copilot Pro is the most strategic and cost-effective, as it is the only tool that, at no additional cost to the team, meets and exceeds all Goal 5 objectives within the required development environment.
 <br>
 ### 1. Comprehensive Coverage of Training Goals
@@ -19,7 +20,7 @@ The choice of GitHub Copilot Pro is the most strategic and cost-effective, as it
 | Best Practices for AI Code Review | Copilot Chat with /explain, /test, /review | The Chat feature (exclusive to the Pro plan) is essential for review. We can ask the AI to explain complex code or generate unit tests, elevating human code review quality | 
 | Strategic Integration into Workflow | `Copilot4Eclipse` Plugin and Integrated Chat | Integrating Chat and suggestions directly into Eclipse (via the robust `Copilot4Eclipse` plugin) ensures we do not have to leave our SDV/compilation environment, minimizing friction |
 | Embracing AI-driven Tools | Access to Advanced Models (GPT-4, etc.) | Guarantees the team is working with industry-leading technology, preparing them for the future of automotive software engineering |
-<br>
+
 ### 2. Competitive Advantage vs. Tabnine Free
 Possessing Copilot Pro makes any free alternative irrelevant for a professional-level training project:
 <br>
@@ -34,7 +35,7 @@ Our team must utilize the most powerful tool available to simulate a real engine
 ### Action Plan and Next Steps
 For successful integration, we propose the following action plan:
 
-1- **Eclipse IDE Installation:** Install the **Ecplise IDE for Embedded C/C++ Developers**
+1- **Eclipse Integrated Development Environment (IDE) Installation:** Install the **Ecplise IDE for Embedded C/C++ Developers**
 
 2- **Plugin Installation:** Install the `Copilot4Eclipse` plugin from the Eclipse Marketplace. This plugin supports both **Completions** (inline suggestions) and **Copilot Chat**.
 
@@ -52,12 +53,13 @@ This guide details the process for setting up the Integrated Development Environ
 **Step 1: Download the Eclipse Installer**
 
 1- Access the official Eclipse Foundation download website.
-<br>
+
 2- Download the Eclipse Installer appropriate for your operating system (Windows, macOS, or Linux).
 
 **Step 2: Run and Select the IDE**
 
 1- Execute the downloaded file to start the Eclipse Installer. (e.g. ./eclipse-inst)
+
 2- The installer will present a list of available Eclipse IDE options. Select the specific option for our development needs:
 
     **Eclipse IDE for Embedded C/C++ Developers**
@@ -68,7 +70,7 @@ Note: It is crucial to select the Embedded version, not the generic C/C++ versio
 
 1- Installation Folder: Define the directory where Eclipse will be installed
 
-2- JDK/JVM: The installer will ensure that the compatible Java Runtime Environment (necessary for Eclipse) is ready.
+2- Java Development Kit (JDK)/ Java Virtual Machine (JVM): The installer will ensure that the compatible Java Runtime Environment (necessary for Eclipse) is ready.
 
 3- Click Install and accept the License Agreement(s) when prompted.
 
