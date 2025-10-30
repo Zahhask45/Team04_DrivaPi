@@ -33,26 +33,73 @@ Our team must utilize the most powerful tool available to simulate a real engine
 <br>
 ### Action Plan and Next Steps
 For successful integration, we propose the following action plan:
+
+1- **Eclipse IDE Installation:** Install the **Ecplise IDE for Embedded C/C++ Developers**
+
+2- **Plugin Installation:** Install the `Copilot4Eclipse` plugin from the Eclipse Marketplace. This plugin supports both **Completions** (inline suggestions) and **Copilot Chat**.
+
+3- **Access Configuration:** Authenticate the plugin with each team member's GitHub credentials, ensuring the Copilot Pro access is active.
+
+4- **Prompt Engineering Training:** Focus early Pair Programming sessions on learning how to use **Copilot Chat** effectively, emphasizing commands like `/explain`, `/test`, and `/review` applied to ThreadX and UProtocol code.
 <br>
-1- **Plugin Installation:** Install the `Copilot4Eclipse` plugin from the Eclipse Marketplace. This plugin supports both **Completions** (inline suggestions) and **Copilot Chat**.
+
+## Installation Guide: Eclipse IDE for Embedded C/C++ Developers
+
+This guide details the process for setting up the Integrated Development Environment (IDE) for firmware (C/C++) development within the SDV (ThreadX) environment.
+
+---
+
+**Step 1: Download the Eclipse Installer**
+
+1- Access the official Eclipse Foundation download website.
 <br>
-2- **Access Configuration:** Authenticate the plugin with each team member's GitHub credentials, ensuring the Copilot Pro access is active.
-<br>
-3- **Prompt Engineering Training:** Focus early Pair Programming sessions on learning how to use **Copilot Chat** effectively, emphasizing commands like `/explain`, `/test`, and `/review` applied to ThreadX and UProtocol code.
-<br>
+2- Download the Eclipse Installer appropriate for your operating system (Windows, macOS, or Linux).
+
+**Step 2: Run and Select the IDE**
+
+1- Execute the downloaded file to start the Eclipse Installer. (e.g. ./eclipse-inst)
+2- The installer will present a list of available Eclipse IDE options. Select the specific option for our development needs:
+
+    **Eclipse IDE for Embedded C/C++ Developers**
+
+Note: It is crucial to select the Embedded version, not the generic C/C++ version.
+
+**Step 3: Configuration and Installation**
+
+1- Installation Folder: Define the directory where Eclipse will be installed
+
+2- JDK/JVM: The installer will ensure that the compatible Java Runtime Environment (necessary for Eclipse) is ready.
+
+3- Click Install and accept the License Agreement(s) when prompted.
+
+4- Wait for the installation to complete. This process downloads all the necessary plugins and tools specific to embedded systems development.
+
+**Step 4: Launch the IDE and Configure the Workspace**
+
+1- Once the installation is complete, click Launch
+
+2- Select Workspace: Eclipse will ask you to select the Workspace directory. This is the location where all project files will be stored.
+
+* Create a new, dedicated folder for the SEA:ME project (e.g., `~/Eclipse-Workspaces/SEA:ME`).
+* Optional: Check the box "Use this as the default and do not ask again".
+
+3- Click Launch.
+
+---
+
 ### Installation Guide: Copilot4Eclipse (Step-by-Step)
 To get started immediately with your already powerful tool, follow these steps to integrate it into your SDV Eclipse IDE:
-<br>
+
 1- **Open Eclipse Marketplace:** In your Eclipse IDE, go to Help → Eclipse Marketplace...
-<br>
+
 2- **Search:** In the "Find" tab, search for "**Copilot4Eclipse**".
-<br>
+
 3- **Install:** Locate the official plugin (often titled "Copilot4Eclipse") and click the Install button.
-<br>
+
 4- **Complete Installation:** Follow the prompts, accept the terms, and click Finish.
-<br>
+
 5- **Restart IDE:** Restart your Eclipse IDE when prompted to finalize the installation.
-<br>
+
 6- **Authentication:** After restarting, a prompt will usually appear to sign in or authorize your GitHub account. Follow the device code steps:
 * **Copy the Device Code** provided by Eclipse.
 * **Open the Authorization Link** in your browser.
