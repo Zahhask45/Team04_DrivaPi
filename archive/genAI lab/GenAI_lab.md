@@ -10,6 +10,7 @@ Participants must use the terminal for these steps to ensure a standardized star
 | Tool | Command/Check | Description |
 |------|------|------|
 | Copilot CLI | npm install -g @github/copilot | Installs the Copilot CLI globally
+| Copilot CLI | copilot | Launch the Copilot CLI
 | Copilot CLI | /login | Authorization: Follow the browser prompts to link the CLI to your GitHub account
 | GitHub CLI | gh auth login | Authorization: Log in to GitHub to allow gh commands (which Copilot uses)
 | Verification | /help | Confirms that both the installation and authentication were successful
