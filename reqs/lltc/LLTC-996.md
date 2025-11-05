@@ -1,8 +1,10 @@
 ---
 id: LLTC-996
 header: Code Coverage Verification
-text: '"Unit test coverage for motor speed driver meets project threshold."
+text: |
+  "Unit test coverage for motor speed driver meets project threshold."
 
+# TSF Type: A Premise
 verification_method: Coverage analysis
 parents:
 - id: SWD-998
