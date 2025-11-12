@@ -26,6 +26,6 @@ This document provides the ASIL justification for the software design requiremen
 
 ## 5. Review Notes & Dependencies
 - **Dependencies:** GPIO driver, emergency stop system
-- **Review:** <Reviewer> approved YYYY-MM-DD (PR #<Number>)
+- **Review:** 2025-11-12 - Approved by Hugo Lopes hugo.lopes@seame.pt PR #144
 
 **References:** ISO 26262-9:2018
