@@ -28,6 +28,6 @@ The Hazard Analysis and Risk Assessment (HARA) for the motor speed sensor requir
 
 ## 5. Dependencies & Review Notes
 - **Dependencies:** Emergency stop button, GPIO hardware driver
-- **Review:** Manually fill on PR approval (YYYY-MM-DD - Approved by Name <email>)
+- **Review:** 2025-11-12 - Approved by Hugo Lopes hugo.lopes@seame.pt
 
 **References:** ISO 26262-3:2018.
