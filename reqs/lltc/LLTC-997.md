@@ -11,14 +11,16 @@ verification_method: Static Analysis
 parents:
 - id: SWD-998
 reviewers:
-- name: QA Engineer
-  email: qa@team.com
-reviewed: ''  # Manually fill on PR approval (YYYY-MM-DD - Approved by Name <email>)
+- name: Gaspar
+  email: joao.gaspar@seame.pt
+reviewed: '2025-11-12 - Approved by Gaspar joao.gaspar@seame.pt'
 references:
 - type: file
   path: artifacts/verification/static-analysis/cppcheck-SWD-998.xml
   description: Static analysis report (0 errors)
 
+score:
+  Gaspar: 1.0
 active: true
 derived: false
 normative: true

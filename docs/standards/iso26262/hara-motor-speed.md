@@ -15,7 +15,7 @@
 ## 2. Hazards & Operational Situations
 | ID | Hazard Description | Operational Situation | Exposure (E) / Justification |
 |:---|:---|:---|:---|
-| H-001 | Sensor fails silently during test | Extended motor test | E2 (2-5% of operating time; regular extended tests occur a few times in system lifetime) |
+| H-001 | Sensor fails silently during test | Extended motor test | E2 (Low probability; extended tests represent 2-5% of total operating time) |
 
 ## 3. Risk Assessment & ASIL
 - **Severity (S):** S1 - Light to moderate injuries
@@ -41,7 +41,7 @@
 ## 4. Safety Goals
 | Goal ID | ASIL | Description | Safe State |
 |:---|:---|:---|:---|
-| SG-001 | A | Motor speed sensor shall function reliably and accurately monitor motor RPM | Operator can monitor motor status and execute emergency stop if anomaly detected |
+| SG-001 | QM | Motor speed sensor shall function reliably and accurately monitor motor RPM | Operator can monitor motor status and execute emergency stop if anomaly detected |
 
 ## 5. Dependencies & Review Notes
 - **Dependencies:** 

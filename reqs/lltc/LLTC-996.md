@@ -9,13 +9,16 @@ verification_method: Coverage analysis
 parents:
 - id: SWD-998
 reviewers:
-- name: Test Engineer
-  email: test@team.com
-reviewed: ''  # Manually fill on PR approval (YYYY-MM-DD - Approved by Name <email>)
+- name: Gaspar
+  email: joao.gaspar@seame.pt
+reviewed: '2025-11-12 - Approved by Gaspar joao.gaspar@seame.pt'
 references:
 - type: file
   path: artifacts/verification/coverage/coverage-SWD-998.xml
   description: Coverage report
+
+score:
+  Gaspar: 0.87
 active: true
 derived: false
 normative: true
