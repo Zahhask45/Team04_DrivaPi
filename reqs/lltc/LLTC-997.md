@@ -11,9 +11,9 @@ verification_method: Static Analysis
 parents:
 - id: SWD-998
 reviewers:
-- name: QA Engineer
-  email: qa@team.com
-reviewed: ''  # Manually fill on PR approval (YYYY-MM-DD - Approved by Name <email>)
+- name: Hugo Lopes
+  email: hugo.lopes@seame.pt
+reviewed: '2025-11-12 - Approved by Hugo Lopes hugo.lopes@seame.pt'
 references:
 - type: file
   path: artifacts/verification/static-analysis/cppcheck-SWD-998.xml
@@ -23,5 +23,7 @@ active: true
 derived: false
 normative: true
 level: 4.0
+score:
+  Hugo Lopes: 0.95
 ---
 Verifies SWD-998 implementation against static analysis rules.
