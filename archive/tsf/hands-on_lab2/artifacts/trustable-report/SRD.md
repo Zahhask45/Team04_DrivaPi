@@ -2,21 +2,21 @@
 
 ---
 
-### SRD-998 ### {: .item-element .item-section class="tsf-score" style="background-color:hsl(65.99999999999999, 100%, 45%)"}
+### SRD-998 ### {: .item-element .item-section class="tsf-score" style="background-color:hsl(66.0, 100%, 45%)"}
 The motor speed sensing subsystem shall provide real-time RPM measurements using a GPIO-connected tachometer sensor to support operator monitoring and test validation.
 {: .expanded-item-element }
 
 **Item Status:**
 
-:material-check: Item Reviewed<br>:material-check: Children linked<br>
+☑ Item Reviewed<br>☑ Children linked<br>
 
 **Supported Requests:**
 
-- [URD-998](URD.md#urd-998){.item-element class="tsf-score" style="background-color:hsl(65.99999999999999, 100%, 45%)"}
+- [URD-998](URD.md#urd-998){.item-element class="tsf-score" style="background-color:hsl(66.0, 100%, 45%)"}
 
 **Supporting Items:**
 
-- [SWD-998](SWD.md#swd-998){.item-element class="tsf-score" style="background-color:hsl(65.99999999999999, 100%, 45%)"}
+- [SWD-998](SWD.md#swd-998){.item-element class="tsf-score" style="background-color:hsl(66.0, 100%, 45%)"}
 
 {% raw %}
 
