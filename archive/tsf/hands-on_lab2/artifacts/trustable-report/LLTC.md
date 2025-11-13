@@ -8,11 +8,11 @@ Verifies that unit test coverage for the motor speed driver meets the defined pr
 
 **Item Status:**
 
-:material-check: Item Reviewed<br>:material-check: Children linked<br>
+☑ Item Reviewed<br>☑ Children linked<br>
 
 **Supported Requests:**
 
-- [SWD-998](SWD.md#swd-998){.item-element class="tsf-score" style="background-color:hsl(65.99999999999999, 100%, 45%)"}
+- [SWD-998](SWD.md#swd-998){.item-element class="tsf-score" style="background-color:hsl(66.0, 100%, 45%)"}
 
 **Supporting Items:**
 
@@ -84,11 +84,11 @@ Verifies SWD-998 implementation against static analysis rules.
 
 **Item Status:**
 
-:material-check: Item Reviewed<br>:material-check: Children linked<br>
+☑ Item Reviewed<br>☑ Children linked<br>
 
 **Supported Requests:**
 
-- [SWD-998](SWD.md#swd-998){.item-element class="tsf-score" style="background-color:hsl(65.99999999999999, 100%, 45%)"}
+- [SWD-998](SWD.md#swd-998){.item-element class="tsf-score" style="background-color:hsl(66.0, 100%, 45%)"}
 
 **Supporting Items:**
 
@@ -190,11 +190,11 @@ Verifies SWD-998 implementation through unit tests for motor speed functionality
 
 **Item Status:**
 
-:material-check: Item Reviewed<br>:material-check: Children linked<br>
+☑ Item Reviewed<br>☑ Children linked<br>
 
 **Supported Requests:**
 
-- [SWD-998](SWD.md#swd-998){.item-element class="tsf-score" style="background-color:hsl(65.99999999999999, 100%, 45%)"}
+- [SWD-998](SWD.md#swd-998){.item-element class="tsf-score" style="background-color:hsl(66.0, 100%, 45%)"}
 
 **Supporting Items:**
 

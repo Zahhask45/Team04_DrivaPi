@@ -2,13 +2,13 @@
 
 ---
 
-### URD-998 ### {: .item-element .item-section class="tsf-score" style="background-color:hsl(65.99999999999999, 100%, 45%)"}
+### URD-998 ### {: .item-element .item-section class="tsf-score" style="background-color:hsl(66.0, 100%, 45%)"}
 Operators need to monitor motor speed during test operations to ensure tests run within acceptable performance ranges and to detect anomalies.
 {: .expanded-item-element }
 
 **Item Status:**
 
-:material-check: Item Reviewed<br>:material-check: Children linked<br>
+☑ Item Reviewed<br>☑ Children linked<br>
 
 **Supported Requests:**
 
@@ -16,7 +16,7 @@ _None_
 
 **Supporting Items:**
 
-- [SRD-998](SRD.md#srd-998){.item-element class="tsf-score" style="background-color:hsl(65.99999999999999, 100%, 45%)"}
+- [SRD-998](SRD.md#srd-998){.item-element class="tsf-score" style="background-color:hsl(66.0, 100%, 45%)"}
 
 {% raw %}
 
