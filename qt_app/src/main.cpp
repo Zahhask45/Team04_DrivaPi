@@ -11,10 +11,7 @@
 
 int main(int argc, char *argv[])
 {
-    QGuiApplication app(argc, argv);
-
-    // Create QML engine
-    QQmlApplicationEngine engine;
+    QGuiApplication app(argc, argv)
     app.setApplicationName("DrivaPi Dashboard");
 
     // --- 1. ARGUMENT PARSING ---
@@ -32,9 +29,9 @@ int main(int argc, char *argv[])
     // Check if the user passed the argument
     bool useKuksa = parser.isSet(kuksaOption);
 
-    // Create VehicleData using QScopedPointer for automatic cleanup
+    // UI and Engine setup
+    QQmlApplicationEngine engine;
     QScopedPointer<VehicleData> vehicleData(new VehicleData());
-
     // Expose VehicleData to QML (keep ownership in C++)
     engine.rootContext()->setContextProperty("vehicleData", vehicleData.data());
 
