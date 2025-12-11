@@ -1,6 +1,6 @@
 # Implementation Report: Kuksa Middleware Infrastructure
 
-**Ref:** Issue #237 | **Status:** In Progress 
+**Ref:** Issue #237 | **Status:** Done
 **Target:** Raspberry Pi 5 (aarch64) | **Host:** seame-4
 
 ## 1. Executive Summary
