@@ -2,17 +2,29 @@
 
 void KUKSAReader::KUKSAReader
     : QObject(parent)
-{
-
-}
+{}
 
 KUKSAReader::~KUKSAReader()
-{
-
-}
+{}
 
 void KUKSAReader::start()
 {
+    //1. Connect to Broker auto channel
+    auto channel = grpc::CreateChannel("localhost:55555", grpc::InsecureChannelCredentials());
+    m_stub_ = VAL::NewStub(channel);
 
+    //2. Subscribe to speed data
+    grpc::ClientContext context;
+    SubscribeRequest request;
+
+    auto *entry = request.add_entries();
+    entry->set_path("Vehicle.Speed");
+    entry->add_fields(Field::FIELD_VALUE);
+
+    std::unique_ptr<grpc::ClientReader<SubscribeResponse>> reader(
+        m_stub_->Subscribe(&context, request));
+
+    SubscribeResponse response;
+    qDebug() << "KuksaReader: Connected and Subscribed to Vehicle.Speed";
 }
 
