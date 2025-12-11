@@ -12,6 +12,8 @@ class KUKSAReader : public QObject
 {
     Q_OBJECT
 public:
+    explicit KUKSAReader(QObject *parent = nullptr);
+    ~KUKSAReader() override;
 
 private:
 };
