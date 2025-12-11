@@ -245,3 +245,11 @@ void VehicleData::checkStaleProperties()
     }
     // Repeat for other keys if you want special handling
 }
+
+// KUKSA speed update handler
+void VehicleData::handleSpeedUpdate(float speed)
+{
+    setSpeed(speed); // updates timestamp inside
+    // debug
+    // qDebug() << "Updated speed from KUKSA (m/s):" << speed;
+}
