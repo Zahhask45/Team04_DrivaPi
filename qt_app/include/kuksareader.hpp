@@ -2,6 +2,7 @@
 #define KUKSAREADER_HPP
 
 #include <QObject>
+#include <QDebug>
 #include <grpcpp/grpcpp.h>
 #include "val.grpc.pb.h"
 
