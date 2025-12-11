@@ -58,3 +58,16 @@ dnf install kuksa-databroker
 ```
 
 **Result**: The system automatically installed the requested binaries plus the required runtime libraries (libgrpc++, libprotobuf, libabsl) into /usr/lib.
+
+## 4. Validation Results
+Acceptance Criteria were validated on the physical hardware:
+
+- [x] **Automatic Dependency Resolution**: Confirmed that libgrpc++.so was installed automatically by DNF without manual intervention.
+- [x] **Service Execution**: The broker starts correctly.
+```bash
+root@raspberrypi5:~# /usr/bin/kuksa-databroker
+# Output: Listening on 10.21.220.188:55555
+```
+## 5. Conclusion
+
+The infrastructure is ready. Using dnf ensured a clean installation managed by the OS database, avoiding "DLL Hell" or missing library issues for future updates.
