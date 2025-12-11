@@ -35,17 +35,32 @@ int main(int argc, char *argv[])
     // Expose VehicleData to QML (keep ownership in C++)
     engine.rootContext()->setContextProperty("vehicleData", vehicleData.data());
 
-    // Create CANReader and move it to its own thread if needed
-    QThread *canThread = new QThread(&app);
+    // Worker thread setup for data reading
+    QThread *workerThread = new QThread(&app);
+
+    if (useKuksa)
+    {
+        qInfo() << "Starting in KUKSA mode";
+        // KUKSA Reader setup
+        KUKSAReader *kuksareader = new KUKSAReader();
+        kuksareader->moveToThread(workerThread);
+        // Start KUKSAReader when thread starts
+        QObject::connect(workerThread, &QThread::started, kuksareader, &KUKSAReader::start);
+        // Ensure worker object is deleted when thread finishes (safe because it's a QObject)
+        QObject::connect(workerThread, &QThread::finished, kuksareader, &KUKSAReader::deleteLater);
+        // Forward speed data from KUKSAReader to VehicleData (thread-safe)
+        QObject::connect(kuksareader, &KUKSAReader::speedReceived,
+                         vehicleData.data(), &VehicleData::handleSpeedUpdate);
+    }
 
     // Use a raw pointer for the worker object (we call deleteLater on it)
     CANReader *canReader = new CANReader(QStringLiteral("can1"));
-    canReader->moveToThread(canThread);
+    canReader->moveToThread(workerThread);
 
     // Start CANReader when thread starts
-    QObject::connect(canThread, &QThread::started, canReader, &CANReader::start);
+    QObject::connect(workerThread, &QThread::started, canReader, &CANReader::start);
     // Ensure worker object is deleted when thread finishes (safe because it's a QObject)
-    QObject::connect(canThread, &QThread::finished, canReader, &CANReader::deleteLater);
+    QObject::connect(workerThread, &QThread::finished, canReader, &CANReader::deleteLater);
 
     // Forward CAN messages from thread worker to UI (thread-safe)
     QObject::connect(canReader, &CANReader::canMessageReceived,
