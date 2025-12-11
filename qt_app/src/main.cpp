@@ -5,13 +5,15 @@
 #include <QWindow>
 #include <QThread>
 #include <QPointer>
+#include <QCommandLineParser>
+#include <QCommandLineOption>
 #include "vehicledata.hpp"
 #include "canreader.hpp"
 #include "kuksareader.hpp"
 
 int main(int argc, char *argv[])
 {
-    QGuiApplication app(argc, argv)
+    QGuiApplication app(argc, argv);
     app.setApplicationName("DrivaPi Dashboard");
 
     // --- 1. ARGUMENT PARSING ---
@@ -38,23 +40,27 @@ int main(int argc, char *argv[])
     // Worker thread setup for data reading
     QThread *workerThread = new QThread(&app);
 
+    // Pointers to readers for cleanup
+    CANReader *canReader = nullptr;
+    KUKSAReader *kuksaReader = nullptr;
+
     if (useKuksa)
     {
         qInfo() << "Starting in KUKSA mode";
         // KUKSA Reader setup
-        KUKSAReader *kuksareader = new KUKSAReader();
-        kuksareader->moveToThread(workerThread);
+        kuksaReader = new KUKSAReader();
+        kuksaReader->moveToThread(workerThread);
         // Start KUKSAReader when thread starts
-        QObject::connect(workerThread, &QThread::started, kuksareader, &KUKSAReader::start);
+        QObject::connect(workerThread, &QThread::started, kuksaReader, &KUKSAReader::start);
         // Ensure worker object is deleted when thread finishes (safe because it's a QObject)
-        QObject::connect(workerThread, &QThread::finished, kuksareader, &KUKSAReader::deleteLater);
+        QObject::connect(workerThread, &QThread::finished, kuksaReader, &KUKSAReader::deleteLater);
         // Forward speed data from KUKSAReader to VehicleData (thread-safe)
-        QObject::connect(kuksareader, &KUKSAReader::speedReceived,
+        QObject::connect(kuksaReader, &KUKSAReader::speedReceived,
                          vehicleData.data(), &VehicleData::handleSpeedUpdate);
     } else {
         qInfo() << "Starting in CAN mode";
         // CAN Reader setup
-        CANReader *canReader = new CANReader(QStringLiteral("vcan0"));
+        canReader = new CANReader(QStringLiteral("vcan0"));
         canReader->moveToThread(workerThread);
         // Start CANReader when thread starts
         QObject::connect(workerThread, &QThread::started, canReader, &CANReader::start);
