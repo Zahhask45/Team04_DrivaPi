@@ -15,6 +15,13 @@ find_package(gRPC REQUIRED)
 find_program(gRPC_PLUGIN_EXECUTABLE grpc_cpp_plugin) # Tool to generate network code
 find_package(absl REQUIRED) # Google common libraries (Critical dependency)
 
+# --- Protocol Buffers Code Generation ---
+# Define paths for input (.proto) and output (generated C++)
+set(PROTO_DIR "${CMAKE_CURRENT_SOURCE_DIR}/proto")
+set(PROTO_SRCS "${PROTO_DIR}/val.proto" "${PROTO_DIR}/types.proto")
+set(GEN_DIR "${CMAKE_CURRENT_BINARY_DIR}/generated")
+file(MAKE_DIRECTORY ${GEN_DIR})
+
 file(GLOB_RECURSE APP_SOURCES
     "${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp"
 )
