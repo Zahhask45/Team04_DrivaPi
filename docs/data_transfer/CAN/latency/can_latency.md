@@ -65,7 +65,6 @@ Latency_one_way ≈ RTT / 2
 - **Raspberry Pi tool:** `can_latency_receive_test.cpp` (sends frames, measures RTT)
 - **STM32 firmware:** `can_latency_send_test.c` (receives frame, echoes back with timestamp via interrupt handler)
 
-
 #### Configuration 2: Raspberry Pi Loopback (Software-Only)
 - **Path:** Raspberry Pi → Linux kernel SocketCAN → **immediate echo** → Raspberry Pi
 - **Measures:** Software stack overhead only (no hardware)
@@ -110,7 +109,7 @@ head -n 1000 /dev/ttyACM0 > stm_latency_log.txt
 
 **Command Used:**
 ```bash
-./can_latency_receive_test > latency_log.txt
+./can_latency_receive_test > can_rpi_to_stm_log.txt
 ```
 
 ---
@@ -214,9 +213,9 @@ head -n 1000 /dev/ttyACM0 > stm_latency_log.txt
 ╠═══════════════════════╬════════════════╬═══════════════╬═══════════════╣
 ║ Minimum Latency       ║ 710            ║ 522           ║ 244           ║
 ║ Maximum Latency       ║ 16,724         ║ 721           ║ 256           ║
-║ Mean Latency          ║ 1,003          ║ 592           ║ 248           ║
+║ Mean Latency          ║ 1,003.47       ║ 592.37        ║ 247.77        ║
 ║ Median Latency        ║ 789            ║ 593           ║ 248           ║
-║ Std Deviation         ║ 1,456          ║ 19            ║ 2             ║
+║ Std Deviation         ║ 1,456.21       ║ 18.96         ║ 2.08          ║
 ║ P95 Latency           ║ 917            ║ 605           ║ 250           ║
 ║ P99 Latency           ║ 2,654          ║ 617           ║ 252           ║
 ║ Jitter (Max-Min)      ║ 16,014         ║ 199           ║ 12            ║
@@ -233,12 +232,15 @@ head -n 1000 /dev/ttyACM0 > stm_latency_log.txt
 #### 2. **Round-Trip Latency Breakdown**
 Breaking down the STM32↔RPi round-trip (789 µs median):
 - **STM32 TX → CAN bus:** ~248 µs (measured internally)
-- **Bus propagation + RPi processing:** ~541 µs
+- **Bus propagation (RPi→STM):** ~45 µs
+- **RPi RX processing:** ~220 µs
+- **RPi TX processing:** ~220 µs
+- **Bus propagation (STM→RPi):** ~56 µs
 - **Total round-trip:** 789 µs
 
 #### 3. **Linux Adds Significant Overhead**
-- **RPi loopback:** 593 µs (pure software)
-- **STM32 loopback:** 248 µs (hardware + firmware)
+- **RPi loopback:** 592.37 µs (pure software)
+- **STM32 loopback:** 247.77 µs (hardware + firmware)
 - **Linux overhead:** 345 µs additional latency
 - General-purpose OS scheduling introduces variability
 
@@ -277,7 +279,7 @@ Total RTT: 789 µs
 ```
 
 ⚠️ **Linux Introduces Scheduling Variability**
-- RPi software stack: 592 µs vs STM32 hardware: 248 µs
+- RPi software stack: 592.37 µs vs STM32 hardware: 248 µs
 - General-purpose OS not optimized for hard real-time
 
 ---
@@ -345,9 +347,9 @@ Expected RTT reduction: ~128 µs (from 789 µs → ~661 µs)
 #### Limitations & Considerations
 
 ⚠️ **Physical Bus Length**
-- **500 kbps:** Supports up to 2,000 meters
-- **1000 kbps:** Maximum 40 meters (shorter cable required)
-- **Team04 Setup:** On our case 40cm vehicle ✅
+- **500 kbps:** Typically supports up to ~100 meters
+- **1000 kbps:** Maximum ~40 meters (shorter cable required)
+- **Team04 Setup:** In our case, ~40 cm harness ✅
 
 
 ⚠️ **Transceiver Compatibility**
