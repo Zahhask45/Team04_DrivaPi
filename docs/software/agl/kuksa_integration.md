@@ -29,3 +29,11 @@ bitbake kuksa-databroker grpc protobuf abseil-cpp
 4. `abseil-cpp` (CRITICAL):
     - Issue: gRPC has a hard dependency on Google Abseil.
     - Action: Explicitly added abseil-cpp to the bitbake target. Without this, shared objects (.so) are not generated, causing Linker errors in the Qt application
+
+### C. Repository Generation To enable dnf usage, the package index was explicitly updated on the host:
+```bash
+
+bitbake package-index -c package_index
+```
+
+This ensures that the tmp/deploy/rpm directory contains valid metadata for the package manager.
