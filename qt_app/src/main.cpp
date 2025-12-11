@@ -14,6 +14,7 @@ int main(int argc, char *argv[])
 
     // Create QML engine
     QQmlApplicationEngine engine;
+    app.setApplicationName("DrivaPi Dashboard");
 
     // Create VehicleData using QScopedPointer for automatic cleanup
     QScopedPointer<VehicleData> vehicleData(new VehicleData());
