@@ -51,47 +51,43 @@ int main(int argc, char *argv[])
         // Forward speed data from KUKSAReader to VehicleData (thread-safe)
         QObject::connect(kuksareader, &KUKSAReader::speedReceived,
                          vehicleData.data(), &VehicleData::handleSpeedUpdate);
+    } else {
+        qInfo() << "Starting in CAN mode";
+        // CAN Reader setup
+        CANReader *canReader = new CANReader(QStringLiteral("can1"));
+        canReader->moveToThread(workerThread);
+        // Start CANReader when thread starts
+        QObject::connect(workerThread, &QThread::started, canReader, &CANReader::start);
+        // Ensure worker object is deleted when thread finishes (safe because it's a QObject)
+        QObject::connect(workerThread, &QThread::finished, canReader, &CANReader::deleteLater);
+
+        // Forward CAN messages from thread worker to UI (thread-safe)
+        QObject::connect(canReader, &CANReader::canMessageReceived,
+                        vehicleData.data(), &VehicleData::handleCanMessage,
+                        Qt::QueuedConnection);
     }
 
-    // Use a raw pointer for the worker object (we call deleteLater on it)
-    CANReader *canReader = new CANReader(QStringLiteral("can1"));
-    canReader->moveToThread(workerThread);
+    workerThread->start();
 
-    // Start CANReader when thread starts
-    QObject::connect(workerThread, &QThread::started, canReader, &CANReader::start);
-    // Ensure worker object is deleted when thread finishes (safe because it's a QObject)
-    QObject::connect(workerThread, &QThread::finished, canReader, &CANReader::deleteLater);
-
-    // Forward CAN messages from thread worker to UI (thread-safe)
-    QObject::connect(canReader, &CANReader::canMessageReceived,
-                     vehicleData.data(), &VehicleData::handleCanMessage,
-                     Qt::QueuedConnection);
-
-    // Handle CANReader errors (lambda - no capture needed here)
-    QObject::connect(canReader, &CANReader::errorOccurred, [](const QString &msg)
-    {
-        qWarning() << "CANReader error:" << msg;
-    });
-
-    // Start the CAN thread
-    canThread->start();
-
-    // Clean up thread and worker on app exit. Capture raw pointers by value.
-    QObject::connect(&app, &QCoreApplication::aboutToQuit, [canThread, canReader]() {
-        // ask the thread worker to stop reading CAN messages (queued to worker thread)
-        QMetaObject::invokeMethod(canReader, "stop", Qt::QueuedConnection);
-
-        // request thread to quit its event loop
-        canThread->quit();
-
-        // wait for thread to finish
-        if (!canThread->wait(2000)) {
-            qWarning() << "CAN thread did not quit in 2 seconds, terminating";
-            canThread->terminate();
-            canThread->wait();
+    // CLEANUP HANDLING
+    QObject::connect(&app, &QCoreApplication::aboutToQuit, [workerThread, canReader, kuksaReader]() {
+        if (canReader)
+        {
+            // ask CAN reader to stop
+            QMetaObject::invokeMethod(canReader, "stop", Qt::QueuedConnection);
         }
-        // delete the thread (worker will be deleted via deleteLater)
-        delete canThread;
+        if (workerThread)
+        {
+            workerThread->quit();
+            // wait for thread to finish
+            if (!workerThread->wait(2000)) {
+                qWarning() << "Worker thread did not quit in 2 seconds, terminating";
+                workerThread->terminate();
+                workerThread->wait();
+            }
+            // delete the thread (worker will be deleted via deleteLater)
+            delete workerThread;
+        }
     });
 
     // Load main QML file
