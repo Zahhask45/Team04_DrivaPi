@@ -45,8 +45,10 @@ int main() {
     struct sockaddr_can addr;
     addr.can_family = AF_CAN;
     addr.can_ifindex = ifr.ifr_ifindex;
-    if (bind(s, (struct sockaddr *)&addr, sizeof(addr)) < 0) 
-        perror("bind"); return 1;
+    if (bind(s, (struct sockaddr *)&addr, sizeof(addr)) < 0) { 
+        perror("bind"); 
+        return 1;
+    }
 
     struct can_frame frame, rx;
     frame.can_id = 0x123;
