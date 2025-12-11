@@ -60,7 +60,7 @@ int main(int argc, char *argv[])
     } else {
         qInfo() << "Starting in CAN mode";
         // CAN Reader setup
-        canReader = new CANReader(QStringLiteral("vcan0"));
+        canReader = new CANReader(QStringLiteral("can1"));
         canReader->moveToThread(workerThread);
         // Start CANReader when thread starts
         QObject::connect(workerThread, &QThread::started, canReader, &CANReader::start);
