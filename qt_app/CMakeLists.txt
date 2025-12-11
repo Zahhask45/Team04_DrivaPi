@@ -58,7 +58,14 @@ target_sources(myqtapp PRIVATE
     "${GEN_DIR}/types.pb.cc"
 )
 
-target_link_libraries(myqtapp PRIVATE Qt6::Core Qt6::Gui Qt6::Quick Qt6::Qml Qt6::QuickControls2 Qt6::SerialBus)
+target_link_libraries(myqtapp PRIVATE
+    Qt6::Core Qt6::Gui Qt6::Quick Qt6::Qml Qt6::QuickControls2 Qt6::SerialBus
+    gRPC::grpc++           # The gRPC Transport Layer
+    protobuf::libprotobuf  # The Serialization Library
+    absl::base             # Abseil Base (Required by gRPC)
+    absl::strings          # Abseil Strings
+    absl::log_internal_check_op # <--- Critical fix for "Undefined Symbol" linker errors
+)
 
 
 install(TARGETS myqtapp RUNTIME DESTINATION bin)
