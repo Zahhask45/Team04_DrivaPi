@@ -9,6 +9,12 @@ set(CMAKE_AUTOUIC ON)
 # Use Qt6
 find_package(Qt6 REQUIRED COMPONENTS Core Gui Quick Qml QuickControls2 SerialBus)
 
+# --- Find Kuksa Middleware Dependencies ---
+find_package(Protobuf REQUIRED)
+find_package(gRPC REQUIRED)
+find_program(gRPC_PLUGIN_EXECUTABLE grpc_cpp_plugin) # Tool to generate network code
+find_package(absl REQUIRED) # Google common libraries (Critical dependency)
+
 file(GLOB_RECURSE APP_SOURCES
     "${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp"
 )
