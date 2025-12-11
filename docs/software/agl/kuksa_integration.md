@@ -37,3 +37,24 @@ bitbake package-index -c package_index
 ```
 
 This ensures that the tmp/deploy/rpm directory contains valid metadata for the package manager.
+
+## 3. Deployment Strategy (Target)
+
+We utilized the AGL Package Manager (DNF). This method is superior as it automatically handles transitive dependencies (e.g., installing the broker automatically pulls the correct libgrpc version).
+
+Installation Procedure on Raspberry Pi:
+
+1. **Clean Cache**: Removed old metadata to ensure the new custom packages are visible.
+```bash
+dnf clean all
+```
+2. **Update Metadata**: Downloaded the new package lists from the Host's package feed.
+```bash
+dnf makecache
+```
+3. **Package Installation**: Installed the broker and client tools.
+```bash
+dnf install kuksa-databroker
+```
+
+**Result**: The system automatically installed the requested binaries plus the required runtime libraries (libgrpc++, libprotobuf, libabsl) into /usr/lib.
