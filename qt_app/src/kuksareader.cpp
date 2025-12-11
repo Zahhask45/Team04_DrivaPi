@@ -26,5 +26,18 @@ void KUKSAReader::start()
 
     SubscribeResponse response;
     qDebug() << "KuksaReader: Connected and Subscribed to Vehicle.Speed";
+
+    //3. Loop to read incoming speed data (blocking call so run in separate thread (QThread))
+    while(reader->Read(&response))
+    {
+        for (const auto &update : response.updates())
+        {
+                if (update.entry().path() == "Vehicle.Speed")
+                {
+                    float speed = update.entry().value().float_();
+                    emit speedReceived(speed);
+                }
+        }
+    }
 }
 
