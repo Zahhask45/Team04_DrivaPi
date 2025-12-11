@@ -22,6 +22,20 @@ set(PROTO_SRCS "${PROTO_DIR}/val.proto" "${PROTO_DIR}/types.proto")
 set(GEN_DIR "${CMAKE_CURRENT_BINARY_DIR}/generated")
 file(MAKE_DIRECTORY ${GEN_DIR})
 
+# Command to auto-generate C++ sources from .proto files before compilation
+add_custom_command(
+    OUTPUT "${GEN_DIR}/val.pb.cc" "${GEN_DIR}/val.pb.h" 
+           "${GEN_DIR}/val.grpc.pb.cc" "${GEN_DIR}/val.grpc.pb.h"
+           "${GEN_DIR}/types.pb.cc" "${GEN_DIR}/types.pb.h"
+    # Step 1: Generate gRPC Network Stubs
+    COMMAND ${Protobuf_PROTOC_EXECUTABLE} 
+    ARGS --grpc_out=${GEN_DIR} --plugin=protoc-gen-grpc=${gRPC_PLUGIN_EXECUTABLE} -I${PROTO_DIR} ${PROTO_SRCS}
+    # Step 2: Generate Data Serialization Classes
+    COMMAND ${Protobuf_PROTOC_EXECUTABLE} 
+    ARGS --cpp_out=${GEN_DIR} -I${PROTO_DIR} ${PROTO_SRCS}
+    DEPENDS ${PROTO_SRCS}
+)
+
 file(GLOB_RECURSE APP_SOURCES
     "${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp"
 )
