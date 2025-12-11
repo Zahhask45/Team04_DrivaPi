@@ -44,6 +44,7 @@ add_executable(myqtapp ${APP_SOURCES})
 
 target_include_directories(myqtapp PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/include
+    ${GEN_DIR}
 )
 
 target_sources(myqtapp PRIVATE
@@ -51,6 +52,10 @@ target_sources(myqtapp PRIVATE
     "${CMAKE_CURRENT_SOURCE_DIR}/resources/resources.qrc"
     "${CMAKE_CURRENT_SOURCE_DIR}/include/vehicledata.hpp"
     "${CMAKE_CURRENT_SOURCE_DIR}/include/canreader.hpp"  
+    "${CMAKE_CURRENT_SOURCE_DIR}/include/kuksareader.hpp"
+    "${GEN_DIR}/val.pb.cc"
+    "${GEN_DIR}/val.grpc.pb.cc"
+    "${GEN_DIR}/types.pb.cc"
 )
 
 target_link_libraries(myqtapp PRIVATE Qt6::Core Qt6::Gui Qt6::Quick Qt6::Qml Qt6::QuickControls2 Qt6::SerialBus)
