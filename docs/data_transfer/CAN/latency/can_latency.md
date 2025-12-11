@@ -300,9 +300,6 @@ Total RTT: 789 µs
 | `can_latency_send_test.c` | STM32 firmware that receives and echoes back frames with timestamp |
 | `stm32_latency_loopback.c` | STM32 internal loopback measurement (self-test) |
 | `calc_average.cpp` | Utility to calculate average latency from log files |
-| `can_rpi_to_stm_log.txt` | STM32↔RPi round-trip results (1000 samples) |
-| `can_rpi_loopback_log.txt` | RPi loopback results (1000 samples) |
-| `can_stm32_loopback_log.txt` | STM32 internal loopback results (1000 samples) |
 | `can_latency.md` | This document |
 
 ---
