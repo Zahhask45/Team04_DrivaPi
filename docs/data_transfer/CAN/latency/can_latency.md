@@ -136,7 +136,7 @@ head -n 1000 /dev/ttyACM0 > stm_latency_log.txt
 ```bash
 sudo ip link add dev can-virt type vcan
 sudo ip link set can-virt up
-./can_latency_receive_test > can_lat_loop_log.txt
+./can_latency_receive_test > can_rpi_loopback_log.txt
 ```
 
 ---
