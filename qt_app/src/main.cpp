@@ -7,6 +7,7 @@
 #include <QPointer>
 #include "vehicledata.hpp"
 #include "canreader.hpp"
+#include "kuksareader.hpp"
 
 int main(int argc, char *argv[])
 {
@@ -15,6 +16,21 @@ int main(int argc, char *argv[])
     // Create QML engine
     QQmlApplicationEngine engine;
     app.setApplicationName("DrivaPi Dashboard");
+
+    // --- 1. ARGUMENT PARSING ---
+    QCommandLineParser parser;
+    parser.setApplicationDescription("Hybrid Dashboard (CAN / Kuksa)");
+    parser.addHelpOption();
+    
+    // Define the "--kuksa" or "-k" option
+    QCommandLineOption kuksaOption(QStringList() << "k" << "kuksa", 
+        "Enable Kuksa mode (gRPC). Defaults to CAN if omitted.");
+    parser.addOption(kuksaOption);
+    
+    parser.process(app);
+    
+    // Check if the user passed the argument
+    bool useKuksa = parser.isSet(kuksaOption);
 
     // Create VehicleData using QScopedPointer for automatic cleanup
     QScopedPointer<VehicleData> vehicleData(new VehicleData());
