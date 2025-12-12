@@ -85,7 +85,7 @@ void CANReader::handleFramesReceived()
         uint32_t canId = static_cast<uint32_t>(frame.frameId());
         
         //LATENCY TESTING CODE - REMOVE LATER
-        qint64 t1 = QDateTime::currentMSecsSinceEpoch().setprecision(6);
+        qint64 t1 = QDateTime::currentMSecsSinceEpoch();
         qDebug() << "CANReader: Received CAN frame ID=0x" << QString::number(canId, 16) << " at " << t1;
         //END LATENCY TESTING CODE
         

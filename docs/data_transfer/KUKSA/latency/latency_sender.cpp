@@ -2,18 +2,22 @@
 #include <linux/can.h>
 #include <linux/can/raw.h>
 #include <sys/socket.h>
+#include <sys/ioctl.h>
 #include <net/if.h>
 #include <unistd.h>
 #include <cstring>
 #include <random>
 #include <chrono>
+#include <thread>
+#include <iomanip>
 
 
 const char* INTERFACE = "vcan0";
 const int NUM_SAMPLES = 1000;
 const int DELAY_MS = 10;
 
-int main() {
+int main()
+{
     std::cout << "Starting latency sender on interface: " << INTERFACE << std::endl;
     std::cout << "Using floats (4 bytes) for data transfer." << std::endl;
 
@@ -46,7 +50,8 @@ int main() {
 
     std::random_device rd; // Hardware random number generator
     std::mt19937 gen(rd()); // Mersenne Twister engine
-    std::uniform_real_distribution<float> dis(0.0, 100.0); // Random speeds between 0.0 and 100.0
+    // Random speeds between 0.0 and 100.0
+    std::uniform_real_distribution<float> dis(0.0, 100.0);
 
     std::cout << std::fixed <<std::setprecision(6);
     for (int i = 0; i < NUM_SAMPLES; ++i)
