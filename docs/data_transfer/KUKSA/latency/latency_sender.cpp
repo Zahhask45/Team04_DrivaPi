@@ -6,6 +6,7 @@
 #include <unistd.h>
 #include <cstring>
 #include <random>
+#include <chrono>
 
 
 const char* INTERFACE = "vcan0";
@@ -47,5 +48,18 @@ int main() {
     std::mt19937 gen(rd()); // Mersenne Twister engine
     std::uniform_real_distribution<float> dis(0.0, 100.0); // Random speeds between 0.0 and 100.0
 
+    std::cout << std::fixed <<std::setprecision(6);
+    for (int i = 0; i < NUM_SAMPLES; ++i)
+    {
+        struct can_frame frame;
+        frame.can_id = 0x100; // CAN ID for speed data
+        frame.can_dlc = sizeof(float); // Data length code
+
+        float speed = dis(gen);
+
+        std::memcpy(frame.data, &speed, sizeof(float));
+
+        auto now = std::chrono::system_clock::now();
+    }
     return 0;
 }
