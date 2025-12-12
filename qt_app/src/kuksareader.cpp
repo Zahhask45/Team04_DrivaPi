@@ -39,7 +39,7 @@ void KUKSAReader::start()
                     float speed = update.entry().value().float_();
                     
                     //LATENCY TESTING CODE - REMOVE LATER
-                    qint64 t1 = QDateTime::currentMSecsSinceEpoch();
+                    qint64 t1 = QDateTime::currentMSecsSinceEpoch().setprecision(6);
                     qDebug() << "KuksaReader: Received speed:" << speed << " at " << t1;
                     //END LATENCY TESTING CODE
 
