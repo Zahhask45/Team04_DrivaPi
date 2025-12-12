@@ -4,9 +4,14 @@
 #include <sys/socket.h>
 #include <net/if.h>
 #include <unistd.h>
+#include <cstring>
+#include <random>
 
 
 const char* INTERFACE = "vcan0";
+const int NUM_SAMPLES = 1000;
+const int DELAY_MS = 10;
+
 int main() {
     std::cout << "Starting latency sender on interface: " << INTERFACE << std::endl;
     std::cout << "Using floats (4 bytes) for data transfer." << std::endl;
@@ -37,6 +42,10 @@ int main() {
         std::cerr << "Error in socket bind" << std::endl;
         return 1;
     }
-    
+
+    std::random_device rd; // Hardware random number generator
+    std::mt19937 gen(rd()); // Mersenne Twister engine
+    std::uniform_real_distribution<float> dis(0.0, 100.0); // Random speeds between 0.0 and 100.0
+
     return 0;
 }
