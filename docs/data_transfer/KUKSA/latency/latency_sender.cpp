@@ -21,5 +21,22 @@ int main() {
         return 1;
     }
     
+    std::strcpy(ifr.ifr_name, INTERFACE);
+    if (ioctl(s, SIOCGIFINDEX, &ifr) < 0)
+    {
+        std::cerr << "Error getting interface index" << std::endl;
+        return 1;
+    }
+
+    std::memset(&addr, 0, sizeof(addr));
+    addr.can_family = AF_CAN;
+    addr.can_ifindex = ifr.ifr_ifindex;
+
+    if (bind(s, (struct sockaddr *)&addr, sizeof(addr)) < 0)
+    {
+        std::cerr << "Error in socket bind" << std::endl;
+        return 1;
+    }
+    
     return 0;
 }
