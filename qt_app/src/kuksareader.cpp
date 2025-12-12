@@ -1,4 +1,6 @@
 #include "kuksareader.hpp"
+//QDateTime for latency testing - remove later
+#include <QDateTime>
 
 KUKSAReader::KUKSAReader(QObject *parent)
     : QObject(parent)
@@ -40,7 +42,7 @@ void KUKSAReader::start()
                     qint64 t1 = QDateTime::currentMSecsSinceEpoch();
                     qDebug() << "KuksaReader: Received speed:" << speed << " at " << t1;
                     //END LATENCY TESTING CODE
-                    
+
                     emit speedReceived(speed);
                 }
         }
