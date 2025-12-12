@@ -60,6 +60,16 @@ int main() {
         std::memcpy(frame.data, &speed, sizeof(float));
 
         auto now = std::chrono::system_clock::now();
+        double timestamp = std::chrono::duration<double>(now.time_since_epoch()).count();
+
+        if (write(s, &frame, sizeof(struct can_frame)) != sizeof(struct can_frame))
+        {
+            std::cerr << "Error in CAN frame write" << std::endl;
+            break;
+        }
+        std::cout << "Sent speed: " << speed << " at timestamp: " << timestamp << std::endl;
+        
+        std::this_thread::sleep_for(std::chrono::milliseconds(DELAY_MS));
     }
     return 0;
 }
