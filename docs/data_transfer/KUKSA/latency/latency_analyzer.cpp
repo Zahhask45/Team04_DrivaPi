@@ -29,8 +29,17 @@ Sample parseSenderLogLine(const std::string &line, float &speed, double& timesta
     return (!iss.fail());
 }
 
-int main()
+int main(int argc, char **argv)
 {
+    if (argc != 3)
+    {
+        std::cerr << "Usage: latency_analyzer <sender_log_file> <receiver_log_file>" << std::endl;
+        return 1;
+    }
+
+    std::string senderFile = argv[1];
+    std::string receiverFile = argv[2];
+    
     std::cout << "Latency Analyzer" << std::endl;
     return 0;
 }
