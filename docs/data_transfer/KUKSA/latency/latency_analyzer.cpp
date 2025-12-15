@@ -39,7 +39,20 @@ int main(int argc, char **argv)
 
     std::string senderFile = argv[1];
     std::string receiverFile = argv[2];
+
+    std::string outputFile = receiverFile;
+    size_t lastdot = outputFile.find_last_of(".");
+    if (lastdot != std::string::npos)
+    {
+        outputFile = outputFile.substr(0, lastdot);
+    }
+    outputFile += "_analyzed.csv";
+
+    std::cout << "Analyzing latency from sender log: " << senderFile << " and receiver log: " << receiverFile << std::endl;
+    std::cout << "Output will be saved to: " << outputFile << std::endl;
+
     
-    std::cout << "Latency Analyzer" << std::endl;
+
+
     return 0;
 }
