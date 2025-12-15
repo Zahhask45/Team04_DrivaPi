@@ -135,7 +135,7 @@ int main(int argc, char **argv)
 
     // Write analysis to output CSV
     std::ofstream outFile(outputFile);
-    std:vector<double> latencies;
+    std::vector<double> latencies;
 
     outFile << "Speed (m/s),Sent Timestamp (s),Received Timestamp (s),Latency (ms)" << std::endl;
     for (const auto &[key, sample] : database)
