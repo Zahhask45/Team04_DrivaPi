@@ -15,47 +15,85 @@ struct Sample
     double t0; // timestamp when sent
     double t1; // timestamp when received
     bool received;
-};
+}; // <--- CORREÇÃO: Faltava o ponto e vírgula aqui
 
-// Function to parse a line from the receiver log
+// Variável global para guardar o timestamp do CAN (pois aparece na linha anterior ao valor)
+double g_lastCanTimestamp = 0.0;
+
+// Function to parse a line from the receiver log (Handles both KUKSA and CAN formats)
 bool parseReceiverLogLine(const std::string &line, float &speed, double& timestamp)
 {
-    std::istringstream iss(line);
+    std::stringstream iss(line);
     std::string temp;
 
+    // --- CASO 1: KUKSA ---
+    // Formato: "KuksaReader: Received speed: 89.7408 at 1765553552797"
     if (line.find("Received speed:") != std::string::npos)
     {
-        iss >> temp >> temp >> temp; // Skip "KuksaReader:" "Received" "speed:" 
+        // Ignorar tudo até encontrar "speed:"
+        while (iss >> temp && temp != "speed:") {} 
+        
         if (iss.fail()) return false;
         iss >> speed;
         iss >> temp; // Skip "at"
-
         iss >> timestamp;
         timestamp /= 1000.0; // Convert ms to s 
-        return (true);
+        return true;
     }
+
+    // --- CASO 2: CAN (Parte 1 - Ler Timestamp) ---
+    // Formato: "CANReader: Received CAN frame ... at 1765553122792"
+    if (line.find("CANReader: Received CAN frame") != std::string::npos && line.find("at") != std::string::npos)
+    {
+        // Encontrar a posição de "at" e ler o número a seguir
+        size_t pos = line.rfind("at");
+        std::string tsStr = line.substr(pos + 3);
+        try {
+            g_lastCanTimestamp = std::stod(tsStr);
+        } catch(...) {}
+        return false; // Ainda não temos a velocidade, só guardamos o tempo
+    }
+
+    // --- CASO 2: CAN (Parte 2 - Ler Velocidade) ---
+    // Formato: "Speed set to (m/s): 49.459"
+    if (line.find("Speed set to") != std::string::npos)
+    {
+        // Ignorar tudo até encontrar "(m/s):"
+        while (iss >> temp && temp != "(m/s):") {}
+        if (iss.fail()) return false;
+
+        iss >> speed;
+        // Usar o timestamp guardado na linha anterior
+        timestamp = g_lastCanTimestamp / 1000.0; 
+        return true;
+    }
+
     return false;
 }
 
+// Function to parse line from Sender log
 bool parseSenderLogLine(const std::string &line, float &speed, double& timestamp)
 {
-    std::istringstream iss(line);
+    std::stringstream iss(line);
     std::string temp;
     
-    iss >> temp >> temp; // Skip "Sender:" and "Sent"
-    if (iss.fail()) return false;
-    iss >> speed;
-    iss >> temp >> temp; // Skip "at" "timestamp:"
-
-    iss >> timestamp;
-    return (!iss.fail());
+    // Formato: "Sent speed: 49.459... at timestamp: 12345..."
+    if (line.find("Sent speed:") != std::string::npos) {
+        iss >> temp >> temp; // Skip "Sent" "speed:"
+        if (iss.fail()) return false;
+        iss >> speed;
+        iss >> temp >> temp; // Skip "at" "timestamp:"
+        iss >> timestamp;
+        return true;
+    }
+    return false;
 }
 
 int main(int argc, char **argv)
 {
     if (argc != 3)
     {
-        std::cerr << "Usage: latency_analyzer <sender_log_file> <receiver_log_file>" << std::endl;
+        std::cerr << "Usage: ./latency_analyzer <sender_log_file> <receiver_log_file>" << std::endl;
         return 1;
     }
 
@@ -75,7 +113,7 @@ int main(int argc, char **argv)
 
     std::map<int, Sample> database;
 
-    // Read sender log
+    // 1. Read sender log
     std::ifstream senderLog(senderFile);
     if (!senderLog.is_open())
     {
@@ -94,18 +132,19 @@ int main(int argc, char **argv)
             Sample sample;
             sample.speed = speed;
             sample.t0 = t0;
+            sample.t1 = 0.0;
             sample.received = false;
 
-            int key = std::round(speed * 1000); // Use speed in mm/s as key
+            // Usar arredondamento x100 para tolerar pequenas diferenças de float
+            int key = std::round(speed * 100); 
             database[key] = sample;
             sentCount++;
         }
     }
     senderLog.close();
-
     std::cout << "Total samples sent: " << sentCount << std::endl;
 
-    // Read receiver log
+    // 2. Read receiver log
     std::ifstream receiverLog(receiverFile);
     if (!receiverLog.is_open())
     {
@@ -117,15 +156,19 @@ int main(int argc, char **argv)
     {
         float speed;
         double t1;
-        if (parseSenderLogLine(line, speed, t1))
+        // CORREÇÃO: Usar a função de parse do Receiver, não do Sender
+        if (parseReceiverLogLine(line, speed, t1))
         {
-            int key = std::round(speed * 1000);
+            int key = std::round(speed * 100);
             auto it = database.find(key);
             if (it != database.end())
             {
-                it->second.t1 = t1;
-                it->second.received = true;
-                receivedCount++;
+                // Só processa se ainda não foi recebido (evita duplicados)
+                if (!it->second.received) {
+                    it->second.t1 = t1;
+                    it->second.received = true;
+                    receivedCount++;
+                }
             }
         }
     }
@@ -133,9 +176,9 @@ int main(int argc, char **argv)
 
     std::cout << "Total samples received: " << receivedCount << std::endl;
 
-    // Write analysis to output CSV
+    // 3. Write analysis to output CSV
     std::ofstream outFile(outputFile);
-    std::vector<double> latencies;
+    std::vector<double> latencies; // CORREÇÃO: std::vector
 
     outFile << "Speed (m/s),Sent Timestamp (s),Received Timestamp (s),Latency (ms)" << std::endl;
     for (const auto &[key, sample] : database)
@@ -143,14 +186,16 @@ int main(int argc, char **argv)
         if (sample.received)
         {
             double latency = (sample.t1 - sample.t0) * 1000.0; // Convert to ms
-            if (latency > -1000 && latency < 10000) // Filter out unreasonable latencies
+            
+            // Filtro para remover valores absurdos (ex: dessincronia de relógio)
+            if (latency > -1000 && latency < 10000) 
             {
                 latencies.push_back(latency);
                 outFile << std::fixed << std::setprecision(3)
                         << sample.speed << ","
-                        << sample.t0 << ","
+                        << std::setprecision(6) << sample.t0 << ","
                         << sample.t1 << ","
-                        << latency << std::endl;
+                        << std::setprecision(3) << latency << std::endl;
             }
         }
     }
@@ -190,7 +235,7 @@ int main(int argc, char **argv)
         std::cout << "Total Samples Received: " << receivedCount << std::endl;
         std::cout << "Packet lost: "<< std::fixed << std::setprecision(2)<< lossRate << " %" << std::endl;
         std::cout << "==========================" << std::endl;
-        std::cout << "Average Latency: " << avgLatency << " ms" << std::endl;
+        std::cout << "Average Latency: " << std::fixed << std::setprecision(3) << avgLatency << " ms" << std::endl;
         std::cout << "Minimum Latency: " << minLatency << " ms" << std::endl;
         std::cout << "Maximum Latency: " << maxLatency << " ms" << std::endl;
         std::cout << "Standard Deviation: " << stddevLatency << " ms" << std::endl;
