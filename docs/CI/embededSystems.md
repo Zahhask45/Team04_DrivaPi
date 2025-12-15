@@ -410,23 +410,6 @@ continuestart:
 
 ---
 
-## S-Record and Flash Programming
-
-### **Configuration-Dependent Addressing**
-
-**Configuration 1: Boot at Address 0**
-- S-record CPU-relative addresses = flash device addresses
-- Works seamlessly
-
-**Configuration 2: Boot at Non-Zero Address**
-- Example: CPU boots at 0x8F000000
-- S-record has addresses starting at 0x8F000000 (CPU view)
-- **Problem:** Flash programmer sees addresses 0x00000000-based
-- **Solution:** Post-processing to adjust S-record addresses
-- **Recommendation:** Use raw binary files instead to avoid complexity
-
----
-
 ## Exception Handling
 
 ### **Exception Vector Table Setup**
