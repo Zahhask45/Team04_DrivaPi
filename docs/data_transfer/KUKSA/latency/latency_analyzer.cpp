@@ -15,9 +15,9 @@ struct Sample
     double t0; // timestamp when sent
     double t1; // timestamp when received
     bool received;
-}; // <--- CORREÇÃO: Faltava o ponto e vírgula aqui
+}; 
 
-// Variável global para guardar o timestamp do CAN (pois aparece na linha anterior ao valor)
+// Global variable to store CAN timestamp (because it appears on the line before the speed value)
 double g_lastCanTimestamp = 0.0;
 
 // Function to parse a line from the receiver log (Handles both KUKSA and CAN formats)
@@ -26,11 +26,11 @@ bool parseReceiverLogLine(const std::string &line, float &speed, double& timesta
     std::stringstream iss(line);
     std::string temp;
 
-    // --- CASO 1: KUKSA ---
-    // Formato: "KuksaReader: Received speed: 89.7408 at 1765553552797"
+    // --- CASE 1: KUKSA ---
+    // Format: "KuksaReader: Received speed: 89.7408  at  1765553552797"
     if (line.find("Received speed:") != std::string::npos)
     {
-        // Ignorar tudo até encontrar "speed:"
+        // Skip until "speed:"
         while (iss >> temp && temp != "speed:") {} 
         
         if (iss.fail()) return false;
@@ -41,31 +41,36 @@ bool parseReceiverLogLine(const std::string &line, float &speed, double& timesta
         return true;
     }
 
-    // --- CASO 2: CAN (Parte 1 - Ler Timestamp) ---
-    // Formato: "CANReader: Received CAN frame ... at 1765553122792"
+    // --- CASE 2: CAN (Part 1 - Timestamp) ---
+    // Format: "CANReader: Received CAN frame ID=0x "100"  at  1765553122792"
     if (line.find("CANReader: Received CAN frame") != std::string::npos && line.find("at") != std::string::npos)
     {
-        // Encontrar a posição de "at" e ler o número a seguir
+        // Find position of "at" and read the number immediately following it
         size_t pos = line.rfind("at");
-        std::string tsStr = line.substr(pos + 3);
-        try {
-            g_lastCanTimestamp = std::stod(tsStr);
-        } catch(...) {}
-        return false; // Ainda não temos a velocidade, só guardamos o tempo
+        if (pos != std::string::npos) {
+            std::string tsStr = line.substr(pos + 2); // +2 to skip "at"
+            try {
+                g_lastCanTimestamp = std::stod(tsStr);
+            } catch(...) {}
+        }
+        return false; // We don't have the speed yet, only the time
     }
 
-    // --- CASO 2: CAN (Parte 2 - Ler Velocidade) ---
-    // Formato: "Speed set to (m/s): 49.459"
+    // --- CASE 2: CAN (Part 2 - Speed Value) ---
+    // Format: "Speed set to (m/s): 49.459"
     if (line.find("Speed set to") != std::string::npos)
     {
-        // Ignorar tudo até encontrar "(m/s):"
+        // Skip until "(m/s):"
         while (iss >> temp && temp != "(m/s):") {}
         if (iss.fail()) return false;
 
         iss >> speed;
-        // Usar o timestamp guardado na linha anterior
-        timestamp = g_lastCanTimestamp / 1000.0; 
-        return true;
+        
+        // Use the timestamp stored from the previous line
+        if (g_lastCanTimestamp > 0.0) {
+            timestamp = g_lastCanTimestamp / 1000.0; 
+            return true;
+        }
     }
 
     return false;
@@ -77,7 +82,7 @@ bool parseSenderLogLine(const std::string &line, float &speed, double& timestamp
     std::stringstream iss(line);
     std::string temp;
     
-    // Formato: "Sent speed: 49.459... at timestamp: 12345..."
+    // Format: "Sent speed: 49.459042 at timestamp: 1765553122.791886"
     if (line.find("Sent speed:") != std::string::npos) {
         iss >> temp >> temp; // Skip "Sent" "speed:"
         if (iss.fail()) return false;
@@ -100,6 +105,7 @@ int main(int argc, char **argv)
     std::string senderFile = argv[1];
     std::string receiverFile = argv[2];
 
+    // Generate output filename
     std::string outputFile = receiverFile;
     size_t lastdot = outputFile.find_last_of(".");
     if (lastdot != std::string::npos)
@@ -108,18 +114,15 @@ int main(int argc, char **argv)
     }
     outputFile += "_analyzed.csv";
 
-    std::cout << "Analyzing latency from sender log: " << senderFile << " and receiver log: " << receiverFile << std::endl;
-    std::cout << "Output will be saved to: " << outputFile << std::endl;
+    std::cout << "Analyzing latency..." << std::endl;
+    std::cout << "Sender Log:   " << senderFile << std::endl;
+    std::cout << "Receiver Log: " << receiverFile << std::endl;
 
     std::map<int, Sample> database;
 
     // 1. Read sender log
     std::ifstream senderLog(senderFile);
-    if (!senderLog.is_open())
-    {
-        std::cerr << "Error opening sender log file: " << senderFile << std::endl;
-        return 1;
-    }
+    if (!senderLog.is_open()) { std::cerr << "Error opening sender log!" << std::endl; return 1; }
 
     std::string line;
     int sentCount = 0;
@@ -135,35 +138,34 @@ int main(int argc, char **argv)
             sample.t1 = 0.0;
             sample.received = false;
 
-            // Usar arredondamento x100 para tolerar pequenas diferenças de float
+            // Use rounded key (x100) to handle float precision differences
             int key = std::round(speed * 100); 
             database[key] = sample;
             sentCount++;
         }
     }
     senderLog.close();
-    std::cout << "Total samples sent: " << sentCount << std::endl;
+    std::cout << "-> Loaded " << sentCount << " sent samples." << std::endl;
 
     // 2. Read receiver log
     std::ifstream receiverLog(receiverFile);
-    if (!receiverLog.is_open())
-    {
-        std::cerr << "Error opening receiver log file: " << receiverFile << std::endl;
-        return 1;
-    }
+    if (!receiverLog.is_open()) { std::cerr << "Error opening receiver log!" << std::endl; return 1; }
+    
     int receivedCount = 0;
     while (std::getline(receiverLog, line))
     {
         float speed;
         double t1;
-        // CORREÇÃO: Usar a função de parse do Receiver, não do Sender
+        
+        // --- CORREÇÃO AQUI: Chamar parseReceiverLogLine ---
         if (parseReceiverLogLine(line, speed, t1))
         {
             int key = std::round(speed * 100);
             auto it = database.find(key);
+            
             if (it != database.end())
             {
-                // Só processa se ainda não foi recebido (evita duplicados)
+                // Only process the first time we receive this unique speed
                 if (!it->second.received) {
                     it->second.t1 = t1;
                     it->second.received = true;
@@ -173,12 +175,11 @@ int main(int argc, char **argv)
         }
     }
     receiverLog.close();
-
-    std::cout << "Total samples received: " << receivedCount << std::endl;
+    std::cout << "-> Correlated " << receivedCount << " received samples." << std::endl;
 
     // 3. Write analysis to output CSV
     std::ofstream outFile(outputFile);
-    std::vector<double> latencies; // CORREÇÃO: std::vector
+    std::vector<double> latencies;
 
     outFile << "Speed (m/s),Sent Timestamp (s),Received Timestamp (s),Latency (ms)" << std::endl;
     for (const auto &[key, sample] : database)
@@ -187,7 +188,7 @@ int main(int argc, char **argv)
         {
             double latency = (sample.t1 - sample.t0) * 1000.0; // Convert to ms
             
-            // Filtro para remover valores absurdos (ex: dessincronia de relógio)
+            // Filter unreasonable latencies (e.g. clock sync issues)
             if (latency > -1000 && latency < 10000) 
             {
                 latencies.push_back(latency);
@@ -201,9 +202,10 @@ int main(int argc, char **argv)
     }
     outFile.close();
 
+    // 4. Report
     if (latencies.empty())
     {
-        std::cerr << "No valid latency samples to analyze." << std::endl;
+        std::cerr << "WARNING: No valid latency samples found. Check log format matches code logic." << std::endl;
     }
     else
     {
@@ -230,17 +232,19 @@ int main(int argc, char **argv)
         {
             lossRate = 100.0 * (1.0 - static_cast<double>(receivedCount) / static_cast<double>(sentCount));
         }
+        
         std::cout << "\n=== PERFORMANCE REPORT ===" << std::endl;
-        std::cout << "Total Samples Sent: " << sentCount << std::endl;
+        std::cout << "Total Samples Sent:     " << sentCount << std::endl;
         std::cout << "Total Samples Received: " << receivedCount << std::endl;
-        std::cout << "Packet lost: "<< std::fixed << std::setprecision(2)<< lossRate << " %" << std::endl;
+        std::cout << "Packet Loss:            " << std::fixed << std::setprecision(2) << lossRate << " %" << std::endl;
+        std::cout << "--------------------------" << std::endl;
+        std::cout << "Average Latency:        " << std::fixed << std::setprecision(3) << avgLatency << " ms" << std::endl;
+        std::cout << "Minimum Latency:        " << minLatency << " ms" << std::endl;
+        std::cout << "Maximum Latency:        " << maxLatency << " ms" << std::endl;
+        std::cout << "Jitter (StdDev):        " << stddevLatency << " ms" << std::endl;
         std::cout << "==========================" << std::endl;
-        std::cout << "Average Latency: " << std::fixed << std::setprecision(3) << avgLatency << " ms" << std::endl;
-        std::cout << "Minimum Latency: " << minLatency << " ms" << std::endl;
-        std::cout << "Maximum Latency: " << maxLatency << " ms" << std::endl;
-        std::cout << "Standard Deviation: " << stddevLatency << " ms" << std::endl;
     }
-    std::cout << "Analysis complete. Results saved to " << outputFile << std::endl;
+    std::cout << "Results saved to: " << outputFile << std::endl;
 
     return 0;
 }
