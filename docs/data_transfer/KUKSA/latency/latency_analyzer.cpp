@@ -4,6 +4,9 @@
 #include <string>
 #include <vector>
 #include <iomanip>
+#include <map>
+#include <cmath>
+#include <algorithm>
 
 // Define a structure to hold latency sample data
 struct Sample
