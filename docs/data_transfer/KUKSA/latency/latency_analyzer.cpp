@@ -37,7 +37,7 @@ bool parseReceiverLogLine(const std::string &line, float &speed, double& timesta
     return false;
 }
 
-Sample parseSenderLogLine(const std::string &line, float &speed, double& timestamp)
+bool parseSenderLogLine(const std::string &line, float &speed, double& timestamp)
 {
     std::istringstream iss(line);
     std::string temp;
