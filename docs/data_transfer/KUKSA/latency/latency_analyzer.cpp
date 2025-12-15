@@ -17,8 +17,8 @@ struct Sample
     bool received;
 };
 
-// 
-Sample parseReceiverLogLine(const std::string &line, float &speed, double& timestamp)
+// Function to parse a line from the receiver log
+bool parseReceiverLogLine(const std::string &line, float &speed, double& timestamp)
 {
     std::istringstream iss(line);
     std::string temp;
@@ -37,7 +37,7 @@ Sample parseReceiverLogLine(const std::string &line, float &speed, double& times
     return false;
 }
 
-bool parseSenderLogLine(const std::string &line, float &speed, double& timestamp)
+Sample parseSenderLogLine(const std::string &line, float &speed, double& timestamp)
 {
     std::istringstream iss(line);
     std::string temp;
