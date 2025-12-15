@@ -51,8 +51,38 @@ int main(int argc, char **argv)
     std::cout << "Analyzing latency from sender log: " << senderFile << " and receiver log: " << receiverFile << std::endl;
     std::cout << "Output will be saved to: " << outputFile << std::endl;
 
+    std::map<int, Sample> database;
+
+    // Read sender log
+    std::ifstream senderLog(senderFile);
+    if (!senderLog.is_open())
+    {
+        std::cerr << "Error opening sender log file: " << senderFile << std::endl;
+        return 1;
+    }
+
+    std::string line;
+    int sentCount = 0;
+    while (std::getline(senderLog, line))
+    {
+        float speed;
+        double t0;
+        if (parseSenderLogLine(line, speed, t0))
+        {
+            Sample sample;
+            sample.speed = speed;
+            sample.t0 = t0;
+            sample.received = false;
+
+            int key = std::round(speed * 1000); // Use speed in mm/s as key
+            database[key] = sample;
+            sentCount++;
+        }
+    }
+    senderLog.close();
+
+    std::cout << "Total samples sent: " << sentCount << std::endl;
+
     
-
-
     return 0;
 }
