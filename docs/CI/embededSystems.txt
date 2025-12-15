@@ -1,0 +1,402 @@
+Programmable chip Selects 
+- to make address counication to some specifies periphereal
+
+Interrupt controller
+-stop what cpu is doing and putting "gaining is attention"
+
+Timer counter Unit
+- Provides to the firmware the ability to generate periodc events , including events based on incomming impulses 
+
+DMA Controller
+-Direct memory access . This is the capability of others can interact with memory without going trough CPU. Without that per exemple an incoming characters need to go to CPU an interrupt its tasks, with this the serial port places the incoming char directly on memory. Many integrated microprocessors have multiple DMA channels that
+they can use to perform I/O-to-memory, memory-to-I/O, or memory-to-memory transfers
+
+Serial port
+The serial port provides basic communication to a console or some other device that understands the same protocol.
+The basic asynchronous serial bit stream consists of one start bit, some number of data bits (usually between five and nine), and one
+or two stop bits.
+
+DRAM(Dinamyc RAM) Control Unit
+DRAM is a much cheaper alternative to SRAM, but,
+unlike SRAM and flash memory, DRAM requires baby-sitting or extra logic in the hardware to keep the bits in the DRAM stable
+
+MMU(Memory Management Unit)
+main responsibility is to define and enforce the boundaries that separate different tasks or processes.
+code bounded by the MMU protection is called a process and code not bounded by an MMU is called a task
+
+Cache
+Microprocessors have been speeding up at a much faster pace than have the large memory
+subsystems with which they interact. To compensate for this difference, smaller blocks of really fast (and more expensive) memory are put between the
+microprocessor and system memory so that fetches to memory that happen frequently can be done through this faster cache memory instead of through
+the slower standard memory.
+
+Programmable I/O Pins
+the majority of those pins can be used for their specific function (serial port receiver, timer output, DMA control signal,
+etc.), or they can be programmed to just act as a simple input or output pin (PIO).
+
+
+System Memory
+The CPU fetches instructions from the
+memory, and these instructions tell the CPU what to do. If the memory is programmed incorrectly or connected to the CPU incorrectly, then even the
+most sophisticated processor will be confused
+
+ROM, PROM, EPROM and EEPROM
+The term ROM is an acronym for Read-Only-Memory 
+
+PROM
+A programmable read only memory (PROM) can be programmed by an in-house device programmer,
+but cannot be erased.
+
+EPROM
+Erasable programmable read only
+memory (EPROM) can be programmed and erased in-house, with the limitation that the programming is done with an external device programmer and
+erasure must be done with some ultra-violet light source.
+
+RAM(random access memory)
+The name reflects the fact that any byte can be accessed at any time, which was a step ahead of its
+predecessor, sequential access memory.
+. RAM is read/writable but is also volatile, which means that when power is removed, the data is not retained.
+static (SRAM) and dynamic (DRAM). SRAM is the easier of the two to interface with because it is “static,”
+meaning that it does not require any baby-sitting from the processor to do its job. Simply wire it up to the processor and use it. DRAM, on the other hand,
+requires external hardware to refresh it periodically so that the internal capacitors hold their charge.
+
+Flash Memory
+Like EPROM, flash memory is also nonvolatile memory.
+
+Still Others
+PSRAM (pseudo-static RAM) is a DRAM with some kind of refresh controller
+built into it.
+
+CPU Supervision
+A RESET signal forces key CPU
+components to a known initial state.
+There are
+several different components available that monitor the supply voltage and automatically generate a clean reset pulse into the CPU when the supply
+drops below a certain level.
+
+Watchdog Timer
+(WDT) acts as a safety net for the system. If the software stops responding or attending to the task at hand, the watchdog timer
+detects that something is amiss and resets the software automatically
+If the watchdog is not toggled
+within that period, it pulses one of its output pins. Typically, this output pin is tied either to the CPU’s reset line or to some nonmaskable interrupt (NMI),
+
+Battery-Backed SRAM
+a handful of companies provide nonvolatile SRAM modules that have the battery and the power supply monitoring
+circuitry built right into the part. These parts are guaranteed to retain data for up to 10 years (with certain restrictions regarding the actual amount of time
+the internal battery is powering the SRAM, of course)
+
+Time-of-Day Clock
+the CPU provides all that is needed for maintaining time. Typically, there is no need to keep track of the time of day;
+
+Serial Port Drivers
+Many embedded systems use serial ports as an interface to the outside world.
+
+Flash Device Options
+All flash devices are structured as a number of sectors.
+
+Flash Device Options
+All flash devices are structured as a number of sectors. On some devices, the sectors are all the same size; on others the sector sizes vary. Some have
+features that allow the firmware to lock a sector so that it cannot be erased unless a physical connection is inserted onto the hardware. Some devices
+have reset input lines, and others do not. Densities vary from 64KB to 8MB in a single flash device.
+
+Bottom-Boot and Top-Boot Flash Devices
+Since boot code is typically placed
+in small sectors, flash memory is some times described as bottom-boot or top-boot, depending on where the smaller sectors are located.
+
+The CPU/Memory Interface
+The most critical interface in any computing system is the connection between memory and the CPU. If this interface doesn’t function properly, the CPU
+cannot function because it cannot retrieve instructions
+
+The CPU
+The clock provides the CPU with the ability to step through processing states, which can vary from one cycle per instruction (RISC) to
+sometimes over a dozen cycles per instruction (CISC).
+
+CPU in this design uses 16-bit addresses but transfers data eight bits at a time.
+Thus, it has a 16-bit address bus and an 8-bit data bus. Using
+these 16 bits, the processor can address a 64K memory space. In this design, half of that space is occupied by 32K of flash memory and the other half
+by 32K of SRAM
+
+Each CPU pin belongs to one of four groups: address, data, control, or I/O.
+
+Whenever the CPU wants to read or write a particular byte of memory, it places the address of that byte on the address lines. If the address is 0x0000,
+the CPU would drive all address lines to a low voltage, logic 0 state. If the address were 0xFFFE, the CPU would drive all except the least significant
+address line to a high voltage, logic 1 state.
+
+0xBE con tains only two hexadecimal digits, implying that the data bus is only
+eight bits wide. The four hexadecimal digits in 0x26A4, on the other hand, suggest that the address bus is 16 bits wide. Because of this implicit
+relationship between the hex representation and the bus size, it is accepted convention to pad addresses and data values with zeros so that all bits in
+the bus are specified. For example, when referencing address 1 in a machine with 32-bit addresses, one would write 0x00000001, not 0x1
+
+The CPU-to-flash device interaction can be summarized with the following steps:
+1. CPU places the desired address on the address pins.
+2. CPU brings the read line active.
+3. CPU brings the appropriate chip select line active.
+4. The flash device places the data located at the specified address onto the data bus.
+5. CPU reads in the data that has been placed on the bus by the flash device.
+6. CPU releases the chip select line and processes the data.
+
+The Power (and Pitfalls) of Cache
+Cache is a fast chunk of memory placed between the memory access portion of the CPU and the real memory system in order to provide an
+enhancement to the access time between the CPU and external memory.
+
+instruction cache (I-cache) and data cache (D-cache)	
+
+
+How Is It Done on a PC?
+In DOS, the file command.com is one of the first files retrieved from the disk when the PC is turned on. The
+command.com program is a shell that provides an interface between the user and the PC hardware. In an embedded system, there is no
+insulation (shell) between the program and the hardware.
+— The file system allows programs to be stored in some large capacity device and pulled into the processor’s memory space only
+when needed. In an embedded system, the program is typically stored in flash memory all the time
+
+Upon entry into main(), the stack pointer must be pointing to memory space that can be used for temporary storage	
+
+. When building a program that is to boot a target system, the file is not relocatable.[1] This is
+because boot code is always destined to reside at some fixed memory location in the target’s memory space (not necessarily zero), and, when boot code
+is executed, the MMU (if there is one) is disabled.
+
+The cross-compilation process requires an additional step to
+convert the executable file from the format illustrated in Figure 2.1 to one that presents the data in a way the CPU understands.
+
+Since the executable file represents an absolute memory map, the code behind it has been compiled and linked to run at a specific location in memory.
+
+The linker extracts the necessary location information from the memory map input file. This file tells the linker where to put the different output sections
+(text, data and BSS).
+BSS refers to the Block Started by Symbol segment
+
+final step is to convert the executable file into a single binary image that will look to the processor like raw instructions and data
+
+
+Establishing the Memory Map
+The memory map describes (in terms of address space ranges) where the designer has placed memory and peripheral devices. The memory map may
+be simple flash memory and RAM. On the other hand, the processor may boot out of the top of memory, and there may be multiple devices that are not
+necessarily in contiguous memory space.
+
+Usually, the hardware is designed so that the firmware can use all the memory of any one type contiguously. All flash memory is located as a contiguous
+block, as is all RAM, EPROM, etc. The processor also requires a block of non-volatile memory in hardware at the location where it resets. This block of
+memory is typically called a boot block
+
+MEMORY
+{
+flash : org = 0,
+dram : org = 0x80000,
+}
+len = 0x40000
+len = 0x80000
+/
+
+In the case of Listing 2.2, there is 256K of flash memory ( 0x40000) starting at location
+zero and 512K of dynamic RAM (0x80000) starting at location 0x80000.
+
+
+SECTIONS
+{
+.text
+:
+{
+boot_base = .;
+*(.text)
+} >flash
+.data
+:
+{
+*(.data)
+} >flash
+.bss
+{
+:
+bss_start = .;
+*(.bss)
+bss_end = .;
+} >dram
+}
+The blocks in the SECTIONS portion of the file establish where each of the fundamental sections are placed in real memory space (see Listing 2.2). The
+*(.text), *(.data) and *(.bss) lines tell the linker to put all of the text, data, and BSS portions (respectively) of the image into the referenced memory
+area.
+
+The boot_base = ., bss_start = ., and bss_end = . lines are used to create labels that can be referenced by C code.
+
+Different Reset Vectors Equate to Different Memory Maps
+
+# Makefile for building M5272C3 based system.
+#
+PROG
+OBJCOPY
+OBJDUMP
+NM
+CC
+ASM
+ASMCPP
+LD
+CCOPTS
+ASMOPTS
+= myprog
+= m68k-coff-objcopy
+= m68k-coff-objdump
+= m68k-coff-nm
+= m68k-coff-gcc
+= m68k-coff-as
+= cpp -D ASSEMBLY_ONLY
+= m68k-coff-ld
+= -Wall -g -c -m520
+OBJS=obj/reset.o obj/start.o obj/cpuio.o obj/main.o
+
+all: $(OBJS) makefile
+$(LD) -Map=$(PROG).map -TROM.lnk -nostartfiles -ecoldstart \
+-o $(PROG) $(OBJS)
+coff -B $(PROG).bin $(PROG)
+$(NM) --numeric-sort $(PROG) > $(PROG).sym
+The top level, all target (see Listing 2.5), depends on all of the individual object modules (OBJS) that must be compiled or assembled prior to
+performing the linkage (LD). The LD line takes all of the modules ( reset, start, cpuio, and main) and links them together in the order of their listing.
+It establishes an absolute memory map based on the memory map specified by -TROM.lnk (where ROM.lnk is the name of the memory map file).
+Typically, a loader
+automatically includes code that does some initialization prior to turning over control to the application’s main() function. Because embedded systems
+run on the bare metal, you must write custom code to initialize your particular hardware (in reset.s and start.c).
+
+objdump --section-headers your_program.elf
+
+arm-none-eabi-objdump --source --disassemble --show-raw-insn Threadx.elf
+
+
+Building Libraries
+The important thing to remember is that whenever you build your own library, you build it as a lot of individual one-function-per-file modules. You’ll save
+headaches and memory space! 
+
+JTAG, or Joint Test Access Group, is a standard interface that was
+originally intended for hardware BIST (built-in self-test) but has been extended so that it can be used for debugging embedded systems.
+
+Background
+Debug Mode (BDM) is similar (implemented by Motorola) in that it is strictly dedicated to CPU-related debugging.
+
+A logic probe is a simple pencil-like gizmo (usually with power and ground connections) that you clip onto appropriate sources.
+You read a pin’s logic level by touching the pin with the tip of this “pencil.” A readout (often just LEDs) on the probe will then indicate whether
+the pin is logical high or low, high impedance, or changing. A logic probe is very handy if you have already verified that the hardware is stable
+and you are just writing code to wiggle some PIO pins or a chip select.
+
+Configuration 1, where the boot device resides at location zero of CPU-relative memory, the S-record CPU-
+relative addresses also correspond to flash device addresses, so all works well.
+Configuration 2 however, does not work. Here the CPU boots from some location other than zero, so offset zero within the flash device no longer
+corresponds to physical address zero. Assume that this CPU boots at 0x8F000000, so the S-record file has AAAA… fields starting at 0x8F000000
+because that’s where the CPU sees the instructions. However, when I step away from the hardware design and go program the flash device, I must
+adjust the S-record address of 0x8F000000 to 0x0000000 because 0x8F000000 in CPU address space is the same as 0x00000000 in the flash
+device’s address space. This adjustment to the S-record address can be performed in some post-processing step or in the programmer if it supports the
+ability to adjust the base. My personal preference is to avoid this complexity by using raw binary files instead of S-records.
+
+Hardware Sanity Tests for the Firmware Developer
+Verify Power Supply Voltage
+
+Verify a Valid Clock
+Use an oscilloscope to verify that the clock input to the processor is toggling and that the frequency is about what you would expec
+
+Check the Boot Chip Select and Read
+With a scope probe on the boot device chip select, push the reset button and verify that, at least momentarily, the line toggles to the active state
+
+A Simple LED Is Priceless at This Point!
+If neither an oscilloscope nor a logic analyzer is available, then hopefully you
+thought ahead and had the design include an accessible LED. This LED could be used to monitor state based on some type of blink rate or on/off state
+
+An Embedded System Boot Platform
+MicroMonitor is the firmware that the CPU executes immediately after a reset or power-up. MicroMonitor resides in the non-volatile flash memory of the
+target system. It is responsible for booting the CPU and getting the system to a state where a user can access the target through some interface
+
+Just After Reset
+The code executed immediately out of reset must be written in assembly language so that it can be executed either as
+a result of a real reset or powerup of the hardware or as a resu/bhklt of a firmware-invoked restart;
+disable interrupts at the CPU level (not peripherals, just CPU);
+disable/flush/invalidate caches appropriately;
+enable the ability to access the boot flash memory at the desired speed and address;
+enable the ability to access the system RAM/DRAM at the desired speed and address;
+initialize a stack pointer.
+
+Pseudo-Code for reset.s.
+.file
+"reset.s"
+.extern start, moncom
+.global warmstart, moncomptr
+coldstart:
+Initialize "something" to store away a state variable.
+StateOfTarget = INITIIALIZE
+JumpTo continuestart
+moncomptr:
+.long moncom
+warmstart:
+/* Load into StateOfTarget the parameter passed to warmstart
+* as if it was the C function:
+* warmstart(unsigned long state).
+*/
+continuestart:
+Disable interrupts
+Flush/invalidate/disable cache
+Adjust boot device access
+Adjust system ram access
+Establish the system ram access
+Establish the stack pointer
+JumpTo start()
+
+Strings ending with a colon (coldstart:, moncomptr:, warmstart:, or continustart:) are tags, or symbolically accessible addresses
+
+Words that start with a period (.file, .extern, or .global) are directives that tell the assembler to do something other than just generate
+code for some assembler mnemonic.
+
+Establish Exception Handlers
+The next step is to initialize the CPU vector table.The vector table for the CPU is some block of memory (either at a fixed location or pointed to by a
+system register) that contains code or pointers to code
+From the monitor’s point of view, there are two important things to do:
+first you must create the table, and second, the code must be prepared to handle the exception.
+
+Exception Handlers in ROM
+The default exception table is typically found in the boot flash memory because the memory space that the boot flash memory covers must be the same
+space to whichthe exception table is mapped at reset.
+
+/* saveregs:
+* Save register set into regtbl[] array.
+*/
+saveregs:
+lis
+regY,(regtbl)@ha
+addi
+regY,regY,(regtbl)@l
+stw
+rA,0(regY)
+stw
+rB,4(regY)
+stw
+rC,8(regY)
+stw
+rD,12(regY)
+stw
+rE,16(regY)
+stw
+rF,20(regY)
+stw
+rG,24(regY)
+stw
+rH,28(regY)
+stw
+rI,32(regY)
+stw
+rJ,36(regY)
+stw
+rK,40(regY)
+stw
+rL,44(regY)
+stw
+rM,48(regY)
+stw
+rN,52(regY)
+stw
+rO,56(regY)
+stw
+rP,60(regY)
+mr
+lis
+addi
+mtctr
+
+This code uses register regY as a pointer to the regtbl array. As each register is stored, the offset relative to regY is increased by four, After the registers have been stored, the value of regX is moved to the register that is used by the compiler as the first function
+parameter register. (For this example, I assume that the first function parameter register is rC.) The next function called (exception) receives the
+exception type as its argument and, based on that type information, can perform exception-specific things.
+
+Exception Handlers in RAM
+This implementation puts all of the exception handlers in ROM, or non-volatile space. This policy is convenient for the reset handler because at reset
+you need that exception handler to be in place.
