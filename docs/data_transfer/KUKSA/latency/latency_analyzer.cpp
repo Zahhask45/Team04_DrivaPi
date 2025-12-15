@@ -5,70 +5,85 @@
 #include <vector>
 #include <iomanip>
 #include <map>
+#include <deque>
 #include <cmath>
 #include <algorithm>
 
-// Define a structure to hold latency sample data
-struct Sample
-{
-    float speed;
-    double t0; // timestamp when sent
-    double t1; // timestamp when received
-    bool received;
-}; 
+// Data structure: Map a KEY (int) to a QUEUE of timestamps
+// Example: Speed 50.123 -> [Time_Sent_1, Time_Sent_2, ...]
+std::map<int, std::deque<double>> sent_timestamps;
+std::map<int, std::deque<float>> sent_speeds; // Keep original value for debugging
 
-// Global variable to store CAN timestamp (because it appears on the line before the speed value)
+// Structure for final results
+struct Result {
+    float speed;
+    double t_sent;
+    double t_recv;
+    double latency_ms;
+};
+std::vector<Result> results;
+
+// Global variable to store CAN timestamp (since it appears on the line before the value)
 double g_lastCanTimestamp = 0.0;
 
-// Function to parse a line from the receiver log (Handles both KUKSA and CAN formats)
-bool parseReceiverLogLine(const std::string &line, float &speed, double& timestamp)
-{
-    std::stringstream iss(line);
-    std::string temp;
+// Helper: Convert float to integer key (3 decimal places precision to match CAN logs)
+int get_key(float speed) {
+    return std::round(speed * 1000.0f);
+}
 
-    // --- CASE 1: KUKSA ---
-    // Format: "KuksaReader: Received speed: 89.7408  at  1765553552797"
-    if (line.find("Received speed:") != std::string::npos)
-    {
-        // Skip until "speed:"
-        while (iss >> temp && temp != "speed:") {} 
-        
-        if (iss.fail()) return false;
-        iss >> speed;
-        iss >> temp; // Skip "at"
-        iss >> timestamp;
-        timestamp /= 1000.0; // Convert ms to s 
+// Helper: Find a number in a string following a specific "keyword"
+bool extractValue(const std::string& line, const std::string& keyword, double& value) {
+    size_t pos = line.find(keyword);
+    if (pos == std::string::npos) return false;
+    
+    // Try to read the number immediately after the keyword length
+    try {
+        std::string remainder = line.substr(pos + keyword.length());
+        value = std::stod(remainder);
+        return true;
+    } catch (...) {
+        return false;
+    }
+}
+
+// Sender Log Parser
+bool parseSender(const std::string& line, float& speed, double& t0) {
+    // Format: "Sent speed: 49.459042 at timestamp: 1765553122.791886"
+    double spd_dbl;
+    if (extractValue(line, "speed: ", spd_dbl) && extractValue(line, "timestamp: ", t0)) {
+        speed = (float)spd_dbl;
         return true;
     }
+    return false;
+}
 
-    // --- CASE 2: CAN (Part 1 - Timestamp) ---
-    // Format: "CANReader: Received CAN frame ID=0x "100"  at  1765553122792"
-    if (line.find("CANReader: Received CAN frame") != std::string::npos && line.find("at") != std::string::npos)
-    {
-        // Find position of "at" and read the number immediately following it
-        size_t pos = line.rfind("at");
-        if (pos != std::string::npos) {
-            std::string tsStr = line.substr(pos + 2); // +2 to skip "at"
-            try {
-                g_lastCanTimestamp = std::stod(tsStr);
-            } catch(...) {}
+// Receiver Log Parser (Handles both KUKSA and CAN formats)
+bool parseReceiver(const std::string& line, float& speed, double& t1) {
+    double temp_val;
+
+    // --- KUKSA CASE ---
+    // Format: "KuksaReader: Received speed: 89.7408 at 1765553552797"
+    if (line.find("KuksaReader:") != std::string::npos) {
+        if (extractValue(line, "speed: ", temp_val)) {
+            speed = (float)temp_val;
+            if (extractValue(line, "at ", t1)) {
+                t1 /= 1000.0; // convert ms to seconds
+                return true;
+            }
         }
-        return false; // We don't have the speed yet, only the time
     }
 
-    // --- CASE 2: CAN (Part 2 - Speed Value) ---
-    // Format: "Speed set to (m/s): 49.459"
-    if (line.find("Speed set to") != std::string::npos)
-    {
-        // Skip until "(m/s):"
-        while (iss >> temp && temp != "(m/s):") {}
-        if (iss.fail()) return false;
-
-        iss >> speed;
-        
-        // Use the timestamp stored from the previous line
-        if (g_lastCanTimestamp > 0.0) {
-            timestamp = g_lastCanTimestamp / 1000.0; 
+    // --- CAN CASE (Split into two lines) ---
+    // Line 1: "CANReader: ... at 1765553122792"
+    if (line.find("CANReader:") != std::string::npos && extractValue(line, "at ", temp_val)) {
+        g_lastCanTimestamp = temp_val;
+        return false; // We only caught the timestamp, waiting for value
+    }
+    // Line 2: "Speed set to (m/s): 49.459"
+    if (line.find("Speed set to") != std::string::npos) {
+        if (extractValue(line, ": ", temp_val)) {
+            speed = (float)temp_val;
+            t1 = g_lastCanTimestamp / 1000.0; // Use the timestamp from the previous line
             return true;
         }
     }
@@ -76,175 +91,95 @@ bool parseReceiverLogLine(const std::string &line, float &speed, double& timesta
     return false;
 }
 
-// Function to parse line from Sender log
-bool parseSenderLogLine(const std::string &line, float &speed, double& timestamp)
-{
-    std::stringstream iss(line);
-    std::string temp;
-    
-    // Format: "Sent speed: 49.459042 at timestamp: 1765553122.791886"
-    if (line.find("Sent speed:") != std::string::npos) {
-        iss >> temp >> temp; // Skip "Sent" "speed:"
-        if (iss.fail()) return false;
-        iss >> speed;
-        iss >> temp >> temp; // Skip "at" "timestamp:"
-        iss >> timestamp;
-        return true;
-    }
-    return false;
-}
-
-int main(int argc, char **argv)
-{
-    if (argc != 3)
-    {
-        std::cerr << "Usage: ./latency_analyzer <sender_log_file> <receiver_log_file>" << std::endl;
+int main(int argc, char **argv) {
+    if (argc != 3) {
+        std::cerr << "Usage: ./latency_analyzer <sender.txt> <receiver.txt>" << std::endl;
         return 1;
     }
 
     std::string senderFile = argv[1];
     std::string receiverFile = argv[2];
+    std::string outputFile = receiverFile + "_analise.csv";
 
-    // Generate output filename
-    std::string outputFile = receiverFile;
-    size_t lastdot = outputFile.find_last_of(".");
-    if (lastdot != std::string::npos)
-    {
-        outputFile = outputFile.substr(0, lastdot);
-    }
-    outputFile += "_analyzed.csv";
-
-    std::cout << "Analyzing latency..." << std::endl;
-    std::cout << "Sender Log:   " << senderFile << std::endl;
-    std::cout << "Receiver Log: " << receiverFile << std::endl;
-
-    std::map<int, Sample> database;
-
-    // 1. Read sender log
-    std::ifstream senderLog(senderFile);
-    if (!senderLog.is_open()) { std::cerr << "Error opening sender log!" << std::endl; return 1; }
-
+    // 1. READ SENDER (Populate Queue)
+    std::ifstream fSend(senderFile);
+    int countSent = 0;
     std::string line;
-    int sentCount = 0;
-    while (std::getline(senderLog, line))
-    {
-        float speed;
-        double t0;
-        if (parseSenderLogLine(line, speed, t0))
-        {
-            Sample sample;
-            sample.speed = speed;
-            sample.t0 = t0;
-            sample.t1 = 0.0;
-            sample.received = false;
-
-            // Use rounded key (x100) to handle float precision differences
-            int key = std::round(speed * 100); 
-            database[key] = sample;
-            sentCount++;
+    while (std::getline(fSend, line)) {
+        float spd; double t0;
+        if (parseSender(line, spd, t0)) {
+            int key = get_key(spd);
+            sent_timestamps[key].push_back(t0); // Add to end of queue
+            sent_speeds[key].push_back(spd);
+            countSent++;
         }
     }
-    senderLog.close();
-    std::cout << "-> Loaded " << sentCount << " sent samples." << std::endl;
+    fSend.close();
+    std::cout << "Sender: Loaded " << countSent << " samples." << std::endl;
 
-    // 2. Read receiver log
-    std::ifstream receiverLog(receiverFile);
-    if (!receiverLog.is_open()) { std::cerr << "Error opening receiver log!" << std::endl; return 1; }
-    
-    int receivedCount = 0;
-    while (std::getline(receiverLog, line))
-    {
-        float speed;
-        double t1;
-        
-        // --- CORREÇÃO AQUI: Chamar parseReceiverLogLine ---
-        if (parseReceiverLogLine(line, speed, t1))
-        {
-            int key = std::round(speed * 100);
-            auto it = database.find(key);
+    // 2. READ RECEIVER (Consume Queue)
+    std::ifstream fRecv(receiverFile);
+    int countRecv = 0;
+    while (std::getline(fRecv, line)) {
+        float spd; double t1;
+        if (parseReceiver(line, spd, t1)) {
+            int key = get_key(spd);
             
-            if (it != database.end())
-            {
-                // Only process the first time we receive this unique speed
-                if (!it->second.received) {
-                    it->second.t1 = t1;
-                    it->second.received = true;
-                    receivedCount++;
+            // Check if this speed exists in our map and has pending timestamps
+            if (sent_timestamps[key].size() > 0) {
+                // FIFO: Get the oldest send time
+                double t0 = sent_timestamps[key].front();
+                sent_timestamps[key].pop_front(); 
+                
+                double lat = (t1 - t0) * 1000.0;
+                
+                // Sanity filter (-500ms to 5000ms) to ignore clock sync errors
+                if (lat > -500 && lat < 5000) {
+                    results.push_back({spd, t0, t1, lat});
+                    countRecv++;
                 }
             }
         }
     }
-    receiverLog.close();
-    std::cout << "-> Correlated " << receivedCount << " received samples." << std::endl;
+    fRecv.close();
+    std::cout << "Receiver: Correlated " << countRecv << " samples." << std::endl;
 
-    // 3. Write analysis to output CSV
-    std::ofstream outFile(outputFile);
-    std::vector<double> latencies;
-
-    outFile << "Speed (m/s),Sent Timestamp (s),Received Timestamp (s),Latency (ms)" << std::endl;
-    for (const auto &[key, sample] : database)
-    {
-        if (sample.received)
-        {
-            double latency = (sample.t1 - sample.t0) * 1000.0; // Convert to ms
-            
-            // Filter unreasonable latencies (e.g. clock sync issues)
-            if (latency > -1000 && latency < 10000) 
-            {
-                latencies.push_back(latency);
-                outFile << std::fixed << std::setprecision(3)
-                        << sample.speed << ","
-                        << std::setprecision(6) << sample.t0 << ","
-                        << sample.t1 << ","
-                        << std::setprecision(3) << latency << std::endl;
-            }
-        }
+    // 3. STATISTICS
+    if (results.empty()) {
+        std::cerr << "ERROR: No matches found. Check the log files." << std::endl;
+        return 1;
     }
-    outFile.close();
 
-    // 4. Report
-    if (latencies.empty())
-    {
-        std::cerr << "WARNING: No valid latency samples found. Check log format matches code logic." << std::endl;
+    double sum = 0, minLat = 99999, maxLat = -99999;
+    std::ofstream fOut(outputFile);
+    fOut << "Speed,T_Sent,T_Recv,Latency_ms\n";
+
+    for (const auto& r : results) {
+        sum += r.latency_ms;
+        if (r.latency_ms < minLat) minLat = r.latency_ms;
+        if (r.latency_ms > maxLat) maxLat = r.latency_ms;
+        fOut << r.speed << "," << std::fixed << std::setprecision(6) 
+             << r.t_sent << "," << r.t_recv << "," << std::setprecision(3) << r.latency_ms << "\n";
     }
-    else
-    {
-        double sum = 0.0;
-        double minLatency = latencies[0];
-        double maxLatency = latencies[0];
-        for (double latency : latencies)
-        {
-            sum += latency;
-            if (latency < minLatency) minLatency = latency;
-            if (latency > maxLatency) maxLatency = latency;
-        }
-        double avgLatency = sum / latencies.size();
+    fOut.close();
 
-        double sqrSum = 0.0;
-        for (double latency : latencies)
-        {
-            sqrSum += std::pow(latency - avgLatency, 2);
-        }
-        double stddevLatency = std::sqrt(sqrSum / latencies.size());
+    double avg = sum / results.size();
+    double sqSum = 0;
+    for (const auto& r : results) sqSum += std::pow(r.latency_ms - avg, 2);
+    double stdDev = std::sqrt(sqSum / results.size());
+    double loss = 100.0 * (1.0 - (double)countRecv / (double)countSent);
 
-        double lossRate = 0;
-        if (sentCount > 0)
-        {
-            lossRate = 100.0 * (1.0 - static_cast<double>(receivedCount) / static_cast<double>(sentCount));
-        }
-        
-        std::cout << "\n=== PERFORMANCE REPORT ===" << std::endl;
-        std::cout << "Total Samples Sent:     " << sentCount << std::endl;
-        std::cout << "Total Samples Received: " << receivedCount << std::endl;
-        std::cout << "Packet Loss:            " << std::fixed << std::setprecision(2) << lossRate << " %" << std::endl;
-        std::cout << "--------------------------" << std::endl;
-        std::cout << "Average Latency:        " << std::fixed << std::setprecision(3) << avgLatency << " ms" << std::endl;
-        std::cout << "Minimum Latency:        " << minLatency << " ms" << std::endl;
-        std::cout << "Maximum Latency:        " << maxLatency << " ms" << std::endl;
-        std::cout << "Jitter (StdDev):        " << stddevLatency << " ms" << std::endl;
-        std::cout << "==========================" << std::endl;
-    }
-    std::cout << "Results saved to: " << outputFile << std::endl;
+    std::cout << "\n=== PERFORMANCE REPORT ===" << std::endl;
+    std::cout << "Sent:           " << countSent << std::endl;
+    std::cout << "Received:       " << countRecv << std::endl;
+    std::cout << "Packet Loss:    " << std::fixed << std::setprecision(2) << loss << " %" << std::endl;
+    std::cout << "--------------------------" << std::endl;
+    std::cout << "Avg Latency:    " << std::setprecision(3) << avg << " ms" << std::endl;
+    std::cout << "Min Latency:    " << minLat << " ms" << std::endl;
+    std::cout << "Max Latency:    " << maxLat << " ms" << std::endl;
+    std::cout << "Jitter (StdDev):" << stdDev << " ms" << std::endl;
+    std::cout << "==========================" << std::endl;
+    std::cout << "CSV file generated: " << outputFile << std::endl;
 
     return 0;
 }
