@@ -19,6 +19,25 @@ Sample parseSenderLogLine(const std::string &line, float &speed, double& timesta
 {
     std::istringstream iss(line);
     std::string temp;
+
+    if (line.find("Received speed:") != std::string::npos)
+    {
+        iss >> temp >> temp >> temp; // Skip "KuksaReader:" "Received" "speed:" 
+        if (iss.fail()) return false;
+        iss >> speed;
+        iss >> temp; // Skip "at"
+
+        iss >> timestamp;
+        timestamp /= 1000.0; // Convert ms to s 
+        return (true);
+    }
+    return false;
+}
+
+bool parseSenderLogLine(const std::string &line, float &speed, double& timestamp)
+{
+    std::istringstream iss(line);
+    std::string temp;
     
     iss >> temp >> temp; // Skip "Sender:" and "Sent"
     if (iss.fail()) return false;
