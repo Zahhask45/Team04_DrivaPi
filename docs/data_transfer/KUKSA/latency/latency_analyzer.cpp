@@ -83,6 +83,33 @@ int main(int argc, char **argv)
 
     std::cout << "Total samples sent: " << sentCount << std::endl;
 
-    
+    // Read receiver log
+    std::ifstream receiverLog(receiverFile);
+    if (!receiverLog.is_open())
+    {
+        std::cerr << "Error opening receiver log file: " << receiverFile << std::endl;
+        return 1;
+    }
+    int receivedCount = 0;
+    while (std::getline(receiverLog, line))
+    {
+        float speed;
+        double t1;
+        if (parseSenderLogLine(line, speed, t1))
+        {
+            int key = std::round(speed * 1000);
+            auto it = database.find(key);
+            if (it != database.end())
+            {
+                it->second.t1 = t1;
+                it->second.received = true;
+                receivedCount++;
+            }
+        }
+    }
+    receiverLog.close();
+
+    std::cout << "Total samples received: " << receivedCount << std::endl;
+
     return 0;
 }
