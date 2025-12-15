@@ -111,5 +111,69 @@ int main(int argc, char **argv)
 
     std::cout << "Total samples received: " << receivedCount << std::endl;
 
+    // Write analysis to output CSV
+    std::ofstream outFile(outputFile);
+    std:vector<double> latencies;
+
+    outFile << "Speed (m/s),Sent Timestamp (s),Received Timestamp (s),Latency (ms)" << std::endl;
+    for (const auto &[key, sample] : database)
+    {
+        if (sample.received)
+        {
+            double latency = (sample.t1 - sample.t0) * 1000.0; // Convert to ms
+            if (latency > -1000 && latency < 10000) // Filter out unreasonable latencies
+            {
+                latencies.push_back(latency);
+                outFile << std::fixed << std::setprecision(3)
+                        << sample.speed << ","
+                        << sample.t0 << ","
+                        << sample.t1 << ","
+                        << latency << std::endl;
+            }
+        }
+    }
+    outFile.close();
+
+    if (latencies.empty())
+    {
+        std::cerr << "No valid latency samples to analyze." << std::endl;
+    }
+    else
+    {
+        double sum = 0.0;
+        double minLatency = latencies[0];
+        double maxLatency = latencies[0];
+        for (double latency : latencies)
+        {
+            sum += latency;
+            if (latency < minLatency) minLatency = latency;
+            if (latency > maxLatency) maxLatency = latency;
+        }
+        double avgLatency = sum / latencies.size();
+
+        double sqrSum = 0.0;
+        for (double latency : latencies)
+        {
+            sqrSum += std::pow(latency - avgLatency, 2);
+        }
+        double stddevLatency = std::sqrt(sqrSum / latencies.size());
+
+        double lossRate = 0;
+        if (sentCount > 0)
+        {
+            lossRate = 100.0 * (1.0 - static_cast<double>(receivedCount) / static_cast<double>(sentCount));
+        }
+        std::cout << "\n=== PERFORMANCE REPORT ===" << std::endl;
+        std::cout << "Total Samples Sent: " << sentCount << std::endl;
+        std::cout << "Total Samples Received: " << receivedCount << std::endl;
+        std::cout << "Packet lost: "<< std::fixed << std::setprecision(2)<< lossRate << " %" << std::endl;
+        std::cout << "==========================" << std::endl;
+        std::cout << "Average Latency: " << avgLatency << " ms" << std::endl;
+        std::cout << "Minimum Latency: " << minLatency << " ms" << std::endl;
+        std::cout << "Maximum Latency: " << maxLatency << " ms" << std::endl;
+        std::cout << "Standard Deviation: " << stddevLatency << " ms" << std::endl;
+    }
+    std::cout << "Analysis complete. Results saved to " << outputFile << std::endl;
+
     return 0;
 }
