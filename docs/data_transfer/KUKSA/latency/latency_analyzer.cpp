@@ -15,10 +15,10 @@ struct Sample
     double t0; // timestamp when sent
     double t1; // timestamp when received
     bool received;
-}
+};
 
-// Auxiliary function to parse line from Sender log
-Sample parseSenderLogLine(const std::string &line, float &speed, double& timestamp)
+// 
+Sample parseReceiverLogLine(const std::string &line, float &speed, double& timestamp)
 {
     std::istringstream iss(line);
     std::string temp;
