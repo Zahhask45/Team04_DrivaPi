@@ -8,6 +8,7 @@ This research report presents an exhaustive, data-driven analysis comparing the 
 
 The raw CAN interface demonstrated an average latency of approximately 0.28 milliseconds (excluding systemic scheduling artifacts) and 0.00% packet loss. In stark contrast, the KUKSA Databroker ecosystem, utilizing the KUKSA CAN Provider, exhibited an average latency in the range of 2.5 to 3.0 milliseconds. While this represents an increase in latency, it comfortably ensure no visual stutter in the Qt-based Dashboard.
 
+Crucially, the KUKSA path showed a "packet loss" of 89.90%. This is identified not as a failure, but as a feature of architectural throttling (data decimation), where the kuksa-can-provider intentionally downsamples high-frequency sensor data (100Hz) to a manageable update rate (10Hz) to optimize bandwidth for VSS consumers. The report validates the Hybrid Architecture proposed in Spike #194, confirming that KUKSA is the superior choice for the Northbound UI (Dashboard) due to VSS decoupling, while direct CAN remains necessary for any Southbound control loops.
 ---
 
 ## Part 1: Architectural Context
