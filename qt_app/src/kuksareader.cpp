@@ -1,0 +1,51 @@
+#include "kuksareader.hpp"
+//QDateTime for latency testing - remove later
+#include <QDateTime>
+
+KUKSAReader::KUKSAReader(QObject *parent)
+    : QObject(parent)
+{}
+
+KUKSAReader::~KUKSAReader()
+{}
+
+void KUKSAReader::start()
+{
+    //1. Connect to Broker auto channel
+    auto channel = grpc::CreateChannel("localhost:55555", grpc::InsecureChannelCredentials());
+    m_stub_ = VAL::NewStub(channel);
+
+    //2. Subscribe to speed data
+    grpc::ClientContext context;
+    SubscribeRequest request;
+
+    auto *entry = request.add_entries();
+    entry->set_path("Vehicle.Speed");
+    entry->add_fields(Field::FIELD_VALUE);
+
+    std::unique_ptr<grpc::ClientReader<SubscribeResponse>> reader(
+        m_stub_->Subscribe(&context, request));
+
+    SubscribeResponse response;
+    qDebug() << "KuksaReader: Connected and Subscribed to Vehicle.Speed";
+
+    //3. Loop to read incoming speed data (blocking call so run in separate thread (QThread))
+    while(reader->Read(&response))
+    {
+        for (const auto &update : response.updates())
+        {
+                if (update.entry().path() == "Vehicle.Speed")
+                {
+                    float speed = update.entry().value().float_();
+                    
+                    //LATENCY TESTING CODE - REMOVE LATER
+                    qint64 t1 = QDateTime::currentMSecsSinceEpoch();
+                    qDebug() << "KuksaReader: Received speed:" << speed << " at " << t1;
+                    //END LATENCY TESTING CODE
+
+                    emit speedReceived(speed);
+                }
+        }
+    }
+}
+

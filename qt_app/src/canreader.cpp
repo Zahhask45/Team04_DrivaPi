@@ -1,4 +1,6 @@
 #include "canreader.hpp"
+//QDateTime for latency testing - remove later
+#include <QDateTime>
 
 CANReader *reader0 = new CANReader(QStringLiteral("can1"));
 
@@ -81,6 +83,12 @@ void CANReader::handleFramesReceived()
         QCanBusFrame frame = m_device->readFrame();
         QByteArray payload = frame.payload();
         uint32_t canId = static_cast<uint32_t>(frame.frameId());
+        
+        //LATENCY TESTING CODE - REMOVE LATER
+        qint64 t1 = QDateTime::currentMSecsSinceEpoch();
+        qDebug() << "CANReader: Received CAN frame ID=0x" << QString::number(canId, 16) << " at " << t1;
+        //END LATENCY TESTING CODE
+        
         emit canMessageReceived(payload, canId);
         qDebug() << "Received CAN frame: ID=0x" << QString::number(canId, 16) << " Payload=" << payload.toHex();
     }

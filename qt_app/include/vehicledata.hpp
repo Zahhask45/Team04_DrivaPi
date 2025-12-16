@@ -50,6 +50,9 @@ public:
     Q_INVOKABLE void changeGearUp();
     Q_INVOKABLE void changeGearDown();
 
+    // Thread-safe handlers for incoming data
+    void handleSpeedUpdate(float speed);
+    
 public slots:
     // Called by CANReader (queued connection) with raw payload + canId
     void handleCanMessage(const QByteArray &payload, uint32_t canId);
