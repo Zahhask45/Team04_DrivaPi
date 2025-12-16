@@ -4,8 +4,9 @@
 ---
 
 ## Executive Summary
+This research report presents an exhaustive, data-driven analysis comparing the performance characteristics of raw CAN bus data transfer against the Eclipse KUKSA Databroker abstraction layer. The study utilizes a proprietary dataset comprising approximately 1,000 transmission samples for each protocol to quantify critical metrics including latency, jitter, packet loss, and architectural overhead.
 
-
+The raw CAN interface demonstrated an average latency of approximately 0.28 milliseconds (excluding systemic scheduling artifacts) and 0.00% packet loss. In stark contrast, the KUKSA Databroker ecosystem, utilizing the KUKSA CAN Provider, exhibited an average latency in the range of 2.5 to 3.0 milliseconds. While this represents an increase in latency, it comfortably ensure no visual stutter in the Qt-based Dashboard.
 
 ---
 
