@@ -1,205 +1,207 @@
 VehicleData initialized
 Starting in KUKSA mode
 KuksaReader: Connected and Subscribed to Vehicle.Speed
-KuksaReader: Received speed: 0  at  1765894221286
+KuksaReader: Received speed: 0  at  1765894911602
 Speed set to (m/s): 0
-KuksaReader: Received speed: 22.444  at  1765894225520
-Speed set to (m/s): 22.444
-KuksaReader: Received speed: 55.5074  at  1765894225621
-Speed set to (m/s): 55.5074
-KuksaReader: Received speed: 51.3464  at  1765894225722
-Speed set to (m/s): 51.3464
-KuksaReader: Received speed: 15.4323  at  1765894225825
-Speed set to (m/s): 15.4323
-KuksaReader: Received speed: 59.4572  at  1765894225924
-Speed set to (m/s): 59.4572
-KuksaReader: Received speed: 12.2831  at  1765894226027
-Speed set to (m/s): 12.2831
-KuksaReader: Received speed: 98.7485  at  1765894226129
-Speed set to (m/s): 98.7485
-KuksaReader: Received speed: 88.9904  at  1765894226231
-Speed set to (m/s): 88.9904
-KuksaReader: Received speed: 63.0571  at  1765894226333
-Speed set to (m/s): 63.0571
-KuksaReader: Received speed: 81.0995  at  1765894226435
-Speed set to (m/s): 81.0995
-KuksaReader: Received speed: 4.31535  at  1765894226538
-Speed set to (m/s): 4.31535
-KuksaReader: Received speed: 6.39639  at  1765894226640
-Speed set to (m/s): 6.39639
-KuksaReader: Received speed: 24.2779  at  1765894226742
-Speed set to (m/s): 24.2779
-KuksaReader: Received speed: 59.5476  at  1765894226844
-Speed set to (m/s): 59.5476
-KuksaReader: Received speed: 3.53731  at  1765894226945
-Speed set to (m/s): 3.53731
-KuksaReader: Received speed: 25.2492  at  1765894227047
-Speed set to (m/s): 25.2492
-KuksaReader: Received speed: 96.9064  at  1765894227148
-Speed set to (m/s): 96.9064
-KuksaReader: Received speed: 36.7882  at  1765894227249
-Speed set to (m/s): 36.7882
-KuksaReader: Received speed: 84.9443  at  1765894227352
-Speed set to (m/s): 84.9443
-KuksaReader: Received speed: 35.4725  at  1765894227454
-Speed set to (m/s): 35.4725
-KuksaReader: Received speed: 48.6183  at  1765894227556
-Speed set to (m/s): 48.6183
-KuksaReader: Received speed: 41.3301  at  1765894227658
-Speed set to (m/s): 41.3301
-KuksaReader: Received speed: 10.3542  at  1765894227759
-Speed set to (m/s): 10.3542
-KuksaReader: Received speed: 46.7526  at  1765894227860
-Speed set to (m/s): 46.7526
-KuksaReader: Received speed: 45.6978  at  1765894227961
-Speed set to (m/s): 45.6978
-KuksaReader: Received speed: 46.9592  at  1765894228063
-Speed set to (m/s): 46.9592
-KuksaReader: Received speed: 33.6184  at  1765894228164
-Speed set to (m/s): 33.6184
-KuksaReader: Received speed: 54.2496  at  1765894228267
-Speed set to (m/s): 54.2496
-KuksaReader: Received speed: 19.4099  at  1765894228369
-Speed set to (m/s): 19.4099
-KuksaReader: Received speed: 66.0149  at  1765894228471
-Speed set to (m/s): 66.0149
-KuksaReader: Received speed: 45.1853  at  1765894228573
-Speed set to (m/s): 45.1853
-KuksaReader: Received speed: 52.4036  at  1765894228675
-Speed set to (m/s): 52.4036
-KuksaReader: Received speed: 55.2201  at  1765894228776
-Speed set to (m/s): 55.2201
-KuksaReader: Received speed: 75.561  at  1765894228879
-Speed set to (m/s): 75.561
-KuksaReader: Received speed: 23.2195  at  1765894228980
-Speed set to (m/s): 23.2195
-KuksaReader: Received speed: 1.93751  at  1765894229082
-Speed set to (m/s): 1.93751
-KuksaReader: Received speed: 23.9663  at  1765894229183
-Speed set to (m/s): 23.9663
-KuksaReader: Received speed: 63.1218  at  1765894229286
-Speed set to (m/s): 63.1218
-KuksaReader: Received speed: 3.06174  at  1765894229388
-Speed set to (m/s): 3.06174
-KuksaReader: Received speed: 44.4421  at  1765894229489
-Speed set to (m/s): 44.4421
-KuksaReader: Received speed: 33.7027  at  1765894229591
-Speed set to (m/s): 33.7027
-KuksaReader: Received speed: 63.963  at  1765894229693
-Speed set to (m/s): 63.963
-KuksaReader: Received speed: 35.2354  at  1765894229795
-Speed set to (m/s): 35.2354
-KuksaReader: Received speed: 46.1132  at  1765894229897
-Speed set to (m/s): 46.1132
-KuksaReader: Received speed: 34.6291  at  1765894229998
-Speed set to (m/s): 34.6291
-KuksaReader: Received speed: 82.7429  at  1765894230102
-Speed set to (m/s): 82.7429
-KuksaReader: Received speed: 66.4054  at  1765894230204
-Speed set to (m/s): 66.4054
-KuksaReader: Received speed: 90.3511  at  1765894230305
-Speed set to (m/s): 90.3511
-KuksaReader: Received speed: 73.4002  at  1765894230408
-Speed set to (m/s): 73.4002
-KuksaReader: Received speed: 53.8063  at  1765894230510
-Speed set to (m/s): 53.8063
-KuksaReader: Received speed: 4.80778  at  1765894230612
-Speed set to (m/s): 4.80778
-KuksaReader: Received speed: 68.4614  at  1765894230714
-Speed set to (m/s): 68.4614
-KuksaReader: Received speed: 46.9841  at  1765894230817
-Speed set to (m/s): 46.9841
-KuksaReader: Received speed: 86.9632  at  1765894230919
-Speed set to (m/s): 86.9632
-KuksaReader: Received speed: 15.2383  at  1765894231022
-Speed set to (m/s): 15.2383
-KuksaReader: Received speed: 14.8904  at  1765894231124
-Speed set to (m/s): 14.8904
-KuksaReader: Received speed: 5.88111  at  1765894231226
-Speed set to (m/s): 5.88111
-KuksaReader: Received speed: 94.0347  at  1765894231329
-Speed set to (m/s): 94.0347
-KuksaReader: Received speed: 26.6327  at  1765894231431
-Speed set to (m/s): 26.6327
-KuksaReader: Received speed: 36.741  at  1765894231533
-Speed set to (m/s): 36.741
-KuksaReader: Received speed: 60.7497  at  1765894231635
-Speed set to (m/s): 60.7497
-KuksaReader: Received speed: 65.2385  at  1765894231738
-Speed set to (m/s): 65.2385
-KuksaReader: Received speed: 56.5261  at  1765894231841
-Speed set to (m/s): 56.5261
-KuksaReader: Received speed: 42.4314  at  1765894231943
-Speed set to (m/s): 42.4314
-KuksaReader: Received speed: 70.51  at  1765894232045
-Speed set to (m/s): 70.51
-KuksaReader: Received speed: 82.0033  at  1765894232149
-Speed set to (m/s): 82.0033
-KuksaReader: Received speed: 70.4064  at  1765894232250
-Speed set to (m/s): 70.4064
-KuksaReader: Received speed: 52.2124  at  1765894232353
-Speed set to (m/s): 52.2124
-KuksaReader: Received speed: 73.2311  at  1765894232456
-Speed set to (m/s): 73.2311
-KuksaReader: Received speed: 8.96744  at  1765894232558
-Speed set to (m/s): 8.96744
-KuksaReader: Received speed: 92.7718  at  1765894232661
-Speed set to (m/s): 92.7718
-KuksaReader: Received speed: 57.1696  at  1765894232763
-Speed set to (m/s): 57.1696
-KuksaReader: Received speed: 81.8854  at  1765894232864
-Speed set to (m/s): 81.8854
-KuksaReader: Received speed: 23.8713  at  1765894232967
-Speed set to (m/s): 23.8713
-KuksaReader: Received speed: 61.8242  at  1765894233069
-Speed set to (m/s): 61.8242
-KuksaReader: Received speed: 78.9449  at  1765894233172
-Speed set to (m/s): 78.9449
-KuksaReader: Received speed: 56.6234  at  1765894233275
-Speed set to (m/s): 56.6234
-KuksaReader: Received speed: 32.1572  at  1765894233377
-Speed set to (m/s): 32.1572
-KuksaReader: Received speed: 35.1456  at  1765894233479
-Speed set to (m/s): 35.1456
-KuksaReader: Received speed: 55.8183  at  1765894233582
-Speed set to (m/s): 55.8183
-KuksaReader: Received speed: 7.35422  at  1765894233684
-Speed set to (m/s): 7.35422
-KuksaReader: Received speed: 2.20435  at  1765894233787
-Speed set to (m/s): 2.20435
-KuksaReader: Received speed: 59.2091  at  1765894233889
-Speed set to (m/s): 59.2091
-KuksaReader: Received speed: 9.80938  at  1765894233991
-Speed set to (m/s): 9.80938
-KuksaReader: Received speed: 43.8008  at  1765894234094
-Speed set to (m/s): 43.8008
-KuksaReader: Received speed: 67.1138  at  1765894234197
-Speed set to (m/s): 67.1138
-KuksaReader: Received speed: 72.0199  at  1765894234299
-Speed set to (m/s): 72.0199
-KuksaReader: Received speed: 74.773  at  1765894234402
-Speed set to (m/s): 74.773
-KuksaReader: Received speed: 44.9499  at  1765894234504
-Speed set to (m/s): 44.9499
-KuksaReader: Received speed: 0.786731  at  1765894234607
-Speed set to (m/s): 0.786731
-KuksaReader: Received speed: 33.5913  at  1765894234709
-Speed set to (m/s): 33.5913
-KuksaReader: Received speed: 87.4007  at  1765894234812
-Speed set to (m/s): 87.4007
-KuksaReader: Received speed: 49.7849  at  1765894234914
-Speed set to (m/s): 49.7849
-KuksaReader: Received speed: 30.6309  at  1765894235016
-Speed set to (m/s): 30.6309
-KuksaReader: Received speed: 48.7481  at  1765894235119
-Speed set to (m/s): 48.7481
-KuksaReader: Received speed: 25.6215  at  1765894235221
-Speed set to (m/s): 25.6215
-KuksaReader: Received speed: 99.4172  at  1765894235324
-Speed set to (m/s): 99.4172
-KuksaReader: Received speed: 48.1331  at  1765894235427
-Speed set to (m/s): 48.1331
-KuksaReader: Received speed: 64.9647  at  1765894235529
-Speed set to (m/s): 64.9647
-KuksaReader: Received speed: 14.4931  at  1765894235632
-Speed set to (m/s): 14.4931
+KuksaReader: Received speed: 70.2965  at  1765894929269
+Speed set to (m/s): 70.2965
+KuksaReader: Received speed: 32.8145  at  1765894929373
+Speed set to (m/s): 32.8145
+KuksaReader: Received speed: 50.5936  at  1765894929476
+Speed set to (m/s): 50.5936
+KuksaReader: Received speed: 75.4097  at  1765894929580
+Speed set to (m/s): 75.4097
+KuksaReader: Received speed: 90.5058  at  1765894929682
+Speed set to (m/s): 90.5058
+KuksaReader: Received speed: 66.8225  at  1765894929785
+Speed set to (m/s): 66.8225
+KuksaReader: Received speed: 74.2388  at  1765894929888
+Speed set to (m/s): 74.2388
+KuksaReader: Received speed: 29.1486  at  1765894929991
+Speed set to (m/s): 29.1486
+KuksaReader: Received speed: 36.7157  at  1765894930093
+Speed set to (m/s): 36.7157
+KuksaReader: Received speed: 29.9873  at  1765894930196
+Speed set to (m/s): 29.9873
+KuksaReader: Received speed: 49.4859  at  1765894930299
+Speed set to (m/s): 49.4859
+KuksaReader: Received speed: 62.2023  at  1765894930402
+Speed set to (m/s): 62.2023
+KuksaReader: Received speed: 44.7633  at  1765894930505
+Speed set to (m/s): 44.7633
+KuksaReader: Received speed: 6.16912  at  1765894930607
+Speed set to (m/s): 6.16912
+KuksaReader: Received speed: 75.8901  at  1765894930710
+Speed set to (m/s): 75.8901
+KuksaReader: Received speed: 62.8503  at  1765894930815
+Speed set to (m/s): 62.8503
+KuksaReader: Received speed: 52.0842  at  1765894930917
+Speed set to (m/s): 52.0842
+KuksaReader: Received speed: 94.3017  at  1765894931020
+Speed set to (m/s): 94.3017
+KuksaReader: Received speed: 73.75  at  1765894931123
+Speed set to (m/s): 73.75
+KuksaReader: Received speed: 19.1203  at  1765894931226
+Speed set to (m/s): 19.1203
+KuksaReader: Received speed: 73.888  at  1765894931329
+Speed set to (m/s): 73.888
+KuksaReader: Received speed: 82.486  at  1765894931433
+Speed set to (m/s): 82.486
+KuksaReader: Received speed: 29.2694  at  1765894931535
+Speed set to (m/s): 29.2694
+KuksaReader: Received speed: 60.8334  at  1765894931639
+Speed set to (m/s): 60.8334
+KuksaReader: Received speed: 36.6191  at  1765894931742
+Speed set to (m/s): 36.6191
+KuksaReader: Received speed: 46.9424  at  1765894931845
+Speed set to (m/s): 46.9424
+KuksaReader: Received speed: 80.0006  at  1765894931949
+Speed set to (m/s): 80.0006
+KuksaReader: Received speed: 89.7934  at  1765894932051
+Speed set to (m/s): 89.7934
+KuksaReader: Received speed: 73.5611  at  1765894932154
+Speed set to (m/s): 73.5611
+KuksaReader: Received speed: 24.4952  at  1765894932257
+Speed set to (m/s): 24.4952
+KuksaReader: Received speed: 92.324  at  1765894932360
+Speed set to (m/s): 92.324
+KuksaReader: Received speed: 26.1616  at  1765894932462
+Speed set to (m/s): 26.1616
+KuksaReader: Received speed: 10.0955  at  1765894932565
+Speed set to (m/s): 10.0955
+KuksaReader: Received speed: 40.6524  at  1765894932667
+Speed set to (m/s): 40.6524
+KuksaReader: Received speed: 53.2733  at  1765894932770
+Speed set to (m/s): 53.2733
+KuksaReader: Received speed: 4.55978  at  1765894932872
+Speed set to (m/s): 4.55978
+KuksaReader: Received speed: 17.7589  at  1765894932976
+Speed set to (m/s): 17.7589
+KuksaReader: Received speed: 58.3508  at  1765894933079
+Speed set to (m/s): 58.3508
+KuksaReader: Received speed: 50.9703  at  1765894933183
+Speed set to (m/s): 50.9703
+KuksaReader: Received speed: 10.2062  at  1765894933285
+Speed set to (m/s): 10.2062
+KuksaReader: Received speed: 2.49656  at  1765894933389
+Speed set to (m/s): 2.49656
+KuksaReader: Received speed: 19.9525  at  1765894933492
+Speed set to (m/s): 19.9525
+KuksaReader: Received speed: 90.4811  at  1765894933595
+Speed set to (m/s): 90.4811
+KuksaReader: Received speed: 40.2465  at  1765894933698
+Speed set to (m/s): 40.2465
+KuksaReader: Received speed: 72.9108  at  1765894933801
+Speed set to (m/s): 72.9108
+KuksaReader: Received speed: 73.5356  at  1765894933904
+Speed set to (m/s): 73.5356
+KuksaReader: Received speed: 92.9301  at  1765894934007
+Speed set to (m/s): 92.9301
+KuksaReader: Received speed: 46.6044  at  1765894934109
+Speed set to (m/s): 46.6044
+KuksaReader: Received speed: 39.6873  at  1765894934212
+Speed set to (m/s): 39.6873
+KuksaReader: Received speed: 71.8625  at  1765894934315
+Speed set to (m/s): 71.8625
+KuksaReader: Received speed: 17.3859  at  1765894934417
+Speed set to (m/s): 17.3859
+KuksaReader: Received speed: 67.4524  at  1765894934521
+Speed set to (m/s): 67.4524
+KuksaReader: Received speed: 47.7612  at  1765894934623
+Speed set to (m/s): 47.7612
+KuksaReader: Received speed: 40.3719  at  1765894934726
+Speed set to (m/s): 40.3719
+KuksaReader: Received speed: 49.6203  at  1765894934829
+Speed set to (m/s): 49.6203
+KuksaReader: Received speed: 50.6031  at  1765894934932
+Speed set to (m/s): 50.6031
+KuksaReader: Received speed: 54.7014  at  1765894935034
+Speed set to (m/s): 54.7014
+KuksaReader: Received speed: 61.2668  at  1765894935138
+Speed set to (m/s): 61.2668
+KuksaReader: Received speed: 34.6836  at  1765894935240
+Speed set to (m/s): 34.6836
+KuksaReader: Received speed: 65.3647  at  1765894935342
+Speed set to (m/s): 65.3647
+KuksaReader: Received speed: 76.4435  at  1765894935444
+Speed set to (m/s): 76.4435
+KuksaReader: Received speed: 61.2081  at  1765894935546
+Speed set to (m/s): 61.2081
+KuksaReader: Received speed: 28.9946  at  1765894935650
+Speed set to (m/s): 28.9946
+KuksaReader: Received speed: 27.063  at  1765894935753
+Speed set to (m/s): 27.063
+KuksaReader: Received speed: 99.5758  at  1765894935855
+Speed set to (m/s): 99.5758
+KuksaReader: Received speed: 3.17445  at  1765894935957
+Speed set to (m/s): 3.17445
+KuksaReader: Received speed: 94.4711  at  1765894936060
+Speed set to (m/s): 94.4711
+KuksaReader: Received speed: 86.8892  at  1765894936162
+Speed set to (m/s): 86.8892
+KuksaReader: Received speed: 97.6442  at  1765894936266
+Speed set to (m/s): 97.6442
+KuksaReader: Received speed: 29.8971  at  1765894936369
+Speed set to (m/s): 29.8971
+KuksaReader: Received speed: 56.3991  at  1765894936470
+Speed set to (m/s): 56.3991
+KuksaReader: Received speed: 30.8322  at  1765894936572
+Speed set to (m/s): 30.8322
+KuksaReader: Received speed: 6.60216  at  1765894936674
+Speed set to (m/s): 6.60216
+KuksaReader: Received speed: 2.0665  at  1765894936776
+Speed set to (m/s): 2.0665
+KuksaReader: Received speed: 98.3441  at  1765894936879
+Speed set to (m/s): 98.3441
+KuksaReader: Received speed: 28.7516  at  1765894936981
+Speed set to (m/s): 28.7516
+KuksaReader: Received speed: 88.4528  at  1765894937084
+Speed set to (m/s): 88.4528
+KuksaReader: Received speed: 56.2758  at  1765894937188
+Speed set to (m/s): 56.2758
+KuksaReader: Received speed: 54.1722  at  1765894937291
+Speed set to (m/s): 54.1722
+KuksaReader: Received speed: 15.7588  at  1765894937394
+Speed set to (m/s): 15.7588
+KuksaReader: Received speed: 17.4447  at  1765894937497
+Speed set to (m/s): 17.4447
+KuksaReader: Received speed: 11.8155  at  1765894937600
+Speed set to (m/s): 11.8155
+KuksaReader: Received speed: 50.4885  at  1765894937703
+Speed set to (m/s): 50.4885
+KuksaReader: Received speed: 29.6756  at  1765894937806
+Speed set to (m/s): 29.6756
+KuksaReader: Received speed: 14.0836  at  1765894937908
+Speed set to (m/s): 14.0836
+KuksaReader: Received speed: 54.5192  at  1765894938010
+Speed set to (m/s): 54.5192
+KuksaReader: Received speed: 81.1109  at  1765894938112
+Speed set to (m/s): 81.1109
+KuksaReader: Received speed: 34.5757  at  1765894938214
+Speed set to (m/s): 34.5757
+KuksaReader: Received speed: 50.1824  at  1765894938316
+Speed set to (m/s): 50.1824
+KuksaReader: Received speed: 74.0966  at  1765894938418
+Speed set to (m/s): 74.0966
+KuksaReader: Received speed: 59.6996  at  1765894938521
+Speed set to (m/s): 59.6996
+KuksaReader: Received speed: 40.5955  at  1765894938623
+Speed set to (m/s): 40.5955
+KuksaReader: Received speed: 34.4489  at  1765894938724
+Speed set to (m/s): 34.4489
+KuksaReader: Received speed: 24.6637  at  1765894938826
+Speed set to (m/s): 24.6637
+KuksaReader: Received speed: 73.9351  at  1765894938929
+Speed set to (m/s): 73.9351
+KuksaReader: Received speed: 39.118  at  1765894939032
+Speed set to (m/s): 39.118
+KuksaReader: Received speed: 66.5394  at  1765894939136
+Speed set to (m/s): 66.5394
+KuksaReader: Received speed: 69.6766  at  1765894939240
+Speed set to (m/s): 69.6766
+KuksaReader: Received speed: 33.8116  at  1765894939343
+Speed set to (m/s): 33.8116
+KuksaReader: Received speed: 76.5563  at  1765894939446
+Speed set to (m/s): 76.5563
+KuksaReader: Received speed: 6.69415  at  1765894939548
+Speed set to (m/s): 6.69415
