@@ -49,11 +49,51 @@ jobs:
       # Build project for CodeQL
       - name: Build project for CodeQL
         run: |
+          set -e
           cd Threadx/Debug
-          make -f makefile main-build
+          echo "Building firmware for CodeQL analysis..."
+          
+          if ! make -f makefile main-build; then
+            echo "❌ Build failed - compilation errors detected"
+            echo "Fix compilation errors before analysis can proceed"
+            exit 1
+          fi
+          
+          if [ ! -f Threadx.elf ]; then
+            echo "❌ Build artifact missing - Threadx.elf not found"
+            exit 1
+          fi
+          
+          echo "✅ Build successful - proceeding with CodeQL analysis"
 
       # Run CodeQL analysis
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v4
         with:
           category: '/language:cpp'
+          output: results
+
+      # Fail job if high or critical severity issues found
+      - name: Check for high-severity issues
+        if: always()
+        run: |
+          SARIF_FILE="results/cpp.sarif"
+          
+          if [ ! -f "$SARIF_FILE" ]; then
+            echo "SARIF file not found at $SARIF_FILE"
+            exit 0
+          fi
+          
+          # Count error-level (high/critical) results
+          # SARIF uses "error" level for high/critical severity
+          ERROR_COUNT=$(jq '[.runs[].results[] | select(.level == "error")] | length' "$SARIF_FILE")
+          
+          echo "CodeQL found $ERROR_COUNT high/critical severity issue(s)"
+          
+          if [ "$ERROR_COUNT" -gt 0 ]; then
+            echo "❌ Failing job due to $ERROR_COUNT high/critical severity issue(s)"
+            echo "Review findings at: Security → Code scanning alerts"
+            exit 1
+          else
+            echo "✅ No high/critical severity issues found"
+          fi
