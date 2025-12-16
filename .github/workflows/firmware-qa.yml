@@ -2,7 +2,7 @@ name: "CodeQL C Analysis for STM32 (with comments)"
 
 on:
   push:
-    branches: [main]
+    branches: [feat/263-create-ci-workflow-for-static-analysis]
   pull_request:
     branches: [main]
   schedule:
