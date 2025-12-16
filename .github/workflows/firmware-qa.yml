@@ -1,8 +1,17 @@
-name: "CodeQL C Analysis for STM32 (with comments)"
+name: "CodeQL C Analysis for STM32"
 
 on:
   push:
   pull_request:
+
+permissions:
+  contents: read
+  security-events: write
+  actions: read
+
+concurrency:
+  group: codeql-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   codeql:
@@ -12,13 +21,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
-      # Cache ARM toolchain
-      - name: Cache ARM Toolchain
-        uses: actions/cache@v3
-        with:
-          path: /usr/bin/arm-none-eabi-gcc
-          key: arm-toolchain-${{ runner.os }}-v1
 
       - name: Install ARM toolchain
         run: |
@@ -30,9 +32,11 @@ jobs:
 
       # Initialize CodeQL
       - name: Initialize CodeQL
-        uses: github/codeql-action/init@v2
+        uses: github/codeql-action/init@v3
         with:
           languages: ['c']
+          queries: security-and-quality
+          build-mode: manual
 
       # Cache build artifacts
       - name: Cache build artifacts
@@ -49,38 +53,6 @@ jobs:
 
       # Run CodeQL analysis
       - name: Perform CodeQL Analysis
-        uses: github/codeql-action/analyze@v2
-        id: codeql-analysis
-
-      # Comment on PR if exists
-      - name: Comment PR with CodeQL results
-        if: github.event_name == 'pull_request'
-        uses: github/codeql-action/upload-sarif@v2
+        uses: github/codeql-action/analyze@v3
         with:
-          sarif_file: ${{ steps.codeql-analysis.outputs.sarif_file }}
-      
-      - name: Comment on PR with summary
-        if: github.event_name == 'pull_request'
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const sarif = require('@actions/core').getInput('sarif_file');
-            await github.rest.issues.createComment({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: context.payload.pull_request.number,
-              body: "🔍 CodeQL analysis completed. Check Security → Code scanning alerts for details."
-            });
-
-      # Comment on commit for push events
-      - name: Comment commit with CodeQL summary
-        if: github.event_name == 'push'
-        uses: actions/github-script@v7
-        with:
-          script: |
-            await github.rest.repos.createCommitComment({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              commit_sha: context.sha,
-              body: "🔍 CodeQL analysis completed for this commit. Check Security → Code scanning alerts for details."
-            });
+          category: '/language:c'
