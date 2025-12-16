@@ -23,11 +23,9 @@ This test verifies bidirectional CAN communication between a Raspberry Pi and an
 
 1. Sender (Raspberry Pi)
    - Used `cansend` at 1 Mbps
-   - Transmitted message: "hello"
 
 2. Receiver (STM32)
    - Interrupt handler configured for incoming CAN messages
-   - Successfully received "hello"
    - Interrupt-driven approach provided real-time handling
 
 3. Verification
