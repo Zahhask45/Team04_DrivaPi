@@ -27,14 +27,32 @@ KUKSA introduces a semantic abstraction layer via the **Vehicle Signal Specifica
 - **Decoupling**: Firmware changes don't require Dashboard recompilation
 - **Portability**: VSS standardization enables cloud sync, simulation, and third-party integrations
 - **Security**: TLS and JWT authentication (vs. promiscuous CAN trust model)
-- **Scalability**: Easy to add new signals via `drivapi.vss.json` without touching C++ code
+- **Scalability**: To add new signals, update the VSS mapping and DBC database in the KUKSA CAN Provider only
 
 ---
 
 ## Part 2: Experimental Methodology
 
-### Test Setup
-- **Environment**: Linux virtual machine (VM42) with virtual CAN interface (vcan0)
-- **Sample size**: ~1,000 transmission samples per protocol
-- **Simulation**: C++ sender generates 100 Hz traffic on vcan0 ID 0x100 (STM32 ECU simulation)
-- **Analysis method**: Post-execution log correlation using "Nearest Time Match" algorithm
+### 2.1 Test Infrastructure and Virtualization
+
+The experimental setup utilizes the Linux kernel's virtual CAN interface (vcan0), which emulates a physical CAN bus in software. This isolates the software stack overhead from physical wire delays, providing a pure measurement of the middleware cost.
+
+### 2.2 Component Architecture
+The experimental rig mirrors the proposed DrivaPi architecture:
+
+**The Sender (Simulating Firmware):**
+- A C++ application generating 100Hz traffic on vcan0 with ID 0x100, simulating the STM32 ECU.
+
+**The KUKSA Ecosystem (Simulating Middleware):**
+- **KUKSA Databroker**: The central server.
+- **KUKSA CAN Provider**: The "Feeder" component (configured via kuksa can provider) that reads vcan0, parses the float payload, and publishes to the broker.
+- **KUKSAreader**: The "Consumer" component that subscribes to `Vehicle.Speed` from the broker.
+
+**The Analyzer:**
+- A post-processing tool that correlates sent/received timestamps to compute \(\Delta T\) (Latency).
+
+### 2.3 Data Processing Limitations and Assumptions
+
+The analysis relies on correlating logs post-execution using a "Nearest Time Match" algorithm. A critical assumption is that the "KUKSA Latency" measured here encompasses the entire signal chain: vcan0 \(\rightarrow\) Provider \(\rightarrow\) Broker \(\rightarrow\) Client. This represents the full "application-perceived latency" for the DrivaPi Dashboard.
+
+---
