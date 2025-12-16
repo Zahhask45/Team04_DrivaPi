@@ -1,4 +1,4 @@
-name: STM32 CI (QEMU Simulation - split strategy)
+name: STM32 CI
 
 on:
   push:
