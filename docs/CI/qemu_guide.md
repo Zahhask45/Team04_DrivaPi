@@ -211,7 +211,7 @@ qemu-system-arm -M help | grep stm32
 
 ## Workaround Strategy
 
-### Option 1: Use Compatible STM32 Device
+### Use Compatible STM32 Device
 
 **Strategy:** Emulate using a supported STM32 device with compatible Cortex-M4
 
