@@ -14,7 +14,6 @@ This test verifies bidirectional CAN communication between a Raspberry Pi and an
 - Direction: Raspberry Pi (sender) ↔ STM32 (receiver with interrupts)
 - Message ID: 123
 - Payload: ASCII text
-- Test message: "hello"
 
 ## Results
 
