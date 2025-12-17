@@ -24,7 +24,6 @@ struct Result
 
 std::vector<SentPacket> sender_list;
 std::vector<Result> results;
-double g_lastCanTimestamp = 0.0;
 
 // --- HELPER ---
 bool extractValue(const std::string& line, const std::string& keyword, double& value)
@@ -61,7 +60,7 @@ bool parseReceiverLine(const std::string& line, float& speed, double& t1)
     
     // CASE 1: KUKSA (KuksaReader)
     // Log format: "KuksaReader: Received speed: 45.5 at 1234.567890"
-    if (line.find("Received speed:") != std::string::npos)
+    if (line.find("KuksaReader: Received speed:") != std::string::npos)
     {
         if (extractValue(line, "speed: ", temp_val))
         {
@@ -76,30 +75,19 @@ bool parseReceiverLine(const std::string& line, float& speed, double& t1)
 
     // CASE 2: CAN (CANReader + VehicleData)
     // Line A: "CANReader: Received... at 1234.567890" (timestamp buffer)
-    if (line.find("at ") != std::string::npos && line.find("Received speed:") == std::string::npos)
+    if (line.find("CANReader: Received speed:") != std::string::npos && line.find("Received speed:") == std::string::npos)
     {
-        if (extractValue(line, "at ", temp_val)) 
+        if (extractValue(line, "speed: ", temp_val)) 
         { 
             // Store timestamp for the next line
-            g_lastCanTimestamp = temp_val; 
-            return false; 
-        }
-    }
-    // Line B: "Speed set to (m/s): 45.5" (data match)
-    if (line.find("Speed set to") != std::string::npos)
-    {
-        if (extractValue(line, ": ", temp_val))
-        {
             speed = (float)temp_val;
-            if (g_lastCanTimestamp > 0.0)
-            { 
-                // UPDATE: Input is now in SECONDS (steady_clock), no division needed.
-                t1 = g_lastCanTimestamp; 
+            if (extractValue(line, "at ", t1))
+            {
                 return true;
             }
+            return false;
         }
     }
-    return false;
 }
 
 // --- MAIN ---

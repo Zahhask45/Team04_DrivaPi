@@ -92,7 +92,12 @@ void CANReader::handleFramesReceived()
         //END LATENCY TESTING CODE
         
         emit canMessageReceived(payload, canId);
-        qDebug() << "Received CAN frame: ID=0x" << QString::number(canId, 16) << " Payload=" << payload.toHex();
+        // In CANReader::handleFramesReceived
+        float speed_val;
+        std::memcpy(&speed_val, payload.constData(), sizeof(float)); // Assuming payload is 4 bytes
+
+        std::cout << "CANReader: Received speed: " << speed_val
+        << " at " << std::fixed << std::setprecision(6) << t1 << std::endl;
     }
 }
 
