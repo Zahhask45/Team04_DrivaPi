@@ -94,4 +94,4 @@ However, the benefits remain decisive:
 * **Hardware Independence:** UI works on any car with a VSS mapping.
 * **Future Proofing:** Ready for Cloud/Digital Twin integration.
 
-**Final Decision:** The Architecture Spike is **APPROVED**. The team should move to Phase 2, with a requirement to implement animation smoothing in the Qt client.
+**Final Decision:** The Architecture Spike should be **APPROVED**. The team should move to Phase 2, proceed to latency test KUKSA on AGL.
