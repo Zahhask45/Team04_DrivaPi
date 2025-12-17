@@ -3,6 +3,7 @@
 
 #include <QObject>
 #include <QDebug>
+#include <iomanip>
 #include <grpcpp/grpcpp.h>
 #include "val.grpc.pb.h"
 
