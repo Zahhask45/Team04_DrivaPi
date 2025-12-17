@@ -1,7 +1,3 @@
-Here is the updated **Performance Validation Report** with the latest test results you just provided.
-
----
-
 # CAN Bus vs KUKSA Databroker: Performance Analysis for DrivaPi
 
 ## Empirical Validation for Spike #194 (Migration from Direct CAN to Eclipse KUKSA)
