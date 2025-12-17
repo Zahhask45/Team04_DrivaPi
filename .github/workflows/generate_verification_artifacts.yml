@@ -71,7 +71,7 @@ jobs:
           cppcheck --enable=warning,style,performance,portability,information --error-exitcode=1 --suppress=missingIncludeSystem --suppress=unusedFunction --xml --xml-version=2 --includes-file=cppcheck_includes.txt "${{ inputs.src_dirs }}" 2> "${{ inputs.cppcheck_output }}"
 
       - name: Upload verification artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: verification-artifacts
           path: artifacts/verification

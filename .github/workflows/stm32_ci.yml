@@ -38,7 +38,7 @@ jobs:
           hexdump -C Threadx.elf | sed -n '1,4p' || true
 
       - name: Upload Threadx.elf as artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: firmware-elf
           path: Threadx/Debug/Threadx.elf
