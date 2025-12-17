@@ -58,36 +58,29 @@ bool parseReceiverLine(const std::string& line, float& speed, double& t1)
 {
     double temp_val;
     
-    // CASE 1: KUKSA (KuksaReader)
-    // Log format: "KuksaReader: Received speed: 45.5 at 1234.567890"
+    // Check for KUKSA format
     if (line.find("KuksaReader: Received speed:") != std::string::npos)
     {
         if (extractValue(line, "speed: ", temp_val))
         {
             speed = (float)temp_val;
-            if (extractValue(line, "at ", t1))
-            {
-                // UPDATE: Input is now in SECONDS (steady_clock), no division needed.
-                return true;
-            }
+            if (extractValue(line, "at ", t1)) return true;
         }
     }
 
-    // CASE 2: CAN (CANReader + VehicleData)
-    // Line A: "CANReader: Received... at 1234.567890" (timestamp buffer)
-    if (line.find("CANReader: Received speed:") != std::string::npos && line.find("Received speed:") == std::string::npos)
+    // Check for CAN format (UPDATED TO MATCH YOUR LOGS)
+    // Log line: "CANReader: Received speed: 29.3048 at 39930.388230"
+    if (line.find("CANReader: Received speed:") != std::string::npos)
     {
-        if (extractValue(line, "speed: ", temp_val)) 
-        { 
-            // Store timestamp for the next line
+         if (extractValue(line, "speed: ", temp_val))
+        {
             speed = (float)temp_val;
-            if (extractValue(line, "at ", t1))
-            {
-                return true;
-            }
-            return false;
+            // The timestamp is now directly in seconds (steady_clock), same as KUKSA
+            if (extractValue(line, "at ", t1)) return true;
         }
     }
+
+    return false;
 }
 
 // --- MAIN ---
