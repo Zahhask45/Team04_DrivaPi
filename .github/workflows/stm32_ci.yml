@@ -45,7 +45,7 @@ jobs:
       
       - name: Comment PR with build result (success)
         if: ${{ success() && github.event_name == 'pull_request' }}
-        uses: peter-evans/create-or-update-comment@v4
+        uses: peter-evans/create-or-update-comment@v5
         with:
           issue-number: ${{ github.event.pull_request.number }}
           body: |
@@ -53,7 +53,7 @@ jobs:
 
       - name: Comment PR with build result (failure)
         if: ${{ failure() && github.event_name == 'pull_request' }}
-        uses: peter-evans/create-or-update-comment@v4
+        uses: peter-evans/create-or-update-comment@v5
         with:
           issue-number: ${{ github.event.pull_request.number }}
           body: |
