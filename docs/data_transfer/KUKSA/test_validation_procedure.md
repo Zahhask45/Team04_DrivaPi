@@ -86,3 +86,63 @@ python3 dbcfeeder.py --canport vcan0 --dbcfile simple.dbc --mapping mapping.json
 
 ---
 
+The "Test Validation Procedure" below has been updated to reflect the specific repository you used (`eclipse-kuksa/kuksa-can-provider`).
+
+**Correction:** The `kuksa-can-provider` repository **is** the Python-based provider (formerly known as `dbc2val` or `dbcfeeder`). It is **not** Rust-based (that's the Databroker). Therefore, your use of `python3 dbcfeeder.py` and `mapping.json` is perfectly correct for this repo.
+
+Here is the finalized document using `c++` for compilation and the correct repo structure.
+
+---
+
+## 4. Test Execution
+
+### 4.1 Preparation: Compile Tools
+
+Compile the C++ test tools using the standard `c++` command.
+
+```bash
+c++ latency_sender.cpp -o latency_sender
+c++ latency_analyzer.cpp -o latency_analyzer
+
+```
+
+### 4.2 Test Case A: Direct CAN (Baseline)
+
+Run the application in "Direct CAN" mode to capture baseline performance.
+
+1. **Start Receiver (Background):**
+```bash
+# Directs output to latency_received_can_1000.txt
+./myqtapp > ../../docs/data_transfer/KUKSA/latency/latency_received_can_1000.txt 2>&1 &
+
+```
+
+
+2. **Start Sender:**
+```bash
+# Generates 1000 CAN frames on vcan0 and redirects output to latency_sent_can.txt
+./latency_sender > latency_sent_can.txt
+```
+
+
+### 4.3 Test Case B: KUKSA Databroker (Target)
+
+Run the application in "KUKSA Client" mode (`-k or -kuksa` flag) to validate the new architecture.
+
+1. **Start Receiver (Background):**
+```bash
+# Directs output to latency_received_kuksa_1000.txt
+./myqtapp -k > ../../docs/data_transfer/KUKSA/latency/latency_received_kuksa_1000.txt 2>&1 &
+
+```
+
+
+2. **Start Sender:**
+```bash
+# Generates 1000 CAN frames (Feeder -> Broker -> App)and redirects output to latency_sent_kuksa.txt
+./latency_sender > latency_sent_kuksa.txt
+
+```
+
+
+
