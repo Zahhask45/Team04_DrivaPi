@@ -9,9 +9,8 @@ This report presents the quantitative validation of the architecture proposed in
 
 Using a proprietary dataset of ~1,000 transmission samples in a Linux environment, the analysis yields the following key findings:
 
-1. **Latency:** The Kuksa Databroker introduces an average latency of 2.01 ms, compared to the 1.51 ms baseline of raw CAN.
+1. **Latency:** The Kuksa Databroker introduces an average latency of 1.83 ms, compared to the 0.13 ms baseline of raw CAN.
 
 2. **Throughput:** The system demonstrated 0.00% packet loss at a 100Hz update rate, proving that the kuksa-can-provider can handle high-frequency telemetry without mandatory decimation on this hardware.
 
-3. **Verdict:** The performance delta (~0.5ms) is negligible and significantly below the 16ms success criteria defined in the Spike. The architecture is VALIDATED for implementation.
-
+**Verdict:** The performance delta is well within the 16ms success criteria. However, the presence of occasional spikes >33ms requires robustness in the client-side interpolation logic.
