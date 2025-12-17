@@ -64,8 +64,12 @@ int main()
 
         std::memcpy(frame.data, &speed, sizeof(float));
 
-        auto now = std::chrono::system_clock::now();
-        double timestamp = std::chrono::duration<double>(now.time_since_epoch()).count();
+        auto now = std::chrono::steady_clock::now();
+        // Get the raw nanoseconds count since boot
+        long long timestamp_ns = std::chrono::duration_cast<std::chrono::nanoseconds>(now.time_since_epoch()).count();
+
+        // Convert to double seconds for printing (matches your current log format)
+        double timestamp = static_cast<double>(timestamp_ns) / 1e9;
 
         if (write(s, &frame, sizeof(struct can_frame)) != sizeof(struct can_frame))
         {

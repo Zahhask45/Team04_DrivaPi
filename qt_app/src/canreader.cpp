@@ -85,8 +85,10 @@ void CANReader::handleFramesReceived()
         uint32_t canId = static_cast<uint32_t>(frame.frameId());
         
         //LATENCY TESTING CODE - REMOVE LATER
-        qint64 t1 = QDateTime::currentMSecsSinceEpoch();
-        qDebug() << "CANReader: Received CAN frame ID=0x" << QString::number(canId, 16) << " at " << t1;
+        auto now = std::chrono::steady_clock::now();
+        long long t_ns = std::chrono::duration_cast<std::chrono::nanoseconds>(now.time_since_epoch()).count();
+        double t1 = static_cast<double>(t_ns) / 1e9; // Seconds as double
+        // qDebug() << "CANReader: Received CAN frame ID=0x" << QString::number(canId, 16) << " at " << t1;
         //END LATENCY TESTING CODE
         
         emit canMessageReceived(payload, canId);

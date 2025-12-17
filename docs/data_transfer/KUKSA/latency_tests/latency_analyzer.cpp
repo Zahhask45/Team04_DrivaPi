@@ -58,7 +58,9 @@ void processSenderLine(const std::string& line)
 bool parseReceiverLine(const std::string& line, float& speed, double& t1)
 {
     double temp_val;
-    // KUKSA
+    
+    // CASE 1: KUKSA (KuksaReader)
+    // Log format: "KuksaReader: Received speed: 45.5 at 1234.567890"
     if (line.find("Received speed:") != std::string::npos)
     {
         if (extractValue(line, "speed: ", temp_val))
@@ -66,16 +68,24 @@ bool parseReceiverLine(const std::string& line, float& speed, double& t1)
             speed = (float)temp_val;
             if (extractValue(line, "at ", t1))
             {
-                t1 /= 1000.0; 
+                // UPDATE: Input is now in SECONDS (steady_clock), no division needed.
                 return true;
             }
         }
     }
-    // CAN
+
+    // CASE 2: CAN (CANReader + VehicleData)
+    // Line A: "CANReader: Received... at 1234.567890" (timestamp buffer)
     if (line.find("at ") != std::string::npos && line.find("Received speed:") == std::string::npos)
     {
-        if (extractValue(line, "at ", temp_val)) { g_lastCanTimestamp = temp_val; return false; }
+        if (extractValue(line, "at ", temp_val)) 
+        { 
+            // Store timestamp for the next line
+            g_lastCanTimestamp = temp_val; 
+            return false; 
+        }
     }
+    // Line B: "Speed set to (m/s): 45.5" (data match)
     if (line.find("Speed set to") != std::string::npos)
     {
         if (extractValue(line, ": ", temp_val))
@@ -83,7 +93,8 @@ bool parseReceiverLine(const std::string& line, float& speed, double& t1)
             speed = (float)temp_val;
             if (g_lastCanTimestamp > 0.0)
             { 
-                t1 = g_lastCanTimestamp / 1000.0;
+                // UPDATE: Input is now in SECONDS (steady_clock), no division needed.
+                t1 = g_lastCanTimestamp; 
                 return true;
             }
         }
@@ -100,12 +111,13 @@ int main(int argc, char **argv)
         return 1;
     }
 
-    std::cout << "Method: Nearest Time Match (Permissive)..." << std::endl;
+    std::cout << "Method: Nearest Time Match (Steady Clock Precision)..." << std::endl;
 
-    // 1. CARREGAR SENDER
+    // 1. LOAD SENDER LOGS
     std::ifstream fSend(argv[1]);
     if (!fSend.is_open())
     {
+        std::cerr << "Error: Could not open sender file." << std::endl;
         return 1;
     }
     std::string line;
@@ -114,10 +126,15 @@ int main(int argc, char **argv)
         processSenderLine(line);
     }
     fSend.close();
-    std::cout << "[Sender] Loaded: " << sender_list.size() << std::endl;
+    std::cout << "[Sender] Loaded: " << sender_list.size() << " packets." << std::endl;
 
-    // 2. PROCESSAR RECEIVER
+    // 2. LOAD RECEIVER LOGS
     std::ifstream fRecv(argv[2]);
+    if (!fRecv.is_open())
+    {
+        std::cerr << "Error: Could not open receiver file." << std::endl;
+        return 1;
+    }
     int countRecvLines = 0;
 
     while (std::getline(fRecv, line))
@@ -129,18 +146,20 @@ int main(int argc, char **argv)
         {
             countRecvLines++;
             
-            // BUSCA UNIVERSAL
+            // "NEAREST MATCH" ALGORITHM
             int bestIndex = -1;
+            // Search window (e.g., look for packets sent +/- 100ms around receive time)
             double minAbsTimeDiff = 100000.0; 
 
             for (size_t i = 0; i < sender_list.size(); i++)
             {
                 if (sender_list[i].matched) continue;
 
-                // Tolerância aumentada para 0.1 para garantir que apanha tudo
+                // 1. Check Data Integrity (Tolerance 0.1 for float rounding)
                 if (std::abs(sender_list[i].speed - r_speed) < 0.1f)
                 {
-                    
+                    // 2. Check Time Correlation
+                    // Note: r_time and timestamp are both in seconds now
                     double diff = std::abs(r_time - sender_list[i].timestamp);
                     
                     if (diff < minAbsTimeDiff)
@@ -151,11 +170,14 @@ int main(int argc, char **argv)
                 }
             }
 
+            // Match Threshold: 
+            // If the closest matching speed value was sent > 2.0 seconds away, it's likely a different packet (collision).
             if (bestIndex != -1)
             {
-                if (minAbsTimeDiff < 10.0) 
+                if (minAbsTimeDiff < 2.0) 
                 { 
                     sender_list[bestIndex].matched = true;
+                    // Latency = (Recv - Sent) * 1000 to get ms
                     double lat = (r_time - sender_list[bestIndex].timestamp) * 1000.0;
                     results.push_back({r_speed, sender_list[bestIndex].timestamp, r_time, lat});
                 }
@@ -164,7 +186,7 @@ int main(int argc, char **argv)
     }
     fRecv.close();
 
-    // 3. ESTATÍSTICAS
+    // 3. STATS & OUTPUT
     std::string outName = std::string(argv[2]) + "_analise.csv";
     std::ofstream fOut(outName);
     fOut << "Speed,TS_Sent,TS_Recv,Latency_ms\n";
@@ -176,7 +198,7 @@ int main(int argc, char **argv)
              << r.t_sent << "," << r.t_recv << "," 
              << std::setprecision(3) << r.latency_ms << "\n";
         
-        // Estatísticas apenas em valores razoáveis
+        // Filter massive outliers for statistics (e.g. process paused for > 2 seconds)
         if (std::abs(r.latency_ms) < 2000.0)
         {
             stats_lats.push_back(r.latency_ms);
