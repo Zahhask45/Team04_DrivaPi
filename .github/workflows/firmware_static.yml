@@ -38,6 +38,17 @@ jobs:
           languages: cpp
           queries: security-and-quality
           build-mode: manual
+          config: |
+            paths:
+              - Threadx/Core/Src
+              - Threadx/Core/Inc
+            paths-ignore:
+              - Threadx/Drivers
+              - Threadx/Middlewares
+              - Threadx/Debug
+              - Threadx/AZURE_RTOS
+              - Threadx/Core/Startup
+              - Threadx/Core/Test
 
       # Cache build artifacts
       - name: Cache build artifacts
