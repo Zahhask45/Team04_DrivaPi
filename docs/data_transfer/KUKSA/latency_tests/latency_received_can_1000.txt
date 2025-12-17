@@ -3,2003 +3,2003 @@ Starting in CAN mode
 RTNETLINK answers: Operation not permitted
 qt.canbus.plugins.socketcan: Cannot apply parameter: 4 with value: 500000.
 CAN device opened on interface "vcan0"
-Received CAN frame: ID=0x "100"  Payload= "eefaa542"
-Speed set to (m/s): 82.9901
-Received CAN frame: ID=0x "100"  Payload= "e367b042"
-Speed set to (m/s): 88.2029
-Received CAN frame: ID=0x "100"  Payload= "aa220542"
-Speed set to (m/s): 33.2839
-Received CAN frame: ID=0x "100"  Payload= "c3fe4541"
-Speed set to (m/s): 12.3747
-Received CAN frame: ID=0x "100"  Payload= "ddcb7542"
-Speed set to (m/s): 61.4491
-Received CAN frame: ID=0x "100"  Payload= "911c553f"
-Speed set to (m/s): 0.832467
-Received CAN frame: ID=0x "100"  Payload= "f19f2c42"
-Speed set to (m/s): 43.1562
-Received CAN frame: ID=0x "100"  Payload= "7f9faa40"
-Received CAN frame: ID=0x "100"  Payload= "ce101642"
-Speed set to (m/s): 5.33197
-Speed set to (m/s): 37.5164
-Received CAN frame: ID=0x "100"  Payload= "e8de9442"
-Speed set to (m/s): 74.4354
-Received CAN frame: ID=0x "100"  Payload= "c3b16b41"
-Speed set to (m/s): 14.7309
-Received CAN frame: ID=0x "100"  Payload= "7807a242"
-Speed set to (m/s): 81.0146
-Received CAN frame: ID=0x "100"  Payload= "b02a0742"
-Received CAN frame: ID=0x "100"  Payload= "d5ca9642"
-Speed set to (m/s): 33.7917
-Speed set to (m/s): 75.3962
-Received CAN frame: ID=0x "100"  Payload= "d09b4342"
-Speed set to (m/s): 48.9022
-Received CAN frame: ID=0x "100"  Payload= "27788742"
-Received CAN frame: ID=0x "100"  Payload= "cef4b542"
-Speed set to (m/s): 67.7347
-Speed set to (m/s): 90.9781
-Received CAN frame: ID=0x "100"  Payload= "a7f70d42"
-Speed set to (m/s): 35.4918
-Received CAN frame: ID=0x "100"  Payload= "01b78842"
-Speed set to (m/s): 68.3574
-Received CAN frame: ID=0x "100"  Payload= "e5621442"
-Speed set to (m/s): 37.0966
-Received CAN frame: ID=0x "100"  Payload= "28879941"
-Received CAN frame: ID=0x "100"  Payload= "3938b241"
-Speed set to (m/s): 19.191
-Speed set to (m/s): 22.2775
-Received CAN frame: ID=0x "100"  Payload= "9d7eb541"
-Speed set to (m/s): 22.6868
-Received CAN frame: ID=0x "100"  Payload= "0b60ad42"
-Speed set to (m/s): 86.6876
-Received CAN frame: ID=0x "100"  Payload= "62e4af42"
-Speed set to (m/s): 87.9461
-Received CAN frame: ID=0x "100"  Payload= "ed20e641"
-Received CAN frame: ID=0x "100"  Payload= "08e53142"
-Speed set to (m/s): 28.7661
-Speed set to (m/s): 44.4737
-Received CAN frame: ID=0x "100"  Payload= "10490741"
-Speed set to (m/s): 8.45534
-Received CAN frame: ID=0x "100"  Payload= "3e546f41"
-Speed set to (m/s): 14.9581
-Received CAN frame: ID=0x "100"  Payload= "a8812642"
-Speed set to (m/s): 41.6266
-Received CAN frame: ID=0x "100"  Payload= "2c728e42"
-Speed set to (m/s): 71.223
-Received CAN frame: ID=0x "100"  Payload= "fef2b041"
-Speed set to (m/s): 22.1186
-Received CAN frame: ID=0x "100"  Payload= "7e9d2b42"
-Speed set to (m/s): 42.9038
-Received CAN frame: ID=0x "100"  Payload= "26deaa42"
-Received CAN frame: ID=0x "100"  Payload= "b6cbff41"
-Speed set to (m/s): 85.4339
-Speed set to (m/s): 31.9745
-Received CAN frame: ID=0x "100"  Payload= "b4aad940"
-Speed set to (m/s): 6.80209
-Received CAN frame: ID=0x "100"  Payload= "5937ac42"
-Speed set to (m/s): 86.1081
-Received CAN frame: ID=0x "100"  Payload= "03c24b40"
-Speed set to (m/s): 3.18372
-Received CAN frame: ID=0x "100"  Payload= "8f923242"
-Received CAN frame: ID=0x "100"  Payload= "63aec140"
-Speed set to (m/s): 44.6431
-Speed set to (m/s): 6.05254
-Received CAN frame: ID=0x "100"  Payload= "deb3a941"
-Speed set to (m/s): 21.2128
-Received CAN frame: ID=0x "100"  Payload= "604e0642"
-Speed set to (m/s): 33.5765
-Received CAN frame: ID=0x "100"  Payload= "c63b8142"
-Speed set to (m/s): 64.6167
-Received CAN frame: ID=0x "100"  Payload= "4e39a842"
-Received CAN frame: ID=0x "100"  Payload= "52cce041"
-Speed set to (m/s): 84.1119
-Speed set to (m/s): 28.0998
-Received CAN frame: ID=0x "100"  Payload= "39d98941"
-Speed set to (m/s): 17.2311
-Received CAN frame: ID=0x "100"  Payload= "26a67d42"
-Speed set to (m/s): 63.4123
-Received CAN frame: ID=0x "100"  Payload= "f4d3b240"
-Speed set to (m/s): 5.58837
-Received CAN frame: ID=0x "100"  Payload= "152c2e42"
-Received CAN frame: ID=0x "100"  Payload= "3cabe141"
-Speed set to (m/s): 43.543
-Speed set to (m/s): 28.2086
-Received CAN frame: ID=0x "100"  Payload= "fe3ea842"
-Speed set to (m/s): 84.123
-Received CAN frame: ID=0x "100"  Payload= "18344040"
-Speed set to (m/s): 3.00318
-Received CAN frame: ID=0x "100"  Payload= "6095f340"
-Speed set to (m/s): 7.61198
-Received CAN frame: ID=0x "100"  Payload= "4ba72442"
-Speed set to (m/s): 41.1634
-Received CAN frame: ID=0x "100"  Payload= "e71f4c41"
-Speed set to (m/s): 12.7578
-Received CAN frame: ID=0x "100"  Payload= "38fc0440"
-Speed set to (m/s): 2.07789
-Received CAN frame: ID=0x "100"  Payload= "229fa242"
-Speed set to (m/s): 81.3108
-Received CAN frame: ID=0x "100"  Payload= "0bbec742"
-Speed set to (m/s): 99.8712
-Received CAN frame: ID=0x "100"  Payload= "2f261442"
-Speed set to (m/s): 37.0373
-Received CAN frame: ID=0x "100"  Payload= "1cf85642"
-Speed set to (m/s): 53.7423
-Received CAN frame: ID=0x "100"  Payload= "6ca93541"
-Speed set to (m/s): 11.3539
-Received CAN frame: ID=0x "100"  Payload= "96909a42"
-Received CAN frame: ID=0x "100"  Payload= "e9eebc42"
-Speed set to (m/s): 77.2824
-Speed set to (m/s): 94.4666
-Received CAN frame: ID=0x "100"  Payload= "a662e541"
-Speed set to (m/s): 28.6732
-Received CAN frame: ID=0x "100"  Payload= "0a244142"
-Speed set to (m/s): 48.2852
-Received CAN frame: ID=0x "100"  Payload= "5ff9b742"
-Speed set to (m/s): 91.9871
-Received CAN frame: ID=0x "100"  Payload= "58ec8042"
-Received CAN frame: ID=0x "100"  Payload= "48539342"
-Speed set to (m/s): 64.4616
-Speed set to (m/s): 73.6627
-Received CAN frame: ID=0x "100"  Payload= "d77cec41"
-Speed set to (m/s): 29.561
-Received CAN frame: ID=0x "100"  Payload= "db91a642"
-Speed set to (m/s): 83.2849
-Received CAN frame: ID=0x "100"  Payload= "ccf82342"
-Speed set to (m/s): 40.993
-Received CAN frame: ID=0x "100"  Payload= "c9870940"
-Received CAN frame: ID=0x "100"  Payload= "a36f5242"
-Speed set to (m/s): 2.14891
-Speed set to (m/s): 52.609
-Received CAN frame: ID=0x "100"  Payload= "cd439741"
-Speed set to (m/s): 18.9081
-Received CAN frame: ID=0x "100"  Payload= "4fd79842"
-Speed set to (m/s): 76.4205
-Received CAN frame: ID=0x "100"  Payload= "1c618442"
-Speed set to (m/s): 66.1897
-Received CAN frame: ID=0x "100"  Payload= "a8619742"
-Speed set to (m/s): 75.6907
-Received CAN frame: ID=0x "100"  Payload= "ab823142"
-Speed set to (m/s): 44.3776
-Received CAN frame: ID=0x "100"  Payload= "22bc0542"
-Speed set to (m/s): 33.4337
-Received CAN frame: ID=0x "100"  Payload= "18425e41"
-Received CAN frame: ID=0x "100"  Payload= "eb068e41"
-Speed set to (m/s): 13.8911
-Speed set to (m/s): 17.7534
-Received CAN frame: ID=0x "100"  Payload= "6a0d9d42"
-Speed set to (m/s): 78.5262
-Received CAN frame: ID=0x "100"  Payload= "b581f540"
-Speed set to (m/s): 7.67208
-Received CAN frame: ID=0x "100"  Payload= "ab9e0242"
-Speed set to (m/s): 32.6549
-Received CAN frame: ID=0x "100"  Payload= "20e3bf42"
-Received CAN frame: ID=0x "100"  Payload= "428cf941"
-Speed set to (m/s): 95.9436
-Speed set to (m/s): 31.1935
-Received CAN frame: ID=0x "100"  Payload= "955f0e42"
-Speed set to (m/s): 35.5933
-Received CAN frame: ID=0x "100"  Payload= "a196a042"
-Speed set to (m/s): 80.2942
-Received CAN frame: ID=0x "100"  Payload= "1be12842"
-Speed set to (m/s): 42.2198
-Received CAN frame: ID=0x "100"  Payload= "9dc78842"
-Received CAN frame: ID=0x "100"  Payload= "a95e7142"
-Speed set to (m/s): 68.3899
-Speed set to (m/s): 60.3424
-Received CAN frame: ID=0x "100"  Payload= "37b1a642"
-Speed set to (m/s): 83.3461
-Received CAN frame: ID=0x "100"  Payload= "62cfb442"
-Speed set to (m/s): 90.405
-Received CAN frame: ID=0x "100"  Payload= "584c6042"
-Speed set to (m/s): 56.0746
-Received CAN frame: ID=0x "100"  Payload= "30c4ba42"
-Speed set to (m/s): 93.3832
-Received CAN frame: ID=0x "100"  Payload= "4ad29941"
-Speed set to (m/s): 19.2277
-Received CAN frame: ID=0x "100"  Payload= "a0aeae42"
-Speed set to (m/s): 87.3411
-Received CAN frame: ID=0x "100"  Payload= "67b28b42"
-Received CAN frame: ID=0x "100"  Payload= "60a0b842"
-Speed set to (m/s): 69.8484
-Speed set to (m/s): 92.3132
-Received CAN frame: ID=0x "100"  Payload= "e8924541"
-Speed set to (m/s): 12.3484
-Received CAN frame: ID=0x "100"  Payload= "a67c9442"
-Speed set to (m/s): 74.2435
-Received CAN frame: ID=0x "100"  Payload= "6b686642"
-Speed set to (m/s): 57.602
-Received CAN frame: ID=0x "100"  Payload= "b4df4142"
-Speed set to (m/s): 48.4685
-Received CAN frame: ID=0x "100"  Payload= "4a286442"
-Speed set to (m/s): 57.0393
-Received CAN frame: ID=0x "100"  Payload= "5b942342"
-Speed set to (m/s): 40.8949
-Received CAN frame: ID=0x "100"  Payload= "60654742"
-Speed set to (m/s): 49.849
-Received CAN frame: ID=0x "100"  Payload= "df749942"
-Speed set to (m/s): 76.7283
-Received CAN frame: ID=0x "100"  Payload= "d42c8042"
-Speed set to (m/s): 64.0876
-Received CAN frame: ID=0x "100"  Payload= "f2652142"
-Speed set to (m/s): 40.3496
-Received CAN frame: ID=0x "100"  Payload= "99138642"
-Speed set to (m/s): 67.0383
-Received CAN frame: ID=0x "100"  Payload= "1d964f42"
-Received CAN frame: ID=0x "100"  Payload= "f286f441"
-Speed set to (m/s): 51.8966
-Speed set to (m/s): 30.5659
-Received CAN frame: ID=0x "100"  Payload= "b7316d42"
-Speed set to (m/s): 59.2985
-Received CAN frame: ID=0x "100"  Payload= "f2ab2941"
-Speed set to (m/s): 10.6045
-Received CAN frame: ID=0x "100"  Payload= "9ef84e42"
-Speed set to (m/s): 51.7428
-Received CAN frame: ID=0x "100"  Payload= "9ef28e42"
-Speed set to (m/s): 71.4739
-Received CAN frame: ID=0x "100"  Payload= "bb649942"
-Speed set to (m/s): 76.6967
-Received CAN frame: ID=0x "100"  Payload= "99b3ae42"
-Speed set to (m/s): 87.3508
-Received CAN frame: ID=0x "100"  Payload= "ac83e640"
-Received CAN frame: ID=0x "100"  Payload= "5eb3b442"
-Speed set to (m/s): 7.20357
-Speed set to (m/s): 90.3503
-Received CAN frame: ID=0x "100"  Payload= "30d2c042"
-Speed set to (m/s): 96.4105
-Received CAN frame: ID=0x "100"  Payload= "07cbc141"
-Speed set to (m/s): 24.2241
-Received CAN frame: ID=0x "100"  Payload= "ddda6742"
-Speed set to (m/s): 57.9637
-Received CAN frame: ID=0x "100"  Payload= "4a7fa441"
-Received CAN frame: ID=0x "100"  Payload= "2bfc4a42"
-Speed set to (m/s): 20.5622
-Speed set to (m/s): 50.7463
-Received CAN frame: ID=0x "100"  Payload= "b571a142"
-Speed set to (m/s): 80.7221
-Received CAN frame: ID=0x "100"  Payload= "84ba8a42"
-Speed set to (m/s): 69.3643
-Received CAN frame: ID=0x "100"  Payload= "5db49c42"
-Speed set to (m/s): 78.3523
-Received CAN frame: ID=0x "100"  Payload= "e67eb442"
-Received CAN frame: ID=0x "100"  Payload= "b83f1a42"
-Speed set to (m/s): 90.2478
-Speed set to (m/s): 38.5622
-Received CAN frame: ID=0x "100"  Payload= "7f4c4942"
-Speed set to (m/s): 50.3247
-Received CAN frame: ID=0x "100"  Payload= "ae782342"
-Speed set to (m/s): 40.8679
-Received CAN frame: ID=0x "100"  Payload= "558b2b42"
-Speed set to (m/s): 42.8861
-Received CAN frame: ID=0x "100"  Payload= "5c243d41"
-Speed set to (m/s): 11.8214
-Received CAN frame: ID=0x "100"  Payload= "2e33bc42"
-Speed set to (m/s): 94.1
-Received CAN frame: ID=0x "100"  Payload= "ad423742"
-Speed set to (m/s): 45.8151
-Received CAN frame: ID=0x "100"  Payload= "b714b842"
-Speed set to (m/s): 92.0405
-Received CAN frame: ID=0x "100"  Payload= "af68c742"
-Speed set to (m/s): 99.7045
-Received CAN frame: ID=0x "100"  Payload= "44b55442"
-Speed set to (m/s): 53.177
-Received CAN frame: ID=0x "100"  Payload= "e7a26442"
-Speed set to (m/s): 57.1591
-Received CAN frame: ID=0x "100"  Payload= "58cd3542"
-Speed set to (m/s): 45.4505
-Received CAN frame: ID=0x "100"  Payload= "4f081842"
-Received CAN frame: ID=0x "100"  Payload= "df75a842"
-Speed set to (m/s): 38.0081
-Speed set to (m/s): 84.2302
-Received CAN frame: ID=0x "100"  Payload= "06560042"
-Speed set to (m/s): 32.084
-Received CAN frame: ID=0x "100"  Payload= "dbe2b941"
-Speed set to (m/s): 23.2358
-Received CAN frame: ID=0x "100"  Payload= "fe532441"
-Speed set to (m/s): 10.2705
-Received CAN frame: ID=0x "100"  Payload= "33cba242"
-Speed set to (m/s): 81.3969
-Speed set to (m/s): 29.8763
-Received CAN frame: ID=0x "100"  Payload= "a702ef41"
-Received CAN frame: ID=0x "100"  Payload= "61216542"
-Speed set to (m/s): 57.2826
-Received CAN frame: ID=0x "100"  Payload= "37c7c142"
-Speed set to (m/s): 96.8891
-Received CAN frame: ID=0x "100"  Payload= "00f5b942"
-Speed set to (m/s): 92.9785
-Received CAN frame: ID=0x "100"  Payload= "c97d8441"
-Speed set to (m/s): 16.5614
-Received CAN frame: ID=0x "100"  Payload= "657aa942"
-Speed set to (m/s): 84.7391
-Received CAN frame: ID=0x "100"  Payload= "f69b8141"
-Speed set to (m/s): 16.2012
-Received CAN frame: ID=0x "100"  Payload= "2186b142"
-Received CAN frame: ID=0x "100"  Payload= "e50fc042"
-Speed set to (m/s): 88.762
-Speed set to (m/s): 96.031
-Received CAN frame: ID=0x "100"  Payload= "794e3842"
-Speed set to (m/s): 46.0766
-Received CAN frame: ID=0x "100"  Payload= "1ae61242"
-Speed set to (m/s): 36.7247
-Received CAN frame: ID=0x "100"  Payload= "73a88041"
-Speed set to (m/s): 16.0823
-Received CAN frame: ID=0x "100"  Payload= "0f004b42"
-Received CAN frame: ID=0x "100"  Payload= "4d6fb642"
-Speed set to (m/s): 50.7501
-Speed set to (m/s): 91.2174
-Received CAN frame: ID=0x "100"  Payload= "83929742"
-Speed set to (m/s): 75.7862
-Received CAN frame: ID=0x "100"  Payload= "5e5b8741"
-Speed set to (m/s): 16.9196
-Received CAN frame: ID=0x "100"  Payload= "daa5b141"
-Speed set to (m/s): 22.206
-Received CAN frame: ID=0x "100"  Payload= "e41e8142"
-Speed set to (m/s): 64.5603
-Received CAN frame: ID=0x "100"  Payload= "6564e940"
-Speed set to (m/s): 7.29351
-Received CAN frame: ID=0x "100"  Payload= "93fb3d41"
-Speed set to (m/s): 11.8739
-Received CAN frame: ID=0x "100"  Payload= "c279e541"
-Received CAN frame: ID=0x "100"  Payload= "e95c5b42"
-Speed set to (m/s): 28.6845
-Speed set to (m/s): 54.8407
-Received CAN frame: ID=0x "100"  Payload= "117a5642"
-Speed set to (m/s): 53.6192
-Received CAN frame: ID=0x "100"  Payload= "2dac5442"
-Speed set to (m/s): 53.1681
-Received CAN frame: ID=0x "100"  Payload= "54d2a442"
-Speed set to (m/s): 82.4108
-Received CAN frame: ID=0x "100"  Payload= "72c70e41"
-Received CAN frame: ID=0x "100"  Payload= "9bbf9642"
-Speed set to (m/s): 8.92369
-Speed set to (m/s): 75.3742
-Received CAN frame: ID=0x "100"  Payload= "a29f8a42"
-Speed set to (m/s): 69.3118
-Received CAN frame: ID=0x "100"  Payload= "250d8941"
-Speed set to (m/s): 17.1314
-Received CAN frame: ID=0x "100"  Payload= "a3d3aa42"
-Speed set to (m/s): 85.4134
-Received CAN frame: ID=0x "100"  Payload= "5a818c42"
-Speed set to (m/s): 70.2526
-Received CAN frame: ID=0x "100"  Payload= "064ed03e"
-Speed set to (m/s): 0.406845
-Received CAN frame: ID=0x "100"  Payload= "ae598f42"
-Speed set to (m/s): 71.6752
-Received CAN frame: ID=0x "100"  Payload= "a3ec3e41"
-Speed set to (m/s): 11.9328
-Received CAN frame: ID=0x "100"  Payload= "5ad86241"
-Speed set to (m/s): 14.1778
-Received CAN frame: ID=0x "100"  Payload= "f715e941"
-Speed set to (m/s): 29.1357
-Received CAN frame: ID=0x "100"  Payload= "d5b62741"
-Speed set to (m/s): 10.4821
-Received CAN frame: ID=0x "100"  Payload= "2d8c6f42"
-Speed set to (m/s): 59.8869
-Received CAN frame: ID=0x "100"  Payload= "e92b8a42"
-Speed set to (m/s): 69.0858
-Received CAN frame: ID=0x "100"  Payload= "e6618c42"
-Speed set to (m/s): 70.1912
-Received CAN frame: ID=0x "100"  Payload= "dc099541"
-Speed set to (m/s): 18.6298
-Received CAN frame: ID=0x "100"  Payload= "a2f6a042"
-Speed set to (m/s): 80.4817
-Received CAN frame: ID=0x "100"  Payload= "46722b42"
-Speed set to (m/s): 42.8616
-Received CAN frame: ID=0x "100"  Payload= "4eed8042"
-Speed set to (m/s): 64.4635
-Received CAN frame: ID=0x "100"  Payload= "8a659642"
-Received CAN frame: ID=0x "100"  Payload= "05dd4d42"
-Speed set to (m/s): 75.1983
-Speed set to (m/s): 51.4658
-Received CAN frame: ID=0x "100"  Payload= "52641842"
-Speed set to (m/s): 38.098
-Received CAN frame: ID=0x "100"  Payload= "93904d42"
-Speed set to (m/s): 51.3912
-Received CAN frame: ID=0x "100"  Payload= "f6f3a442"
-Speed set to (m/s): 82.4765
-Received CAN frame: ID=0x "100"  Payload= "c4768740"
-Speed set to (m/s): 4.23325
-Received CAN frame: ID=0x "100"  Payload= "eeee5e42"
-Speed set to (m/s): 55.7333
-Received CAN frame: ID=0x "100"  Payload= "93468541"
-Speed set to (m/s): 16.6595
-Received CAN frame: ID=0x "100"  Payload= "f9ddbf42"
-Received CAN frame: ID=0x "100"  Payload= "bb0e1042"
-Speed set to (m/s): 95.9335
-Speed set to (m/s): 36.0144
-Received CAN frame: ID=0x "100"  Payload= "f74f1941"
-Speed set to (m/s): 9.58202
-Received CAN frame: ID=0x "100"  Payload= "3c2c6942"
-Speed set to (m/s): 58.2932
-Received CAN frame: ID=0x "100"  Payload= "82479042"
-Speed set to (m/s): 72.1397
-Received CAN frame: ID=0x "100"  Payload= "82189b42"
-Received CAN frame: ID=0x "100"  Payload= "d92b0f42"
-Speed set to (m/s): 77.5479
-Speed set to (m/s): 35.7928
-Received CAN frame: ID=0x "100"  Payload= "e2e75542"
-Speed set to (m/s): 53.4764
-Received CAN frame: ID=0x "100"  Payload= "5c6e4641"
-Speed set to (m/s): 12.4019
-Received CAN frame: ID=0x "100"  Payload= "ab928942"
-Speed set to (m/s): 68.7865
-Received CAN frame: ID=0x "100"  Payload= "892c8c42"
-Speed set to (m/s): 70.087
-Received CAN frame: ID=0x "100"  Payload= "66bcb742"
-Speed set to (m/s): 91.868
-Received CAN frame: ID=0x "100"  Payload= "926e7e42"
-Speed set to (m/s): 63.608
-Received CAN frame: ID=0x "100"  Payload= "00c57142"
-Speed set to (m/s): 60.4424
-Received CAN frame: ID=0x "100"  Payload= "9ec15a42"
-Speed set to (m/s): 54.6891
-Received CAN frame: ID=0x "100"  Payload= "338b9a41"
-Speed set to (m/s): 19.318
-Received CAN frame: ID=0x "100"  Payload= "af7d0f42"
-Speed set to (m/s): 35.8727
-Received CAN frame: ID=0x "100"  Payload= "72c8b142"
-Speed set to (m/s): 88.8915
-Received CAN frame: ID=0x "100"  Payload= "08819142"
-Received CAN frame: ID=0x "100"  Payload= "a4bca341"
-Speed set to (m/s): 72.752
-Speed set to (m/s): 20.4671
-Received CAN frame: ID=0x "100"  Payload= "da0bc042"
-Speed set to (m/s): 96.0231
-Speed set to (m/s): 65.9721
-Received CAN frame: ID=0x "100"  Payload= "bdf18342"
-Received CAN frame: ID=0x "100"  Payload= "d97ffe41"
-Speed set to (m/s): 31.8124
-Received CAN frame: ID=0x "100"  Payload= "2f6f3a42"
-Received CAN frame: ID=0x "100"  Payload= "07ef5941"
-Speed set to (m/s): 46.6086
-Speed set to (m/s): 13.6209
-Received CAN frame: ID=0x "100"  Payload= "3889c542"
-Speed set to (m/s): 98.768
-Received CAN frame: ID=0x "100"  Payload= "2eee9942"
-Speed set to (m/s): 76.9652
-Received CAN frame: ID=0x "100"  Payload= "e4bf7341"
-Speed set to (m/s): 15.2343
-Received CAN frame: ID=0x "100"  Payload= "cc1fee41"
-Speed set to (m/s): 29.7655
-Received CAN frame: ID=0x "100"  Payload= "b01e6a40"
-Speed set to (m/s): 3.65812
-Received CAN frame: ID=0x "100"  Payload= "fc0c1941"
-Speed set to (m/s): 9.56567
-Received CAN frame: ID=0x "100"  Payload= "bba58f42"
-Speed set to (m/s): 71.8237
-Received CAN frame: ID=0x "100"  Payload= "e50d8a40"
-Speed set to (m/s): 4.3142
-Received CAN frame: ID=0x "100"  Payload= "781d5842"
-Speed set to (m/s): 54.0288
-Received CAN frame: ID=0x "100"  Payload= "583d2541"
-Speed set to (m/s): 10.3275
-Received CAN frame: ID=0x "100"  Payload= "554b9241"
-Speed set to (m/s): 18.2868
-Received CAN frame: ID=0x "100"  Payload= "ff04cf41"
-Received CAN frame: ID=0x "100"  Payload= "d1a88b42"
-Speed set to (m/s): 25.8774
-Speed set to (m/s): 69.8297
-Received CAN frame: ID=0x "100"  Payload= "34f79d42"
-Speed set to (m/s): 78.9828
-Received CAN frame: ID=0x "100"  Payload= "4c66b842"
-Speed set to (m/s): 92.1998
-Received CAN frame: ID=0x "100"  Payload= "e70b8d42"
-Speed set to (m/s): 70.5232
-Received CAN frame: ID=0x "100"  Payload= "ed5b3e42"
-Received CAN frame: ID=0x "100"  Payload= "3e336740"
-Speed set to (m/s): 47.5898
-Speed set to (m/s): 3.6125
-Received CAN frame: ID=0x "100"  Payload= "7c1def41"
-Speed set to (m/s): 29.8894
-Received CAN frame: ID=0x "100"  Payload= "7d89c241"
-Speed set to (m/s): 24.3171
-Received CAN frame: ID=0x "100"  Payload= "b0f2c542"
-Speed set to (m/s): 98.974
-Received CAN frame: ID=0x "100"  Payload= "3faa9942"
-Speed set to (m/s): 76.8325
-Received CAN frame: ID=0x "100"  Payload= "45558e42"
-Speed set to (m/s): 71.1665
-Received CAN frame: ID=0x "100"  Payload= "4ee98041"
-Speed set to (m/s): 16.1139
-Received CAN frame: ID=0x "100"  Payload= "83f65542"
-Received CAN frame: ID=0x "100"  Payload= "dd80b442"
-Speed set to (m/s): 53.4907
-Speed set to (m/s): 90.2517
-Received CAN frame: ID=0x "100"  Payload= "c14f2e42"
-Speed set to (m/s): 43.5779
-Received CAN frame: ID=0x "100"  Payload= "e4778642"
-Speed set to (m/s): 67.2342
-Received CAN frame: ID=0x "100"  Payload= "0abcae41"
-Speed set to (m/s): 21.8418
-Received CAN frame: ID=0x "100"  Payload= "f5c5a142"
-Speed set to (m/s): 80.8866
-Received CAN frame: ID=0x "100"  Payload= "a29d9142"
-Speed set to (m/s): 72.8079
-Received CAN frame: ID=0x "100"  Payload= "ea7b8242"
-Speed set to (m/s): 65.242
-Received CAN frame: ID=0x "100"  Payload= "89817342"
-Received CAN frame: ID=0x "100"  Payload= "6b033a42"
-Speed set to (m/s): 60.8765
-Speed set to (m/s): 46.5033
-Received CAN frame: ID=0x "100"  Payload= "3bca3f42"
-Speed set to (m/s): 47.9475
-Received CAN frame: ID=0x "100"  Payload= "3261c642"
-Speed set to (m/s): 99.1898
-Received CAN frame: ID=0x "100"  Payload= "50249d42"
-Speed set to (m/s): 78.5709
-Received CAN frame: ID=0x "100"  Payload= "ad9a7341"
-Received CAN frame: ID=0x "100"  Payload= "dc598d41"
-Speed set to (m/s): 15.2253
-Speed set to (m/s): 17.6689
-Received CAN frame: ID=0x "100"  Payload= "aaf60542"
-Speed set to (m/s): 33.4909
-Received CAN frame: ID=0x "100"  Payload= "d9396942"
-Speed set to (m/s): 58.3065
-Received CAN frame: ID=0x "100"  Payload= "c4c11b42"
-Speed set to (m/s): 38.9392
-Received CAN frame: ID=0x "100"  Payload= "35f9bc42"
-Speed set to (m/s): 94.4867
-Received CAN frame: ID=0x "100"  Payload= "ab24ef41"
-Speed set to (m/s): 29.8929
-Received CAN frame: ID=0x "100"  Payload= "a9cbae42"
-Speed set to (m/s): 87.3978
-Received CAN frame: ID=0x "100"  Payload= "19720942"
-Received CAN frame: ID=0x "100"  Payload= "14068542"
-Speed set to (m/s): 34.3614
-Speed set to (m/s): 66.5119
-Received CAN frame: ID=0x "100"  Payload= "8b9b8b42"
-Speed set to (m/s): 69.8038
-Received CAN frame: ID=0x "100"  Payload= "59989141"
-Speed set to (m/s): 18.1994
-Received CAN frame: ID=0x "100"  Payload= "051b9f42"
-Speed set to (m/s): 79.5528
-Received CAN frame: ID=0x "100"  Payload= "8c3eab42"
-Received CAN frame: ID=0x "100"  Payload= "ab4c0f42"
-Speed set to (m/s): 85.6222
-Speed set to (m/s): 35.8249
-Received CAN frame: ID=0x "100"  Payload= "5ae70e42"
-Speed set to (m/s): 35.7259
-Received CAN frame: ID=0x "100"  Payload= "c18cd83f"
-Speed set to (m/s): 1.6918
-Received CAN frame: ID=0x "100"  Payload= "62a8a140"
-Speed set to (m/s): 5.0518
-Received CAN frame: ID=0x "100"  Payload= "52b0ac42"
-Speed set to (m/s): 86.3444
-Speed set to (m/s): 95.9081
-Received CAN frame: ID=0x "100"  Payload= "f0d0bf42"
-Received CAN frame: ID=0x "100"  Payload= "57e3f641"
-Speed set to (m/s): 30.861
-Received CAN frame: ID=0x "100"  Payload= "99b18542"
-Received CAN frame: ID=0x "100"  Payload= "c6e51c42"
-Speed set to (m/s): 66.8469
-Speed set to (m/s): 39.2244
-Received CAN frame: ID=0x "100"  Payload= "c1840c3e"
-Speed set to (m/s): 0.137225
-Received CAN frame: ID=0x "100"  Payload= "b0df0d42"
-Speed set to (m/s): 35.4684
-Received CAN frame: ID=0x "100"  Payload= "92b6c642"
-Speed set to (m/s): 99.3566
-Received CAN frame: ID=0x "100"  Payload= "e53f0642"
-Received CAN frame: ID=0x "100"  Payload= "6d47ea40"
-Speed set to (m/s): 33.5624
-Speed set to (m/s): 7.32122
-Received CAN frame: ID=0x "100"  Payload= "bb23a342"
-Speed set to (m/s): 81.5698
-Received CAN frame: ID=0x "100"  Payload= "ca680242"
-Speed set to (m/s): 32.6023
-Received CAN frame: ID=0x "100"  Payload= "65af8342"
-Speed set to (m/s): 65.8426
-Received CAN frame: ID=0x "100"  Payload= "5629bc42"
-Speed set to (m/s): 94.0807
-Received CAN frame: ID=0x "100"  Payload= "afd45c42"
-Speed set to (m/s): 55.2077
-Received CAN frame: ID=0x "100"  Payload= "befd5c42"
-Speed set to (m/s): 55.2478
-Received CAN frame: ID=0x "100"  Payload= "15195742"
-Received CAN frame: ID=0x "100"  Payload= "837fe941"
-Speed set to (m/s): 53.7745
-Speed set to (m/s): 29.1873
-Received CAN frame: ID=0x "100"  Payload= "4a99a442"
-Speed set to (m/s): 82.2994
-Received CAN frame: ID=0x "100"  Payload= "ed2d9a42"
-Speed set to (m/s): 77.0897
-Received CAN frame: ID=0x "100"  Payload= "b2ee4342"
-Speed set to (m/s): 48.9831
-Received CAN frame: ID=0x "100"  Payload= "1575a842"
-Received CAN frame: ID=0x "100"  Payload= "c4f31e42"
-Speed set to (m/s): 84.2287
-Speed set to (m/s): 39.7381
-Received CAN frame: ID=0x "100"  Payload= "b8465641"
-Speed set to (m/s): 13.3923
-Received CAN frame: ID=0x "100"  Payload= "149d6e42"
-Speed set to (m/s): 59.6534
-Received CAN frame: ID=0x "100"  Payload= "a24fa742"
-Speed set to (m/s): 83.6555
-Received CAN frame: ID=0x "100"  Payload= "83a98d42"
-Speed set to (m/s): 70.8311
-Received CAN frame: ID=0x "100"  Payload= "e0e85d42"
-Speed set to (m/s): 55.4774
-Received CAN frame: ID=0x "100"  Payload= "5e670742"
-Speed set to (m/s): 33.8509
-Received CAN frame: ID=0x "100"  Payload= "f7d98b41"
-Received CAN frame: ID=0x "100"  Payload= "a2428040"
-Speed set to (m/s): 17.4814
-Speed set to (m/s): 4.00813
-Received CAN frame: ID=0x "100"  Payload= "4ae3a140"
-Speed set to (m/s): 5.059
-Received CAN frame: ID=0x "100"  Payload= "a5acbc42"
-Speed set to (m/s): 94.3372
-Received CAN frame: ID=0x "100"  Payload= "610f6841"
-Speed set to (m/s): 14.5038
-Received CAN frame: ID=0x "100"  Payload= "418c3442"
-Received CAN frame: ID=0x "100"  Payload= "3572b342"
-Speed set to (m/s): 45.137
-Speed set to (m/s): 89.7231
-Received CAN frame: ID=0x "100"  Payload= "7a258e41"
-Speed set to (m/s): 17.7683
-Received CAN frame: ID=0x "100"  Payload= "ec3d9a42"
-Speed set to (m/s): 77.1209
-Received CAN frame: ID=0x "100"  Payload= "d6917c42"
-Speed set to (m/s): 63.1424
-Received CAN frame: ID=0x "100"  Payload= "c1bc8d41"
-Speed set to (m/s): 17.7172
-Received CAN frame: ID=0x "100"  Payload= "0b37b242"
-Speed set to (m/s): 89.1075
-Received CAN frame: ID=0x "100"  Payload= "7dfd6c42"
-Speed set to (m/s): 59.2475
-Received CAN frame: ID=0x "100"  Payload= "8c2cb641"
-Received CAN frame: ID=0x "100"  Payload= "d69c0940"
-Speed set to (m/s): 22.7718
-Speed set to (m/s): 2.1502
-Received CAN frame: ID=0x "100"  Payload= "aaeea441"
-Speed set to (m/s): 20.6165
-Received CAN frame: ID=0x "100"  Payload= "ac8ea541"
-Speed set to (m/s): 20.6947
-Received CAN frame: ID=0x "100"  Payload= "b8b30b42"
-Speed set to (m/s): 34.9255
-Received CAN frame: ID=0x "100"  Payload= "e509b642"
-Received CAN frame: ID=0x "100"  Payload= "af433c41"
-Speed set to (m/s): 91.0193
-Speed set to (m/s): 11.7665
-Received CAN frame: ID=0x "100"  Payload= "f0aa9640"
-Speed set to (m/s): 4.70837
-Received CAN frame: ID=0x "100"  Payload= "5ed14142"
-Speed set to (m/s): 48.4545
-Received CAN frame: ID=0x "100"  Payload= "784b9f41"
-Speed set to (m/s): 19.9118
-Received CAN frame: ID=0x "100"  Payload= "6c351642"
-Speed set to (m/s): 37.5522
-Received CAN frame: ID=0x "100"  Payload= "c5e4a642"
-Speed set to (m/s): 83.4468
-Received CAN frame: ID=0x "100"  Payload= "28c54742"
-Speed set to (m/s): 49.9425
-Received CAN frame: ID=0x "100"  Payload= "3c939542"
-Received CAN frame: ID=0x "100"  Payload= "43dae241"
-Speed set to (m/s): 74.7876
-Speed set to (m/s): 28.3566
-Received CAN frame: ID=0x "100"  Payload= "c9046341"
-Speed set to (m/s): 14.1887
-Received CAN frame: ID=0x "100"  Payload= "2dbb6042"
-Speed set to (m/s): 56.1828
-Received CAN frame: ID=0x "100"  Payload= "d2d11741"
-Speed set to (m/s): 9.48873
-Received CAN frame: ID=0x "100"  Payload= "d0c79042"
-Received CAN frame: ID=0x "100"  Payload= "ba0fe541"
-Speed set to (m/s): 72.3903
-Speed set to (m/s): 28.6327
-Received CAN frame: ID=0x "100"  Payload= "3c1c3142"
-Speed set to (m/s): 44.2776
-Received CAN frame: ID=0x "100"  Payload= "b56c4c42"
-Speed set to (m/s): 51.1062
-Received CAN frame: ID=0x "100"  Payload= "ee1d9842"
-Speed set to (m/s): 76.0585
-Received CAN frame: ID=0x "100"  Payload= "5a209d42"
-Speed set to (m/s): 78.5632
-Received CAN frame: ID=0x "100"  Payload= "8f860540"
-Speed set to (m/s): 2.08634
-Received CAN frame: ID=0x "100"  Payload= "0f2c1642"
-Speed set to (m/s): 37.543
-Received CAN frame: ID=0x "100"  Payload= "0dde2141"
-Speed set to (m/s): 10.1167
-Received CAN frame: ID=0x "100"  Payload= "3760b842"
-Speed set to (m/s): 92.1879
-Received CAN frame: ID=0x "100"  Payload= "9f9a0d41"
-Speed set to (m/s): 8.85025
-Received CAN frame: ID=0x "100"  Payload= "d476bd42"
-Speed set to (m/s): 94.7321
-Received CAN frame: ID=0x "100"  Payload= "01f65642"
-Speed set to (m/s): 53.7402
-Received CAN frame: ID=0x "100"  Payload= "3e26e440"
-Received CAN frame: ID=0x "100"  Payload= "34156a42"
-Speed set to (m/s): 7.12967
-Speed set to (m/s): 58.5207
-Received CAN frame: ID=0x "100"  Payload= "5b6d0642"
-Speed set to (m/s): 33.6068
-Received CAN frame: ID=0x "100"  Payload= "138db942"
-Speed set to (m/s): 92.7755
-Received CAN frame: ID=0x "100"  Payload= "b115c142"
-Speed set to (m/s): 96.5424
-Received CAN frame: ID=0x "100"  Payload= "0dfc9f42"
-Received CAN frame: ID=0x "100"  Payload= "72b59b42"
-Speed set to (m/s): 79.9923
-Speed set to (m/s): 77.8544
-Received CAN frame: ID=0x "100"  Payload= "95860942"
-Speed set to (m/s): 34.3814
-Received CAN frame: ID=0x "100"  Payload= "49849842"
-Speed set to (m/s): 76.2584
-Received CAN frame: ID=0x "100"  Payload= "25824942"
-Speed set to (m/s): 50.3771
-Received CAN frame: ID=0x "100"  Payload= "e07db742"
-Speed set to (m/s): 91.7458
-Received CAN frame: ID=0x "100"  Payload= "dcbef541"
-Speed set to (m/s): 30.7182
-Received CAN frame: ID=0x "100"  Payload= "d97f4042"
-Speed set to (m/s): 48.1249
-Received CAN frame: ID=0x "100"  Payload= "fa6d2742"
-Received CAN frame: ID=0x "100"  Payload= "97028742"
-Speed set to (m/s): 41.8574
-Speed set to (m/s): 67.5051
-Received CAN frame: ID=0x "100"  Payload= "37740a42"
-Speed set to (m/s): 34.6135
-Received CAN frame: ID=0x "100"  Payload= "eed00241"
-Speed set to (m/s): 8.17601
-Received CAN frame: ID=0x "100"  Payload= "2f3c5b40"
-Speed set to (m/s): 3.42555
-Received CAN frame: ID=0x "100"  Payload= "063a8e41"
-Received CAN frame: ID=0x "100"  Payload= "e6b61f42"
-Speed set to (m/s): 17.7783
-Speed set to (m/s): 39.9286
-Received CAN frame: ID=0x "100"  Payload= "8d389442"
-Speed set to (m/s): 74.1105
-Received CAN frame: ID=0x "100"  Payload= "aeef9b42"
-Speed set to (m/s): 77.9681
-Received CAN frame: ID=0x "100"  Payload= "69197940"
-Speed set to (m/s): 3.89218
-Received CAN frame: ID=0x "100"  Payload= "90ef4241"
-Speed set to (m/s): 12.1835
-Received CAN frame: ID=0x "100"  Payload= "d8a70f42"
-Speed set to (m/s): 35.9139
-Received CAN frame: ID=0x "100"  Payload= "6a591942"
-Speed set to (m/s): 38.3373
-Received CAN frame: ID=0x "100"  Payload= "29a6ef41"
-Received CAN frame: ID=0x "100"  Payload= "c46e0742"
-Speed set to (m/s): 29.9561
-Speed set to (m/s): 33.8582
-Received CAN frame: ID=0x "100"  Payload= "84205a42"
-Speed set to (m/s): 54.5318
-Received CAN frame: ID=0x "100"  Payload= "66e9b041"
-Speed set to (m/s): 22.114
-Received CAN frame: ID=0x "100"  Payload= "03260b41"
-Speed set to (m/s): 8.69678
-Received CAN frame: ID=0x "100"  Payload= "dd91be42"
-Received CAN frame: ID=0x "100"  Payload= "8f0ea142"
-Speed set to (m/s): 95.2849
-Speed set to (m/s): 80.5284
-Received CAN frame: ID=0x "100"  Payload= "aa4ff041"
-Speed set to (m/s): 30.0389
-Received CAN frame: ID=0x "100"  Payload= "885fa542"
-Speed set to (m/s): 82.6866
-Received CAN frame: ID=0x "100"  Payload= "15f38a41"
-Speed set to (m/s): 17.3687
-Received CAN frame: ID=0x "100"  Payload= "045f5042"
-Speed set to (m/s): 52.0928
-Received CAN frame: ID=0x "100"  Payload= "b1dc6441"
-Speed set to (m/s): 14.3039
-Received CAN frame: ID=0x "100"  Payload= "de567842"
-Speed set to (m/s): 62.0848
-Received CAN frame: ID=0x "100"  Payload= "e5328142"
-Received CAN frame: ID=0x "100"  Payload= "04bffd41"
-Speed set to (m/s): 64.5994
-Speed set to (m/s): 31.7183
-Received CAN frame: ID=0x "100"  Payload= "c6175e42"
-Speed set to (m/s): 55.5232
-Received CAN frame: ID=0x "100"  Payload= "9a2e9341"
-Speed set to (m/s): 18.3978
-Received CAN frame: ID=0x "100"  Payload= "ccd33f42"
-Speed set to (m/s): 47.9568
-Received CAN frame: ID=0x "100"  Payload= "3ff88742"
-Received CAN frame: ID=0x "100"  Payload= "c5e5af42"
-Speed set to (m/s): 67.9849
-Speed set to (m/s): 87.9488
-Received CAN frame: ID=0x "100"  Payload= "f8158542"
-Speed set to (m/s): 66.5429
-Received CAN frame: ID=0x "100"  Payload= "193c8641"
-Speed set to (m/s): 16.7793
-Received CAN frame: ID=0x "100"  Payload= "4ca32d42"
-Speed set to (m/s): 43.4095
-Received CAN frame: ID=0x "100"  Payload= "dd4d9f3e"
-Speed set to (m/s): 0.311141
-Received CAN frame: ID=0x "100"  Payload= "e08ea842"
-Speed set to (m/s): 84.2791
-Received CAN frame: ID=0x "100"  Payload= "d964f840"
-Speed set to (m/s): 7.76231
-Received CAN frame: ID=0x "100"  Payload= "fbba0441"
-Received CAN frame: ID=0x "100"  Payload= "27acb642"
-Speed set to (m/s): 8.29565
-Speed set to (m/s): 91.3362
-Received CAN frame: ID=0x "100"  Payload= "f209aa42"
-Speed set to (m/s): 85.0194
-Received CAN frame: ID=0x "100"  Payload= "86211f3f"
-Speed set to (m/s): 0.621605
-Received CAN frame: ID=0x "100"  Payload= "b8fb0242"
-Speed set to (m/s): 32.7458
-Received CAN frame: ID=0x "100"  Payload= "da0d6942"
-Received CAN frame: ID=0x "100"  Payload= "a50abe42"
-Speed set to (m/s): 58.2635
-Speed set to (m/s): 95.0208
-Received CAN frame: ID=0x "100"  Payload= "c4798341"
-Speed set to (m/s): 16.4345
-Received CAN frame: ID=0x "100"  Payload= "1fc7ad42"
-Speed set to (m/s): 86.8889
-Received CAN frame: ID=0x "100"  Payload= "d633a241"
-Speed set to (m/s): 20.2753
-Received CAN frame: ID=0x "100"  Payload= "2e6c6242"
-Speed set to (m/s): 56.6056
-Received CAN frame: ID=0x "100"  Payload= "96d62241"
-Speed set to (m/s): 10.1774
-Received CAN frame: ID=0x "100"  Payload= "47908f42"
-Speed set to (m/s): 71.7818
-Received CAN frame: ID=0x "100"  Payload= "01237b42"
-Speed set to (m/s): 62.7842
-Received CAN frame: ID=0x "100"  Payload= "9bfe4142"
-Speed set to (m/s): 48.4986
-Received CAN frame: ID=0x "100"  Payload= "7feef841"
-Speed set to (m/s): 31.1165
-Received CAN frame: ID=0x "100"  Payload= "e76e7741"
-Speed set to (m/s): 15.4646
-Received CAN frame: ID=0x "100"  Payload= "7cdb6d42"
-Speed set to (m/s): 59.4643
-Received CAN frame: ID=0x "100"  Payload= "81509442"
-Received CAN frame: ID=0x "100"  Payload= "26d6be42"
-Speed set to (m/s): 74.1572
-Speed set to (m/s): 95.4183
-Received CAN frame: ID=0x "100"  Payload= "0dc41242"
-Speed set to (m/s): 36.6915
-Received CAN frame: ID=0x "100"  Payload= "fb356f41"
-Speed set to (m/s): 14.9507
-Received CAN frame: ID=0x "100"  Payload= "437e8242"
-Speed set to (m/s): 65.2466
-Received CAN frame: ID=0x "100"  Payload= "a1580441"
-Received CAN frame: ID=0x "100"  Payload= "40f3a542"
-Speed set to (m/s): 8.27164
-Speed set to (m/s): 82.9751
-Received CAN frame: ID=0x "100"  Payload= "23116742"
-Speed set to (m/s): 57.7667
-Received CAN frame: ID=0x "100"  Payload= "c88ab842"
-Speed set to (m/s): 92.2711
-Received CAN frame: ID=0x "100"  Payload= "7c709542"
-Speed set to (m/s): 74.7197
-Received CAN frame: ID=0x "100"  Payload= "c6d7ad42"
-Speed set to (m/s): 86.9214
-Received CAN frame: ID=0x "100"  Payload= "7d921942"
-Speed set to (m/s): 38.3931
-Received CAN frame: ID=0x "100"  Payload= "696ea042"
-Speed set to (m/s): 80.2156
-Received CAN frame: ID=0x "100"  Payload= "fde84342"
-Received CAN frame: ID=0x "100"  Payload= "ecd36141"
-Speed set to (m/s): 48.9775
-Speed set to (m/s): 14.1142
-Received CAN frame: ID=0x "100"  Payload= "9a9f0140"
-Speed set to (m/s): 2.02537
-Received CAN frame: ID=0x "100"  Payload= "32f98b41"
-Speed set to (m/s): 17.4967
-Received CAN frame: ID=0x "100"  Payload= "7f4f8c41"
-Speed set to (m/s): 17.5388
-Received CAN frame: ID=0x "100"  Payload= "7580bb42"
-Received CAN frame: ID=0x "100"  Payload= "b9a11742"
-Speed set to (m/s): 93.7509
-Speed set to (m/s): 37.9079
-Received CAN frame: ID=0x "100"  Payload= "e59df040"
-Speed set to (m/s): 7.51927
-Received CAN frame: ID=0x "100"  Payload= "9fd99042"
-Speed set to (m/s): 72.425
-Received CAN frame: ID=0x "100"  Payload= "2ae83542"
-Speed set to (m/s): 45.4767
-Received CAN frame: ID=0x "100"  Payload= "0a074342"
-Speed set to (m/s): 48.7569
-Received CAN frame: ID=0x "100"  Payload= "3e1ee741"
-Speed set to (m/s): 28.8898
-Received CAN frame: ID=0x "100"  Payload= "251fc540"
-Speed set to (m/s): 6.16005
-Received CAN frame: ID=0x "100"  Payload= "a8fb8e42"
-Received CAN frame: ID=0x "100"  Payload= "73508242"
-Speed set to (m/s): 71.4915
-Speed set to (m/s): 65.1571
-Received CAN frame: ID=0x "100"  Payload= "1c034342"
-Speed set to (m/s): 48.753
-Received CAN frame: ID=0x "100"  Payload= "99438641"
-Speed set to (m/s): 16.783
-Received CAN frame: ID=0x "100"  Payload= "5b4b9142"
-Speed set to (m/s): 72.6472
-Received CAN frame: ID=0x "100"  Payload= "b4f1bd42"
-Received CAN frame: ID=0x "100"  Payload= "42b08d41"
-Speed set to (m/s): 94.9721
-Speed set to (m/s): 17.7111
-Received CAN frame: ID=0x "100"  Payload= "6a399142"
-Speed set to (m/s): 72.6121
-Received CAN frame: ID=0x "100"  Payload= "43cc6e42"
-Speed set to (m/s): 59.6995
-Received CAN frame: ID=0x "100"  Payload= "3fd5a341"
-Speed set to (m/s): 20.4791
-Received CAN frame: ID=0x "100"  Payload= "63ff8b42"
-Received CAN frame: ID=0x "100"  Payload= "5b8fc642"
-Speed set to (m/s): 69.9988
-Speed set to (m/s): 99.28
-Received CAN frame: ID=0x "100"  Payload= "99268d40"
-Speed set to (m/s): 4.41096
-Received CAN frame: ID=0x "100"  Payload= "d577dd41"
-Speed set to (m/s): 27.6835
-Received CAN frame: ID=0x "100"  Payload= "b42cb141"
-Speed set to (m/s): 22.1468
-Received CAN frame: ID=0x "100"  Payload= "31880840"
-Speed set to (m/s): 2.13331
-Received CAN frame: ID=0x "100"  Payload= "16d6c442"
-Speed set to (m/s): 98.4181
-Received CAN frame: ID=0x "100"  Payload= "b62dc841"
-Speed set to (m/s): 25.0223
-Received CAN frame: ID=0x "100"  Payload= "a75d2b42"
-Received CAN frame: ID=0x "100"  Payload= "3465e341"
-Speed set to (m/s): 42.8415
-Speed set to (m/s): 28.4244
-Received CAN frame: ID=0x "100"  Payload= "ede19242"
-Speed set to (m/s): 73.4413
-Received CAN frame: ID=0x "100"  Payload= "769f7a42"
-Speed set to (m/s): 62.6557
-Received CAN frame: ID=0x "100"  Payload= "19438942"
-Speed set to (m/s): 68.6311
-Received CAN frame: ID=0x "100"  Payload= "b14cc342"
-Received CAN frame: ID=0x "100"  Payload= "be838941"
-Speed set to (m/s): 97.6498
-Speed set to (m/s): 17.1893
-Received CAN frame: ID=0x "100"  Payload= "b80fb541"
-Speed set to (m/s): 22.6327
-Received CAN frame: ID=0x "100"  Payload= "67e7b942"
-Speed set to (m/s): 92.952
-Received CAN frame: ID=0x "100"  Payload= "55e04e42"
-Speed set to (m/s): 51.7191
-Received CAN frame: ID=0x "100"  Payload= "ea083d42"
-Speed set to (m/s): 47.2587
-Received CAN frame: ID=0x "100"  Payload= "56406c42"
-Speed set to (m/s): 59.0628
-Received CAN frame: ID=0x "100"  Payload= "47c0ee40"
-Speed set to (m/s): 7.46097
-Received CAN frame: ID=0x "100"  Payload= "e97f3942"
-Received CAN frame: ID=0x "100"  Payload= "05828c42"
-Speed set to (m/s): 46.3749
-Speed set to (m/s): 70.2539
-Received CAN frame: ID=0x "100"  Payload= "36c1c742"
-Speed set to (m/s): 99.8774
-Received CAN frame: ID=0x "100"  Payload= "afa4d241"
-Speed set to (m/s): 26.3304
-Received CAN frame: ID=0x "100"  Payload= "4e1aa242"
-Speed set to (m/s): 81.0514
-Received CAN frame: ID=0x "100"  Payload= "d6649d42"
-Received CAN frame: ID=0x "100"  Payload= "e4c2ad42"
-Speed set to (m/s): 78.6969
-Speed set to (m/s): 86.8806
-Received CAN frame: ID=0x "100"  Payload= "ac651842"
-Speed set to (m/s): 38.0993
-Received CAN frame: ID=0x "100"  Payload= "7a579c42"
-Speed set to (m/s): 78.1709
-Received CAN frame: ID=0x "100"  Payload= "04737e42"
-Speed set to (m/s): 63.6123
-Received CAN frame: ID=0x "100"  Payload= "e6d87d42"
-Speed set to (m/s): 63.4618
-Received CAN frame: ID=0x "100"  Payload= "f0ba8142"
-Speed set to (m/s): 64.8651
-Received CAN frame: ID=0x "100"  Payload= "4197b642"
-Speed set to (m/s): 91.2954
-Received CAN frame: ID=0x "100"  Payload= "73746342"
-Received CAN frame: ID=0x "100"  Payload= "5e840042"
-Speed set to (m/s): 56.8637
-Speed set to (m/s): 32.1293
-Received CAN frame: ID=0x "100"  Payload= "65e7a042"
-Speed set to (m/s): 80.4519
-Received CAN frame: ID=0x "100"  Payload= "92ab4242"
-Speed set to (m/s): 48.6675
-Received CAN frame: ID=0x "100"  Payload= "d87f6342"
-Speed set to (m/s): 56.8748
-Received CAN frame: ID=0x "100"  Payload= "5211a442"
-Received CAN frame: ID=0x "100"  Payload= "237ab842"
-Speed set to (m/s): 82.0338
-Speed set to (m/s): 92.2385
-Received CAN frame: ID=0x "100"  Payload= "74f99442"
-Speed set to (m/s): 74.4872
-Received CAN frame: ID=0x "100"  Payload= "7745b142"
-Speed set to (m/s): 88.6357
-Received CAN frame: ID=0x "100"  Payload= "ad979f42"
-Speed set to (m/s): 79.7962
-Received CAN frame: ID=0x "100"  Payload= "90e7a442"
-Speed set to (m/s): 82.4523
-Received CAN frame: ID=0x "100"  Payload= "d610ac42"
-Speed set to (m/s): 86.0329
-Received CAN frame: ID=0x "100"  Payload= "350f8f42"
-Speed set to (m/s): 71.5297
-Received CAN frame: ID=0x "100"  Payload= "64b72e42"
-Received CAN frame: ID=0x "100"  Payload= "39b7dd41"
-Speed set to (m/s): 43.6791
-Speed set to (m/s): 27.7145
-Received CAN frame: ID=0x "100"  Payload= "86f24f3f"
-Speed set to (m/s): 0.812294
-Received CAN frame: ID=0x "100"  Payload= "e8b59b42"
-Speed set to (m/s): 77.8553
-Received CAN frame: ID=0x "100"  Payload= "793b5e42"
-Speed set to (m/s): 55.5581
-Received CAN frame: ID=0x "100"  Payload= "d20d5742"
-Received CAN frame: ID=0x "100"  Payload= "c3833a42"
-Speed set to (m/s): 53.7635
-Speed set to (m/s): 46.6287
-Received CAN frame: ID=0x "100"  Payload= "a96c2942"
-Speed set to (m/s): 42.3561
-Received CAN frame: ID=0x "100"  Payload= "d2f8ae41"
-Speed set to (m/s): 21.8715
-Received CAN frame: ID=0x "100"  Payload= "ce1f2442"
-Speed set to (m/s): 41.0311
-Received CAN frame: ID=0x "100"  Payload= "fc610a42"
-Speed set to (m/s): 34.5957
-Received CAN frame: ID=0x "100"  Payload= "3c08b742"
-Speed set to (m/s): 91.5161
-Received CAN frame: ID=0x "100"  Payload= "f1c7a341"
-Speed set to (m/s): 20.4726
-Received CAN frame: ID=0x "100"  Payload= "ab147341"
-Received CAN frame: ID=0x "100"  Payload= "be9d8042"
-Speed set to (m/s): 15.1925
-Speed set to (m/s): 64.3081
-Received CAN frame: ID=0x "100"  Payload= "b143c741"
-Speed set to (m/s): 24.9081
-Received CAN frame: ID=0x "100"  Payload= "885e7942"
-Speed set to (m/s): 62.3423
-Received CAN frame: ID=0x "100"  Payload= "3806a240"
-Speed set to (m/s): 5.06326
-Received CAN frame: ID=0x "100"  Payload= "c4054e42"
-Received CAN frame: ID=0x "100"  Payload= "01f27e42"
-Speed set to (m/s): 51.5056
-Speed set to (m/s): 63.7363
-Received CAN frame: ID=0x "100"  Payload= "1a2fa742"
-Speed set to (m/s): 83.592
-Received CAN frame: ID=0x "100"  Payload= "88c01f40"
-Speed set to (m/s): 2.49613
-Received CAN frame: ID=0x "100"  Payload= "5840b042"
-Speed set to (m/s): 88.1257
-Received CAN frame: ID=0x "100"  Payload= "a32b6a42"
-Speed set to (m/s): 58.5426
-Received CAN frame: ID=0x "100"  Payload= "bd60ae3f"
-Speed set to (m/s): 1.36233
-Received CAN frame: ID=0x "100"  Payload= "9c80f641"
-Speed set to (m/s): 30.8128
-Received CAN frame: ID=0x "100"  Payload= "76049e41"
-Speed set to (m/s): 19.7522
-Received CAN frame: ID=0x "100"  Payload= "ae48a842"
-Speed set to (m/s): 84.142
-Received CAN frame: ID=0x "100"  Payload= "4c208442"
-Speed set to (m/s): 66.0631
-Received CAN frame: ID=0x "100"  Payload= "8e1d5741"
-Speed set to (m/s): 13.4447
-Received CAN frame: ID=0x "100"  Payload= "6c419f42"
-Speed set to (m/s): 79.6278
-Received CAN frame: ID=0x "100"  Payload= "c46ba042"
-Received CAN frame: ID=0x "100"  Payload= "52efaf42"
-Speed set to (m/s): 80.2105
-Speed set to (m/s): 87.9674
-Received CAN frame: ID=0x "100"  Payload= "b4115b40"
-Speed set to (m/s): 3.42296
-Received CAN frame: ID=0x "100"  Payload= "48b28e41"
-Speed set to (m/s): 17.8371
-Received CAN frame: ID=0x "100"  Payload= "17347242"
-Speed set to (m/s): 60.5509
-Received CAN frame: ID=0x "100"  Payload= "38fb6d42"
-Speed set to (m/s): 59.4953
-Received CAN frame: ID=0x "100"  Payload= "376fd740"
-Speed set to (m/s): 6.73233
-Received CAN frame: ID=0x "100"  Payload= "ea6c6642"
-Speed set to (m/s): 57.6064
-Received CAN frame: ID=0x "100"  Payload= "8709a542"
-Received CAN frame: ID=0x "100"  Payload= "b2f98041"
-Speed set to (m/s): 82.5186
-Speed set to (m/s): 16.1219
-Received CAN frame: ID=0x "100"  Payload= "9cbeaf41"
-Speed set to (m/s): 21.9681
-Received CAN frame: ID=0x "100"  Payload= "93c29642"
-Speed set to (m/s): 75.38
-Received CAN frame: ID=0x "100"  Payload= "49015441"
-Speed set to (m/s): 13.2503
-Received CAN frame: ID=0x "100"  Payload= "1c887e42"
-Received CAN frame: ID=0x "100"  Payload= "40e83740"
-Speed set to (m/s): 63.6329
-Speed set to (m/s): 2.87355
-Received CAN frame: ID=0x "100"  Payload= "c0c1c042"
-Speed set to (m/s): 96.3784
-Received CAN frame: ID=0x "100"  Payload= "4ac19a42"
-Speed set to (m/s): 77.3775
-Received CAN frame: ID=0x "100"  Payload= "01d93542"
-Speed set to (m/s): 45.4619
-Received CAN frame: ID=0x "100"  Payload= "75ad8042"
-Received CAN frame: ID=0x "100"  Payload= "16978d42"
-Speed set to (m/s): 64.3388
-Speed set to (m/s): 70.7951
-Received CAN frame: ID=0x "100"  Payload= "3227b442"
-Speed set to (m/s): 90.0766
-Received CAN frame: ID=0x "100"  Payload= "c554c542"
-Speed set to (m/s): 98.6656
-Received CAN frame: ID=0x "100"  Payload= "594ca842"
-Speed set to (m/s): 84.1491
-Received CAN frame: ID=0x "100"  Payload= "d8437141"
-Speed set to (m/s): 15.0791
-Received CAN frame: ID=0x "100"  Payload= "d92c9542"
-Speed set to (m/s): 74.5876
-Received CAN frame: ID=0x "100"  Payload= "58eea141"
-Speed set to (m/s): 20.2414
-Received CAN frame: ID=0x "100"  Payload= "fa3ef441"
-Received CAN frame: ID=0x "100"  Payload= "f52aa640"
-Speed set to (m/s): 30.5308
-Speed set to (m/s): 5.19274
-Received CAN frame: ID=0x "100"  Payload= "6365b842"
-Speed set to (m/s): 92.198
-Received CAN frame: ID=0x "100"  Payload= "e377f841"
-Speed set to (m/s): 31.0585
-Received CAN frame: ID=0x "100"  Payload= "24d95742"
-Speed set to (m/s): 53.9621
-Received CAN frame: ID=0x "100"  Payload= "8f7a1440"
-Received CAN frame: ID=0x "100"  Payload= "e59b8241"
-Speed set to (m/s): 2.31998
-Speed set to (m/s): 16.3261
-Received CAN frame: ID=0x "100"  Payload= "0ffc5f41"
-Speed set to (m/s): 13.999
-Received CAN frame: ID=0x "100"  Payload= "ac1a7941"
-Speed set to (m/s): 15.569
-Received CAN frame: ID=0x "100"  Payload= "eccd5b42"
-Speed set to (m/s): 54.9511
-Received CAN frame: ID=0x "100"  Payload= "3395c042"
-Speed set to (m/s): 96.2914
-Received CAN frame: ID=0x "100"  Payload= "b24fbc42"
-Speed set to (m/s): 94.1557
-Received CAN frame: ID=0x "100"  Payload= "4cc99542"
-Speed set to (m/s): 74.8932
-Received CAN frame: ID=0x "100"  Payload= "ec51c142"
-Received CAN frame: ID=0x "100"  Payload= "307b0642"
-Speed set to (m/s): 96.66
-Speed set to (m/s): 33.6203
-Received CAN frame: ID=0x "100"  Payload= "5701bf42"
-Speed set to (m/s): 95.5026
-Received CAN frame: ID=0x "100"  Payload= "8fdbc442"
-Speed set to (m/s): 98.4288
-Received CAN frame: ID=0x "100"  Payload= "cddc1c42"
-Speed set to (m/s): 39.2156
-Received CAN frame: ID=0x "100"  Payload= "0b059542"
-Received CAN frame: ID=0x "100"  Payload= "6feb8541"
-Speed set to (m/s): 74.5098
-Speed set to (m/s): 16.74
-Received CAN frame: ID=0x "100"  Payload= "9044d841"
-Speed set to (m/s): 27.0335
-Received CAN frame: ID=0x "100"  Payload= "dca7a042"
-Speed set to (m/s): 80.3279
-Received CAN frame: ID=0x "100"  Payload= "e63d7641"
-Speed set to (m/s): 15.3901
-Received CAN frame: ID=0x "100"  Payload= "c28e8742"
-Speed set to (m/s): 67.7788
-Received CAN frame: ID=0x "100"  Payload= "c36a2c42"
-Speed set to (m/s): 43.1043
-Received CAN frame: ID=0x "100"  Payload= "40e53a42"
-Speed set to (m/s): 46.7239
-Received CAN frame: ID=0x "100"  Payload= "1374e840"
-Received CAN frame: ID=0x "100"  Payload= "e4332e41"
-Speed set to (m/s): 7.26417
-Speed set to (m/s): 10.8877
-Received CAN frame: ID=0x "100"  Payload= "04a56341"
-Speed set to (m/s): 14.2278
-Received CAN frame: ID=0x "100"  Payload= "9e77bb42"
-Speed set to (m/s): 93.7336
-Received CAN frame: ID=0x "100"  Payload= "f04e7f42"
-Speed set to (m/s): 63.8271
-Received CAN frame: ID=0x "100"  Payload= "443f8c40"
-Speed set to (m/s): 4.38272
-Received CAN frame: ID=0x "100"  Payload= "8f5f9f41"
-Speed set to (m/s): 19.9217
-Received CAN frame: ID=0x "100"  Payload= "57091042"
-Speed set to (m/s): 36.0091
-Received CAN frame: ID=0x "100"  Payload= "3c1c0842"
-Speed set to (m/s): 34.0276
-Received CAN frame: ID=0x "100"  Payload= "fde4a642"
-Speed set to (m/s): 83.4472
-Received CAN frame: ID=0x "100"  Payload= "18ab5b41"
-Speed set to (m/s): 13.7293
-Received CAN frame: ID=0x "100"  Payload= "cc772942"
-Speed set to (m/s): 42.367
-Received CAN frame: ID=0x "100"  Payload= "e13b8e42"
-Speed set to (m/s): 71.117
-Received CAN frame: ID=0x "100"  Payload= "d93d4042"
-Received CAN frame: ID=0x "100"  Payload= "a85fd241"
-Speed set to (m/s): 48.0604
-Speed set to (m/s): 26.2967
-Received CAN frame: ID=0x "100"  Payload= "0616dc3e"
-Speed set to (m/s): 0.429856
-Received CAN frame: ID=0x "100"  Payload= "90d43142"
-Speed set to (m/s): 44.4576
-Received CAN frame: ID=0x "100"  Payload= "27ac5b42"
-Speed set to (m/s): 54.9181
-Received CAN frame: ID=0x "100"  Payload= "87cf5340"
-Received CAN frame: ID=0x "100"  Payload= "b097ab42"
-Speed set to (m/s): 3.30954
-Speed set to (m/s): 85.7963
-Received CAN frame: ID=0x "100"  Payload= "114baa42"
-Speed set to (m/s): 85.1466
-Received CAN frame: ID=0x "100"  Payload= "c40c9c42"
-Speed set to (m/s): 78.0249
-Received CAN frame: ID=0x "100"  Payload= "8312cb41"
-Speed set to (m/s): 25.384
-Received CAN frame: ID=0x "100"  Payload= "5122dd41"
-Speed set to (m/s): 27.6418
-Received CAN frame: ID=0x "100"  Payload= "adddf741"
-Speed set to (m/s): 30.9832
-Received CAN frame: ID=0x "100"  Payload= "d0fc9442"
-Speed set to (m/s): 74.4938
-Received CAN frame: ID=0x "100"  Payload= "77da9642"
-Speed set to (m/s): 75.4267
-Received CAN frame: ID=0x "100"  Payload= "69eeb142"
-Speed set to (m/s): 88.9656
-Received CAN frame: ID=0x "100"  Payload= "d521bb42"
-Speed set to (m/s): 93.5661
-Received CAN frame: ID=0x "100"  Payload= "9045a742"
-Speed set to (m/s): 83.6359
-Received CAN frame: ID=0x "100"  Payload= "12098042"
-Speed set to (m/s): 64.0177
-Received CAN frame: ID=0x "100"  Payload= "9897af42"
-Received CAN frame: ID=0x "100"  Payload= "8ee38c42"
-Speed set to (m/s): 87.7961
-Speed set to (m/s): 70.4444
-Received CAN frame: ID=0x "100"  Payload= "79389a42"
-Speed set to (m/s): 77.1103
-Received CAN frame: ID=0x "100"  Payload= "6d556040"
-Speed set to (m/s): 3.50521
-Received CAN frame: ID=0x "100"  Payload= "7fd98242"
-Speed set to (m/s): 65.4248
-Received CAN frame: ID=0x "100"  Payload= "1bd04d42"
-Received CAN frame: ID=0x "100"  Payload= "0bc04042"
-Speed set to (m/s): 51.4532
-Speed set to (m/s): 48.1875
-Received CAN frame: ID=0x "100"  Payload= "5407c242"
-Speed set to (m/s): 97.0143
-Received CAN frame: ID=0x "100"  Payload= "48f6c941"
-Speed set to (m/s): 25.2453
-Received CAN frame: ID=0x "100"  Payload= "940e5642"
-Speed set to (m/s): 53.5142
-Received CAN frame: ID=0x "100"  Payload= "64e96241"
-Speed set to (m/s): 14.182
-Received CAN frame: ID=0x "100"  Payload= "b456ba42"
-Speed set to (m/s): 93.1693
-Received CAN frame: ID=0x "100"  Payload= "dbfdba42"
-Speed set to (m/s): 93.4958
-Received CAN frame: ID=0x "100"  Payload= "03bb1442"
-Received CAN frame: ID=0x "100"  Payload= "d4863642"
-Speed set to (m/s): 37.1826
-Speed set to (m/s): 45.6317
-Received CAN frame: ID=0x "100"  Payload= "dcce6440"
-Speed set to (m/s): 3.57513
-Received CAN frame: ID=0x "100"  Payload= "57258542"
-Speed set to (m/s): 66.5729
-Received CAN frame: ID=0x "100"  Payload= "bc678e42"
-Speed set to (m/s): 71.2026
-Received CAN frame: ID=0x "100"  Payload= "381e4c42"
-Received CAN frame: ID=0x "100"  Payload= "01369342"
-Speed set to (m/s): 51.0295
-Speed set to (m/s): 73.6055
-Received CAN frame: ID=0x "100"  Payload= "259aaa42"
-Speed set to (m/s): 85.3011
-Received CAN frame: ID=0x "100"  Payload= "d6e9c242"
-Speed set to (m/s): 97.4567
-Received CAN frame: ID=0x "100"  Payload= "b5a81c42"
-Speed set to (m/s): 39.1648
-Received CAN frame: ID=0x "100"  Payload= "c5393d42"
-Speed set to (m/s): 47.3064
-Received CAN frame: ID=0x "100"  Payload= "63393142"
-Speed set to (m/s): 44.306
-Received CAN frame: ID=0x "100"  Payload= "b558a442"
-Speed set to (m/s): 82.1733
-Received CAN frame: ID=0x "100"  Payload= "9bd51642"
-Received CAN frame: ID=0x "100"  Payload= "0d265d42"
-Speed set to (m/s): 37.7086
-Speed set to (m/s): 55.2872
-Received CAN frame: ID=0x "100"  Payload= "76763742"
-Speed set to (m/s): 45.8657
-Received CAN frame: ID=0x "100"  Payload= "88344f41"
-Speed set to (m/s): 12.9503
-Received CAN frame: ID=0x "100"  Payload= "611f5b41"
-Speed set to (m/s): 13.6952
-Received CAN frame: ID=0x "100"  Payload= "fc21c241"
-Received CAN frame: ID=0x "100"  Payload= "6b548842"
-Speed set to (m/s): 24.2666
-Speed set to (m/s): 68.1649
-Received CAN frame: ID=0x "100"  Payload= "56eea041"
-Speed set to (m/s): 20.1164
-Received CAN frame: ID=0x "100"  Payload= "6b239142"
-Speed set to (m/s): 72.5692
-Received CAN frame: ID=0x "100"  Payload= "873f9541"
-Speed set to (m/s): 18.656
-Received CAN frame: ID=0x "100"  Payload= "f3c88a42"
-Speed set to (m/s): 69.3925
-Received CAN frame: ID=0x "100"  Payload= "1249b942"
-Speed set to (m/s): 92.6427
-Received CAN frame: ID=0x "100"  Payload= "c0899a42"
-Speed set to (m/s): 77.269
-Received CAN frame: ID=0x "100"  Payload= "25aaaa42"
-Received CAN frame: ID=0x "100"  Payload= "9f107041"
-Speed set to (m/s): 85.3323
-Speed set to (m/s): 15.0041
-Received CAN frame: ID=0x "100"  Payload= "fff42341"
-Speed set to (m/s): 10.2473
-Received CAN frame: ID=0x "100"  Payload= "a64e8542"
-Speed set to (m/s): 66.6536
-Received CAN frame: ID=0x "100"  Payload= "6f8dc342"
-Speed set to (m/s): 97.7762
-Received CAN frame: ID=0x "100"  Payload= "0d328d42"
-Received CAN frame: ID=0x "100"  Payload= "09359a41"
-Speed set to (m/s): 70.5978
-Speed set to (m/s): 19.2759
-Received CAN frame: ID=0x "100"  Payload= "98bf1a41"
-Speed set to (m/s): 9.67178
-Received CAN frame: ID=0x "100"  Payload= "f5af9d42"
-Speed set to (m/s): 78.8437
-Received CAN frame: ID=0x "100"  Payload= "76b30542"
-Speed set to (m/s): 33.4253
-Received CAN frame: ID=0x "100"  Payload= "ab09e341"
-Speed set to (m/s): 28.3797
-Received CAN frame: ID=0x "100"  Payload= "475e3842"
-Speed set to (m/s): 46.0921
-Received CAN frame: ID=0x "100"  Payload= "982f2a42"
-Speed set to (m/s): 42.5465
-Received CAN frame: ID=0x "100"  Payload= "41788e42"
-Received CAN frame: ID=0x "100"  Payload= "37ccaf41"
-Speed set to (m/s): 71.2349
-Speed set to (m/s): 21.9747
-Received CAN frame: ID=0x "100"  Payload= "1180af41"
-Speed set to (m/s): 21.9375
-Received CAN frame: ID=0x "100"  Payload= "5ebaba41"
-Speed set to (m/s): 23.341
-Received CAN frame: ID=0x "100"  Payload= "235ba642"
-Speed set to (m/s): 83.178
-Received CAN frame: ID=0x "100"  Payload= "0077b242"
-Received CAN frame: ID=0x "100"  Payload= "837c3842"
-Speed set to (m/s): 89.2324
-Speed set to (m/s): 46.1216
-Received CAN frame: ID=0x "100"  Payload= "89f07842"
-Speed set to (m/s): 62.2349
-Received CAN frame: ID=0x "100"  Payload= "919c9741"
-Speed set to (m/s): 18.9514
-Received CAN frame: ID=0x "100"  Payload= "c9a60a41"
-Speed set to (m/s): 8.66572
-Received CAN frame: ID=0x "100"  Payload= "872b9f42"
-Speed set to (m/s): 79.585
-Received CAN frame: ID=0x "100"  Payload= "8ce91542"
-Speed set to (m/s): 37.4781
-Received CAN frame: ID=0x "100"  Payload= "0430a642"
-Speed set to (m/s): 83.0938
-Received CAN frame: ID=0x "100"  Payload= "48dd8d42"
-Speed set to (m/s): 70.9322
-Received CAN frame: ID=0x "100"  Payload= "d9afbe42"
-Speed set to (m/s): 95.3435
-Received CAN frame: ID=0x "100"  Payload= "ed359c42"
-Speed set to (m/s): 78.1053
-Received CAN frame: ID=0x "100"  Payload= "66a15842"
-Speed set to (m/s): 54.1576
-Received CAN frame: ID=0x "100"  Payload= "78266e42"
-Speed set to (m/s): 59.5376
-Received CAN frame: ID=0x "100"  Payload= "4d144242"
-Received CAN frame: ID=0x "100"  Payload= "1f795242"
-Speed set to (m/s): 48.5198
-Speed set to (m/s): 52.6183
-Received CAN frame: ID=0x "100"  Payload= "14edd140"
-Speed set to (m/s): 6.56019
-Received CAN frame: ID=0x "100"  Payload= "f7078342"
-Speed set to (m/s): 65.5156
-Received CAN frame: ID=0x "100"  Payload= "6abeb842"
-Speed set to (m/s): 92.3719
-Received CAN frame: ID=0x "100"  Payload= "ddeed841"
-Received CAN frame: ID=0x "100"  Payload= "8ec99842"
-Speed set to (m/s): 27.1166
-Speed set to (m/s): 76.3937
-Received CAN frame: ID=0x "100"  Payload= "cdecaa42"
-Speed set to (m/s): 85.4625
-Received CAN frame: ID=0x "100"  Payload= "400c7442"
-Speed set to (m/s): 61.012
-Received CAN frame: ID=0x "100"  Payload= "d2237841"
-Speed set to (m/s): 15.5087
-Received CAN frame: ID=0x "100"  Payload= "d1e61d42"
-Received CAN frame: ID=0x "100"  Payload= "677fb942"
-Speed set to (m/s): 39.4754
-Speed set to (m/s): 92.7488
-Received CAN frame: ID=0x "100"  Payload= "4d2a0742"
-Speed set to (m/s): 33.7913
-Received CAN frame: ID=0x "100"  Payload= "9d0a4e42"
-Speed set to (m/s): 51.5104
-Received CAN frame: ID=0x "100"  Payload= "df9ff641"
-Speed set to (m/s): 30.8281
-Received CAN frame: ID=0x "100"  Payload= "b5ee6142"
-Speed set to (m/s): 56.4831
-Received CAN frame: ID=0x "100"  Payload= "e439ae42"
-Speed set to (m/s): 87.1131
-Received CAN frame: ID=0x "100"  Payload= "9b4f4542"
-Speed set to (m/s): 49.3277
-Received CAN frame: ID=0x "100"  Payload= "f3a26d42"
-Received CAN frame: ID=0x "100"  Payload= "6c0e4042"
-Speed set to (m/s): 59.4091
-Speed set to (m/s): 48.0141
-Received CAN frame: ID=0x "100"  Payload= "40766542"
-Speed set to (m/s): 57.3655
-Received CAN frame: ID=0x "100"  Payload= "b0a82e42"
-Speed set to (m/s): 43.6647
-Received CAN frame: ID=0x "100"  Payload= "38748741"
-Speed set to (m/s): 16.9317
-Received CAN frame: ID=0x "100"  Payload= "70ce8742"
-Speed set to (m/s): 67.9032
-Received CAN frame: ID=0x "100"  Payload= "82336142"
-Speed set to (m/s): 56.3003
-Received CAN frame: ID=0x "100"  Payload= "62eb4342"
-Speed set to (m/s): 48.9799
-Received CAN frame: ID=0x "100"  Payload= "057e3c41"
-Speed set to (m/s): 11.7808
-Received CAN frame: ID=0x "100"  Payload= "25443142"
-Speed set to (m/s): 44.3165
-Received CAN frame: ID=0x "100"  Payload= "35bf7141"
-Speed set to (m/s): 15.1092
-Received CAN frame: ID=0x "100"  Payload= "7fe19441"
-Speed set to (m/s): 18.6101
-Received CAN frame: ID=0x "100"  Payload= "03fd8b42"
-Speed set to (m/s): 69.9942
-Received CAN frame: ID=0x "100"  Payload= "e846d840"
-Received CAN frame: ID=0x "100"  Payload= "8dfe3f42"
-Speed set to (m/s): 6.75866
-Speed set to (m/s): 47.9986
-Received CAN frame: ID=0x "100"  Payload= "1bbebe42"
-Speed set to (m/s): 95.3713
-Received CAN frame: ID=0x "100"  Payload= "5aef5c42"
-Speed set to (m/s): 55.2337
-Received CAN frame: ID=0x "100"  Payload= "a6dd8140"
-Speed set to (m/s): 4.05831
-Received CAN frame: ID=0x "100"  Payload= "1f0de641"
-Received CAN frame: ID=0x "100"  Payload= "fe943842"
-Speed set to (m/s): 28.7564
-Speed set to (m/s): 46.1455
-Received CAN frame: ID=0x "100"  Payload= "ef8d5242"
-Speed set to (m/s): 52.6386
-Received CAN frame: ID=0x "100"  Payload= "aeef3242"
-Speed set to (m/s): 44.7341
-Received CAN frame: ID=0x "100"  Payload= "544d8942"
-Speed set to (m/s): 68.651
-Received CAN frame: ID=0x "100"  Payload= "6cae3741"
-Speed set to (m/s): 11.4801
-Received CAN frame: ID=0x "100"  Payload= "006e5642"
-Speed set to (m/s): 53.6074
-Received CAN frame: ID=0x "100"  Payload= "618ef641"
-Speed set to (m/s): 30.8195
-Received CAN frame: ID=0x "100"  Payload= "4fd56742"
-Received CAN frame: ID=0x "100"  Payload= "4d5d8642"
-Speed set to (m/s): 57.9583
-Speed set to (m/s): 67.1822
-Received CAN frame: ID=0x "100"  Payload= "2e9c5b42"
-Speed set to (m/s): 54.9025
-Received CAN frame: ID=0x "100"  Payload= "d9519742"
-Speed set to (m/s): 75.6599
-Received CAN frame: ID=0x "100"  Payload= "4be65842"
-Speed set to (m/s): 54.2249
-Received CAN frame: ID=0x "100"  Payload= "2578a242"
-Received CAN frame: ID=0x "100"  Payload= "efcb1241"
-Speed set to (m/s): 81.2347
-Speed set to (m/s): 9.17479
-Received CAN frame: ID=0x "100"  Payload= "e5df9242"
-Speed set to (m/s): 73.4373
-Received CAN frame: ID=0x "100"  Payload= "d9e47042"
-Speed set to (m/s): 60.2235
-Received CAN frame: ID=0x "100"  Payload= "63763741"
-Speed set to (m/s): 11.4664
-Received CAN frame: ID=0x "100"  Payload= "9aafbe42"
-Speed set to (m/s): 95.343
-Received CAN frame: ID=0x "100"  Payload= "81719342"
-Speed set to (m/s): 73.7217
-Received CAN frame: ID=0x "100"  Payload= "87303e42"
-Speed set to (m/s): 47.5474
-Received CAN frame: ID=0x "100"  Payload= "e8f6c042"
-Received CAN frame: ID=0x "100"  Payload= "f9bace41"
-Speed set to (m/s): 96.4822
-Speed set to (m/s): 25.8413
-Received CAN frame: ID=0x "100"  Payload= "54c58b42"
-Speed set to (m/s): 69.8854
-Received CAN frame: ID=0x "100"  Payload= "2363a342"
-Speed set to (m/s): 81.6936
-Received CAN frame: ID=0x "100"  Payload= "32c8c142"
-Speed set to (m/s): 96.891
-Received CAN frame: ID=0x "100"  Payload= "bf529142"
-Received CAN frame: ID=0x "100"  Payload= "fbd43b42"
-Speed set to (m/s): 72.6616
-Speed set to (m/s): 46.958
-Received CAN frame: ID=0x "100"  Payload= "a802a042"
-Speed set to (m/s): 80.0052
-Received CAN frame: ID=0x "100"  Payload= "29fe3041"
-Speed set to (m/s): 11.0621
-Received CAN frame: ID=0x "100"  Payload= "8dd2a041"
-Speed set to (m/s): 20.1028
-Received CAN frame: ID=0x "100"  Payload= "aac39942"
-Speed set to (m/s): 76.8822
-Received CAN frame: ID=0x "100"  Payload= "2b97af41"
-Speed set to (m/s): 21.9488
-Received CAN frame: ID=0x "100"  Payload= "8f674a42"
-Speed set to (m/s): 50.6011
-Received CAN frame: ID=0x "100"  Payload= "e8c69d42"
-Received CAN frame: ID=0x "100"  Payload= "a0398942"
-Speed set to (m/s): 78.8885
-Speed set to (m/s): 68.6125
-Received CAN frame: ID=0x "100"  Payload= "ebce4f42"
-Speed set to (m/s): 51.9521
-Received CAN frame: ID=0x "100"  Payload= "139cc03e"
-Speed set to (m/s): 0.376191
-Received CAN frame: ID=0x "100"  Payload= "70433842"
-Speed set to (m/s): 46.0659
-Received CAN frame: ID=0x "100"  Payload= "ec159242"
-Received CAN frame: ID=0x "100"  Payload= "c4d3c742"
-Speed set to (m/s): 73.0428
-Speed set to (m/s): 99.9136
-Received CAN frame: ID=0x "100"  Payload= "35c68d42"
-Speed set to (m/s): 70.8871
-Received CAN frame: ID=0x "100"  Payload= "65b5c242"
-Speed set to (m/s): 97.3543
-Received CAN frame: ID=0x "100"  Payload= "84a86942"
-Speed set to (m/s): 58.4146
-Received CAN frame: ID=0x "100"  Payload= "88a20e42"
-Speed set to (m/s): 35.6587
-Received CAN frame: ID=0x "100"  Payload= "50017c42"
-Speed set to (m/s): 63.0013
-Received CAN frame: ID=0x "100"  Payload= "c4a67f42"
-Speed set to (m/s): 63.9129
-Received CAN frame: ID=0x "100"  Payload= "fd59b542"
-Speed set to (m/s): 90.6758
-Received CAN frame: ID=0x "100"  Payload= "af2d1e3f"
-Speed set to (m/s): 0.617885
-Received CAN frame: ID=0x "100"  Payload= "e221c641"
-Speed set to (m/s): 24.7665
-Received CAN frame: ID=0x "100"  Payload= "2e087342"
-Speed set to (m/s): 60.758
-Received CAN frame: ID=0x "100"  Payload= "d54eb942"
-Speed set to (m/s): 92.654
-Received CAN frame: ID=0x "100"  Payload= "40543b42"
-Received CAN frame: ID=0x "100"  Payload= "0d1a8142"
-Speed set to (m/s): 46.8323
-Speed set to (m/s): 64.5509
-Received CAN frame: ID=0x "100"  Payload= "340e9942"
-Speed set to (m/s): 76.5277
-Received CAN frame: ID=0x "100"  Payload= "c4edbd42"
-Speed set to (m/s): 94.9644
-Received CAN frame: ID=0x "100"  Payload= "f2a45742"
-Speed set to (m/s): 53.9111
-Received CAN frame: ID=0x "100"  Payload= "462fc642"
-Received CAN frame: ID=0x "100"  Payload= "1c4a7542"
-Speed set to (m/s): 99.0923
-Speed set to (m/s): 61.3224
-Received CAN frame: ID=0x "100"  Payload= "de34b142"
-Speed set to (m/s): 88.6033
-Received CAN frame: ID=0x "100"  Payload= "889e6242"
-Speed set to (m/s): 56.6548
-Received CAN frame: ID=0x "100"  Payload= "9241c542"
-Speed set to (m/s): 98.6281
-Received CAN frame: ID=0x "100"  Payload= "c300c142"
-Speed set to (m/s): 96.5015
-Received CAN frame: ID=0x "100"  Payload= "5a5b1342"
-Speed set to (m/s): 36.8392
-Received CAN frame: ID=0x "100"  Payload= "b7cc9e42"
-Speed set to (m/s): 79.3998
-Received CAN frame: ID=0x "100"  Payload= "8844a940"
-Speed set to (m/s): 5.28962
-Received CAN frame: ID=0x "100"  Payload= "73bc3342"
-Speed set to (m/s): 44.934
-Received CAN frame: ID=0x "100"  Payload= "a38abb42"
-Speed set to (m/s): 93.7708
-Received CAN frame: ID=0x "100"  Payload= "d1092c42"
-Speed set to (m/s): 43.0096
-Received CAN frame: ID=0x "100"  Payload= "cc5b7e42"
-Speed set to (m/s): 63.5896
-Received CAN frame: ID=0x "100"  Payload= "40dfac42"
-Received CAN frame: ID=0x "100"  Payload= "7bd91d42"
-Speed set to (m/s): 86.436
-Speed set to (m/s): 39.4624
-Received CAN frame: ID=0x "100"  Payload= "dcd19b42"
-Speed set to (m/s): 77.9099
-Received CAN frame: ID=0x "100"  Payload= "b1308f3f"
-Speed set to (m/s): 1.11867
-Received CAN frame: ID=0x "100"  Payload= "b67b4c42"
-Speed set to (m/s): 51.1208
-Received CAN frame: ID=0x "100"  Payload= "c42d8542"
-Received CAN frame: ID=0x "100"  Payload= "044cb642"
-Speed set to (m/s): 66.5894
-Speed set to (m/s): 91.1485
-Received CAN frame: ID=0x "100"  Payload= "50009642"
-Speed set to (m/s): 75.0006
-Received CAN frame: ID=0x "100"  Payload= "47e4a842"
-Speed set to (m/s): 84.4459
-Received CAN frame: ID=0x "100"  Payload= "bbb7ee3e"
-Speed set to (m/s): 0.466246
-Received CAN frame: ID=0x "100"  Payload= "970e1e42"
-Speed set to (m/s): 39.5142
-Received CAN frame: ID=0x "100"  Payload= "c2ed9f42"
-Speed set to (m/s): 79.9644
-Received CAN frame: ID=0x "100"  Payload= "c4537042"
-Speed set to (m/s): 60.0818
-Received CAN frame: ID=0x "100"  Payload= "b6b2f241"
-Received CAN frame: ID=0x "100"  Payload= "d7473a42"
-Speed set to (m/s): 30.3373
-Speed set to (m/s): 46.5702
-Received CAN frame: ID=0x "100"  Payload= "3f45bb42"
-Speed set to (m/s): 93.6352
-Received CAN frame: ID=0x "100"  Payload= "4d420340"
-Speed set to (m/s): 2.05092
-Received CAN frame: ID=0x "100"  Payload= "1da86542"
-Speed set to (m/s): 57.4142
-Received CAN frame: ID=0x "100"  Payload= "30d49142"
-Received CAN frame: ID=0x "100"  Payload= "175a8e42"
-Speed set to (m/s): 72.9144
-Speed set to (m/s): 71.176
-Received CAN frame: ID=0x "100"  Payload= "70a8bd42"
-Speed set to (m/s): 94.829
-Received CAN frame: ID=0x "100"  Payload= "bb15a142"
-Speed set to (m/s): 80.5424
-Received CAN frame: ID=0x "100"  Payload= "3d93503f"
-Speed set to (m/s): 0.814747
-Received CAN frame: ID=0x "100"  Payload= "f05e3242"
-Speed set to (m/s): 44.5927
-Received CAN frame: ID=0x "100"  Payload= "3be22742"
-Speed set to (m/s): 41.9709
-Received CAN frame: ID=0x "100"  Payload= "4ebbdd41"
-Speed set to (m/s): 27.7165
-Received CAN frame: ID=0x "100"  Payload= "1f281242"
-Received CAN frame: ID=0x "100"  Payload= "6fe61742"
-Speed set to (m/s): 36.5392
-Speed set to (m/s): 37.975
-Received CAN frame: ID=0x "100"  Payload= "c7641242"
-Speed set to (m/s): 36.5984
-Received CAN frame: ID=0x "100"  Payload= "c15d9942"
-Speed set to (m/s): 76.6831
-Received CAN frame: ID=0x "100"  Payload= "eeb69f42"
-Speed set to (m/s): 79.8573
-Received CAN frame: ID=0x "100"  Payload= "4042c742"
-Received CAN frame: ID=0x "100"  Payload= "d5822942"
-Speed set to (m/s): 99.6294
-Speed set to (m/s): 42.3778
-Received CAN frame: ID=0x "100"  Payload= "53811242"
-Speed set to (m/s): 36.6263
-Received CAN frame: ID=0x "100"  Payload= "05fc1742"
-Speed set to (m/s): 37.9961
-Received CAN frame: ID=0x "100"  Payload= "6cae2e41"
-Speed set to (m/s): 10.9176
-Received CAN frame: ID=0x "100"  Payload= "050e8042"
-Speed set to (m/s): 64.0274
-Received CAN frame: ID=0x "100"  Payload= "6491a442"
-Speed set to (m/s): 82.284
-Received CAN frame: ID=0x "100"  Payload= "efd3be41"
-Speed set to (m/s): 23.8535
-Received CAN frame: ID=0x "100"  Payload= "bc2dbf3f"
-Received CAN frame: ID=0x "100"  Payload= "fcb03041"
-Speed set to (m/s): 1.49358
-Speed set to (m/s): 11.0432
-Received CAN frame: ID=0x "100"  Payload= "8635b041"
-Speed set to (m/s): 22.0261
-Received CAN frame: ID=0x "100"  Payload= "67398842"
-Speed set to (m/s): 68.1121
-Received CAN frame: ID=0x "100"  Payload= "da4cc442"
-Speed set to (m/s): 98.1501
-Received CAN frame: ID=0x "100"  Payload= "8a205542"
-Received CAN frame: ID=0x "100"  Payload= "8a482441"
-Speed set to (m/s): 53.2818
-Speed set to (m/s): 10.2677
-Received CAN frame: ID=0x "100"  Payload= "27ffa442"
-Speed set to (m/s): 82.4983
-Received CAN frame: ID=0x "100"  Payload= "60868b42"
-Speed set to (m/s): 69.7625
-Received CAN frame: ID=0x "100"  Payload= "54d83142"
-Speed set to (m/s): 44.4613
-Received CAN frame: ID=0x "100"  Payload= "6f3d5f42"
-Speed set to (m/s): 55.81
-Received CAN frame: ID=0x "100"  Payload= "8ad69b42"
-Speed set to (m/s): 77.919
-Received CAN frame: ID=0x "100"  Payload= "eaac9042"
-Speed set to (m/s): 72.3377
-Received CAN frame: ID=0x "100"  Payload= "6b4d9642"
-Received CAN frame: ID=0x "100"  Payload= "04313242"
-Speed set to (m/s): 75.1512
-Speed set to (m/s): 44.5479
-Received CAN frame: ID=0x "100"  Payload= "026d8841"
-Speed set to (m/s): 17.0532
-Received CAN frame: ID=0x "100"  Payload= "013ec642"
-Speed set to (m/s): 99.1211
-Received CAN frame: ID=0x "100"  Payload= "7a190f42"
-Speed set to (m/s): 35.7749
-Received CAN frame: ID=0x "100"  Payload= "b078ad42"
-Received CAN frame: ID=0x "100"  Payload= "81c32d42"
-Speed set to (m/s): 86.7357
-Speed set to (m/s): 43.4409
-Received CAN frame: ID=0x "100"  Payload= "520ef341"
-Speed set to (m/s): 30.382
-Received CAN frame: ID=0x "100"  Payload= "d95dbc41"
-Speed set to (m/s): 23.5458
-Received CAN frame: ID=0x "100"  Payload= "7f2d9b42"
-Speed set to (m/s): 77.5889
-Received CAN frame: ID=0x "100"  Payload= "5ceb0942"
-Speed set to (m/s): 34.4798
-Received CAN frame: ID=0x "100"  Payload= "b0dc1242"
-Speed set to (m/s): 36.7155
-Received CAN frame: ID=0x "100"  Payload= "cc67a742"
-Speed set to (m/s): 83.7027
-Received CAN frame: ID=0x "100"  Payload= "4fe0e241"
-Speed set to (m/s): 28.3595
-Received CAN frame: ID=0x "100"  Payload= "8a6ec442"
-Speed set to (m/s): 98.2159
-Received CAN frame: ID=0x "100"  Payload= "a6a63f42"
-Speed set to (m/s): 47.9127
-Received CAN frame: ID=0x "100"  Payload= "b1bb0c41"
-Speed set to (m/s): 8.79582
-Received CAN frame: ID=0x "100"  Payload= "f1094d42"
-Speed set to (m/s): 51.2597
-Received CAN frame: ID=0x "100"  Payload= "198d1c42"
-Received CAN frame: ID=0x "100"  Payload= "cee1ce41"
-Speed set to (m/s): 39.1378
-Speed set to (m/s): 25.8603
-Received CAN frame: ID=0x "100"  Payload= "3ac7af40"
-Speed set to (m/s): 5.49307
-Received CAN frame: ID=0x "100"  Payload= "4ba20642"
-Speed set to (m/s): 33.6585
-Received CAN frame: ID=0x "100"  Payload= "77dc2a42"
-Speed set to (m/s): 42.7153
-Received CAN frame: ID=0x "100"  Payload= "c730b941"
-Received CAN frame: ID=0x "100"  Payload= "9b818f3f"
-Speed set to (m/s): 23.1488
-Speed set to (m/s): 1.12114
-Received CAN frame: ID=0x "100"  Payload= "1e329542"
-Speed set to (m/s): 74.5979
-Received CAN frame: ID=0x "100"  Payload= "9edf9e42"
-Speed set to (m/s): 79.4368
-Received CAN frame: ID=0x "100"  Payload= "d2813042"
-Speed set to (m/s): 44.1268
-Received CAN frame: ID=0x "100"  Payload= "1d308642"
-Speed set to (m/s): 67.094
-Received CAN frame: ID=0x "100"  Payload= "f9caa842"
-Speed set to (m/s): 84.3964
-Received CAN frame: ID=0x "100"  Payload= "343d2742"
-Speed set to (m/s): 41.8098
-Received CAN frame: ID=0x "100"  Payload= "719e0741"
-Received CAN frame: ID=0x "100"  Payload= "69d98b42"
-Speed set to (m/s): 8.47618
-Speed set to (m/s): 69.9246
-Received CAN frame: ID=0x "100"  Payload= "f8fa2642"
-Speed set to (m/s): 41.7451
-Received CAN frame: ID=0x "100"  Payload= "7eae8642"
-Speed set to (m/s): 67.3408
-Received CAN frame: ID=0x "100"  Payload= "0d56a642"
-Speed set to (m/s): 83.1681
-Received CAN frame: ID=0x "100"  Payload= "6b601941"
-Received CAN frame: ID=0x "100"  Payload= "dda63d41"
-Speed set to (m/s): 9.58604
-Speed set to (m/s): 11.8532
-Received CAN frame: ID=0x "100"  Payload= "6c3f9a40"
-Speed set to (m/s): 4.82024
-Received CAN frame: ID=0x "100"  Payload= "42177e42"
-Speed set to (m/s): 63.5227
-Received CAN frame: ID=0x "100"  Payload= "75196142"
-Speed set to (m/s): 56.2749
-Received CAN frame: ID=0x "100"  Payload= "92a0f841"
-Speed set to (m/s): 31.0784
-Received CAN frame: ID=0x "100"  Payload= "3233af42"
-Speed set to (m/s): 87.6
-Received CAN frame: ID=0x "100"  Payload= "03f59041"
-Speed set to (m/s): 18.1196
-Received CAN frame: ID=0x "100"  Payload= "152fcf41"
-Speed set to (m/s): 25.898
-Received CAN frame: ID=0x "100"  Payload= "7bca6e42"
-Speed set to (m/s): 59.6977
-Received CAN frame: ID=0x "100"  Payload= "4b968442"
-Speed set to (m/s): 66.2935
-Received CAN frame: ID=0x "100"  Payload= "b446f741"
-Speed set to (m/s): 30.9095
-Received CAN frame: ID=0x "100"  Payload= "31219842"
-Speed set to (m/s): 76.0648
-Received CAN frame: ID=0x "100"  Payload= "54e29940"
-Received CAN frame: ID=0x "100"  Payload= "b9632741"
-Speed set to (m/s): 4.80888
-Speed set to (m/s): 10.4618
-Received CAN frame: ID=0x "100"  Payload= "5837c142"
-Speed set to (m/s): 96.6081
-Received CAN frame: ID=0x "100"  Payload= "01369742"
-Speed set to (m/s): 75.6055
-Received CAN frame: ID=0x "100"  Payload= "d061c542"
-Speed set to (m/s): 98.691
-Received CAN frame: ID=0x "100"  Payload= "796d1142"
-Received CAN frame: ID=0x "100"  Payload= "7fd63542"
-Speed set to (m/s): 36.3569
-Speed set to (m/s): 45.4595
-Received CAN frame: ID=0x "100"  Payload= "281ba442"
-Speed set to (m/s): 82.053
-Received CAN frame: ID=0x "100"  Payload= "95bfab42"
-Speed set to (m/s): 85.8742
-Received CAN frame: ID=0x "100"  Payload= "6293bd40"
-Speed set to (m/s): 5.92424
-Received CAN frame: ID=0x "100"  Payload= "78032142"
-Speed set to (m/s): 40.2534
-Received CAN frame: ID=0x "100"  Payload= "fa9f8f42"
-Speed set to (m/s): 71.8125
-Received CAN frame: ID=0x "100"  Payload= "7a862942"
-Speed set to (m/s): 42.3813
-Received CAN frame: ID=0x "100"  Payload= "7e38ca3e"
-Speed set to (m/s): 0.394962
-Received CAN frame: ID=0x "100"  Payload= "b2da0b42"
-Speed set to (m/s): 34.9636
-Received CAN frame: ID=0x "100"  Payload= "4b8e2f42"
-Speed set to (m/s): 43.889
-Received CAN frame: ID=0x "100"  Payload= "9d471c42"
-Speed set to (m/s): 39.0699
-Received CAN frame: ID=0x "100"  Payload= "b6849f42"
-Speed set to (m/s): 79.7592
-Received CAN frame: ID=0x "100"  Payload= "d31c3541"
-Received CAN frame: ID=0x "100"  Payload= "0c5de441"
-Speed set to (m/s): 11.3195
-Speed set to (m/s): 28.5454
-Received CAN frame: ID=0x "100"  Payload= "f077a042"
-Speed set to (m/s): 80.2343
-Received CAN frame: ID=0x "100"  Payload= "9521c040"
-Speed set to (m/s): 6.0041
-Received CAN frame: ID=0x "100"  Payload= "438cd041"
-Speed set to (m/s): 26.0685
-Received CAN frame: ID=0x "100"  Payload= "ce2a8142"
-Speed set to (m/s): 64.5836
-Received CAN frame: ID=0x "100"  Payload= "6d179941"
-Speed set to (m/s): 19.1364
-Received CAN frame: ID=0x "100"  Payload= "8ae79742"
-Speed set to (m/s): 75.9522
-Received CAN frame: ID=0x "100"  Payload= "733efb41"
-Speed set to (m/s): 31.4055
-Received CAN frame: ID=0x "100"  Payload= "f8bb1042"
-Speed set to (m/s): 36.1836
-Received CAN frame: ID=0x "100"  Payload= "d149b542"
-Speed set to (m/s): 90.6442
-Received CAN frame: ID=0x "100"  Payload= "67e94442"
-Speed set to (m/s): 49.2279
-Received CAN frame: ID=0x "100"  Payload= "d6ae8242"
-Speed set to (m/s): 65.3415
-Received CAN frame: ID=0x "100"  Payload= "66376842"
-Received CAN frame: ID=0x "100"  Payload= "66ee9442"
-Speed set to (m/s): 58.0541
-Speed set to (m/s): 74.4656
-Received CAN frame: ID=0x "100"  Payload= "8a81b641"
-Speed set to (m/s): 22.8133
-Received CAN frame: ID=0x "100"  Payload= "f2be6642"
-Speed set to (m/s): 57.6865
-Received CAN frame: ID=0x "100"  Payload= "ecfb6241"
-Speed set to (m/s): 14.1865
-Received CAN frame: ID=0x "100"  Payload= "dd5e1042"
-Speed set to (m/s): 36.0926
-Received CAN frame: ID=0x "100"  Payload= "4c559b42"
-Speed set to (m/s): 77.6666
-Received CAN frame: ID=0x "100"  Payload= "bac38642"
-Speed set to (m/s): 67.3823
-Received CAN frame: ID=0x "100"  Payload= "4aabbd41"
-Speed set to (m/s): 23.7086
-Received CAN frame: ID=0x "100"  Payload= "ed403c42"
-Speed set to (m/s): 47.0634
-Received CAN frame: ID=0x "100"  Payload= "b164aa42"
-Speed set to (m/s): 85.1967
-Received CAN frame: ID=0x "100"  Payload= "31329f42"
-Speed set to (m/s): 79.598
-Received CAN frame: ID=0x "100"  Payload= "b62df741"
-Speed set to (m/s): 30.8973
-Received CAN frame: ID=0x "100"  Payload= "24a4c342"
-Received CAN frame: ID=0x "100"  Payload= "5bd55e42"
-Speed set to (m/s): 97.8206
-Speed set to (m/s): 55.7084
-Received CAN frame: ID=0x "100"  Payload= "3ab4f641"
-Speed set to (m/s): 30.838
-Received CAN frame: ID=0x "100"  Payload= "95434f42"
-Speed set to (m/s): 51.816
-Received CAN frame: ID=0x "100"  Payload= "73fc2f42"
-Speed set to (m/s): 43.9965
-Received CAN frame: ID=0x "100"  Payload= "68cb1042"
-Received CAN frame: ID=0x "100"  Payload= "6a95793e"
-Speed set to (m/s): 36.1986
-Speed set to (m/s): 0.243734
-Received CAN frame: ID=0x "100"  Payload= "e3d3bf42"
-Speed set to (m/s): 95.9138
-Received CAN frame: ID=0x "100"  Payload= "f5718b42"
-Speed set to (m/s): 69.7226
-Received CAN frame: ID=0x "100"  Payload= "2ee55242"
-Speed set to (m/s): 52.7238
-Received CAN frame: ID=0x "100"  Payload= "e50c1140"
-Speed set to (m/s): 2.26641
-Received CAN frame: ID=0x "100"  Payload= "d590da41"
-Speed set to (m/s): 27.3207
-Received CAN frame: ID=0x "100"  Payload= "ebacab42"
-Speed set to (m/s): 85.8377
-Received CAN frame: ID=0x "100"  Payload= "a11c9a40"
-Received CAN frame: ID=0x "100"  Payload= "7bfea242"
-Speed set to (m/s): 4.81599
-Speed set to (m/s): 81.497
-Received CAN frame: ID=0x "100"  Payload= "9f38c840"
-Speed set to (m/s): 6.25691
-Received CAN frame: ID=0x "100"  Payload= "45523442"
-Speed set to (m/s): 45.0803
-Received CAN frame: ID=0x "100"  Payload= "858ca741"
-Speed set to (m/s): 20.9436
-Received CAN frame: ID=0x "100"  Payload= "8d2fbd42"
-Received CAN frame: ID=0x "100"  Payload= "feb2a141"
-Speed set to (m/s): 94.5929
-Speed set to (m/s): 20.2124
-Received CAN frame: ID=0x "100"  Payload= "53127541"
-Speed set to (m/s): 15.317
-Received CAN frame: ID=0x "100"  Payload= "22d78d42"
-Speed set to (m/s): 70.9202
-Received CAN frame: ID=0x "100"  Payload= "c2e09942"
-Speed set to (m/s): 76.939
-Received CAN frame: ID=0x "100"  Payload= "6b78b341"
-Speed set to (m/s): 22.4338
-Received CAN frame: ID=0x "100"  Payload= "c8b3d041"
-Speed set to (m/s): 26.0878
-Received CAN frame: ID=0x "100"  Payload= "ed69bc42"
-Speed set to (m/s): 94.2069
-Received CAN frame: ID=0x "100"  Payload= "fd6da542"
-Speed set to (m/s): 82.7148
-Received CAN frame: ID=0x "100"  Payload= "00c3ac41"
-Speed set to (m/s): 21.5952
-Received CAN frame: ID=0x "100"  Payload= "116f1a42"
-Speed set to (m/s): 38.6085
-Received CAN frame: ID=0x "100"  Payload= "aec66c42"
-Speed set to (m/s): 59.194
-Received CAN frame: ID=0x "100"  Payload= "efad8c42"
-Speed set to (m/s): 70.3397
-Received CAN frame: ID=0x "100"  Payload= "6cb19c42"
-Received CAN frame: ID=0x "100"  Payload= "818da242"
-Speed set to (m/s): 78.3465
-Speed set to (m/s): 81.2764
-Received CAN frame: ID=0x "100"  Payload= "0b1c3842"
-Speed set to (m/s): 46.0274
-Received CAN frame: ID=0x "100"  Payload= "ccffb241"
-Speed set to (m/s): 22.3749
-Received CAN frame: ID=0x "100"  Payload= "68cb7e42"
-Speed set to (m/s): 63.6986
-Received CAN frame: ID=0x "100"  Payload= "0e0fc741"
-Received CAN frame: ID=0x "100"  Payload= "8f9db042"
-Speed set to (m/s): 24.8824
-Speed set to (m/s): 88.3077
-Received CAN frame: ID=0x "100"  Payload= "94d05d42"
-Speed set to (m/s): 55.4537
-Received CAN frame: ID=0x "100"  Payload= "f0f01742"
-Speed set to (m/s): 37.9853
-Received CAN frame: ID=0x "100"  Payload= "ba90b140"
-Speed set to (m/s): 5.54892
-Received CAN frame: ID=0x "100"  Payload= "19757a42"
-Speed set to (m/s): 62.6144
-Received CAN frame: ID=0x "100"  Payload= "13a49742"
-Speed set to (m/s): 75.8205
-Received CAN frame: ID=0x "100"  Payload= "fa547442"
-Speed set to (m/s): 61.083
-Received CAN frame: ID=0x "100"  Payload= "28f97942"
-Received CAN frame: ID=0x "100"  Payload= "73831f42"
-Speed set to (m/s): 62.4933
-Speed set to (m/s): 39.8784
-Received CAN frame: ID=0x "100"  Payload= "ac168141"
-Speed set to (m/s): 16.1361
-Received CAN frame: ID=0x "100"  Payload= "de67a142"
-Speed set to (m/s): 80.7029
-Received CAN frame: ID=0x "100"  Payload= "06306342"
-Speed set to (m/s): 56.7969
-Received CAN frame: ID=0x "100"  Payload= "18d37c42"
-Received CAN frame: ID=0x "100"  Payload= "78c7f741"
-Speed set to (m/s): 63.2061
-Speed set to (m/s): 30.9724
-Received CAN frame: ID=0x "100"  Payload= "21961842"
-Speed set to (m/s): 38.1466
-Received CAN frame: ID=0x "100"  Payload= "9ed7bf41"
-Speed set to (m/s): 23.9803
-Received CAN frame: ID=0x "100"  Payload= "9573a942"
-Speed set to (m/s): 84.7257
-Received CAN frame: ID=0x "100"  Payload= "ec7a8742"
-Speed set to (m/s): 67.7401
-Received CAN frame: ID=0x "100"  Payload= "3c4f8542"
-Speed set to (m/s): 66.6548
-Received CAN frame: ID=0x "100"  Payload= "d1ab1d42"
-Speed set to (m/s): 39.4178
-Received CAN frame: ID=0x "100"  Payload= "9a738a42"
-Speed set to (m/s): 69.2258
-Received CAN frame: ID=0x "100"  Payload= "f0b8a742"
-Speed set to (m/s): 83.8612
-Received CAN frame: ID=0x "100"  Payload= "d057f441"
-Speed set to (m/s): 30.5429
+CANReader: Received speed: 29.3048 at 39930.388230
+Speed set to (m/s): 29.3048
+CANReader: Received speed: 44.466953 at 39930.398307
+Speed set to (m/s): 44.467
+CANReader: Received speed: 65.056488 at 39930.408434
+Speed set to (m/s): 65.0565
+CANReader: Received speed: 35.703247 at 39930.418607
+Speed set to (m/s): 35.7032
+CANReader: Received speed: 65.562660 at 39930.428815
+Speed set to (m/s): 65.5627
+CANReader: Received speed: 34.542049 at 39930.439048
+Speed set to (m/s): 34.542
+CANReader: Received speed: 76.619514 at 39930.449187
+CANReader: Received speed: 4.497202 at 39930.459318
+Speed set to (m/s): 76.6195
+Speed set to (m/s): 4.4972
+CANReader: Received speed: 64.501007 at 39930.469736
+CANReader: Received speed: 15.130372 at 39930.479755
+Speed set to (m/s): 64.501
+Speed set to (m/s): 15.1304
+CANReader: Received speed: 35.300125 at 39930.489956
+Speed set to (m/s): 35.3001
+CANReader: Received speed: 71.175484 at 39930.500122
+Speed set to (m/s): 71.1755
+CANReader: Received speed: 49.267361 at 39930.510241
+Speed set to (m/s): 49.2674
+CANReader: Received speed: 57.807201 at 39930.520342
+Speed set to (m/s): 57.8072
+CANReader: Received speed: 40.108128 at 39930.530485
+Speed set to (m/s): 40.1081
+CANReader: Received speed: 97.817902 at 39930.540596
+Speed set to (m/s): 97.8179
+CANReader: Received speed: 10.234512 at 39930.550712
+Speed set to (m/s): 10.2345
+CANReader: Received speed: 40.109619 at 39930.560954
+Speed set to (m/s): 40.1096
+CANReader: Received speed: 17.098791 at 39930.570962
+Speed set to (m/s): 17.0988
+CANReader: Received speed: 43.948704 at 39930.581077
+CANReader: Received speed: 57.775967 at 39930.591172
+Speed set to (m/s): 43.9487
+Speed set to (m/s): 57.776
+CANReader: Received speed: 39.285202 at 39930.601281
+Speed set to (m/s): 39.2852
+CANReader: Received speed: 24.756306 at 39930.611376
+Speed set to (m/s): 24.7563
+CANReader: Received speed: 93.747414 at 39930.621489
+Speed set to (m/s): 93.7474
+CANReader: Received speed: 3.137392 at 39930.631591
+CANReader: Received speed: 50.982674 at 39930.641691
+Speed set to (m/s): 3.13739
+Speed set to (m/s): 50.9827
+CANReader: Received speed: 41.709137 at 39930.651786
+Speed set to (m/s): 41.7091
+CANReader: Received speed: 47.597130 at 39930.661912
+Speed set to (m/s): 47.5971
+CANReader: Received speed: 60.348820 at 39930.671993
+Speed set to (m/s): 60.3488
+CANReader: Received speed: 22.827452 at 39930.682074
+CANReader: Received speed: 41.382011 at 39930.692321
+Speed set to (m/s): 22.8275
+Speed set to (m/s): 41.382
+CANReader: Received speed: 69.498352 at 39930.702454
+Speed set to (m/s): 69.4984
+CANReader: Received speed: 97.352539 at 39930.712589
+Speed set to (m/s): 97.3525
+CANReader: Received speed: 49.238503 at 39930.722716
+Speed set to (m/s): 49.2385
+CANReader: Received speed: 18.301195 at 39930.732811
+Speed set to (m/s): 18.3012
+Speed set to (m/s): 74.2281
+CANReader: Received speed: 74.228119 at 39930.742884
+CANReader: Received speed: 17.409859 at 39930.752950
+Speed set to (m/s): 17.4099
+CANReader: Received speed: 83.566170 at 39930.763094
+Speed set to (m/s): 83.5662
+CANReader: Received speed: 50.473190 at 39930.773477
+Speed set to (m/s): 50.4732
+CANReader: Received speed: 72.217957 at 39930.783368
+Speed set to (m/s): 72.218
+CANReader: Received speed: 61.501759 at 39930.793404
+Speed set to (m/s): 61.5018
+CANReader: Received speed: 81.828835 at 39930.803692
+Speed set to (m/s): 81.8288
+CANReader: Received speed: 58.581074 at 39930.813863
+CANReader: Received speed: 52.314556 at 39930.824097
+Speed set to (m/s): 58.5811
+Speed set to (m/s): 52.3146
+CANReader: Received speed: 26.214207 at 39930.834246
+Speed set to (m/s): 26.2142
+CANReader: Received speed: 61.130039 at 39930.844412
+Speed set to (m/s): 61.13
+CANReader: Received speed: 16.730478 at 39930.854665
+Speed set to (m/s): 16.7305
+CANReader: Received speed: 11.190136 at 39930.864914
+CANReader: Received speed: 21.151876 at 39930.875178
+Speed set to (m/s): 11.1901
+Speed set to (m/s): 21.1519
+CANReader: Received speed: 47.125072 at 39930.885474
+Speed set to (m/s): 47.1251
+CANReader: Received speed: 61.502563 at 39930.895643
+Speed set to (m/s): 61.5026
+CANReader: Received speed: 14.798702 at 39930.905800
+Speed set to (m/s): 14.7987
+CANReader: Received speed: 1.436431 at 39930.916067
+Speed set to (m/s): 1.43643
+CANReader: Received speed: 35.974701 at 39930.926313
+Speed set to (m/s): 35.9747
+CANReader: Received speed: 15.671637 at 39930.936507
+Speed set to (m/s): 15.6716
+CANReader: Received speed: 74.555031 at 39930.946623
+Speed set to (m/s): 74.555
+CANReader: Received speed: 69.513222 at 39930.956855
+Speed set to (m/s): 69.5132
+CANReader: Received speed: 90.738770 at 39930.967168
+Speed set to (m/s): 90.7388
+CANReader: Received speed: 57.709007 at 39930.977272
+Speed set to (m/s): 57.709
+CANReader: Received speed: 13.676076 at 39930.987431
+Speed set to (m/s): 13.6761
+CANReader: Received speed: 18.744837 at 39930.997584
+CANReader: Received speed: 60.862797 at 39931.007872
+Speed set to (m/s): 18.7448
+Speed set to (m/s): 60.8628
+CANReader: Received speed: 90.439568 at 39931.018030
+Speed set to (m/s): 90.4396
+CANReader: Received speed: 61.878532 at 39931.028273
+Speed set to (m/s): 61.8785
+CANReader: Received speed: 10.087191 at 39931.038642
+Speed set to (m/s): 10.0872
+CANReader: Received speed: 59.577782 at 39931.048895
+Speed set to (m/s): 59.5778
+CANReader: Received speed: 34.979893 at 39931.059218
+Speed set to (m/s): 34.9799
+CANReader: Received speed: 40.711609 at 39931.069620
+Speed set to (m/s): 40.7116
+CANReader: Received speed: 29.836279 at 39931.079720
+Speed set to (m/s): 29.8363
+CANReader: Received speed: 28.716690 at 39931.089969
+Speed set to (m/s): 28.7167
+CANReader: Received speed: 52.865112 at 39931.100264
+Speed set to (m/s): 52.8651
+CANReader: Received speed: 45.051697 at 39931.110405
+Speed set to (m/s): 45.0517
+CANReader: Received speed: 82.267288 at 39931.120652
+Speed set to (m/s): 82.2673
+CANReader: Received speed: 27.611780 at 39931.130866
+CANReader: Received speed: 98.909668 at 39931.141145
+Speed set to (m/s): 27.6118
+Speed set to (m/s): 98.9097
+CANReader: Received speed: 2.479153 at 39931.151305
+Speed set to (m/s): 2.47915
+CANReader: Received speed: 63.094425 at 39931.161510
+Speed set to (m/s): 63.0944
+CANReader: Received speed: 41.557796 at 39931.171688
+Speed set to (m/s): 41.5578
+CANReader: Received speed: 4.937978 at 39931.181895
+Speed set to (m/s): 4.93798
+CANReader: Received speed: 91.050758 at 39931.192073
+Speed set to (m/s): 91.0508
+CANReader: Received speed: 34.379177 at 39931.202740
+Speed set to (m/s): 34.3792
+CANReader: Received speed: 55.749054 at 39931.212994
+CANReader: Received speed: 66.003380 at 39931.223316
+Speed set to (m/s): 55.7491
+Speed set to (m/s): 66.0034
+CANReader: Received speed: 92.793221 at 39931.233573
+Speed set to (m/s): 92.7932
+CANReader: Received speed: 2.964102 at 39931.243722
+Speed set to (m/s): 2.9641
+CANReader: Received speed: 70.577400 at 39931.253988
+Speed set to (m/s): 70.5774
+CANReader: Received speed: 6.004758 at 39931.264186
+CANReader: Received speed: 26.266844 at 39931.274303
+Speed set to (m/s): 6.00476
+Speed set to (m/s): 26.2668
+CANReader: Received speed: 36.610992 at 39931.284635
+Speed set to (m/s): 36.611
+CANReader: Received speed: 7.638662 at 39931.294870
+Speed set to (m/s): 7.63866
+CANReader: Received speed: 11.386492 at 39931.305108
+Speed set to (m/s): 11.3865
+CANReader: Received speed: 94.493523 at 39931.315350
+Speed set to (m/s): 94.4935
+CANReader: Received speed: 60.558327 at 39931.325498
+Speed set to (m/s): 60.5583
+CANReader: Received speed: 80.127914 at 39931.335761
+Speed set to (m/s): 80.1279
+CANReader: Received speed: 78.629486 at 39931.345953
+CANReader: Received speed: 12.589147 at 39931.356443
+Speed set to (m/s): 78.6295
+Speed set to (m/s): 12.5891
+CANReader: Received speed: 86.568176 at 39931.366601
+Speed set to (m/s): 86.5682
+CANReader: Received speed: 4.916643 at 39931.376845
+Speed set to (m/s): 4.91664
+CANReader: Received speed: 54.937668 at 39931.387055
+Speed set to (m/s): 54.9377
+CANReader: Received speed: 56.222652 at 39931.397271
+CANReader: Received speed: 31.430445 at 39931.407418
+Speed set to (m/s): 56.2227
+Speed set to (m/s): 31.4304
+CANReader: Received speed: 68.466408 at 39931.417639
+Speed set to (m/s): 68.4664
+CANReader: Received speed: 0.646306 at 39931.427752
+Speed set to (m/s): 0.646306
+CANReader: Received speed: 93.841484 at 39931.437891
+Speed set to (m/s): 93.8415
+CANReader: Received speed: 86.764557 at 39931.448045
+Speed set to (m/s): 86.7646
+CANReader: Received speed: 29.052502 at 39931.458141
+Speed set to (m/s): 29.0525
+CANReader: Received speed: 11.017805 at 39931.468235
+Speed set to (m/s): 11.0178
+CANReader: Received speed: 76.515465 at 39931.478294
+Speed set to (m/s): 76.5155
+CANReader: Received speed: 63.433029 at 39931.488432
+Speed set to (m/s): 63.433
+CANReader: Received speed: 46.552994 at 39931.498550
+Speed set to (m/s): 46.553
+CANReader: Received speed: 8.588821 at 39931.508707
+Speed set to (m/s): 8.58882
+CANReader: Received speed: 4.726497 at 39931.518829
+Speed set to (m/s): 4.7265
+CANReader: Received speed: 46.196426 at 39931.528929
+CANReader: Received speed: 92.038040 at 39931.539031
+Speed set to (m/s): 46.1964
+Speed set to (m/s): 92.038
+CANReader: Received speed: 7.643977 at 39931.549158
+Speed set to (m/s): 7.64398
+CANReader: Received speed: 16.969439 at 39931.559223
+Speed set to (m/s): 16.9694
+CANReader: Received speed: 71.886353 at 39931.569303
+Speed set to (m/s): 71.8864
+CANReader: Received speed: 73.227890 at 39931.579404
+CANReader: Received speed: 12.178571 at 39931.589470
+Speed set to (m/s): 73.2279
+Speed set to (m/s): 12.1786
+CANReader: Received speed: 3.884249 at 39931.599658
+Speed set to (m/s): 3.88425
+CANReader: Received speed: 44.638458 at 39931.609728
+Speed set to (m/s): 44.6385
+CANReader: Received speed: 43.916134 at 39931.619855
+Speed set to (m/s): 43.9161
+CANReader: Received speed: 30.260345 at 39931.629981
+CANReader: Received speed: 13.426306 at 39931.640054
+Speed set to (m/s): 30.2603
+Speed set to (m/s): 13.4263
+CANReader: Received speed: 88.687965 at 39931.650185
+Speed set to (m/s): 88.688
+CANReader: Received speed: 55.359192 at 39931.660316
+Speed set to (m/s): 55.3592
+CANReader: Received speed: 52.900322 at 39931.670467
+Speed set to (m/s): 52.9003
+CANReader: Received speed: 62.928753 at 39931.680589
+Speed set to (m/s): 62.9288
+CANReader: Received speed: 76.284630 at 39931.690830
+Speed set to (m/s): 76.2846
+CANReader: Received speed: 56.107815 at 39931.700876
+Speed set to (m/s): 56.1078
+CANReader: Received speed: 34.729210 at 39931.711100
+CANReader: Received speed: 76.030548 at 39931.721211
+Speed set to (m/s): 34.7292
+Speed set to (m/s): 76.0305
+CANReader: Received speed: 83.769485 at 39931.731292
+Speed set to (m/s): 83.7695
+CANReader: Received speed: 82.334312 at 39931.741428
+Speed set to (m/s): 82.3343
+CANReader: Received speed: 21.622408 at 39931.751510
+Speed set to (m/s): 21.6224
+CANReader: Received speed: 46.722519 at 39931.761627
+CANReader: Received speed: 92.605873 at 39931.771724
+Speed set to (m/s): 46.7225
+Speed set to (m/s): 92.6059
+CANReader: Received speed: 64.870865 at 39931.781832
+Speed set to (m/s): 64.8709
+CANReader: Received speed: 20.316509 at 39931.792061
+Speed set to (m/s): 20.3165
+CANReader: Received speed: 94.442978 at 39931.802110
+Speed set to (m/s): 94.443
+CANReader: Received speed: 34.959564 at 39931.812177
+CANReader: Received speed: 45.919704 at 39931.822280
+Speed set to (m/s): 34.9596
+Speed set to (m/s): 45.9197
+CANReader: Received speed: 13.801503 at 39931.832381
+Speed set to (m/s): 13.8015
+CANReader: Received speed: 76.658066 at 39931.842531
+Speed set to (m/s): 76.6581
+CANReader: Received speed: 42.165649 at 39931.852647
+Speed set to (m/s): 42.1656
+CANReader: Received speed: 29.684290 at 39931.862744
+CANReader: Received speed: 51.205818 at 39931.872859
+Speed set to (m/s): 29.6843
+Speed set to (m/s): 51.2058
+CANReader: Received speed: 82.428055 at 39931.882984
+Speed set to (m/s): 82.4281
+CANReader: Received speed: 11.049194 at 39931.893120
+Speed set to (m/s): 11.0492
+CANReader: Received speed: 6.330686 at 39931.903158
+Speed set to (m/s): 6.33069
+CANReader: Received speed: 1.806213 at 39931.913269
+Speed set to (m/s): 1.80621
+CANReader: Received speed: 27.894882 at 39931.923416
+Speed set to (m/s): 27.8949
+CANReader: Received speed: 47.816235 at 39931.933536
+Speed set to (m/s): 47.8162
+CANReader: Received speed: 4.104214 at 39931.943631
+Speed set to (m/s): 4.10421
+CANReader: Received speed: 26.560303 at 39931.953753
+Speed set to (m/s): 26.5603
+CANReader: Received speed: 14.166914 at 39931.963845
+Speed set to (m/s): 14.1669
+CANReader: Received speed: 72.544479 at 39931.973982
+Speed set to (m/s): 72.5445
+CANReader: Received speed: 21.239265 at 39931.984118
+Speed set to (m/s): 21.2393
+CANReader: Received speed: 66.628014 at 39931.994240
+CANReader: Received speed: 68.099754 at 39932.004264
+Speed set to (m/s): 66.628
+Speed set to (m/s): 68.0998
+CANReader: Received speed: 77.974571 at 39932.014346
+Speed set to (m/s): 77.9746
+CANReader: Received speed: 47.419487 at 39932.024594
+Speed set to (m/s): 47.4195
+CANReader: Received speed: 53.140823 at 39932.034687
+Speed set to (m/s): 53.1408
+CANReader: Received speed: 29.515701 at 39932.044807
+CANReader: Received speed: 84.686119 at 39932.054891
+Speed set to (m/s): 29.5157
+Speed set to (m/s): 84.6861
+CANReader: Received speed: 23.167866 at 39932.064959
+Speed set to (m/s): 23.1679
+CANReader: Received speed: 81.223480 at 39932.075139
+Speed set to (m/s): 81.2235
+CANReader: Received speed: 24.414234 at 39932.085238
+Speed set to (m/s): 24.4142
+CANReader: Received speed: 20.658033 at 39932.095295
+CANReader: Received speed: 86.659981 at 39932.105405
+Speed set to (m/s): 20.658
+Speed set to (m/s): 86.66
+CANReader: Received speed: 51.486866 at 39932.115498
+Speed set to (m/s): 51.4869
+CANReader: Received speed: 88.595200 at 39932.125593
+Speed set to (m/s): 88.5952
+CANReader: Received speed: 2.498007 at 39932.135666
+Speed set to (m/s): 2.49801
+CANReader: Received speed: 80.858559 at 39932.145766
+CANReader: Received speed: 22.883671 at 39932.156000
+Speed set to (m/s): 80.8586
+Speed set to (m/s): 22.8837
+CANReader: Received speed: 77.699753 at 39932.166247
+Speed set to (m/s): 77.6998
+CANReader: Received speed: 54.411552 at 39932.176313
+Speed set to (m/s): 54.4116
+CANReader: Received speed: 10.102614 at 39932.186546
+Speed set to (m/s): 10.1026
+CANReader: Received speed: 38.238178 at 39932.196707
+Speed set to (m/s): 38.2382
+CANReader: Received speed: 19.443140 at 39932.206846
+Speed set to (m/s): 19.4431
+CANReader: Received speed: 67.034004 at 39932.217180
+Speed set to (m/s): 67.034
+CANReader: Received speed: 15.144500 at 39932.227325
+CANReader: Received speed: 42.991859 at 39932.237543
+Speed set to (m/s): 15.1445
+Speed set to (m/s): 42.9919
+CANReader: Received speed: 77.896942 at 39932.247709
+Speed set to (m/s): 77.8969
+CANReader: Received speed: 22.235159 at 39932.257939
+Speed set to (m/s): 22.2352
+CANReader: Received speed: 46.978260 at 39932.268199
+Speed set to (m/s): 46.9783
+CANReader: Received speed: 6.295734 at 39932.278319
+CANReader: Received speed: 33.632496 at 39932.288565
+Speed set to (m/s): 6.29573
+Speed set to (m/s): 33.6325
+CANReader: Received speed: 51.278187 at 39932.298734
+Speed set to (m/s): 51.2782
+CANReader: Received speed: 5.740071 at 39932.308870
+Speed set to (m/s): 5.74007
+CANReader: Received speed: 7.770808 at 39932.319118
+Speed set to (m/s): 7.77081
+CANReader: Received speed: 66.082451 at 39932.329275
+Speed set to (m/s): 66.0825
+Speed set to (m/s): 48.0804
+CANReader: Received speed: 48.080444 at 39932.339387
+CANReader: Received speed: 77.867462 at 39932.349633
+Speed set to (m/s): 77.8675
+CANReader: Received speed: 66.018372 at 39932.359804
+Speed set to (m/s): 66.0184
+CANReader: Received speed: 51.749374 at 39932.370044
+Speed set to (m/s): 51.7494
+CANReader: Received speed: 62.856014 at 39932.380115
+Speed set to (m/s): 62.856
+CANReader: Received speed: 78.438980 at 39932.390351
+Speed set to (m/s): 78.439
+CANReader: Received speed: 88.796295 at 39932.400574
+Speed set to (m/s): 88.7963
+CANReader: Received speed: 69.048042 at 39932.410718
+CANReader: Received speed: 72.974602 at 39932.420933
+Speed set to (m/s): 69.048
+Speed set to (m/s): 72.9746
+CANReader: Received speed: 74.388618 at 39932.431190
+Speed set to (m/s): 74.3886
+CANReader: Received speed: 39.357368 at 39932.441306
+Speed set to (m/s): 39.3574
+CANReader: Received speed: 73.566269 at 39932.451541
+Speed set to (m/s): 73.5663
+CANReader: Received speed: 70.044067 at 39932.461761
+CANReader: Received speed: 75.835991 at 39932.471981
+Speed set to (m/s): 70.0441
+Speed set to (m/s): 75.836
+CANReader: Received speed: 38.507988 at 39932.482209
+Speed set to (m/s): 38.508
+CANReader: Received speed: 86.882637 at 39932.492303
+Speed set to (m/s): 86.8826
+CANReader: Received speed: 92.936737 at 39932.502564
+Speed set to (m/s): 92.9367
+CANReader: Received speed: 95.011154 at 39932.512773
+Speed set to (m/s): 95.0112
+CANReader: Received speed: 52.067757 at 39932.522917
+Speed set to (m/s): 52.0678
+CANReader: Received speed: 69.706795 at 39932.533130
+Speed set to (m/s): 69.7068
+CANReader: Received speed: 97.867340 at 39932.543338
+CANReader: Received speed: 21.845554 at 39932.553486
+Speed set to (m/s): 97.8673
+Speed set to (m/s): 21.8456
+CANReader: Received speed: 43.631882 at 39932.563611
+Speed set to (m/s): 43.6319
+CANReader: Received speed: 56.043644 at 39932.573712
+Speed set to (m/s): 56.0436
+CANReader: Received speed: 49.958660 at 39932.583873
+Speed set to (m/s): 49.9587
+CANReader: Received speed: 34.593437 at 39932.593950
+CANReader: Received speed: 82.809868 at 39932.603969
+Speed set to (m/s): 34.5934
+Speed set to (m/s): 82.8099
+CANReader: Received speed: 84.861504 at 39932.614078
+Speed set to (m/s): 84.8615
+CANReader: Received speed: 53.545658 at 39932.624296
+Speed set to (m/s): 53.5457
+CANReader: Received speed: 65.821609 at 39932.634381
+Speed set to (m/s): 65.8216
+CANReader: Received speed: 84.082741 at 39932.644486
+CANReader: Received speed: 29.991076 at 39932.654622
+Speed set to (m/s): 84.0827
+Speed set to (m/s): 29.9911
+CANReader: Received speed: 48.740509 at 39932.664768
+Speed set to (m/s): 48.7405
+CANReader: Received speed: 44.333290 at 39932.674998
+Speed set to (m/s): 44.3333
+CANReader: Received speed: 55.235226 at 39932.685261
+Speed set to (m/s): 55.2352
+CANReader: Received speed: 64.074776 at 39932.695364
+Speed set to (m/s): 64.0748
+Speed set to (m/s): 18.2725
+CANReader: Received speed: 18.272539 at 39932.705485
+CANReader: Received speed: 80.364830 at 39932.715589
+Speed set to (m/s): 80.3648
+CANReader: Received speed: 22.808016 at 39932.725698
+Speed set to (m/s): 22.808
+CANReader: Received speed: 0.608870 at 39932.735918
+Speed set to (m/s): 0.60887
+CANReader: Received speed: 76.293114 at 39932.746191
+Speed set to (m/s): 76.2931
+CANReader: Received speed: 25.508806 at 39932.756309
+Speed set to (m/s): 25.5088
+CANReader: Received speed: 63.982071 at 39932.766529
+Speed set to (m/s): 63.9821
+CANReader: Received speed: 71.830093 at 39932.776651
+CANReader: Received speed: 67.566330 at 39932.786851
+Speed set to (m/s): 71.8301
+Speed set to (m/s): 67.5663
+CANReader: Received speed: 50.605202 at 39932.797077
+Speed set to (m/s): 50.6052
+CANReader: Received speed: 12.292988 at 39932.807184
+Speed set to (m/s): 12.293
+CANReader: Received speed: 68.966713 at 39932.817404
+Speed set to (m/s): 68.9667
+CANReader: Received speed: 4.334018 at 39932.827547
+CANReader: Received speed: 45.990688 at 39932.837699
+Speed set to (m/s): 4.33402
+Speed set to (m/s): 45.9907
+CANReader: Received speed: 71.094498 at 39932.847857
+Speed set to (m/s): 71.0945
+CANReader: Received speed: 18.348604 at 39932.858033
+Speed set to (m/s): 18.3486
+CANReader: Received speed: 68.957970 at 39932.868211
+Speed set to (m/s): 68.958
+CANReader: Received speed: 86.557976 at 39932.878370
+Speed set to (m/s): 86.558
+CANReader: Received speed: 33.055420 at 39932.888480
+Speed set to (m/s): 33.0554
+CANReader: Received speed: 5.272951 at 39932.898631
+Speed set to (m/s): 5.27295
+CANReader: Received speed: 75.232765 at 39932.908773
+Speed set to (m/s): 75.2328
+CANReader: Received speed: 50.688660 at 39932.918982
+Speed set to (m/s): 50.6887
+CANReader: Received speed: 90.167686 at 39932.929249
+Speed set to (m/s): 90.1677
+CANReader: Received speed: 18.736010 at 39932.939367
+Speed set to (m/s): 18.736
+CANReader: Received speed: 45.604603 at 39932.949586
+Speed set to (m/s): 45.6046
+CANReader: Received speed: 93.490845 at 39932.959749
+CANReader: Received speed: 80.013962 at 39932.969959
+Speed set to (m/s): 93.4908
+Speed set to (m/s): 80.014
+CANReader: Received speed: 2.394099 at 39932.980173
+Speed set to (m/s): 2.3941
+CANReader: Received speed: 4.971841 at 39932.990321
+Speed set to (m/s): 4.97184
+CANReader: Received speed: 78.661346 at 39933.000508
+Speed set to (m/s): 78.6613
+CANReader: Received speed: 9.896806 at 39933.010657
+CANReader: Received speed: 63.139915 at 39933.020822
+Speed set to (m/s): 9.89681
+Speed set to (m/s): 63.1399
+CANReader: Received speed: 96.968330 at 39933.031162
+Speed set to (m/s): 96.9683
+CANReader: Received speed: 86.477364 at 39933.041243
+Speed set to (m/s): 86.4774
+CANReader: Received speed: 66.856575 at 39933.051454
+Speed set to (m/s): 66.8566
+CANReader: Received speed: 87.951385 at 39933.061596
+CANReader: Received speed: 1.148611 at 39933.071867
+Speed set to (m/s): 87.9514
+Speed set to (m/s): 1.14861
+CANReader: Received speed: 46.292072 at 39933.081987
+Speed set to (m/s): 46.2921
+CANReader: Received speed: 63.868935 at 39933.092196
+Speed set to (m/s): 63.8689
+CANReader: Received speed: 73.011444 at 39933.102519
+Speed set to (m/s): 73.0114
+CANReader: Received speed: 2.397147 at 39933.112691
+Speed set to (m/s): 2.39715
+CANReader: Received speed: 3.202616 at 39933.122724
+Speed set to (m/s): 3.20262
+CANReader: Received speed: 63.035629 at 39933.132940
+Speed set to (m/s): 63.0356
+CANReader: Received speed: 20.537312 at 39933.143098
+CANReader: Received speed: 44.868938 at 39933.153176
+Speed set to (m/s): 20.5373
+Speed set to (m/s): 44.8689
+CANReader: Received speed: 11.012049 at 39933.163238
+Speed set to (m/s): 11.012
+CANReader: Received speed: 7.907276 at 39933.173310
+Speed set to (m/s): 7.90728
+CANReader: Received speed: 43.464420 at 39933.183418
+Speed set to (m/s): 43.4644
+CANReader: Received speed: 95.977852 at 39933.193563
+CANReader: Received speed: 46.505730 at 39933.203781
+Speed set to (m/s): 95.9779
+Speed set to (m/s): 46.5057
+CANReader: Received speed: 86.928391 at 39933.214040
+Speed set to (m/s): 86.9284
+CANReader: Received speed: 7.440682 at 39933.224248
+Speed set to (m/s): 7.44068
+CANReader: Received speed: 69.984451 at 39933.234436
+Speed set to (m/s): 69.9845
+CANReader: Received speed: 64.641716 at 39933.244581
+Speed set to (m/s): 64.6417
+CANReader: Received speed: 6.852288 at 39933.254791
+Speed set to (m/s): 6.85229
+CANReader: Received speed: 41.944290 at 39933.265064
+Speed set to (m/s): 41.9443
+CANReader: Received speed: 71.637947 at 39933.275282
+Speed set to (m/s): 71.6379
+CANReader: Received speed: 75.874107 at 39933.285354
+Speed set to (m/s): 75.8741
+CANReader: Received speed: 56.646030 at 39933.295605
+Speed set to (m/s): 56.646
+CANReader: Received speed: 55.355568 at 39933.305744
+Speed set to (m/s): 55.3556
+CANReader: Received speed: 40.210674 at 39933.315971
+Speed set to (m/s): 40.2107
+CANReader: Received speed: 25.311476 at 39933.326228
+CANReader: Received speed: 41.165604 at 39933.336357
+Speed set to (m/s): 25.3115
+Speed set to (m/s): 41.1656
+CANReader: Received speed: 84.270691 at 39933.346479
+Speed set to (m/s): 84.2707
+CANReader: Received speed: 78.351212 at 39933.356613
+Speed set to (m/s): 78.3512
+CANReader: Received speed: 91.195107 at 39933.366885
+Speed set to (m/s): 91.1951
+CANReader: Received speed: 7.238101 at 39933.377185
+CANReader: Received speed: 72.516861 at 39933.387302
+Speed set to (m/s): 7.2381
+Speed set to (m/s): 72.5169
+CANReader: Received speed: 41.224369 at 39933.397518
+Speed set to (m/s): 41.2244
+CANReader: Received speed: 88.411209 at 39933.407759
+Speed set to (m/s): 88.4112
+CANReader: Received speed: 45.797916 at 39933.417895
+Speed set to (m/s): 45.7979
+CANReader: Received speed: 99.410469 at 39933.428212
+Speed set to (m/s): 99.4105
+CANReader: Received speed: 66.637512 at 39933.438259
+Speed set to (m/s): 66.6375
+CANReader: Received speed: 56.792980 at 39933.448540
+Speed set to (m/s): 56.793
+CANReader: Received speed: 19.353958 at 39933.458881
+CANReader: Received speed: 50.868290 at 39933.469099
+Speed set to (m/s): 19.354
+Speed set to (m/s): 50.8683
+CANReader: Received speed: 25.900995 at 39933.479289
+Speed set to (m/s): 25.901
+CANReader: Received speed: 51.504070 at 39933.489483
+Speed set to (m/s): 51.5041
+CANReader: Received speed: 7.069232 at 39933.499654
+Speed set to (m/s): 7.06923
+CANReader: Received speed: 97.668617 at 39933.509974
+CANReader: Received speed: 26.197485 at 39933.520305
+Speed set to (m/s): 97.6686
+Speed set to (m/s): 26.1975
+CANReader: Received speed: 26.703978 at 39933.530430
+Speed set to (m/s): 26.704
+CANReader: Received speed: 98.114838 at 39933.540586
+Speed set to (m/s): 98.1148
+CANReader: Received speed: 66.939529 at 39933.550800
+Speed set to (m/s): 66.9395
+CANReader: Received speed: 39.843895 at 39933.561033
+Speed set to (m/s): 39.8439
+CANReader: Received speed: 60.091125 at 39933.571248
+Speed set to (m/s): 60.0911
+CANReader: Received speed: 52.565193 at 39933.581506
+Speed set to (m/s): 52.5652
+CANReader: Received speed: 64.908066 at 39933.591700
+CANReader: Received speed: 52.803856 at 39933.601884
+Speed set to (m/s): 64.9081
+Speed set to (m/s): 52.8039
+CANReader: Received speed: 69.195435 at 39933.612080
+Speed set to (m/s): 69.1954
+Speed set to (m/s): 79.1196
+CANReader: Received speed: 79.119560 at 39933.622226
+CANReader: Received speed: 60.792072 at 39933.632408
+Speed set to (m/s): 60.7921
+CANReader: Received speed: 90.185699 at 39933.642602
+CANReader: Received speed: 28.936052 at 39933.652725
+Speed set to (m/s): 90.1857
+Speed set to (m/s): 28.9361
+CANReader: Received speed: 7.324204 at 39933.663066
+Speed set to (m/s): 7.3242
+CANReader: Received speed: 50.328701 at 39933.673073
+Speed set to (m/s): 50.3287
+CANReader: Received speed: 77.220741 at 39933.683279
+Speed set to (m/s): 77.2207
+CANReader: Received speed: 61.099823 at 39933.693330
+Speed set to (m/s): 61.0998
+CANReader: Received speed: 32.230095 at 39933.703632
+Speed set to (m/s): 32.2301
+CANReader: Received speed: 49.003056 at 39933.713859
+Speed set to (m/s): 49.0031
+CANReader: Received speed: 57.605278 at 39933.723999
+Speed set to (m/s): 57.6053
+CANReader: Received speed: 38.429279 at 39933.734298
+Speed set to (m/s): 38.4293
+CANReader: Received speed: 3.746673 at 39933.744440
+Speed set to (m/s): 3.74667
+CANReader: Received speed: 45.191826 at 39933.754739
+Speed set to (m/s): 45.1918
+CANReader: Received speed: 49.277588 at 39933.764789
+Speed set to (m/s): 49.2776
+CANReader: Received speed: 46.906628 at 39933.774916
+CANReader: Received speed: 2.128053 at 39933.785170
+Speed set to (m/s): 46.9066
+Speed set to (m/s): 2.12805
+CANReader: Received speed: 84.580170 at 39933.795296
+Speed set to (m/s): 84.5802
+CANReader: Received speed: 75.837418 at 39933.805534
+Speed set to (m/s): 75.8374
+CANReader: Received speed: 21.073730 at 39933.815771
+Speed set to (m/s): 21.0737
+CANReader: Received speed: 40.646641 at 39933.825949
+CANReader: Received speed: 65.674736 at 39933.836229
+Speed set to (m/s): 40.6466
+Speed set to (m/s): 65.6747
+CANReader: Received speed: 33.644821 at 39933.846363
+Speed set to (m/s): 33.6448
+CANReader: Received speed: 60.787685 at 39933.856436
+Speed set to (m/s): 60.7877
+CANReader: Received speed: 22.980251 at 39933.866680
+Speed set to (m/s): 22.9803
+CANReader: Received speed: 65.152428 at 39933.876814
+CANReader: Received speed: 1.499865 at 39933.886958
+Speed set to (m/s): 65.1524
+Speed set to (m/s): 1.49986
+CANReader: Received speed: 38.960934 at 39933.897173
+Speed set to (m/s): 38.9609
+CANReader: Received speed: 91.332474 at 39933.907500
+Speed set to (m/s): 91.3325
+CANReader: Received speed: 12.695907 at 39933.917708
+Speed set to (m/s): 12.6959
+CANReader: Received speed: 76.428619 at 39933.927960
+Speed set to (m/s): 76.4286
+CANReader: Received speed: 23.222635 at 39933.938174
+Speed set to (m/s): 23.2226
+CANReader: Received speed: 96.861580 at 39933.948418
+Speed set to (m/s): 96.8616
+CANReader: Received speed: 47.812004 at 39933.958553
+Speed set to (m/s): 47.812
+CANReader: Received speed: 9.405676 at 39933.996265
+Speed set to (m/s): 9.40568
+CANReader: Received speed: 2.712179 at 39934.006447
+Speed set to (m/s): 2.71218
+CANReader: Received speed: 23.309795 at 39934.016502
+Speed set to (m/s): 23.3098
+CANReader: Received speed: 18.818983 at 39934.026721
+CANReader: Received speed: 19.370697 at 39934.036941
+Speed set to (m/s): 18.819
+Speed set to (m/s): 19.3707
+CANReader: Received speed: 72.356796 at 39934.047189
+Speed set to (m/s): 72.3568
+CANReader: Received speed: 25.425449 at 39934.057276
+Speed set to (m/s): 25.4254
+CANReader: Received speed: 7.377779 at 39934.067363
+Speed set to (m/s): 7.37778
+CANReader: Received speed: 39.948498 at 39934.077574
+Speed set to (m/s): 39.9485
+CANReader: Received speed: 45.689438 at 39934.087742
+Speed set to (m/s): 45.6894
+CANReader: Received speed: 3.376734 at 39934.097784
+Speed set to (m/s): 3.37673
+CANReader: Received speed: 17.637497 at 39934.107981
+Speed set to (m/s): 17.6375
+CANReader: Received speed: 36.108498 at 39934.117998
+Speed set to (m/s): 36.1085
+CANReader: Received speed: 88.725204 at 39934.128061
+Speed set to (m/s): 88.7252
+CANReader: Received speed: 23.323191 at 39934.138168
+Speed set to (m/s): 23.3232
+CANReader: Received speed: 63.657795 at 39934.148378
+Speed set to (m/s): 63.6578
+CANReader: Received speed: 65.214890 at 39934.158531
+CANReader: Received speed: 36.759743 at 39934.168668
+Speed set to (m/s): 65.2149
+Speed set to (m/s): 36.7597
+CANReader: Received speed: 49.653408 at 39934.178874
+Speed set to (m/s): 49.6534
+CANReader: Received speed: 2.277102 at 39934.189021
+Speed set to (m/s): 2.2771
+CANReader: Received speed: 35.047565 at 39934.199124
+Speed set to (m/s): 35.0476
+CANReader: Received speed: 78.751221 at 39934.209246
+CANReader: Received speed: 37.995777 at 39934.219402
+Speed set to (m/s): 78.7512
+Speed set to (m/s): 37.9958
+CANReader: Received speed: 37.495750 at 39934.229869
+Speed set to (m/s): 37.4958
+CANReader: Received speed: 95.805664 at 39934.240036
+Speed set to (m/s): 95.8057
+CANReader: Received speed: 6.706859 at 39934.250165
+Speed set to (m/s): 6.70686
+CANReader: Received speed: 3.715969 at 39934.260298
+CANReader: Received speed: 57.950600 at 39934.270430
+Speed set to (m/s): 3.71597
+Speed set to (m/s): 57.9506
+CANReader: Received speed: 69.660416 at 39934.280681
+Speed set to (m/s): 69.6604
+CANReader: Received speed: 29.937628 at 39934.290912
+Speed set to (m/s): 29.9376
+CANReader: Received speed: 69.978508 at 39934.301147
+Speed set to (m/s): 69.9785
+CANReader: Received speed: 28.862217 at 39934.311376
+Speed set to (m/s): 28.8622
+CANReader: Received speed: 5.647500 at 39934.321587
+Speed set to (m/s): 5.6475
+CANReader: Received speed: 13.535777 at 39934.331777
+Speed set to (m/s): 13.5358
+CANReader: Received speed: 77.216011 at 39934.341962
+CANReader: Received speed: 92.089066 at 39934.352216
+Speed set to (m/s): 77.216
+Speed set to (m/s): 92.0891
+CANReader: Received speed: 57.727104 at 39934.362394
+Speed set to (m/s): 57.7271
+CANReader: Received speed: 37.404892 at 39934.372584
+Speed set to (m/s): 37.4049
+CANReader: Received speed: 43.750862 at 39934.382835
+Speed set to (m/s): 43.7509
+CANReader: Received speed: 88.513870 at 39934.393064
+CANReader: Received speed: 60.802395 at 39934.403237
+Speed set to (m/s): 88.5139
+Speed set to (m/s): 60.8024
+CANReader: Received speed: 51.309425 at 39934.413542
+Speed set to (m/s): 51.3094
+CANReader: Received speed: 69.441124 at 39934.423689
+CANReader: Received speed: 5.493181 at 39934.433901
+Speed set to (m/s): 69.4411
+Speed set to (m/s): 5.49318
+CANReader: Received speed: 38.081291 at 39934.444133
+Speed set to (m/s): 38.0813
+CANReader: Received speed: 52.514221 at 39934.454260
+Speed set to (m/s): 52.5142
+CANReader: Received speed: 43.135662 at 39934.464441
+Speed set to (m/s): 43.1357
+CANReader: Received speed: 10.977905 at 39934.474597
+CANReader: Received speed: 77.756729 at 39934.484762
+Speed set to (m/s): 10.9779
+Speed set to (m/s): 77.7567
+CANReader: Received speed: 64.143005 at 39934.495025
+Speed set to (m/s): 64.143
+CANReader: Received speed: 79.970070 at 39934.505170
+Speed set to (m/s): 79.9701
+CANReader: Received speed: 56.232624 at 39934.515379
+Speed set to (m/s): 56.2326
+CANReader: Received speed: 21.606936 at 39934.525548
+Speed set to (m/s): 21.6069
+CANReader: Received speed: 93.079483 at 39934.535769
+Speed set to (m/s): 93.0795
+CANReader: Received speed: 18.337137 at 39934.546059
+Speed set to (m/s): 18.3371
+CANReader: Received speed: 53.521965 at 39934.556282
+Speed set to (m/s): 53.522
+CANReader: Received speed: 22.528214 at 39934.566466
+Speed set to (m/s): 22.5282
+CANReader: Received speed: 15.368187 at 39934.576673
+Speed set to (m/s): 15.3682
+CANReader: Received speed: 85.602264 at 39934.586906
+Speed set to (m/s): 85.6023
+CANReader: Received speed: 43.483627 at 39934.597138
+Speed set to (m/s): 43.4836
+CANReader: Received speed: 54.712234 at 39934.607248
+CANReader: Received speed: 96.955200 at 39934.617380
+Speed set to (m/s): 54.7122
+Speed set to (m/s): 96.9552
+CANReader: Received speed: 78.850197 at 39934.627642
+Speed set to (m/s): 78.8502
+CANReader: Received speed: 67.320320 at 39934.637784
+Speed set to (m/s): 67.3203
+CANReader: Received speed: 56.134914 at 39934.647977
+Speed set to (m/s): 56.1349
+CANReader: Received speed: 76.172791 at 39934.658195
+CANReader: Received speed: 30.443731 at 39934.668449
+Speed set to (m/s): 76.1728
+Speed set to (m/s): 30.4437
+CANReader: Received speed: 87.964424 at 39934.678698
+Speed set to (m/s): 87.9644
+CANReader: Received speed: 22.666702 at 39934.688827
+Speed set to (m/s): 22.6667
+CANReader: Received speed: 85.255585 at 39934.699067
+Speed set to (m/s): 85.2556
+CANReader: Received speed: 2.695699 at 39934.709186
+Speed set to (m/s): 2.6957
+CANReader: Received speed: 21.351067 at 39934.719377
+Speed set to (m/s): 21.3511
+CANReader: Received speed: 9.959389 at 39934.729656
+Speed set to (m/s): 9.95939
+CANReader: Received speed: 61.301773 at 39934.739823
+CANReader: Received speed: 36.134563 at 39934.750175
+Speed set to (m/s): 61.3018
+Speed set to (m/s): 36.1346
+CANReader: Received speed: 60.502785 at 39934.760383
+Speed set to (m/s): 60.5028
+CANReader: Received speed: 62.649704 at 39934.770614
+Speed set to (m/s): 62.6497
+CANReader: Received speed: 64.835564 at 39934.780808
+Speed set to (m/s): 64.8356
+CANReader: Received speed: 19.123213 at 39934.790956
+CANReader: Received speed: 7.482833 at 39934.801228
+Speed set to (m/s): 19.1232
+Speed set to (m/s): 7.48283
+CANReader: Received speed: 23.128485 at 39934.811339
+Speed set to (m/s): 23.1285
+CANReader: Received speed: 91.602669 at 39934.821477
+Speed set to (m/s): 91.6027
+CANReader: Received speed: 68.289001 at 39934.831738
+Speed set to (m/s): 68.289
+CANReader: Received speed: 89.526123 at 39934.841883
+Speed set to (m/s): 89.5261
+CANReader: Received speed: 88.335335 at 39934.852181
+Speed set to (m/s): 88.3353
+CANReader: Received speed: 3.524023 at 39934.862284
+Speed set to (m/s): 3.52402
+CANReader: Received speed: 11.908424 at 39934.872439
+Speed set to (m/s): 11.9084
+CANReader: Received speed: 85.496185 at 39934.882647
+Speed set to (m/s): 85.4962
+CANReader: Received speed: 80.802383 at 39934.892870
+Speed set to (m/s): 80.8024
+CANReader: Received speed: 49.236958 at 39934.903083
+Speed set to (m/s): 49.237
+CANReader: Received speed: 27.311901 at 39934.913303
+Speed set to (m/s): 27.3119
+CANReader: Received speed: 93.363037 at 39934.923527
+CANReader: Received speed: 98.553558 at 39934.933746
+Speed set to (m/s): 93.363
+Speed set to (m/s): 98.5536
+CANReader: Received speed: 74.702385 at 39934.943945
+Speed set to (m/s): 74.7024
+CANReader: Received speed: 47.428192 at 39934.954160
+Speed set to (m/s): 47.4282
+CANReader: Received speed: 77.865143 at 39934.964384
+Speed set to (m/s): 77.8651
+CANReader: Received speed: 36.483639 at 39934.974591
+CANReader: Received speed: 22.050144 at 39934.984793
+Speed set to (m/s): 36.4836
+Speed set to (m/s): 22.0501
+CANReader: Received speed: 14.302855 at 39934.995046
+Speed set to (m/s): 14.3029
+CANReader: Received speed: 40.274117 at 39935.005153
+Speed set to (m/s): 40.2741
+CANReader: Received speed: 92.708252 at 39935.015283
+Speed set to (m/s): 92.7083
+CANReader: Received speed: 48.977844 at 39935.025434
+Speed set to (m/s): 48.9778
+CANReader: Received speed: 87.734131 at 39935.035580
+Speed set to (m/s): 87.7341
+CANReader: Received speed: 81.622780 at 39935.045727
+Speed set to (m/s): 81.6228
+CANReader: Received speed: 96.197052 at 39935.055979
+CANReader: Received speed: 8.904731 at 39935.066091
+Speed set to (m/s): 96.1971
+Speed set to (m/s): 8.90473
+CANReader: Received speed: 79.094460 at 39935.076145
+Speed set to (m/s): 79.0945
+CANReader: Received speed: 55.643463 at 39935.086255
+Speed set to (m/s): 55.6435
+CANReader: Received speed: 21.205505 at 39935.096335
+Speed set to (m/s): 21.2055
+CANReader: Received speed: 57.696690 at 39935.106406
+CANReader: Received speed: 74.962471 at 39935.116642
+Speed set to (m/s): 57.6967
+Speed set to (m/s): 74.9625
+CANReader: Received speed: 18.603697 at 39935.126878
+Speed set to (m/s): 18.6037
+CANReader: Received speed: 68.013046 at 39935.137065
+Speed set to (m/s): 68.013
+CANReader: Received speed: 82.267517 at 39935.147355
+Speed set to (m/s): 82.2675
+CANReader: Received speed: 8.763327 at 39935.157513
+CANReader: Received speed: 61.926342 at 39935.167649
+Speed set to (m/s): 8.76333
+Speed set to (m/s): 61.9263
+CANReader: Received speed: 37.302452 at 39935.177962
+Speed set to (m/s): 37.3025
+CANReader: Received speed: 65.320297 at 39935.188249
+Speed set to (m/s): 65.3203
+CANReader: Received speed: 82.037048 at 39935.198344
+Speed set to (m/s): 82.037
+CANReader: Received speed: 37.003605 at 39935.208517
+Speed set to (m/s): 37.0036
+CANReader: Received speed: 55.468082 at 39935.218693
+Speed set to (m/s): 55.4681
+CANReader: Received speed: 38.395176 at 39935.228877
+Speed set to (m/s): 38.3952
+CANReader: Received speed: 40.688107 at 39935.239178
+CANReader: Received speed: 63.549572 at 39935.249366
+Speed set to (m/s): 40.6881
+Speed set to (m/s): 63.5496
+CANReader: Received speed: 59.349621 at 39935.259622
+Speed set to (m/s): 59.3496
+CANReader: Received speed: 59.892178 at 39935.269775
+Speed set to (m/s): 59.8922
+CANReader: Received speed: 18.832644 at 39935.279983
+Speed set to (m/s): 18.8326
+CANReader: Received speed: 41.908215 at 39935.290207
+CANReader: Received speed: 78.119316 at 39935.300346
+Speed set to (m/s): 41.9082
+Speed set to (m/s): 78.1193
+CANReader: Received speed: 72.099113 at 39935.310590
+Speed set to (m/s): 72.0991
+CANReader: Received speed: 4.477923 at 39935.320713
+Speed set to (m/s): 4.47792
+CANReader: Received speed: 83.647202 at 39935.330868
+Speed set to (m/s): 83.6472
+CANReader: Received speed: 87.022789 at 39935.341105
+Speed set to (m/s): 87.0228
+CANReader: Received speed: 47.826023 at 39935.351257
+Speed set to (m/s): 47.826
+CANReader: Received speed: 61.334930 at 39935.361421
+Speed set to (m/s): 61.3349
+CANReader: Received speed: 41.855984 at 39935.371571
+Speed set to (m/s): 41.856
+CANReader: Received speed: 97.372063 at 39935.381786
+Speed set to (m/s): 97.3721
+CANReader: Received speed: 98.858711 at 39935.392034
+Speed set to (m/s): 98.8587
+CANReader: Received speed: 48.840408 at 39935.402088
+Speed set to (m/s): 48.8404
+CANReader: Received speed: 62.563229 at 39935.412230
+Speed set to (m/s): 62.5632
+CANReader: Received speed: 41.285007 at 39935.422368
+CANReader: Received speed: 81.244949 at 39935.432535
+Speed set to (m/s): 41.285
+Speed set to (m/s): 81.2449
+CANReader: Received speed: 36.213680 at 39935.442790
+Speed set to (m/s): 36.2137
+CANReader: Received speed: 60.466171 at 39935.453017
+Speed set to (m/s): 60.4662
+CANReader: Received speed: 72.442238 at 39935.463200
+Speed set to (m/s): 72.4422
+CANReader: Received speed: 0.948296 at 39935.473364
+CANReader: Received speed: 88.717773 at 39935.483514
+Speed set to (m/s): 0.948296
+Speed set to (m/s): 88.7178
+CANReader: Received speed: 14.289786 at 39935.493758
+Speed set to (m/s): 14.2898
+CANReader: Received speed: 75.422440 at 39935.503960
+Speed set to (m/s): 75.4224
+CANReader: Received speed: 55.039684 at 39935.514113
+Speed set to (m/s): 55.0397
+CANReader: Received speed: 96.880608 at 39935.524270
+Speed set to (m/s): 96.8806
+CANReader: Received speed: 14.755376 at 39935.534405
+Speed set to (m/s): 14.7554
+CANReader: Received speed: 4.747338 at 39935.544544
+Speed set to (m/s): 4.74734
+CANReader: Received speed: 12.065123 at 39935.554699
+Speed set to (m/s): 12.0651
+CANReader: Received speed: 79.259666 at 39935.564900
+Speed set to (m/s): 79.2597
+CANReader: Received speed: 29.515940 at 39935.575115
+Speed set to (m/s): 29.5159
+CANReader: Received speed: 40.796391 at 39935.585266
+Speed set to (m/s): 40.7964
+CANReader: Received speed: 7.478168 at 39935.595398
+Speed set to (m/s): 7.47817
+CANReader: Received speed: 53.917755 at 39935.605558
+CANReader: Received speed: 53.053101 at 39935.615710
+Speed set to (m/s): 53.9178
+Speed set to (m/s): 53.0531
+CANReader: Received speed: 39.327831 at 39935.626047
+Speed set to (m/s): 39.3278
+CANReader: Received speed: 60.555492 at 39935.636175
+Speed set to (m/s): 60.5555
+CANReader: Received speed: 8.703104 at 39935.646411
+Speed set to (m/s): 8.7031
+CANReader: Received speed: 54.286255 at 39935.656555
+CANReader: Received speed: 44.845390 at 39935.666787
+Speed set to (m/s): 54.2863
+Speed set to (m/s): 44.8454
+CANReader: Received speed: 4.038266 at 39935.677022
+Speed set to (m/s): 4.03827
+CANReader: Received speed: 82.616272 at 39935.687177
+Speed set to (m/s): 82.6163
+CANReader: Received speed: 31.061558 at 39935.697301
+Speed set to (m/s): 31.0616
+CANReader: Received speed: 57.907593 at 39935.707461
+Speed set to (m/s): 57.9076
+CANReader: Received speed: 40.119377 at 39935.717582
+Speed set to (m/s): 40.1194
+CANReader: Received speed: 25.112667 at 39935.727820
+Speed set to (m/s): 25.1127
+CANReader: Received speed: 99.411316 at 39935.738072
+Speed set to (m/s): 99.4113
+CANReader: Received speed: 20.393219 at 39935.748280
+Speed set to (m/s): 20.3932
+CANReader: Received speed: 35.531403 at 39935.758490
+Speed set to (m/s): 35.5314
+CANReader: Received speed: 22.172621 at 39935.768714
+Speed set to (m/s): 22.1726
+CANReader: Received speed: 36.557400 at 39935.778943
+Speed set to (m/s): 36.5574
+CANReader: Received speed: 45.219326 at 39935.789213
+CANReader: Received speed: 80.189606 at 39935.799436
+Speed set to (m/s): 45.2193
+Speed set to (m/s): 80.1896
+CANReader: Received speed: 38.975914 at 39935.809664
+Speed set to (m/s): 38.9759
+CANReader: Received speed: 94.042999 at 39935.819895
+Speed set to (m/s): 94.043
+CANReader: Received speed: 63.989086 at 39935.830118
+Speed set to (m/s): 63.9891
+CANReader: Received speed: 61.073917 at 39935.840323
+Speed set to (m/s): 61.0739
+CANReader: Received speed: 74.339394 at 39935.850559
+Speed set to (m/s): 74.3394
+CANReader: Received speed: 49.952522 at 39935.860710
+Speed set to (m/s): 49.9525
+CANReader: Received speed: 74.289795 at 39935.870940
+Speed set to (m/s): 74.2898
+CANReader: Received speed: 22.423626 at 39935.881150
+Speed set to (m/s): 22.4236
+CANReader: Received speed: 28.277905 at 39935.891380
+Speed set to (m/s): 28.2779
+CANReader: Received speed: 47.145802 at 39935.901661
+Speed set to (m/s): 47.1458
+CANReader: Received speed: 77.760429 at 39935.911782
+Speed set to (m/s): 77.7604
+CANReader: Received speed: 27.884203 at 39935.922072
+CANReader: Received speed: 93.590073 at 39935.932300
+Speed set to (m/s): 27.8842
+Speed set to (m/s): 93.5901
+CANReader: Received speed: 30.788841 at 39935.942493
+Speed set to (m/s): 30.7888
+CANReader: Received speed: 21.675539 at 39935.952569
+Speed set to (m/s): 21.6755
+CANReader: Received speed: 46.547886 at 39935.962789
+Speed set to (m/s): 46.5479
+CANReader: Received speed: 40.710423 at 39935.972982
+CANReader: Received speed: 38.355400 at 39935.983153
+Speed set to (m/s): 40.7104
+Speed set to (m/s): 38.3554
+CANReader: Received speed: 99.508003 at 39935.993264
+Speed set to (m/s): 99.508
+CANReader: Received speed: 38.941010 at 39936.003405
+Speed set to (m/s): 38.941
+CANReader: Received speed: 23.449970 at 39936.013535
+Speed set to (m/s): 23.45
+CANReader: Received speed: 46.571049 at 39936.023684
+Speed set to (m/s): 46.571
+CANReader: Received speed: 99.667992 at 39936.033772
+Speed set to (m/s): 99.668
+CANReader: Received speed: 72.558311 at 39936.043888
+Speed set to (m/s): 72.5583
+CANReader: Received speed: 1.997119 at 39936.053995
+Speed set to (m/s): 1.99712
+CANReader: Received speed: 99.905266 at 39936.064277
+Speed set to (m/s): 99.9053
+CANReader: Received speed: 7.886240 at 39936.074522
+Speed set to (m/s): 7.88624
+CANReader: Received speed: 55.610950 at 39936.084656
+Speed set to (m/s): 55.611
+CANReader: Received speed: 25.094408 at 39936.094871
+Speed set to (m/s): 25.0944
+CANReader: Received speed: 98.302711 at 39936.105113
+CANReader: Received speed: 11.726208 at 39936.115359
+Speed set to (m/s): 98.3027
+Speed set to (m/s): 11.7262
+CANReader: Received speed: 91.572617 at 39936.125547
+Speed set to (m/s): 91.5726
+CANReader: Received speed: 48.987110 at 39936.135712
+Speed set to (m/s): 48.9871
+CANReader: Received speed: 18.110256 at 39936.145818
+Speed set to (m/s): 18.1103
+CANReader: Received speed: 41.509319 at 39936.156076
+CANReader: Received speed: 16.225821 at 39936.166327
+Speed set to (m/s): 41.5093
+Speed set to (m/s): 16.2258
+CANReader: Received speed: 27.828321 at 39936.176472
+Speed set to (m/s): 27.8283
+CANReader: Received speed: 15.598204 at 39936.186648
+Speed set to (m/s): 15.5982
+CANReader: Received speed: 15.634422 at 39936.196787
+Speed set to (m/s): 15.6344
+CANReader: Received speed: 15.994305 at 39936.206957
+Speed set to (m/s): 15.9943
+CANReader: Received speed: 59.655613 at 39936.217256
+Speed set to (m/s): 59.6556
+CANReader: Received speed: 80.791801 at 39936.227375
+Speed set to (m/s): 80.7918
+CANReader: Received speed: 38.876160 at 39936.237522
+Speed set to (m/s): 38.8762
+CANReader: Received speed: 80.927368 at 39936.247773
+Speed set to (m/s): 80.9274
+CANReader: Received speed: 68.469604 at 39936.258020
+Speed set to (m/s): 68.4696
+CANReader: Received speed: 41.032799 at 39936.268183
+Speed set to (m/s): 41.0328
+CANReader: Received speed: 93.108376 at 39936.278312
+Speed set to (m/s): 93.1084
+CANReader: Received speed: 40.613155 at 39936.288454
+CANReader: Received speed: 21.703753 at 39936.298789
+Speed set to (m/s): 40.6132
+Speed set to (m/s): 21.7038
+CANReader: Received speed: 27.594444 at 39936.309088
+Speed set to (m/s): 27.5944
+CANReader: Received speed: 52.191681 at 39936.319159
+Speed set to (m/s): 52.1917
+CANReader: Received speed: 10.598180 at 39936.329355
+Speed set to (m/s): 10.5982
+CANReader: Received speed: 14.817015 at 39936.339482
+CANReader: Received speed: 34.510857 at 39936.349599
+Speed set to (m/s): 14.817
+Speed set to (m/s): 34.5109
+CANReader: Received speed: 73.936279 at 39936.359655
+Speed set to (m/s): 73.9363
+CANReader: Received speed: 59.436806 at 39936.369872
+Speed set to (m/s): 59.4368
+CANReader: Received speed: 8.134087 at 39936.379878
+Speed set to (m/s): 8.13409
+CANReader: Received speed: 15.445559 at 39936.390190
+Speed set to (m/s): 15.4456
+CANReader: Received speed: 31.038225 at 39936.400409
+Speed set to (m/s): 31.0382
+CANReader: Received speed: 32.627991 at 39936.410669
+Speed set to (m/s): 32.628
+CANReader: Received speed: 75.684914 at 39936.420901
+Speed set to (m/s): 75.6849
+CANReader: Received speed: 18.928448 at 39936.431138
+Speed set to (m/s): 18.9284
+CANReader: Received speed: 63.749439 at 39936.441345
+Speed set to (m/s): 63.7494
+CANReader: Received speed: 49.626945 at 39936.451628
+Speed set to (m/s): 49.6269
+CANReader: Received speed: 16.260130 at 39936.461809
+Speed set to (m/s): 16.2601
+CANReader: Received speed: 89.302635 at 39936.472108
+CANReader: Received speed: 78.380295 at 39936.482385
+Speed set to (m/s): 89.3026
+Speed set to (m/s): 78.3803
+CANReader: Received speed: 40.599014 at 39936.492508
+Speed set to (m/s): 40.599
+CANReader: Received speed: 12.205556 at 39936.502748
+Speed set to (m/s): 12.2056
+CANReader: Received speed: 50.647293 at 39936.513049
+Speed set to (m/s): 50.6473
+CANReader: Received speed: 39.627834 at 39936.523366
+Speed set to (m/s): 39.6278
+CANReader: Received speed: 60.294701 at 39936.533621
+Speed set to (m/s): 60.2947
+CANReader: Received speed: 53.745682 at 39936.543864
+Speed set to (m/s): 53.7457
+CANReader: Received speed: 2.967396 at 39936.554051
+Speed set to (m/s): 2.9674
+CANReader: Received speed: 59.805386 at 39936.564293
+Speed set to (m/s): 59.8054
+CANReader: Received speed: 88.762352 at 39936.574433
+Speed set to (m/s): 88.7624
+CANReader: Received speed: 81.899940 at 39936.584588
+Speed set to (m/s): 81.8999
+CANReader: Received speed: 6.047435 at 39936.594726
+Speed set to (m/s): 6.04744
+CANReader: Received speed: 38.013184 at 39936.604945
+CANReader: Received speed: 96.613396 at 39936.615180
+Speed set to (m/s): 38.0132
+Speed set to (m/s): 96.6134
+CANReader: Received speed: 51.027126 at 39936.625421
+Speed set to (m/s): 51.0271
+CANReader: Received speed: 51.554794 at 39936.635552
+Speed set to (m/s): 51.5548
+CANReader: Received speed: 48.296452 at 39936.645770
+Speed set to (m/s): 48.2965
+CANReader: Received speed: 14.683347 at 39936.656077
+CANReader: Received speed: 38.320034 at 39936.666405
+Speed set to (m/s): 14.6833
+Speed set to (m/s): 38.32
+CANReader: Received speed: 3.710613 at 39936.676661
+Speed set to (m/s): 3.71061
+CANReader: Received speed: 69.385666 at 39936.686790
+Speed set to (m/s): 69.3857
+CANReader: Received speed: 65.964500 at 39936.697175
+Speed set to (m/s): 65.9645
+CANReader: Received speed: 64.207024 at 39936.707301
+Speed set to (m/s): 64.207
+CANReader: Received speed: 19.748459 at 39936.717558
+Speed set to (m/s): 19.7485
+CANReader: Received speed: 9.813515 at 39936.727668
+Speed set to (m/s): 9.81351
+CANReader: Received speed: 42.374584 at 39936.737912
+CANReader: Received speed: 91.757217 at 39936.748125
+Speed set to (m/s): 42.3746
+Speed set to (m/s): 91.7572
+CANReader: Received speed: 75.647667 at 39936.758381
+Speed set to (m/s): 75.6477
+CANReader: Received speed: 47.522430 at 39936.768527
+Speed set to (m/s): 47.5224
+CANReader: Received speed: 16.063631 at 39936.778746
+Speed set to (m/s): 16.0636
+CANReader: Received speed: 98.528221 at 39936.788959
+CANReader: Received speed: 36.202560 at 39936.799185
+Speed set to (m/s): 98.5282
+Speed set to (m/s): 36.2026
+CANReader: Received speed: 74.800400 at 39936.809322
+Speed set to (m/s): 74.8004
+CANReader: Received speed: 65.780762 at 39936.819451
+Speed set to (m/s): 65.7808
+CANReader: Received speed: 34.021877 at 39936.829622
+Speed set to (m/s): 34.0219
+CANReader: Received speed: 54.521214 at 39936.839764
+Speed set to (m/s): 54.5212
+CANReader: Received speed: 51.295017 at 39936.849922
+Speed set to (m/s): 51.295
+CANReader: Received speed: 58.909302 at 39936.860022
+Speed set to (m/s): 58.9093
+CANReader: Received speed: 48.356636 at 39936.870100
+Speed set to (m/s): 48.3566
+CANReader: Received speed: 19.506975 at 39936.880320
+Speed set to (m/s): 19.507
+CANReader: Received speed: 2.222500 at 39936.890451
+Speed set to (m/s): 2.2225
+CANReader: Received speed: 14.094368 at 39936.900601
+Speed set to (m/s): 14.0944
+CANReader: Received speed: 9.417011 at 39936.910769
+Speed set to (m/s): 9.41701
+CANReader: Received speed: 94.586617 at 39936.920887
+CANReader: Received speed: 14.961708 at 39936.931097
+Speed set to (m/s): 94.5866
+Speed set to (m/s): 14.9617
+CANReader: Received speed: 86.320702 at 39936.941344
+Speed set to (m/s): 86.3207
+CANReader: Received speed: 24.071482 at 39936.951479
+Speed set to (m/s): 24.0715
+CANReader: Received speed: 57.146603 at 39936.961715
+Speed set to (m/s): 57.1466
+CANReader: Received speed: 92.109505 at 39936.971916
+CANReader: Received speed: 69.950737 at 39936.982118
+Speed set to (m/s): 92.1095
+Speed set to (m/s): 69.9507
+CANReader: Received speed: 58.955257 at 39936.992362
+Speed set to (m/s): 58.9553
+CANReader: Received speed: 15.471275 at 39937.002512
+Speed set to (m/s): 15.4713
+CANReader: Received speed: 31.352442 at 39937.012664
+Speed set to (m/s): 31.3524
+CANReader: Received speed: 94.535553 at 39937.022867
+Speed set to (m/s): 94.5356
+CANReader: Received speed: 28.890579 at 39937.033099
+Speed set to (m/s): 28.8906
+CANReader: Received speed: 89.400711 at 39937.043298
+Speed set to (m/s): 89.4007
+CANReader: Received speed: 89.584747 at 39937.053442
+CANReader: Received speed: 50.105942 at 39937.063670
+Speed set to (m/s): 89.5847
+Speed set to (m/s): 50.1059
+CANReader: Received speed: 25.190046 at 39937.073867
+Speed set to (m/s): 25.19
+CANReader: Received speed: 44.118114 at 39937.084035
+Speed set to (m/s): 44.1181
+CANReader: Received speed: 20.702465 at 39937.094147
+Speed set to (m/s): 20.7025
+CANReader: Received speed: 28.641855 at 39937.104380
+CANReader: Received speed: 22.892149 at 39937.114615
+Speed set to (m/s): 28.6419
+Speed set to (m/s): 22.8921
+CANReader: Received speed: 81.149948 at 39937.124768
+Speed set to (m/s): 81.1499
+CANReader: Received speed: 55.481487 at 39937.134959
+Speed set to (m/s): 55.4815
+CANReader: Received speed: 57.071262 at 39937.145229
+Speed set to (m/s): 57.0713
+CANReader: Received speed: 95.752960 at 39937.155370
+Speed set to (m/s): 95.753
+CANReader: Received speed: 8.029112 at 39937.165430
+Speed set to (m/s): 8.02911
+CANReader: Received speed: 66.172951 at 39937.175624
+Speed set to (m/s): 66.173
+CANReader: Received speed: 28.443945 at 39937.185716
+CANReader: Received speed: 44.123077 at 39937.196025
+Speed set to (m/s): 28.4439
+Speed set to (m/s): 44.1231
+CANReader: Received speed: 2.367465 at 39937.206260
+Speed set to (m/s): 2.36747
+CANReader: Received speed: 15.606605 at 39937.216400
+Speed set to (m/s): 15.6066
+CANReader: Received speed: 0.752631 at 39937.226729
+Speed set to (m/s): 0.752631
+CANReader: Received speed: 41.101959 at 39937.236935
+CANReader: Received speed: 56.255787 at 39937.247196
+Speed set to (m/s): 41.102
+Speed set to (m/s): 56.2558
+CANReader: Received speed: 27.753717 at 39937.257391
+Speed set to (m/s): 27.7537
+CANReader: Received speed: 64.282356 at 39937.267550
+Speed set to (m/s): 64.2824
+CANReader: Received speed: 77.317917 at 39937.277760
+Speed set to (m/s): 77.3179
+CANReader: Received speed: 47.970676 at 39937.287904
+Speed set to (m/s): 47.9707
+CANReader: Received speed: 29.760599 at 39937.298102
+Speed set to (m/s): 29.7606
+CANReader: Received speed: 19.210636 at 39937.308379
+Speed set to (m/s): 19.2106
+CANReader: Received speed: 95.217445 at 39937.318498
+Speed set to (m/s): 95.2174
+CANReader: Received speed: 54.197929 at 39937.328742
+Speed set to (m/s): 54.1979
+CANReader: Received speed: 74.997032 at 39937.338982
+Speed set to (m/s): 74.997
+CANReader: Received speed: 18.111374 at 39937.349028
+Speed set to (m/s): 18.1114
+CANReader: Received speed: 12.916348 at 39937.359268
+Speed set to (m/s): 12.9163
+CANReader: Received speed: 97.189018 at 39937.369467
+CANReader: Received speed: 80.423653 at 39937.379680
+Speed set to (m/s): 97.189
+Speed set to (m/s): 80.4237
+CANReader: Received speed: 7.384804 at 39937.389876
+Speed set to (m/s): 7.3848
+CANReader: Received speed: 79.345520 at 39937.400119
+Speed set to (m/s): 79.3455
+CANReader: Received speed: 39.022541 at 39937.410344
+Speed set to (m/s): 39.0225
+CANReader: Received speed: 12.667354 at 39937.420560
+CANReader: Received speed: 98.781601 at 39937.430787
+Speed set to (m/s): 12.6674
+Speed set to (m/s): 98.7816
+CANReader: Received speed: 73.861122 at 39937.441075
+Speed set to (m/s): 73.8611
+CANReader: Received speed: 38.843540 at 39937.451243
+Speed set to (m/s): 38.8435
+CANReader: Received speed: 21.247297 at 39937.461306
+Speed set to (m/s): 21.2473
+CANReader: Received speed: 49.907944 at 39937.471493
+Speed set to (m/s): 49.9079
+CANReader: Received speed: 0.650406 at 39937.481651
+Speed set to (m/s): 0.650406
+CANReader: Received speed: 62.421471 at 39937.491857
+Speed set to (m/s): 62.4215
+CANReader: Received speed: 97.244118 at 39937.502024
+CANReader: Received speed: 19.768394 at 39937.512238
+Speed set to (m/s): 97.2441
+Speed set to (m/s): 19.7684
+CANReader: Received speed: 56.346722 at 39937.522417
+Speed set to (m/s): 56.3467
+CANReader: Received speed: 64.754585 at 39937.532612
+Speed set to (m/s): 64.7546
+CANReader: Received speed: 16.316666 at 39937.542765
+Speed set to (m/s): 16.3167
+CANReader: Received speed: 37.098251 at 39937.552889
+CANReader: Received speed: 61.365921 at 39937.563233
+Speed set to (m/s): 37.0983
+Speed set to (m/s): 61.3659
+CANReader: Received speed: 82.018753 at 39937.573293
+Speed set to (m/s): 82.0188
+CANReader: Received speed: 69.256386 at 39937.583511
+Speed set to (m/s): 69.2564
+CANReader: Received speed: 78.487434 at 39937.593648
+Speed set to (m/s): 78.4874
+CANReader: Received speed: 54.788471 at 39937.603783
+CANReader: Received speed: 96.989174 at 39937.614080
+Speed set to (m/s): 54.7885
+Speed set to (m/s): 96.9892
+CANReader: Received speed: 34.283924 at 39937.624295
+Speed set to (m/s): 34.2839
+CANReader: Received speed: 57.222168 at 39937.634489
+Speed set to (m/s): 57.2222
+CANReader: Received speed: 97.872337 at 39937.644661
+Speed set to (m/s): 97.8723
+CANReader: Received speed: 31.111494 at 39937.654931
+Speed set to (m/s): 31.1115
+CANReader: Received speed: 53.873516 at 39937.665133
+Speed set to (m/s): 53.8735
+CANReader: Received speed: 63.011276 at 39937.675494
+Speed set to (m/s): 63.0113
+CANReader: Received speed: 33.212467 at 39937.685594
+CANReader: Received speed: 21.933195 at 39937.695813
+Speed set to (m/s): 33.2125
+Speed set to (m/s): 21.9332
+CANReader: Received speed: 90.403336 at 39937.706032
+Speed set to (m/s): 90.4033
+CANReader: Received speed: 34.447170 at 39937.716217
+Speed set to (m/s): 34.4472
+CANReader: Received speed: 39.699516 at 39937.726424
+Speed set to (m/s): 39.6995
+CANReader: Received speed: 28.090710 at 39937.736468
+CANReader: Received speed: 60.260834 at 39937.746819
+Speed set to (m/s): 28.0907
+Speed set to (m/s): 60.2608
+CANReader: Received speed: 46.336201 at 39937.757055
+Speed set to (m/s): 46.3362
+CANReader: Received speed: 73.215988 at 39937.767344
+Speed set to (m/s): 73.216
+CANReader: Received speed: 27.055571 at 39937.777417
+Speed set to (m/s): 27.0556
+CANReader: Received speed: 92.285309 at 39937.787582
+Speed set to (m/s): 92.2853
+CANReader: Received speed: 66.956863 at 39937.797731
+Speed set to (m/s): 66.9569
+CANReader: Received speed: 17.097271 at 39937.807943
+Speed set to (m/s): 17.0973
+CANReader: Received speed: 52.959545 at 39937.818165
+CANReader: Received speed: 40.467266 at 39937.828383
+Speed set to (m/s): 52.9595
+Speed set to (m/s): 40.4673
+CANReader: Received speed: 72.743134 at 39937.838624
+Speed set to (m/s): 72.7431
+CANReader: Received speed: 32.611885 at 39937.848755
+Speed set to (m/s): 32.6119
+CANReader: Received speed: 77.835220 at 39937.858874
+Speed set to (m/s): 77.8352
+CANReader: Received speed: 48.089207 at 39937.869054
+CANReader: Received speed: 53.219368 at 39937.879283
+Speed set to (m/s): 48.0892
+Speed set to (m/s): 53.2194
+CANReader: Received speed: 2.378610 at 39937.889437
+Speed set to (m/s): 2.37861
+Speed set to (m/s): 10.6239
+CANReader: Received speed: 10.623910 at 39937.899791
+CANReader: Received speed: 36.435947 at 39937.909983
+Speed set to (m/s): 36.4359
+CANReader: Received speed: 5.367026 at 39937.920195
+Speed set to (m/s): 5.36703
+CANReader: Received speed: 70.022842 at 39937.930423
+Speed set to (m/s): 70.0228
+CANReader: Received speed: 91.645477 at 39937.940572
+Speed set to (m/s): 91.6455
+CANReader: Received speed: 35.428509 at 39937.950724
+Speed set to (m/s): 35.4285
+CANReader: Received speed: 9.355532 at 39937.960937
+Speed set to (m/s): 9.35553
+CANReader: Received speed: 3.158273 at 39937.971171
+Speed set to (m/s): 3.15827
+CANReader: Received speed: 91.745003 at 39937.981382
+Speed set to (m/s): 91.745
+CANReader: Received speed: 92.661713 at 39937.991522
+Speed set to (m/s): 92.6617
+CANReader: Received speed: 23.863087 at 39938.001731
+CANReader: Received speed: 83.996933 at 39938.011944
+Speed set to (m/s): 23.8631
+Speed set to (m/s): 83.9969
+CANReader: Received speed: 8.930768 at 39938.022161
+Speed set to (m/s): 8.93077
+CANReader: Received speed: 89.601967 at 39938.032440
+Speed set to (m/s): 89.602
+CANReader: Received speed: 83.332939 at 39938.042588
+Speed set to (m/s): 83.3329
+CANReader: Received speed: 60.362320 at 39938.052744
+CANReader: Received speed: 32.169518 at 39938.062967
+Speed set to (m/s): 60.3623
+Speed set to (m/s): 32.1695
+CANReader: Received speed: 89.779305 at 39938.073136
+Speed set to (m/s): 89.7793
+CANReader: Received speed: 14.942575 at 39938.083262
+Speed set to (m/s): 14.9426
+CANReader: Received speed: 33.815144 at 39938.093373
+Speed set to (m/s): 33.8151
+CANReader: Received speed: 73.181244 at 39938.103526
+Speed set to (m/s): 73.1812
+CANReader: Received speed: 31.215208 at 39938.113706
+Speed set to (m/s): 31.2152
+CANReader: Received speed: 29.081055 at 39938.123801
+Speed set to (m/s): 29.0811
+CANReader: Received speed: 20.106936 at 39938.133953
+Speed set to (m/s): 20.1069
+CANReader: Received speed: 81.846603 at 39938.144202
+Speed set to (m/s): 81.8466
+CANReader: Received speed: 24.796736 at 39938.154403
+Speed set to (m/s): 24.7967
+CANReader: Received speed: 84.985657 at 39938.164475
+Speed set to (m/s): 84.9857
+CANReader: Received speed: 91.118210 at 39938.174684
+Speed set to (m/s): 91.1182
+CANReader: Received speed: 73.235039 at 39938.184824
+CANReader: Received speed: 71.665451 at 39938.195051
+Speed set to (m/s): 73.235
+Speed set to (m/s): 71.6655
+CANReader: Received speed: 44.181252 at 39938.205196
+Speed set to (m/s): 44.1813
+CANReader: Received speed: 16.232000 at 39938.215511
+Speed set to (m/s): 16.232
+CANReader: Received speed: 20.301514 at 39938.225649
+Speed set to (m/s): 20.3015
+CANReader: Received speed: 12.540097 at 39938.235910
+CANReader: Received speed: 16.065233 at 39938.246053
+Speed set to (m/s): 12.5401
+Speed set to (m/s): 16.0652
+CANReader: Received speed: 66.115974 at 39938.256180
+Speed set to (m/s): 66.116
+CANReader: Received speed: 89.077415 at 39938.266367
+Speed set to (m/s): 89.0774
+CANReader: Received speed: 72.424004 at 39938.276611
+Speed set to (m/s): 72.424
+CANReader: Received speed: 45.028191 at 39938.286754
+Speed set to (m/s): 45.0282
+Speed set to (m/s): 16.2925
+CANReader: Received speed: 16.292498 at 39938.296879
+CANReader: Received speed: 21.784430 at 39938.307102
+Speed set to (m/s): 21.7844
+CANReader: Received speed: 13.205833 at 39938.317315
+CANReader: Received speed: 14.483955 at 39938.327491
+Speed set to (m/s): 13.2058
+Speed set to (m/s): 14.484
+CANReader: Received speed: 4.670939 at 39938.337650
+Speed set to (m/s): 4.67094
+CANReader: Received speed: 16.796375 at 39938.347702
+Speed set to (m/s): 16.7964
+CANReader: Received speed: 47.450932 at 39938.357975
+Speed set to (m/s): 47.4509
+CANReader: Received speed: 8.676715 at 39938.368231
+CANReader: Received speed: 3.331542 at 39938.378449
+Speed set to (m/s): 8.67671
+Speed set to (m/s): 3.33154
+CANReader: Received speed: 38.955399 at 39938.388586
+Speed set to (m/s): 38.9554
+CANReader: Received speed: 53.016830 at 39938.398725
+Speed set to (m/s): 53.0168
+CANReader: Received speed: 52.132111 at 39938.408938
+Speed set to (m/s): 52.1321
+CANReader: Received speed: 75.391487 at 39938.419147
+CANReader: Received speed: 89.849403 at 39938.429257
+Speed set to (m/s): 75.3915
+Speed set to (m/s): 89.8494
+CANReader: Received speed: 55.000965 at 39938.439431
+Speed set to (m/s): 55.001
+CANReader: Received speed: 11.078542 at 39938.449529
+Speed set to (m/s): 11.0785
+CANReader: Received speed: 10.983090 at 39938.459748
+Speed set to (m/s): 10.9831
+CANReader: Received speed: 26.380814 at 39938.470074
+Speed set to (m/s): 26.3808
+CANReader: Received speed: 60.523968 at 39938.480154
+Speed set to (m/s): 60.524
+CANReader: Received speed: 21.403904 at 39938.490339
+Speed set to (m/s): 21.4039
+CANReader: Received speed: 9.952048 at 39938.500517
+Speed set to (m/s): 9.95205
+CANReader: Received speed: 19.764826 at 39938.510717
+Speed set to (m/s): 19.7648
+CANReader: Received speed: 43.332657 at 39938.520910
+Speed set to (m/s): 43.3327
+CANReader: Received speed: 4.565932 at 39938.531098
+Speed set to (m/s): 4.56593
+CANReader: Received speed: 54.665070 at 39938.541184
+Speed set to (m/s): 54.6651
+CANReader: Received speed: 59.768166 at 39938.551277
+CANReader: Received speed: 85.735008 at 39938.561528
+Speed set to (m/s): 59.7682
+Speed set to (m/s): 85.735
+CANReader: Received speed: 91.564217 at 39938.571742
+Speed set to (m/s): 91.5642
+CANReader: Received speed: 51.609905 at 39938.581863
+Speed set to (m/s): 51.6099
+CANReader: Received speed: 95.071709 at 39938.591995
+Speed set to (m/s): 95.0717
+CANReader: Received speed: 48.296375 at 39938.602137
+CANReader: Received speed: 63.648460 at 39938.612233
+Speed set to (m/s): 48.2964
+Speed set to (m/s): 63.6485
+CANReader: Received speed: 54.078369 at 39938.622292
+Speed set to (m/s): 54.0784
+CANReader: Received speed: 62.636589 at 39938.632357
+Speed set to (m/s): 62.6366
+CANReader: Received speed: 27.532244 at 39938.642531
+Speed set to (m/s): 27.5322
+CANReader: Received speed: 31.703714 at 39938.652644
+Speed set to (m/s): 31.7037
+CANReader: Received speed: 15.890539 at 39938.662917
+Speed set to (m/s): 15.8905
+CANReader: Received speed: 27.004845 at 39938.673124
+Speed set to (m/s): 27.0048
+CANReader: Received speed: 76.043358 at 39938.683256
+Speed set to (m/s): 76.0434
+CANReader: Received speed: 72.025955 at 39938.693411
+Speed set to (m/s): 72.026
+CANReader: Received speed: 82.184319 at 39938.703708
+Speed set to (m/s): 82.1843
+CANReader: Received speed: 31.463533 at 39938.713853
+Speed set to (m/s): 31.4635
+CANReader: Received speed: 87.036003 at 39938.724097
+Speed set to (m/s): 87.036
+CANReader: Received speed: 40.796326 at 39938.734370
+CANReader: Received speed: 84.433311 at 39938.744647
+Speed set to (m/s): 40.7963
+Speed set to (m/s): 84.4333
+CANReader: Received speed: 90.574318 at 39938.754848
+Speed set to (m/s): 90.5743
+CANReader: Received speed: 45.422554 at 39938.765041
+Speed set to (m/s): 45.4226
+CANReader: Received speed: 60.922752 at 39938.775234
+Speed set to (m/s): 60.9228
+CANReader: Received speed: 33.406288 at 39938.785440
+CANReader: Received speed: 30.823112 at 39938.795671
+Speed set to (m/s): 33.4063
+Speed set to (m/s): 30.8231
+CANReader: Received speed: 66.472450 at 39938.805880
+Speed set to (m/s): 66.4725
+CANReader: Received speed: 21.195534 at 39938.816110
+Speed set to (m/s): 21.1955
+CANReader: Received speed: 19.627018 at 39938.826327
+Speed set to (m/s): 19.627
+CANReader: Received speed: 69.580032 at 39938.836650
+Speed set to (m/s): 69.58
+CANReader: Received speed: 75.515289 at 39938.846907
+Speed set to (m/s): 75.5153
+CANReader: Received speed: 84.416946 at 39938.857075
+Speed set to (m/s): 84.4169
+CANReader: Received speed: 60.795570 at 39938.867284
+CANReader: Received speed: 31.107092 at 39938.877559
+Speed set to (m/s): 60.7956
+Speed set to (m/s): 31.1071
+CANReader: Received speed: 66.890671 at 39938.887855
+Speed set to (m/s): 66.8907
+CANReader: Received speed: 62.243622 at 39938.898145
+Speed set to (m/s): 62.2436
+CANReader: Received speed: 0.484053 at 39938.908365
+Speed set to (m/s): 0.484053
+CANReader: Received speed: 22.005720 at 39938.918534
+CANReader: Received speed: 72.559845 at 39938.928798
+Speed set to (m/s): 22.0057
+Speed set to (m/s): 72.5598
+CANReader: Received speed: 57.725555 at 39938.939087
+Speed set to (m/s): 57.7256
+CANReader: Received speed: 89.617821 at 39938.949220
+Speed set to (m/s): 89.6178
+CANReader: Received speed: 14.925573 at 39938.959415
+Speed set to (m/s): 14.9256
+CANReader: Received speed: 59.307842 at 39938.969585
+Speed set to (m/s): 59.3078
+CANReader: Received speed: 94.387360 at 39938.979737
+Speed set to (m/s): 94.3874
+CANReader: Received speed: 94.906967 at 39938.990353
+Speed set to (m/s): 94.907
+CANReader: Received speed: 14.835106 at 39939.000627
+CANReader: Received speed: 17.299763 at 39939.010903
+Speed set to (m/s): 14.8351
+Speed set to (m/s): 17.2998
+CANReader: Received speed: 86.110008 at 39939.021204
+Speed set to (m/s): 86.11
+CANReader: Received speed: 28.192272 at 39939.031325
+Speed set to (m/s): 28.1923
+CANReader: Received speed: 60.489441 at 39939.041562
+Speed set to (m/s): 60.4894
+CANReader: Received speed: 84.893074 at 39939.051719
+CANReader: Received speed: 16.929407 at 39939.061924
+Speed set to (m/s): 84.8931
+Speed set to (m/s): 16.9294
+CANReader: Received speed: 2.396984 at 39939.072183
+Speed set to (m/s): 2.39698
+CANReader: Received speed: 14.606913 at 39939.082344
+Speed set to (m/s): 14.6069
+CANReader: Received speed: 41.004028 at 39939.092534
+Speed set to (m/s): 41.004
+CANReader: Received speed: 50.330441 at 39939.102672
+Speed set to (m/s): 50.3304
+Speed set to (m/s): 97.9238
+CANReader: Received speed: 97.923775 at 39939.112738
+CANReader: Received speed: 67.278908 at 39939.123079
+Speed set to (m/s): 67.2789
+CANReader: Received speed: 72.236382 at 39939.133234
+Speed set to (m/s): 72.2364
+CANReader: Received speed: 34.498676 at 39939.143398
+Speed set to (m/s): 34.4987
+CANReader: Received speed: 99.086082 at 39939.153627
+Speed set to (m/s): 99.0861
+CANReader: Received speed: 82.500542 at 39939.163774
+Speed set to (m/s): 82.5005
+CANReader: Received speed: 56.868027 at 39939.173968
+Speed set to (m/s): 56.868
+CANReader: Received speed: 65.672577 at 39939.184232
+CANReader: Received speed: 21.203890 at 39939.194324
+Speed set to (m/s): 65.6726
+Speed set to (m/s): 21.2039
+CANReader: Received speed: 35.763626 at 39939.204482
+Speed set to (m/s): 35.7636
+CANReader: Received speed: 95.036568 at 39939.214736
+Speed set to (m/s): 95.0366
+CANReader: Received speed: 84.783173 at 39939.224865
+Speed set to (m/s): 84.7832
+CANReader: Received speed: 50.066341 at 39939.234959
+CANReader: Received speed: 60.231083 at 39939.245078
+Speed set to (m/s): 50.0663
+Speed set to (m/s): 60.2311
+CANReader: Received speed: 22.064018 at 39939.255214
+Speed set to (m/s): 22.064
+CANReader: Received speed: 45.681839 at 39939.265338
+Speed set to (m/s): 45.6818
+CANReader: Received speed: 8.920089 at 39939.275428
+Speed set to (m/s): 8.92009
+CANReader: Received speed: 24.560497 at 39939.285549
+Speed set to (m/s): 24.5605
+CANReader: Received speed: 73.514465 at 39939.295667
+Speed set to (m/s): 73.5145
+CANReader: Received speed: 28.180197 at 39939.305877
+Speed set to (m/s): 28.1802
+CANReader: Received speed: 36.278378 at 39939.316104
+Speed set to (m/s): 36.2784
+CANReader: Received speed: 96.249496 at 39939.326282
+Speed set to (m/s): 96.2495
+CANReader: Received speed: 20.547699 at 39939.336414
+Speed set to (m/s): 20.5477
+CANReader: Received speed: 62.429832 at 39939.346530
+Speed set to (m/s): 62.4298
+CANReader: Received speed: 31.353992 at 39939.356677
+Speed set to (m/s): 31.354
+CANReader: Received speed: 11.238313 at 39939.366787
+CANReader: Received speed: 31.673782 at 39939.376912
+Speed set to (m/s): 11.2383
+Speed set to (m/s): 31.6738
+CANReader: Received speed: 13.793245 at 39939.387039
+Speed set to (m/s): 13.7932
+CANReader: Received speed: 71.232635 at 39939.397148
+Speed set to (m/s): 71.2326
+CANReader: Received speed: 3.369270 at 39939.407269
+Speed set to (m/s): 3.36927
+CANReader: Received speed: 98.818085 at 39939.417374
+CANReader: Received speed: 51.778221 at 39939.427497
+Speed set to (m/s): 98.8181
+Speed set to (m/s): 51.7782
+CANReader: Received speed: 61.979603 at 39939.437619
+Speed set to (m/s): 61.9796
+CANReader: Received speed: 25.818226 at 39939.447753
+Speed set to (m/s): 25.8182
+CANReader: Received speed: 88.010956 at 39939.457877
+Speed set to (m/s): 88.011
+CANReader: Received speed: 56.733673 at 39939.467996
+CANReader: Received speed: 12.386658 at 39939.478217
+Speed set to (m/s): 56.7337
+Speed set to (m/s): 12.3867
+CANReader: Received speed: 7.263463 at 39939.488443
+Speed set to (m/s): 7.26346
+CANReader: Received speed: 40.249744 at 39939.498578
+Speed set to (m/s): 40.2497
+CANReader: Received speed: 68.957397 at 39939.508724
+Speed set to (m/s): 68.9574
+CANReader: Received speed: 95.947922 at 39939.519040
+Speed set to (m/s): 95.9479
+CANReader: Received speed: 26.544861 at 39939.529168
+Speed set to (m/s): 26.5449
+CANReader: Received speed: 33.139732 at 39939.539385
+Speed set to (m/s): 33.1397
+CANReader: Received speed: 87.541565 at 39939.549560
+CANReader: Received speed: 71.483864 at 39939.559826
+Speed set to (m/s): 87.5416
+Speed set to (m/s): 71.4839
+CANReader: Received speed: 11.265537 at 39939.570069
+Speed set to (m/s): 11.2655
+CANReader: Received speed: 90.691628 at 39939.580315
+Speed set to (m/s): 90.6916
+CANReader: Received speed: 72.558037 at 39939.590438
+Speed set to (m/s): 72.558
+CANReader: Received speed: 85.237610 at 39939.600571
+CANReader: Received speed: 87.695518 at 39939.610817
+Speed set to (m/s): 85.2376
+Speed set to (m/s): 87.6955
+CANReader: Received speed: 34.992607 at 39939.621075
+Speed set to (m/s): 34.9926
+CANReader: Received speed: 37.360523 at 39939.631312
+Speed set to (m/s): 37.3605
+CANReader: Received speed: 53.750038 at 39939.641521
+Speed set to (m/s): 53.75
+CANReader: Received speed: 65.481445 at 39939.651680
+Speed set to (m/s): 65.4814
+CANReader: Received speed: 7.867708 at 39939.661935
+Speed set to (m/s): 7.86771
+CANReader: Received speed: 22.777170 at 39939.672149
+Speed set to (m/s): 22.7772
+CANReader: Received speed: 13.880357 at 39939.682262
+CANReader: Received speed: 21.309599 at 39939.692480
+Speed set to (m/s): 13.8804
+Speed set to (m/s): 21.3096
+CANReader: Received speed: 69.019684 at 39939.702539
+Speed set to (m/s): 69.0197
+CANReader: Received speed: 29.260519 at 39939.712662
+Speed set to (m/s): 29.2605
+CANReader: Received speed: 53.203602 at 39939.722807
+Speed set to (m/s): 53.2036
+CANReader: Received speed: 79.228249 at 39939.732966
+CANReader: Received speed: 64.071915 at 39939.743149
+Speed set to (m/s): 79.2282
+Speed set to (m/s): 64.0719
+CANReader: Received speed: 35.896458 at 39939.753307
+Speed set to (m/s): 35.8965
+CANReader: Received speed: 30.756580 at 39939.763554
+Speed set to (m/s): 30.7566
+CANReader: Received speed: 93.641167 at 39939.773699
+Speed set to (m/s): 93.6412
+CANReader: Received speed: 39.530884 at 39939.783784
+Speed set to (m/s): 39.5309
+CANReader: Received speed: 50.872169 at 39939.793900
+Speed set to (m/s): 50.8722
+CANReader: Received speed: 34.613277 at 39939.804198
+Speed set to (m/s): 34.6133
+CANReader: Received speed: 57.357437 at 39939.814303
+Speed set to (m/s): 57.3574
+CANReader: Received speed: 85.643547 at 39939.824546
+Speed set to (m/s): 85.6435
+CANReader: Received speed: 49.339230 at 39939.834692
+Speed set to (m/s): 49.3392
+CANReader: Received speed: 7.034262 at 39939.844913
+Speed set to (m/s): 7.03426
+CANReader: Received speed: 43.296165 at 39939.855098
+Speed set to (m/s): 43.2962
+CANReader: Received speed: 50.201214 at 39939.865273
+CANReader: Received speed: 36.817223 at 39939.875400
+Speed set to (m/s): 50.2012
+Speed set to (m/s): 36.8172
+CANReader: Received speed: 66.933319 at 39939.885553
+Speed set to (m/s): 66.9333
+CANReader: Received speed: 43.901497 at 39939.895673
+Speed set to (m/s): 43.9015
+CANReader: Received speed: 57.061810 at 39939.905798
+Speed set to (m/s): 57.0618
+CANReader: Received speed: 18.157925 at 39939.915923
+CANReader: Received speed: 70.756477 at 39939.926026
+Speed set to (m/s): 18.1579
+Speed set to (m/s): 70.7565
+CANReader: Received speed: 1.863130 at 39939.936112
+Speed set to (m/s): 1.86313
+CANReader: Received speed: 36.512817 at 39939.946225
+Speed set to (m/s): 36.5128
+CANReader: Received speed: 18.901936 at 39939.956336
+Speed set to (m/s): 18.9019
+CANReader: Received speed: 50.003380 at 39939.966518
+CANReader: Received speed: 34.687786 at 39939.976581
+Speed set to (m/s): 50.0034
+Speed set to (m/s): 34.6878
+CANReader: Received speed: 77.012230 at 39939.986793
+Speed set to (m/s): 77.0122
+CANReader: Received speed: 8.360571 at 39939.997022
+Speed set to (m/s): 8.36057
+CANReader: Received speed: 72.978722 at 39940.007247
+Speed set to (m/s): 72.9787
+CANReader: Received speed: 46.244778 at 39940.017382
+Speed set to (m/s): 46.2448
+CANReader: Received speed: 32.602436 at 39940.027550
+Speed set to (m/s): 32.6024
+CANReader: Received speed: 91.630859 at 39940.037861
+Speed set to (m/s): 91.6309
+CANReader: Received speed: 64.191238 at 39940.048083
+CANReader: Received speed: 87.503334 at 39940.058304
+Speed set to (m/s): 64.1912
+Speed set to (m/s): 87.5033
+CANReader: Received speed: 78.537834 at 39940.068532
+Speed set to (m/s): 78.5378
+CANReader: Received speed: 62.443363 at 39940.078736
+Speed set to (m/s): 62.4434
+CANReader: Received speed: 36.793716 at 39940.088959
+Speed set to (m/s): 36.7937
+CANReader: Received speed: 57.145363 at 39940.099195
+CANReader: Received speed: 0.367434 at 39940.109422
+Speed set to (m/s): 57.1454
+Speed set to (m/s): 0.367434
+CANReader: Received speed: 90.746704 at 39940.119572
+Speed set to (m/s): 90.7467
+CANReader: Received speed: 50.878418 at 39940.129718
+Speed set to (m/s): 50.8784
+CANReader: Received speed: 59.818832 at 39940.139996
+Speed set to (m/s): 59.8188
+CANReader: Received speed: 48.761608 at 39940.150340
+Speed set to (m/s): 48.7616
+CANReader: Received speed: 15.017305 at 39940.160379
+Speed set to (m/s): 15.0173
+CANReader: Received speed: 47.102528 at 39940.170626
+Speed set to (m/s): 47.1025
+CANReader: Received speed: 57.666702 at 39940.180901
+Speed set to (m/s): 57.6667
+CANReader: Received speed: 91.779083 at 39940.191159
+Speed set to (m/s): 91.7791
+CANReader: Received speed: 36.269550 at 39940.201297
+Speed set to (m/s): 36.2696
+CANReader: Received speed: 51.053696 at 39940.211410
+Speed set to (m/s): 51.0537
+CANReader: Received speed: 63.785149 at 39940.221672
+Speed set to (m/s): 63.7851
+CANReader: Received speed: 57.776173 at 39940.231908
+CANReader: Received speed: 71.122925 at 39940.242203
+Speed set to (m/s): 57.7762
+Speed set to (m/s): 71.1229
+CANReader: Received speed: 11.420738 at 39940.252324
+Speed set to (m/s): 11.4207
+CANReader: Received speed: 1.348175 at 39940.262493
+Speed set to (m/s): 1.34817
+CANReader: Received speed: 84.944130 at 39940.272604
+Speed set to (m/s): 84.9441
+CANReader: Received speed: 47.345074 at 39940.282755
+CANReader: Received speed: 15.813553 at 39940.292916
+Speed set to (m/s): 47.3451
+Speed set to (m/s): 15.8136
+CANReader: Received speed: 8.884839 at 39940.303229
+Speed set to (m/s): 8.88484
+CANReader: Received speed: 89.436142 at 39940.313333
+Speed set to (m/s): 89.4361
+CANReader: Received speed: 80.123840 at 39940.323498
+Speed set to (m/s): 80.1238
+CANReader: Received speed: 70.461876 at 39940.333663
+Speed set to (m/s): 70.4619
+CANReader: Received speed: 27.196465 at 39940.343798
+Speed set to (m/s): 27.1965
+CANReader: Received speed: 91.903397 at 39940.353944
+Speed set to (m/s): 91.9034
+CANReader: Received speed: 84.875755 at 39940.364071
+CANReader: Received speed: 79.195724 at 39940.374152
+Speed set to (m/s): 84.8758
+Speed set to (m/s): 79.1957
+CANReader: Received speed: 10.096659 at 39940.384244
+Speed set to (m/s): 10.0967
+CANReader: Received speed: 87.379227 at 39940.394371
+Speed set to (m/s): 87.3792
+CANReader: Received speed: 76.569687 at 39940.404582
+Speed set to (m/s): 76.5697
+CANReader: Received speed: 70.471397 at 39940.414713
+CANReader: Received speed: 38.924282 at 39940.424871
+Speed set to (m/s): 70.4714
+Speed set to (m/s): 38.9243
+CANReader: Received speed: 74.467751 at 39940.434997
+Speed set to (m/s): 74.4678
+CANReader: Received speed: 67.051086 at 39940.445081
+Speed set to (m/s): 67.0511
+CANReader: Received speed: 83.609299 at 39940.455262
+Speed set to (m/s): 83.6093
+CANReader: Received speed: 90.750977 at 39940.465346
+CANReader: Received speed: 24.081825 at 39940.475536
+Speed set to (m/s): 90.751
+Speed set to (m/s): 24.0818
+CANReader: Received speed: 91.770241 at 39940.485678
+Speed set to (m/s): 91.7702
+CANReader: Received speed: 74.001503 at 39940.495855
+Speed set to (m/s): 74.0015
+CANReader: Received speed: 9.168672 at 39940.506055
+Speed set to (m/s): 9.16867
+CANReader: Received speed: 28.396458 at 39940.516280
+Speed set to (m/s): 28.3965
+CANReader: Received speed: 53.983486 at 39940.526350
+Speed set to (m/s): 53.9835
+CANReader: Received speed: 42.908348 at 39940.536524
+Speed set to (m/s): 42.9083
+CANReader: Received speed: 65.707283 at 39940.546713
+Speed set to (m/s): 65.7073
+CANReader: Received speed: 5.064401 at 39940.556906
+Speed set to (m/s): 5.0644
+CANReader: Received speed: 68.706955 at 39940.567073
+Speed set to (m/s): 68.707
+CANReader: Received speed: 53.669529 at 39940.577198
+Speed set to (m/s): 53.6695
+CANReader: Received speed: 58.158695 at 39940.587420
+Speed set to (m/s): 58.1587
