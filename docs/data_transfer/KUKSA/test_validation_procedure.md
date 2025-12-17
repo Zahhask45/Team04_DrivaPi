@@ -144,5 +144,45 @@ Run the application in "KUKSA Client" mode (`-k or -kuksa` flag) to validate the
 
 ```
 
+---
 
+## 5. Validation & Analysis
+
+Run the custom analyzer to correlate timestamps and generate CSV reports.
+
+### 5.1 Run Analysis
+
+```bash
+# Analyze Baseline (Direct CAN)
+./latency_analyzer latency_sent_can.txt latency_received_can_1000.txt
+
+# Analyze Target (KUKSA)
+./latency_analyzer latency_sent_kuksa.txt latency_received_kuksa_1000.txt
+
+```
+
+### 5.2 Verify Output Metrics
+
+Inspect the generated CSV files to confirm the fix.
+
+```bash
+# Check Baseline
+cat latency_received_can_1000.txt_analise.csv
+
+# Check KUKSA 
+cat latency_received_kuksa_1000.txt_analise.csv
+
+```
+
+---
+
+## 6. Pass/Fail Criteria
+
+The test is considered **PASSED** if:
+1. The average latency for the KUKSA path is below **16 ms**.
+2. No packet loss is observed (100% of sent messages are received).
+
+Note: You might see negative latencies due to clock synchronization issues; these should be minimal and not affect the overall average significantly.
+
+---
 
