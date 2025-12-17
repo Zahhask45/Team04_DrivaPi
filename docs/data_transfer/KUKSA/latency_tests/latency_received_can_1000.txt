@@ -1,0 +1,2005 @@
+VehicleData initialized
+Starting in CAN mode
+RTNETLINK answers: Operation not permitted
+qt.canbus.plugins.socketcan: Cannot apply parameter: 4 with value: 500000.
+CAN device opened on interface "vcan0"
+CANReader: Received speed: 35.6822 at 47723.231722
+Speed set to (m/s): 35.6822
+CANReader: Received speed: 86.171547 at 47723.241928
+Speed set to (m/s): 86.1715
+CANReader: Received speed: 1.470063 at 47723.252208
+Speed set to (m/s): 1.47006
+CANReader: Received speed: 19.297604 at 47723.262416
+Speed set to (m/s): 19.2976
+CANReader: Received speed: 12.401808 at 47723.272524
+Speed set to (m/s): 12.4018
+CANReader: Received speed: 44.633911 at 47723.282960
+Speed set to (m/s): 44.6339
+CANReader: Received speed: 10.833430 at 47723.293340
+Speed set to (m/s): 10.8334
+CANReader: Received speed: 31.223106 at 47723.303475
+Speed set to (m/s): 31.2231
+CANReader: Received speed: 36.140221 at 47723.313620
+CANReader: Received speed: 3.393541 at 47723.323922
+Speed set to (m/s): 36.1402
+Speed set to (m/s): 3.39354
+CANReader: Received speed: 69.357193 at 47723.334361
+Speed set to (m/s): 69.3572
+CANReader: Received speed: 25.830782 at 47723.344498
+Speed set to (m/s): 25.8308
+CANReader: Received speed: 99.496994 at 47723.354803
+Speed set to (m/s): 99.497
+CANReader: Received speed: 14.644504 at 47723.365058
+Speed set to (m/s): 14.6445
+CANReader: Received speed: 40.770470 at 47723.375381
+Speed set to (m/s): 40.7705
+CANReader: Received speed: 60.742020 at 47723.385641
+Speed set to (m/s): 60.742
+CANReader: Received speed: 47.912537 at 47723.395903
+CANReader: Received speed: 19.312759 at 47723.406255
+Speed set to (m/s): 47.9125
+Speed set to (m/s): 19.3128
+CANReader: Received speed: 34.110893 at 47723.416453
+Speed set to (m/s): 34.1109
+CANReader: Received speed: 60.080391 at 47723.426834
+Speed set to (m/s): 60.0804
+CANReader: Received speed: 0.495489 at 47723.437177
+Speed set to (m/s): 0.495489
+CANReader: Received speed: 33.544037 at 47723.447450
+CANReader: Received speed: 86.903328 at 47723.457666
+Speed set to (m/s): 33.544
+Speed set to (m/s): 86.9033
+CANReader: Received speed: 14.040256 at 47723.467914
+Speed set to (m/s): 14.0403
+CANReader: Received speed: 44.050919 at 47723.478202
+Speed set to (m/s): 44.0509
+CANReader: Received speed: 73.623138 at 47723.488342
+Speed set to (m/s): 73.6231
+CANReader: Received speed: 37.436962 at 47723.498482
+Speed set to (m/s): 37.437
+CANReader: Received speed: 64.344772 at 47723.508651
+Speed set to (m/s): 64.3448
+CANReader: Received speed: 33.489262 at 47723.518823
+Speed set to (m/s): 33.4893
+CANReader: Received speed: 50.505901 at 47723.529144
+CANReader: Received speed: 14.154832 at 47723.539419
+Speed set to (m/s): 50.5059
+Speed set to (m/s): 14.1548
+CANReader: Received speed: 38.760433 at 47723.549705
+Speed set to (m/s): 38.7604
+CANReader: Received speed: 37.182541 at 47723.560161
+Speed set to (m/s): 37.1825
+CANReader: Received speed: 30.350340 at 47723.570429
+Speed set to (m/s): 30.3503
+CANReader: Received speed: 91.614388 at 47723.580702
+Speed set to (m/s): 91.6144
+CANReader: Received speed: 27.663643 at 47723.590984
+Speed set to (m/s): 27.6636
+CANReader: Received speed: 31.747171 at 47723.601384
+Speed set to (m/s): 31.7472
+CANReader: Received speed: 22.816362 at 47723.611668
+CANReader: Received speed: 50.855045 at 47723.621972
+Speed set to (m/s): 22.8164
+Speed set to (m/s): 50.855
+CANReader: Received speed: 31.694647 at 47723.632280
+Speed set to (m/s): 31.6946
+CANReader: Received speed: 18.951361 at 47723.642546
+Speed set to (m/s): 18.9514
+CANReader: Received speed: 34.647438 at 47723.652877
+Speed set to (m/s): 34.6474
+CANReader: Received speed: 38.873863 at 47723.663214
+Speed set to (m/s): 38.8739
+CANReader: Received speed: 62.604076 at 47723.673374
+Speed set to (m/s): 62.6041
+CANReader: Received speed: 11.875352 at 47723.683666
+Speed set to (m/s): 11.8754
+CANReader: Received speed: 87.447121 at 47723.693948
+CANReader: Received speed: 2.463538 at 47723.704242
+Speed set to (m/s): 87.4471
+Speed set to (m/s): 2.46354
+CANReader: Received speed: 27.554077 at 47723.714418
+Speed set to (m/s): 27.5541
+CANReader: Received speed: 29.426777 at 47723.724793
+Speed set to (m/s): 29.4268
+CANReader: Received speed: 70.756729 at 47723.734996
+Speed set to (m/s): 70.7567
+CANReader: Received speed: 82.011292 at 47723.745452
+CANReader: Received speed: 64.652473 at 47723.755627
+Speed set to (m/s): 82.0113
+Speed set to (m/s): 64.6525
+CANReader: Received speed: 88.155052 at 47723.765858
+Speed set to (m/s): 88.1551
+CANReader: Received speed: 59.691906 at 47723.776275
+Speed set to (m/s): 59.6919
+CANReader: Received speed: 53.408562 at 47723.786388
+Speed set to (m/s): 53.4086
+CANReader: Received speed: 90.047791 at 47723.796627
+Speed set to (m/s): 90.0478
+CANReader: Received speed: 59.612446 at 47723.806873
+Speed set to (m/s): 59.6124
+CANReader: Received speed: 97.164864 at 47723.817093
+Speed set to (m/s): 97.1649
+CANReader: Received speed: 82.169991 at 47723.827262
+CANReader: Received speed: 51.627964 at 47723.837468
+Speed set to (m/s): 82.17
+Speed set to (m/s): 51.628
+CANReader: Received speed: 74.628052 at 47723.847739
+Speed set to (m/s): 74.6281
+CANReader: Received speed: 69.117020 at 47723.858038
+Speed set to (m/s): 69.117
+CANReader: Received speed: 81.863503 at 47723.868279
+Speed set to (m/s): 81.8635
+CANReader: Received speed: 69.325378 at 47723.878423
+CANReader: Received speed: 84.323967 at 47723.888605
+Speed set to (m/s): 69.3254
+Speed set to (m/s): 84.324
+CANReader: Received speed: 44.238369 at 47723.898783
+Speed set to (m/s): 44.2384
+CANReader: Received speed: 61.188507 at 47723.908972
+Speed set to (m/s): 61.1885
+CANReader: Received speed: 1.009936 at 47723.919159
+Speed set to (m/s): 1.00994
+CANReader: Received speed: 88.449455 at 47723.929332
+Speed set to (m/s): 88.4495
+CANReader: Received speed: 44.931183 at 47723.939467
+Speed set to (m/s): 44.9312
+CANReader: Received speed: 77.191833 at 47723.949712
+Speed set to (m/s): 77.1918
+CANReader: Received speed: 78.969879 at 47723.959907
+Speed set to (m/s): 78.9699
+CANReader: Received speed: 99.375519 at 47723.970217
+Speed set to (m/s): 99.3755
+CANReader: Received speed: 45.118839 at 47723.980476
+Speed set to (m/s): 45.1188
+CANReader: Received speed: 21.829327 at 47723.990666
+Speed set to (m/s): 21.8293
+CANReader: Received speed: 36.405865 at 47724.000901
+Speed set to (m/s): 36.4059
+CANReader: Received speed: 2.378032 at 47724.011206
+CANReader: Received speed: 8.572585 at 47724.021420
+Speed set to (m/s): 2.37803
+Speed set to (m/s): 8.57259
+CANReader: Received speed: 53.661900 at 47724.031664
+Speed set to (m/s): 53.6619
+CANReader: Received speed: 82.411072 at 47724.042029
+Speed set to (m/s): 82.4111
+CANReader: Received speed: 16.005362 at 47724.052302
+Speed set to (m/s): 16.0054
+CANReader: Received speed: 6.328906 at 47724.062716
+Speed set to (m/s): 6.32891
+CANReader: Received speed: 5.900448 at 47724.072766
+Speed set to (m/s): 5.90045
+CANReader: Received speed: 75.508400 at 47724.083026
+Speed set to (m/s): 75.5084
+CANReader: Received speed: 37.549706 at 47724.093333
+CANReader: Received speed: 44.606773 at 47724.103638
+Speed set to (m/s): 37.5497
+Speed set to (m/s): 44.6068
+CANReader: Received speed: 20.730009 at 47724.113971
+Speed set to (m/s): 20.73
+CANReader: Received speed: 92.693726 at 47724.124669
+Speed set to (m/s): 92.6937
+CANReader: Received speed: 91.092316 at 47724.134439
+Speed set to (m/s): 91.0923
+CANReader: Received speed: 12.951332 at 47724.144606
+CANReader: Received speed: 90.991463 at 47724.155038
+Speed set to (m/s): 12.9513
+Speed set to (m/s): 90.9915
+CANReader: Received speed: 63.782372 at 47724.165146
+Speed set to (m/s): 63.7824
+CANReader: Received speed: 85.834976 at 47724.175302
+Speed set to (m/s): 85.835
+CANReader: Received speed: 13.499578 at 47724.185399
+Speed set to (m/s): 13.4996
+CANReader: Received speed: 86.466667 at 47724.195562
+Speed set to (m/s): 86.4667
+CANReader: Received speed: 59.361202 at 47724.205741
+Speed set to (m/s): 59.3612
+CANReader: Received speed: 62.524925 at 47724.215911
+Speed set to (m/s): 62.5249
+CANReader: Received speed: 77.573242 at 47724.226133
+CANReader: Received speed: 52.285992 at 47724.236316
+Speed set to (m/s): 77.5732
+Speed set to (m/s): 52.286
+CANReader: Received speed: 90.699478 at 47724.246501
+Speed set to (m/s): 90.6995
+CANReader: Received speed: 47.566204 at 47724.256875
+Speed set to (m/s): 47.5662
+CANReader: Received speed: 62.927574 at 47724.267031
+Speed set to (m/s): 62.9276
+CANReader: Received speed: 0.683942 at 47724.277321
+CANReader: Received speed: 55.937397 at 47724.287604
+Speed set to (m/s): 0.683942
+Speed set to (m/s): 55.9374
+CANReader: Received speed: 70.913521 at 47724.297859
+Speed set to (m/s): 70.9135
+CANReader: Received speed: 67.085098 at 47724.308143
+Speed set to (m/s): 67.0851
+CANReader: Received speed: 10.798909 at 47724.318433
+Speed set to (m/s): 10.7989
+CANReader: Received speed: 49.002285 at 47724.328622
+Speed set to (m/s): 49.0023
+Speed set to (m/s): 27.9483
+CANReader: Received speed: 27.948263 at 47724.338931
+CANReader: Received speed: 13.589483 at 47724.349270
+Speed set to (m/s): 13.5895
+CANReader: Received speed: 78.946129 at 47724.359437
+CANReader: Received speed: 40.835915 at 47724.369720
+Speed set to (m/s): 78.9461
+Speed set to (m/s): 40.8359
+CANReader: Received speed: 80.107666 at 47724.379961
+Speed set to (m/s): 80.1077
+CANReader: Received speed: 69.226913 at 47724.390296
+Speed set to (m/s): 69.2269
+CANReader: Received speed: 38.274723 at 47724.400423
+Speed set to (m/s): 38.2747
+CANReader: Received speed: 75.256020 at 47724.410744
+Speed set to (m/s): 75.256
+CANReader: Received speed: 4.179228 at 47724.420826
+Speed set to (m/s): 4.17923
+CANReader: Received speed: 25.767031 at 47724.431030
+Speed set to (m/s): 25.767
+CANReader: Received speed: 29.927889 at 47724.441302
+CANReader: Received speed: 18.795109 at 47724.451592
+Speed set to (m/s): 29.9279
+Speed set to (m/s): 18.7951
+CANReader: Received speed: 87.671509 at 47724.461825
+Speed set to (m/s): 87.6715
+CANReader: Received speed: 0.811248 at 47724.472077
+Speed set to (m/s): 0.811248
+CANReader: Received speed: 47.640148 at 47724.482275
+Speed set to (m/s): 47.6401
+CANReader: Received speed: 66.045448 at 47724.492403
+CANReader: Received speed: 88.874031 at 47724.502599
+Speed set to (m/s): 66.0454
+Speed set to (m/s): 88.874
+CANReader: Received speed: 81.222549 at 47724.512879
+Speed set to (m/s): 81.2225
+CANReader: Received speed: 9.913841 at 47724.523184
+Speed set to (m/s): 9.91384
+CANReader: Received speed: 15.474808 at 47724.533307
+Speed set to (m/s): 15.4748
+CANReader: Received speed: 1.956957 at 47724.543438
+CANReader: Received speed: 37.484238 at 47724.553677
+Speed set to (m/s): 1.95696
+Speed set to (m/s): 37.4842
+CANReader: Received speed: 36.191208 at 47724.563966
+Speed set to (m/s): 36.1912
+CANReader: Received speed: 8.913718 at 47724.574252
+Speed set to (m/s): 8.91372
+CANReader: Received speed: 4.319383 at 47724.584520
+Speed set to (m/s): 4.31938
+CANReader: Received speed: 40.090908 at 47724.594777
+Speed set to (m/s): 40.0909
+CANReader: Received speed: 9.449277 at 47724.605253
+Speed set to (m/s): 9.44928
+CANReader: Received speed: 10.932219 at 47724.615444
+Speed set to (m/s): 10.9322
+CANReader: Received speed: 1.100460 at 47724.625810
+CANReader: Received speed: 93.033417 at 47724.636170
+Speed set to (m/s): 1.10046
+Speed set to (m/s): 93.0334
+CANReader: Received speed: 13.028608 at 47724.646334
+Speed set to (m/s): 13.0286
+CANReader: Received speed: 49.320835 at 47724.656634
+Speed set to (m/s): 49.3208
+CANReader: Received speed: 47.250996 at 47724.666804
+Speed set to (m/s): 47.251
+CANReader: Received speed: 70.891563 at 47724.677046
+Speed set to (m/s): 70.8916
+CANReader: Received speed: 59.356380 at 47724.687255
+Speed set to (m/s): 59.3564
+CANReader: Received speed: 80.374672 at 47724.697585
+Speed set to (m/s): 80.3747
+CANReader: Received speed: 16.380083 at 47724.707850
+CANReader: Received speed: 59.810986 at 47724.718174
+Speed set to (m/s): 16.3801
+Speed set to (m/s): 59.811
+CANReader: Received speed: 99.085526 at 47724.728395
+Speed set to (m/s): 99.0855
+CANReader: Received speed: 8.464209 at 47724.738589
+Speed set to (m/s): 8.46421
+CANReader: Received speed: 0.685650 at 47724.748841
+Speed set to (m/s): 0.68565
+CANReader: Received speed: 89.911263 at 47724.759061
+CANReader: Received speed: 95.030678 at 47724.769245
+Speed set to (m/s): 89.9113
+Speed set to (m/s): 95.0307
+CANReader: Received speed: 57.261772 at 47724.779499
+Speed set to (m/s): 57.2618
+CANReader: Received speed: 22.162336 at 47724.789818
+Speed set to (m/s): 22.1623
+CANReader: Received speed: 65.088783 at 47724.800153
+Speed set to (m/s): 65.0888
+CANReader: Received speed: 29.333092 at 47724.810360
+Speed set to (m/s): 29.3331
+CANReader: Received speed: 20.398285 at 47724.820535
+Speed set to (m/s): 20.3983
+CANReader: Received speed: 14.903049 at 47724.830878
+Speed set to (m/s): 14.903
+CANReader: Received speed: 58.623810 at 47724.841244
+CANReader: Received speed: 58.172764 at 47724.851532
+Speed set to (m/s): 58.6238
+Speed set to (m/s): 58.1728
+CANReader: Received speed: 9.441519 at 47724.861822
+Speed set to (m/s): 9.44152
+CANReader: Received speed: 52.531570 at 47724.872046
+Speed set to (m/s): 52.5316
+CANReader: Received speed: 59.426586 at 47724.882257
+Speed set to (m/s): 59.4266
+CANReader: Received speed: 33.004410 at 47724.892391
+CANReader: Received speed: 44.156178 at 47724.902616
+Speed set to (m/s): 33.0044
+Speed set to (m/s): 44.1562
+CANReader: Received speed: 31.218925 at 47724.912933
+Speed set to (m/s): 31.2189
+CANReader: Received speed: 76.010353 at 47724.923132
+Speed set to (m/s): 76.0104
+CANReader: Received speed: 12.938319 at 47724.933484
+Speed set to (m/s): 12.9383
+CANReader: Received speed: 55.042885 at 47724.943727
+Speed set to (m/s): 55.0429
+CANReader: Received speed: 36.681484 at 47724.954071
+Speed set to (m/s): 36.6815
+CANReader: Received speed: 78.439812 at 47724.964332
+Speed set to (m/s): 78.4398
+CANReader: Received speed: 69.372803 at 47724.974516
+CANReader: Received speed: 20.489368 at 47724.984827
+Speed set to (m/s): 69.3728
+Speed set to (m/s): 20.4894
+CANReader: Received speed: 64.608986 at 47724.995151
+Speed set to (m/s): 64.609
+CANReader: Received speed: 38.130127 at 47725.005284
+Speed set to (m/s): 38.1301
+CANReader: Received speed: 19.081593 at 47725.015630
+Speed set to (m/s): 19.0816
+CANReader: Received speed: 54.482670 at 47725.025976
+Speed set to (m/s): 54.4827
+CANReader: Received speed: 51.790863 at 47725.036289
+Speed set to (m/s): 51.7909
+CANReader: Received speed: 3.453188 at 47725.046331
+Speed set to (m/s): 3.45319
+CANReader: Received speed: 88.919128 at 47725.056638
+Speed set to (m/s): 88.9191
+CANReader: Received speed: 40.500088 at 47725.067053
+Speed set to (m/s): 40.5001
+CANReader: Received speed: 55.494213 at 47725.077223
+Speed set to (m/s): 55.4942
+CANReader: Received speed: 50.613945 at 47725.087620
+Speed set to (m/s): 50.6139
+CANReader: Received speed: 90.984703 at 47725.097860
+Speed set to (m/s): 90.9847
+CANReader: Received speed: 54.631447 at 47725.108165
+CANReader: Received speed: 53.841251 at 47725.118384
+Speed set to (m/s): 54.6314
+Speed set to (m/s): 53.8413
+CANReader: Received speed: 24.589861 at 47725.128744
+Speed set to (m/s): 24.5899
+CANReader: Received speed: 30.032980 at 47725.139066
+Speed set to (m/s): 30.033
+CANReader: Received speed: 51.206684 at 47725.149371
+Speed set to (m/s): 51.2067
+CANReader: Received speed: 34.870071 at 47725.159649
+Speed set to (m/s): 34.8701
+CANReader: Received speed: 77.064049 at 47725.169870
+Speed set to (m/s): 77.064
+CANReader: Received speed: 37.932659 at 47725.180199
+Speed set to (m/s): 37.9327
+CANReader: Received speed: 23.624504 at 47725.190519
+CANReader: Received speed: 14.762724 at 47725.200848
+Speed set to (m/s): 23.6245
+Speed set to (m/s): 14.7627
+CANReader: Received speed: 17.693521 at 47725.211045
+Speed set to (m/s): 17.6935
+CANReader: Received speed: 88.914879 at 47725.221376
+Speed set to (m/s): 88.9149
+CANReader: Received speed: 49.935837 at 47725.231568
+Speed set to (m/s): 49.9358
+CANReader: Received speed: 69.130188 at 47725.241886
+CANReader: Received speed: 0.150638 at 47725.252245
+Speed set to (m/s): 69.1302
+Speed set to (m/s): 0.150638
+CANReader: Received speed: 66.010406 at 47725.262566
+Speed set to (m/s): 66.0104
+CANReader: Received speed: 70.949684 at 47725.272783
+Speed set to (m/s): 70.9497
+CANReader: Received speed: 40.874218 at 47725.283077
+Speed set to (m/s): 40.8742
+CANReader: Received speed: 40.196705 at 47725.293337
+Speed set to (m/s): 40.1967
+CANReader: Received speed: 57.310860 at 47725.303577
+Speed set to (m/s): 57.3109
+CANReader: Received speed: 47.898643 at 47725.313827
+Speed set to (m/s): 47.8986
+CANReader: Received speed: 18.495188 at 47725.324065
+CANReader: Received speed: 5.039365 at 47725.334293
+Speed set to (m/s): 18.4952
+Speed set to (m/s): 5.03937
+CANReader: Received speed: 53.690536 at 47725.344536
+Speed set to (m/s): 53.6905
+CANReader: Received speed: 48.288105 at 47725.354714
+Speed set to (m/s): 48.2881
+CANReader: Received speed: 38.512291 at 47725.364957
+Speed set to (m/s): 38.5123
+CANReader: Received speed: 52.649097 at 47725.375245
+CANReader: Received speed: 71.521393 at 47725.385424
+Speed set to (m/s): 52.6491
+Speed set to (m/s): 71.5214
+CANReader: Received speed: 4.959351 at 47725.395753
+Speed set to (m/s): 4.95935
+CANReader: Received speed: 29.698038 at 47725.406039
+Speed set to (m/s): 29.698
+CANReader: Received speed: 64.165413 at 47725.416252
+Speed set to (m/s): 64.1654
+CANReader: Received speed: 43.729626 at 47725.426495
+Speed set to (m/s): 43.7296
+CANReader: Received speed: 41.978409 at 47725.436830
+Speed set to (m/s): 41.9784
+CANReader: Received speed: 68.775986 at 47725.447086
+Speed set to (m/s): 68.776
+CANReader: Received speed: 19.208147 at 47725.457400
+CANReader: Received speed: 65.801300 at 47725.467670
+Speed set to (m/s): 19.2081
+Speed set to (m/s): 65.8013
+CANReader: Received speed: 92.085175 at 47725.478029
+Speed set to (m/s): 92.0852
+CANReader: Received speed: 84.002991 at 47725.488277
+Speed set to (m/s): 84.003
+CANReader: Received speed: 19.279980 at 47725.498575
+Speed set to (m/s): 19.28
+CANReader: Received speed: 56.779121 at 47725.508840
+Speed set to (m/s): 56.7791
+CANReader: Received speed: 4.125401 at 47725.519137
+Speed set to (m/s): 4.1254
+CANReader: Received speed: 72.798660 at 47725.529409
+Speed set to (m/s): 72.7987
+CANReader: Received speed: 52.389652 at 47725.539561
+CANReader: Received speed: 7.131223 at 47725.549841
+Speed set to (m/s): 52.3897
+Speed set to (m/s): 7.13122
+CANReader: Received speed: 3.741566 at 47725.560126
+Speed set to (m/s): 3.74157
+CANReader: Received speed: 68.805435 at 47725.570270
+Speed set to (m/s): 68.8054
+CANReader: Received speed: 40.841240 at 47725.580549
+Speed set to (m/s): 40.8412
+CANReader: Received speed: 29.298067 at 47725.590714
+CANReader: Received speed: 5.661233 at 47725.600976
+Speed set to (m/s): 29.2981
+Speed set to (m/s): 5.66123
+CANReader: Received speed: 94.824532 at 47725.611261
+Speed set to (m/s): 94.8245
+CANReader: Received speed: 46.153145 at 47725.621541
+Speed set to (m/s): 46.1531
+CANReader: Received speed: 40.234776 at 47725.631916
+Speed set to (m/s): 40.2348
+CANReader: Received speed: 61.904030 at 47725.642198
+Speed set to (m/s): 61.904
+CANReader: Received speed: 48.060398 at 47725.652447
+Speed set to (m/s): 48.0604
+CANReader: Received speed: 88.920914 at 47725.662711
+Speed set to (m/s): 88.9209
+CANReader: Received speed: 5.791475 at 47725.672967
+CANReader: Received speed: 5.440401 at 47725.683272
+Speed set to (m/s): 5.79147
+Speed set to (m/s): 5.4404
+CANReader: Received speed: 16.989386 at 47725.693524
+Speed set to (m/s): 16.9894
+CANReader: Received speed: 1.941144 at 47725.703799
+Speed set to (m/s): 1.94114
+CANReader: Received speed: 71.697350 at 47725.714084
+Speed set to (m/s): 71.6973
+CANReader: Received speed: 3.656450 at 47725.724375
+CANReader: Received speed: 85.546669 at 47725.734521
+Speed set to (m/s): 3.65645
+Speed set to (m/s): 85.5467
+CANReader: Received speed: 0.537752 at 47725.744780
+Speed set to (m/s): 0.537752
+CANReader: Received speed: 62.033432 at 47725.755047
+Speed set to (m/s): 62.0334
+CANReader: Received speed: 54.382195 at 47725.765368
+Speed set to (m/s): 54.3822
+CANReader: Received speed: 21.811047 at 47725.775668
+Speed set to (m/s): 21.811
+CANReader: Received speed: 2.240063 at 47725.785819
+Speed set to (m/s): 2.24006
+CANReader: Received speed: 93.472160 at 47725.796232
+Speed set to (m/s): 93.4722
+CANReader: Received speed: 74.718384 at 47725.806388
+CANReader: Received speed: 24.855583 at 47725.816532
+Speed set to (m/s): 74.7184
+Speed set to (m/s): 24.8556
+CANReader: Received speed: 63.587318 at 47725.826697
+Speed set to (m/s): 63.5873
+CANReader: Received speed: 68.868629 at 47725.836979
+Speed set to (m/s): 68.8686
+CANReader: Received speed: 98.802422 at 47725.847336
+Speed set to (m/s): 98.8024
+CANReader: Received speed: 81.262230 at 47725.857577
+Speed set to (m/s): 81.2622
+CANReader: Received speed: 30.478689 at 47725.867831
+Speed set to (m/s): 30.4787
+CANReader: Received speed: 23.057718 at 47725.878170
+Speed set to (m/s): 23.0577
+CANReader: Received speed: 98.949181 at 47725.888407
+Speed set to (m/s): 98.9492
+CANReader: Received speed: 17.919775 at 47725.898769
+Speed set to (m/s): 17.9198
+CANReader: Received speed: 28.148279 at 47725.909015
+Speed set to (m/s): 28.1483
+CANReader: Received speed: 26.318878 at 47725.919329
+Speed set to (m/s): 26.3189
+CANReader: Received speed: 21.972067 at 47725.929559
+Speed set to (m/s): 21.9721
+CANReader: Received speed: 32.282917 at 47725.939842
+CANReader: Received speed: 73.563454 at 47725.950155
+Speed set to (m/s): 32.2829
+Speed set to (m/s): 73.5635
+CANReader: Received speed: 4.686499 at 47725.960429
+Speed set to (m/s): 4.6865
+CANReader: Received speed: 90.043182 at 47725.970768
+Speed set to (m/s): 90.0432
+CANReader: Received speed: 14.599754 at 47725.981164
+Speed set to (m/s): 14.5998
+CANReader: Received speed: 77.769981 at 47725.991324
+Speed set to (m/s): 77.77
+CANReader: Received speed: 60.473911 at 47726.001576
+Speed set to (m/s): 60.4739
+CANReader: Received speed: 36.195442 at 47726.011819
+Speed set to (m/s): 36.1954
+CANReader: Received speed: 76.093094 at 47726.022117
+CANReader: Received speed: 35.439053 at 47726.032391
+Speed set to (m/s): 76.0931
+Speed set to (m/s): 35.4391
+CANReader: Received speed: 74.257889 at 47726.042621
+Speed set to (m/s): 74.2579
+CANReader: Received speed: 9.488999 at 47726.052780
+Speed set to (m/s): 9.489
+CANReader: Received speed: 91.018471 at 47726.063158
+Speed set to (m/s): 91.0185
+CANReader: Received speed: 27.919643 at 47726.073392
+CANReader: Received speed: 16.310345 at 47726.083658
+Speed set to (m/s): 27.9196
+Speed set to (m/s): 16.3103
+CANReader: Received speed: 75.455963 at 47726.093882
+Speed set to (m/s): 75.456
+CANReader: Received speed: 83.591713 at 47726.104270
+Speed set to (m/s): 83.5917
+CANReader: Received speed: 89.441238 at 47726.114441
+Speed set to (m/s): 89.4412
+CANReader: Received speed: 8.185116 at 47726.124702
+Speed set to (m/s): 8.18512
+CANReader: Received speed: 24.141188 at 47726.134956
+Speed set to (m/s): 24.1412
+CANReader: Received speed: 10.026398 at 47726.145309
+Speed set to (m/s): 10.0264
+CANReader: Received speed: 97.723557 at 47726.155580
+CANReader: Received speed: 65.076515 at 47726.165843
+Speed set to (m/s): 97.7236
+Speed set to (m/s): 65.0765
+CANReader: Received speed: 83.185791 at 47726.176093
+Speed set to (m/s): 83.1858
+CANReader: Received speed: 21.219233 at 47726.186301
+Speed set to (m/s): 21.2192
+CANReader: Received speed: 59.558147 at 47726.196456
+Speed set to (m/s): 59.5581
+CANReader: Received speed: 94.535942 at 47726.206625
+CANReader: Received speed: 20.644703 at 47726.216784
+Speed set to (m/s): 94.5359
+Speed set to (m/s): 20.6447
+CANReader: Received speed: 17.629484 at 47726.226957
+Speed set to (m/s): 17.6295
+CANReader: Received speed: 8.575625 at 47726.237234
+Speed set to (m/s): 8.57563
+CANReader: Received speed: 46.345455 at 47726.247387
+Speed set to (m/s): 46.3455
+CANReader: Received speed: 50.992119 at 47726.257545
+CANReader: Received speed: 4.967438 at 47726.267698
+Speed set to (m/s): 50.9921
+Speed set to (m/s): 4.96744
+CANReader: Received speed: 87.497749 at 47726.277758
+Speed set to (m/s): 87.4977
+CANReader: Received speed: 31.201443 at 47726.287971
+Speed set to (m/s): 31.2014
+CANReader: Received speed: 30.740183 at 47726.298204
+Speed set to (m/s): 30.7402
+CANReader: Received speed: 96.673325 at 47726.308405
+CANReader: Received speed: 43.882557 at 47726.318544
+Speed set to (m/s): 96.6733
+Speed set to (m/s): 43.8826
+CANReader: Received speed: 33.445610 at 47726.328657
+Speed set to (m/s): 33.4456
+CANReader: Received speed: 56.670887 at 47726.338834
+Speed set to (m/s): 56.6709
+CANReader: Received speed: 81.787086 at 47726.349098
+Speed set to (m/s): 81.7871
+CANReader: Received speed: 10.006616 at 47726.359343
+Speed set to (m/s): 10.0066
+CANReader: Received speed: 56.511414 at 47726.369634
+Speed set to (m/s): 56.5114
+CANReader: Received speed: 9.138101 at 47726.379880
+Speed set to (m/s): 9.1381
+CANReader: Received speed: 73.309387 at 47726.390115
+CANReader: Received speed: 39.538254 at 47726.400457
+Speed set to (m/s): 73.3094
+Speed set to (m/s): 39.5383
+CANReader: Received speed: 31.474627 at 47726.410616
+Speed set to (m/s): 31.4746
+CANReader: Received speed: 15.681296 at 47726.420761
+Speed set to (m/s): 15.6813
+CANReader: Received speed: 7.900956 at 47726.430910
+Speed set to (m/s): 7.90096
+CANReader: Received speed: 34.419594 at 47726.441192
+CANReader: Received speed: 64.662224 at 47726.451294
+Speed set to (m/s): 34.4196
+Speed set to (m/s): 64.6622
+CANReader: Received speed: 13.848904 at 47726.461537
+Speed set to (m/s): 13.8489
+CANReader: Received speed: 8.030819 at 47726.471760
+Speed set to (m/s): 8.03082
+CANReader: Received speed: 60.628719 at 47726.482030
+Speed set to (m/s): 60.6287
+CANReader: Received speed: 31.273472 at 47726.492228
+Speed set to (m/s): 31.2735
+CANReader: Received speed: 1.994972 at 47726.502387
+Speed set to (m/s): 1.99497
+CANReader: Received speed: 5.232943 at 47726.512593
+Speed set to (m/s): 5.23294
+CANReader: Received speed: 80.468353 at 47726.522813
+CANReader: Received speed: 42.609360 at 47726.533082
+Speed set to (m/s): 80.4684
+Speed set to (m/s): 42.6094
+CANReader: Received speed: 46.423061 at 47726.543311
+Speed set to (m/s): 46.4231
+CANReader: Received speed: 41.589985 at 47726.553530
+Speed set to (m/s): 41.59
+CANReader: Received speed: 36.313366 at 47726.563818
+Speed set to (m/s): 36.3134
+CANReader: Received speed: 43.487549 at 47726.574076
+CANReader: Received speed: 13.418907 at 47726.584462
+Speed set to (m/s): 43.4875
+Speed set to (m/s): 13.4189
+CANReader: Received speed: 32.855930 at 47726.594788
+Speed set to (m/s): 32.8559
+CANReader: Received speed: 88.240852 at 47726.605029
+Speed set to (m/s): 88.2409
+CANReader: Received speed: 93.815880 at 47726.615227
+Speed set to (m/s): 93.8159
+CANReader: Received speed: 26.697550 at 47726.625462
+Speed set to (m/s): 26.6975
+CANReader: Received speed: 17.646957 at 47726.635792
+Speed set to (m/s): 17.647
+CANReader: Received speed: 2.197498 at 47726.645986
+Speed set to (m/s): 2.1975
+CANReader: Received speed: 98.534241 at 47726.656192
+CANReader: Received speed: 25.662956 at 47726.666434
+Speed set to (m/s): 98.5342
+Speed set to (m/s): 25.663
+CANReader: Received speed: 60.906929 at 47726.676574
+Speed set to (m/s): 60.9069
+CANReader: Received speed: 90.046913 at 47726.686728
+Speed set to (m/s): 90.0469
+CANReader: Received speed: 92.311493 at 47726.696954
+Speed set to (m/s): 92.3115
+CANReader: Received speed: 72.256569 at 47726.707224
+CANReader: Received speed: 9.384403 at 47726.717464
+Speed set to (m/s): 72.2566
+Speed set to (m/s): 9.3844
+CANReader: Received speed: 54.786671 at 47726.727690
+Speed set to (m/s): 54.7867
+CANReader: Received speed: 43.013992 at 47726.737898
+Speed set to (m/s): 43.014
+CANReader: Received speed: 10.619493 at 47726.748130
+Speed set to (m/s): 10.6195
+CANReader: Received speed: 2.663013 at 47726.758272
+Speed set to (m/s): 2.66301
+CANReader: Received speed: 37.502487 at 47726.768420
+Speed set to (m/s): 37.5025
+CANReader: Received speed: 30.874220 at 47726.778612
+Speed set to (m/s): 30.8742
+CANReader: Received speed: 73.819458 at 47726.788858
+CANReader: Received speed: 29.376434 at 47726.799069
+Speed set to (m/s): 73.8195
+Speed set to (m/s): 29.3764
+CANReader: Received speed: 88.491974 at 47726.809293
+Speed set to (m/s): 88.492
+CANReader: Received speed: 6.760802 at 47726.819553
+Speed set to (m/s): 6.7608
+CANReader: Received speed: 51.672585 at 47726.829707
+Speed set to (m/s): 51.6726
+CANReader: Received speed: 94.849953 at 47726.839892
+CANReader: Received speed: 75.938057 at 47726.850177
+Speed set to (m/s): 94.85
+Speed set to (m/s): 75.9381
+CANReader: Received speed: 31.327024 at 47726.860378
+Speed set to (m/s): 31.327
+CANReader: Received speed: 51.658440 at 47726.870637
+Speed set to (m/s): 51.6584
+CANReader: Received speed: 61.107372 at 47726.880906
+Speed set to (m/s): 61.1074
+CANReader: Received speed: 26.576674 at 47726.891134
+Speed set to (m/s): 26.5767
+CANReader: Received speed: 82.637062 at 47726.901384
+Speed set to (m/s): 82.6371
+CANReader: Received speed: 25.501274 at 47726.911602
+Speed set to (m/s): 25.5013
+CANReader: Received speed: 81.309685 at 47726.921817
+Speed set to (m/s): 81.3097
+CANReader: Received speed: 23.445536 at 47726.932071
+Speed set to (m/s): 23.4455
+CANReader: Received speed: 3.214868 at 47726.942321
+Speed set to (m/s): 3.21487
+CANReader: Received speed: 64.451485 at 47726.952560
+Speed set to (m/s): 64.4515
+CANReader: Received speed: 54.661507 at 47726.962673
+Speed set to (m/s): 54.6615
+CANReader: Received speed: 40.925568 at 47726.972846
+CANReader: Received speed: 3.084544 at 47726.983093
+Speed set to (m/s): 40.9256
+Speed set to (m/s): 3.08454
+CANReader: Received speed: 41.485107 at 47726.993386
+Speed set to (m/s): 41.4851
+CANReader: Received speed: 89.731674 at 47727.003525
+Speed set to (m/s): 89.7317
+CANReader: Received speed: 58.425838 at 47727.013756
+Speed set to (m/s): 58.4258
+CANReader: Received speed: 68.258324 at 47727.023971
+Speed set to (m/s): 68.2583
+CANReader: Received speed: 91.294083 at 47727.034194
+Speed set to (m/s): 91.2941
+CANReader: Received speed: 89.159134 at 47727.044345
+Speed set to (m/s): 89.1591
+CANReader: Received speed: 76.272003 at 47727.054469
+Speed set to (m/s): 76.272
+CANReader: Received speed: 89.817772 at 47727.064626
+Speed set to (m/s): 89.8178
+CANReader: Received speed: 45.959820 at 47727.074751
+Speed set to (m/s): 45.9598
+CANReader: Received speed: 1.205048 at 47727.084898
+Speed set to (m/s): 1.20505
+CANReader: Received speed: 3.067598 at 47727.095163
+Speed set to (m/s): 3.0676
+CANReader: Received speed: 25.080990 at 47727.105281
+CANReader: Received speed: 80.595085 at 47727.115397
+Speed set to (m/s): 25.081
+Speed set to (m/s): 80.5951
+CANReader: Received speed: 56.295925 at 47727.125553
+Speed set to (m/s): 56.2959
+CANReader: Received speed: 17.404396 at 47727.135699
+Speed set to (m/s): 17.4044
+CANReader: Received speed: 41.469833 at 47727.145858
+Speed set to (m/s): 41.4698
+CANReader: Received speed: 73.450607 at 47727.155988
+CANReader: Received speed: 25.977936 at 47727.166255
+Speed set to (m/s): 73.4506
+Speed set to (m/s): 25.9779
+CANReader: Received speed: 87.158165 at 47727.176399
+Speed set to (m/s): 87.1582
+CANReader: Received speed: 43.013344 at 47727.186585
+Speed set to (m/s): 43.0133
+CANReader: Received speed: 57.724453 at 47727.196714
+Speed set to (m/s): 57.7245
+CANReader: Received speed: 43.919773 at 47727.206936
+Speed set to (m/s): 43.9198
+CANReader: Received speed: 72.494804 at 47727.217149
+Speed set to (m/s): 72.4948
+CANReader: Received speed: 43.988235 at 47727.227376
+Speed set to (m/s): 43.9882
+CANReader: Received speed: 33.574043 at 47727.237553
+Speed set to (m/s): 33.574
+CANReader: Received speed: 77.456100 at 47727.247773
+Speed set to (m/s): 77.4561
+CANReader: Received speed: 52.306099 at 47727.257973
+Speed set to (m/s): 52.3061
+CANReader: Received speed: 75.526634 at 47727.268240
+Speed set to (m/s): 75.5266
+CANReader: Received speed: 35.103519 at 47727.278328
+Speed set to (m/s): 35.1035
+CANReader: Received speed: 56.839275 at 47727.288570
+CANReader: Received speed: 47.124447 at 47727.298795
+Speed set to (m/s): 56.8393
+Speed set to (m/s): 47.1244
+CANReader: Received speed: 18.944723 at 47727.309035
+Speed set to (m/s): 18.9447
+CANReader: Received speed: 46.109356 at 47727.319268
+Speed set to (m/s): 46.1094
+CANReader: Received speed: 0.508563 at 47727.329411
+Speed set to (m/s): 0.508563
+CANReader: Received speed: 73.695930 at 47727.339569
+CANReader: Received speed: 51.844078 at 47727.349630
+Speed set to (m/s): 73.6959
+Speed set to (m/s): 51.8441
+CANReader: Received speed: 85.233421 at 47727.359805
+Speed set to (m/s): 85.2334
+CANReader: Received speed: 11.793748 at 47727.370096
+Speed set to (m/s): 11.7937
+CANReader: Received speed: 30.723322 at 47727.380290
+Speed set to (m/s): 30.7233
+CANReader: Received speed: 13.749679 at 47727.390449
+Speed set to (m/s): 13.7497
+CANReader: Received speed: 99.014572 at 47727.400645
+Speed set to (m/s): 99.0146
+CANReader: Received speed: 36.295280 at 47727.410849
+Speed set to (m/s): 36.2953
+CANReader: Received speed: 89.399170 at 47727.421094
+Speed set to (m/s): 89.3992
+CANReader: Received speed: 33.511143 at 47727.431376
+Speed set to (m/s): 33.5111
+CANReader: Received speed: 88.243271 at 47727.441499
+Speed set to (m/s): 88.2433
+CANReader: Received speed: 56.433208 at 47727.451621
+Speed set to (m/s): 56.4332
+CANReader: Received speed: 74.682686 at 47727.461822
+Speed set to (m/s): 74.6827
+CANReader: Received speed: 59.880932 at 47727.471969
+CANReader: Received speed: 93.265137 at 47727.482186
+Speed set to (m/s): 59.8809
+Speed set to (m/s): 93.2651
+CANReader: Received speed: 45.429306 at 47727.492418
+Speed set to (m/s): 45.4293
+CANReader: Received speed: 53.697056 at 47727.502726
+Speed set to (m/s): 53.6971
+CANReader: Received speed: 12.228213 at 47727.512969
+Speed set to (m/s): 12.2282
+CANReader: Received speed: 58.364998 at 47727.523200
+CANReader: Received speed: 91.349754 at 47727.533365
+Speed set to (m/s): 58.365
+Speed set to (m/s): 91.3498
+CANReader: Received speed: 3.553922 at 47727.543646
+Speed set to (m/s): 3.55392
+CANReader: Received speed: 90.316956 at 47727.553867
+Speed set to (m/s): 90.317
+CANReader: Received speed: 33.168968 at 47727.564207
+Speed set to (m/s): 33.169
+CANReader: Received speed: 94.084076 at 47727.574410
+Speed set to (m/s): 94.0841
+CANReader: Received speed: 85.178162 at 47727.584682
+Speed set to (m/s): 85.1782
+CANReader: Received speed: 68.278290 at 47727.594911
+Speed set to (m/s): 68.2783
+CANReader: Received speed: 50.708504 at 47727.605154
+CANReader: Received speed: 33.678253 at 47727.615376
+Speed set to (m/s): 50.7085
+Speed set to (m/s): 33.6783
+CANReader: Received speed: 68.042999 at 47727.625600
+Speed set to (m/s): 68.043
+CANReader: Received speed: 35.498577 at 47727.635741
+Speed set to (m/s): 35.4986
+CANReader: Received speed: 92.668709 at 47727.645991
+Speed set to (m/s): 92.6687
+CANReader: Received speed: 12.477143 at 47727.656221
+CANReader: Received speed: 24.504429 at 47727.666407
+Speed set to (m/s): 12.4771
+Speed set to (m/s): 24.5044
+CANReader: Received speed: 27.654766 at 47727.676669
+Speed set to (m/s): 27.6548
+CANReader: Received speed: 52.787567 at 47727.686799
+Speed set to (m/s): 52.7876
+CANReader: Received speed: 78.052528 at 47727.696946
+Speed set to (m/s): 78.0525
+CANReader: Received speed: 32.087807 at 47727.707198
+Speed set to (m/s): 32.0878
+CANReader: Received speed: 13.013853 at 47727.717411
+Speed set to (m/s): 13.0139
+CANReader: Received speed: 4.838425 at 47727.727478
+Speed set to (m/s): 4.83842
+CANReader: Received speed: 15.599442 at 47727.737680
+CANReader: Received speed: 2.102368 at 47727.747898
+Speed set to (m/s): 15.5994
+Speed set to (m/s): 2.10237
+CANReader: Received speed: 42.510391 at 47727.758123
+Speed set to (m/s): 42.5104
+CANReader: Received speed: 63.421829 at 47727.768273
+Speed set to (m/s): 63.4218
+CANReader: Received speed: 15.158563 at 47727.778514
+Speed set to (m/s): 15.1586
+CANReader: Received speed: 13.414499 at 47727.788741
+Speed set to (m/s): 13.4145
+CANReader: Received speed: 38.788437 at 47727.798883
+Speed set to (m/s): 38.7884
+CANReader: Received speed: 97.285011 at 47727.809107
+Speed set to (m/s): 97.285
+CANReader: Received speed: 85.029083 at 47727.819258
+CANReader: Received speed: 16.033941 at 47727.829536
+Speed set to (m/s): 85.0291
+Speed set to (m/s): 16.0339
+CANReader: Received speed: 19.003321 at 47727.839688
+Speed set to (m/s): 19.0033
+CANReader: Received speed: 8.367554 at 47727.849966
+Speed set to (m/s): 8.36755
+CANReader: Received speed: 75.687340 at 47727.860227
+Speed set to (m/s): 75.6873
+CANReader: Received speed: 62.712532 at 47727.870342
+CANReader: Received speed: 90.936050 at 47727.880635
+Speed set to (m/s): 62.7125
+Speed set to (m/s): 90.9361
+CANReader: Received speed: 31.109970 at 47727.890732
+Speed set to (m/s): 31.11
+CANReader: Received speed: 88.842468 at 47727.901136
+Speed set to (m/s): 88.8425
+CANReader: Received speed: 27.779770 at 47727.911431
+Speed set to (m/s): 27.7798
+CANReader: Received speed: 76.620468 at 47727.921632
+Speed set to (m/s): 76.6205
+CANReader: Received speed: 93.198547 at 47727.931880
+Speed set to (m/s): 93.1985
+CANReader: Received speed: 31.499094 at 47727.942069
+Speed set to (m/s): 31.4991
+CANReader: Received speed: 78.744888 at 47727.952180
+Speed set to (m/s): 78.7449
+CANReader: Received speed: 64.896332 at 47727.962372
+Speed set to (m/s): 64.8963
+CANReader: Received speed: 55.672764 at 47727.972613
+Speed set to (m/s): 55.6728
+CANReader: Received speed: 55.801022 at 47727.982771
+Speed set to (m/s): 55.801
+CANReader: Received speed: 95.515503 at 47727.992977
+Speed set to (m/s): 95.5155
+CANReader: Received speed: 10.008224 at 47728.003294
+CANReader: Received speed: 97.975845 at 47728.013534
+Speed set to (m/s): 10.0082
+Speed set to (m/s): 97.9758
+CANReader: Received speed: 98.074165 at 47728.023716
+Speed set to (m/s): 98.0742
+CANReader: Received speed: 51.331043 at 47728.033881
+Speed set to (m/s): 51.331
+CANReader: Received speed: 71.836296 at 47728.044020
+Speed set to (m/s): 71.8363
+CANReader: Received speed: 53.021263 at 47728.054395
+Speed set to (m/s): 53.0213
+CANReader: Received speed: 5.509948 at 47728.064667
+Speed set to (m/s): 5.50995
+CANReader: Received speed: 81.583618 at 47728.074936
+Speed set to (m/s): 81.5836
+CANReader: Received speed: 54.641682 at 47728.085293
+Speed set to (m/s): 54.6417
+CANReader: Received speed: 3.555928 at 47728.095533
+Speed set to (m/s): 3.55593
+CANReader: Received speed: 27.863535 at 47728.105763
+Speed set to (m/s): 27.8635
+CANReader: Received speed: 42.106724 at 47728.116098
+Speed set to (m/s): 42.1067
+CANReader: Received speed: 71.555939 at 47728.126424
+Speed set to (m/s): 71.5559
+CANReader: Received speed: 28.934170 at 47728.136699
+CANReader: Received speed: 55.773754 at 47728.146821
+Speed set to (m/s): 28.9342
+Speed set to (m/s): 55.7738
+CANReader: Received speed: 19.052177 at 47728.157145
+Speed set to (m/s): 19.0522
+CANReader: Received speed: 27.322224 at 47728.167406
+Speed set to (m/s): 27.3222
+CANReader: Received speed: 36.931854 at 47728.177741
+Speed set to (m/s): 36.9319
+CANReader: Received speed: 32.841366 at 47728.187995
+Speed set to (m/s): 32.8414
+CANReader: Received speed: 93.192024 at 47728.198184
+Speed set to (m/s): 93.192
+CANReader: Received speed: 93.900642 at 47728.208304
+Speed set to (m/s): 93.9006
+CANReader: Received speed: 75.281090 at 47728.218550
+CANReader: Received speed: 55.657681 at 47728.228956
+Speed set to (m/s): 75.2811
+Speed set to (m/s): 55.6577
+CANReader: Received speed: 39.914539 at 47728.239101
+Speed set to (m/s): 39.9145
+CANReader: Received speed: 13.099938 at 47728.249358
+Speed set to (m/s): 13.0999
+CANReader: Received speed: 41.229717 at 47728.259614
+Speed set to (m/s): 41.2297
+CANReader: Received speed: 56.966339 at 47728.269777
+CANReader: Received speed: 82.481834 at 47728.280079
+Speed set to (m/s): 56.9663
+Speed set to (m/s): 82.4818
+CANReader: Received speed: 75.710045 at 47728.290308
+Speed set to (m/s): 75.71
+CANReader: Received speed: 73.710564 at 47728.300584
+Speed set to (m/s): 73.7106
+CANReader: Received speed: 33.185905 at 47728.310873
+Speed set to (m/s): 33.1859
+CANReader: Received speed: 77.727661 at 47728.321140
+Speed set to (m/s): 77.7277
+CANReader: Received speed: 92.903748 at 47728.331440
+Speed set to (m/s): 92.9037
+CANReader: Received speed: 69.344421 at 47728.341595
+Speed set to (m/s): 69.3444
+CANReader: Received speed: 4.032556 at 47728.351753
+CANReader: Received speed: 46.751915 at 47728.362060
+Speed set to (m/s): 4.03256
+Speed set to (m/s): 46.7519
+CANReader: Received speed: 27.401834 at 47728.372195
+Speed set to (m/s): 27.4018
+CANReader: Received speed: 40.656013 at 47728.382505
+Speed set to (m/s): 40.656
+CANReader: Received speed: 39.656803 at 47728.392667
+Speed set to (m/s): 39.6568
+CANReader: Received speed: 21.838816 at 47728.403033
+CANReader: Received speed: 44.801716 at 47728.413264
+Speed set to (m/s): 21.8388
+Speed set to (m/s): 44.8017
+CANReader: Received speed: 33.157364 at 47728.423483
+Speed set to (m/s): 33.1574
+CANReader: Received speed: 84.791527 at 47728.433650
+Speed set to (m/s): 84.7915
+CANReader: Received speed: 29.088467 at 47728.444708
+Speed set to (m/s): 29.0885
+CANReader: Received speed: 50.824398 at 47728.454913
+Speed set to (m/s): 50.8244
+CANReader: Received speed: 14.969699 at 47728.465360
+Speed set to (m/s): 14.9697
+CANReader: Received speed: 74.483978 at 47728.475510
+Speed set to (m/s): 74.484
+CANReader: Received speed: 26.954565 at 47728.485681
+CANReader: Received speed: 74.125626 at 47728.495971
+Speed set to (m/s): 26.9546
+Speed set to (m/s): 74.1256
+CANReader: Received speed: 28.129255 at 47728.506043
+Speed set to (m/s): 28.1293
+CANReader: Received speed: 2.565496 at 47728.516458
+Speed set to (m/s): 2.5655
+CANReader: Received speed: 72.867989 at 47728.526561
+Speed set to (m/s): 72.868
+CANReader: Received speed: 45.641315 at 47728.536658
+CANReader: Received speed: 89.099518 at 47728.547033
+Speed set to (m/s): 45.6413
+Speed set to (m/s): 89.0995
+CANReader: Received speed: 88.745773 at 47728.557212
+Speed set to (m/s): 88.7458
+CANReader: Received speed: 72.810654 at 47728.567462
+Speed set to (m/s): 72.8107
+CANReader: Received speed: 4.267509 at 47728.577717
+Speed set to (m/s): 4.26751
+CANReader: Received speed: 38.856609 at 47728.587970
+Speed set to (m/s): 38.8566
+CANReader: Received speed: 97.028069 at 47728.598229
+Speed set to (m/s): 97.0281
+CANReader: Received speed: 73.540489 at 47728.608403
+Speed set to (m/s): 73.5405
+CANReader: Received speed: 81.110291 at 47728.618706
+CANReader: Received speed: 9.368443 at 47728.629073
+Speed set to (m/s): 81.1103
+Speed set to (m/s): 9.36844
+CANReader: Received speed: 86.536545 at 47728.639281
+Speed set to (m/s): 86.5365
+CANReader: Received speed: 21.923933 at 47728.649530
+Speed set to (m/s): 21.9239
+CANReader: Received speed: 44.446995 at 47728.659787
+Speed set to (m/s): 44.447
+CANReader: Received speed: 40.005375 at 47728.670028
+CANReader: Received speed: 56.778152 at 47728.680265
+Speed set to (m/s): 40.0054
+Speed set to (m/s): 56.7782
+CANReader: Received speed: 32.884453 at 47728.690453
+Speed set to (m/s): 32.8845
+CANReader: Received speed: 62.725967 at 47728.700609
+Speed set to (m/s): 62.726
+CANReader: Received speed: 88.221695 at 47728.710771
+Speed set to (m/s): 88.2217
+CANReader: Received speed: 28.823986 at 47728.720936
+Speed set to (m/s): 28.824
+CANReader: Received speed: 2.139080 at 47728.731080
+Speed set to (m/s): 2.13908
+CANReader: Received speed: 75.103081 at 47728.741291
+Speed set to (m/s): 75.1031
+CANReader: Received speed: 41.393288 at 47728.751433
+CANReader: Received speed: 52.369720 at 47728.761720
+Speed set to (m/s): 41.3933
+Speed set to (m/s): 52.3697
+CANReader: Received speed: 77.639587 at 47728.771935
+Speed set to (m/s): 77.6396
+CANReader: Received speed: 2.069860 at 47728.782232
+Speed set to (m/s): 2.06986
+CANReader: Received speed: 80.439140 at 47728.792348
+Speed set to (m/s): 80.4391
+CANReader: Received speed: 17.685755 at 47728.802481
+CANReader: Received speed: 66.098717 at 47728.812708
+Speed set to (m/s): 17.6858
+Speed set to (m/s): 66.0987
+CANReader: Received speed: 97.299431 at 47728.822857
+Speed set to (m/s): 97.2994
+CANReader: Received speed: 51.054268 at 47728.833232
+Speed set to (m/s): 51.0543
+CANReader: Received speed: 6.023080 at 47728.843330
+Speed set to (m/s): 6.02308
+CANReader: Received speed: 6.895708 at 47728.853667
+Speed set to (m/s): 6.89571
+CANReader: Received speed: 3.832229 at 47728.863939
+Speed set to (m/s): 3.83223
+CANReader: Received speed: 69.845161 at 47728.874073
+Speed set to (m/s): 69.8452
+CANReader: Received speed: 49.282856 at 47728.884316
+Speed set to (m/s): 49.2829
+CANReader: Received speed: 64.753517 at 47728.894542
+Speed set to (m/s): 64.7535
+CANReader: Received speed: 63.442123 at 47728.904667
+Speed set to (m/s): 63.4421
+CANReader: Received speed: 12.723403 at 47728.914894
+Speed set to (m/s): 12.7234
+CANReader: Received speed: 32.221420 at 47728.925111
+Speed set to (m/s): 32.2214
+CANReader: Received speed: 94.812752 at 47728.935329
+CANReader: Received speed: 27.278667 at 47728.945656
+Speed set to (m/s): 94.8128
+Speed set to (m/s): 27.2787
+CANReader: Received speed: 85.797890 at 47728.955794
+Speed set to (m/s): 85.7979
+CANReader: Received speed: 33.612354 at 47728.966168
+Speed set to (m/s): 33.6124
+CANReader: Received speed: 75.945213 at 47728.976392
+Speed set to (m/s): 75.9452
+CANReader: Received speed: 53.563320 at 47728.986617
+Speed set to (m/s): 53.5633
+CANReader: Received speed: 17.510986 at 47728.996803
+Speed set to (m/s): 17.511
+CANReader: Received speed: 32.338844 at 47729.007043
+Speed set to (m/s): 32.3388
+CANReader: Received speed: 95.593803 at 47729.017306
+CANReader: Received speed: 27.780014 at 47729.027442
+Speed set to (m/s): 95.5938
+Speed set to (m/s): 27.78
+CANReader: Received speed: 74.499619 at 47729.037595
+Speed set to (m/s): 74.4996
+CANReader: Received speed: 22.457270 at 47729.047908
+Speed set to (m/s): 22.4573
+CANReader: Received speed: 81.065773 at 47729.058272
+Speed set to (m/s): 81.0658
+CANReader: Received speed: 45.809116 at 47729.068395
+CANReader: Received speed: 10.286280 at 47729.078672
+Speed set to (m/s): 45.8091
+Speed set to (m/s): 10.2863
+CANReader: Received speed: 58.234310 at 47729.088779
+Speed set to (m/s): 58.2343
+CANReader: Received speed: 63.635784 at 47729.099064
+Speed set to (m/s): 63.6358
+CANReader: Received speed: 79.539322 at 47729.109315
+Speed set to (m/s): 79.5393
+CANReader: Received speed: 80.600647 at 47729.119513
+Speed set to (m/s): 80.6006
+Speed set to (m/s): 10.3208
+CANReader: Received speed: 10.320781 at 47729.129762
+CANReader: Received speed: 69.084984 at 47729.140074
+Speed set to (m/s): 69.085
+CANReader: Received speed: 61.392349 at 47729.150300
+Speed set to (m/s): 61.3923
+CANReader: Received speed: 43.291046 at 47729.160453
+Speed set to (m/s): 43.291
+CANReader: Received speed: 60.085670 at 47729.170625
+Speed set to (m/s): 60.0857
+CANReader: Received speed: 82.812447 at 47729.180902
+Speed set to (m/s): 82.8124
+CANReader: Received speed: 27.640471 at 47729.191213
+Speed set to (m/s): 27.6405
+CANReader: Received speed: 56.731586 at 47729.201466
+CANReader: Received speed: 33.899086 at 47729.211706
+Speed set to (m/s): 56.7316
+Speed set to (m/s): 33.8991
+CANReader: Received speed: 80.584061 at 47729.221942
+Speed set to (m/s): 80.5841
+CANReader: Received speed: 29.881447 at 47729.232204
+Speed set to (m/s): 29.8814
+CANReader: Received speed: 76.592941 at 47729.242424
+Speed set to (m/s): 76.5929
+CANReader: Received speed: 19.763193 at 47729.252607
+Speed set to (m/s): 19.7632
+CANReader: Received speed: 34.790382 at 47729.262760
+Speed set to (m/s): 34.7904
+CANReader: Received speed: 23.386673 at 47729.272970
+Speed set to (m/s): 23.3867
+CANReader: Received speed: 90.911720 at 47729.283234
+Speed set to (m/s): 90.9117
+CANReader: Received speed: 83.852730 at 47729.293449
+Speed set to (m/s): 83.8527
+CANReader: Received speed: 84.589233 at 47729.303602
+Speed set to (m/s): 84.5892
+CANReader: Received speed: 15.314400 at 47729.313757
+Speed set to (m/s): 15.3144
+CANReader: Received speed: 41.312298 at 47729.323951
+Speed set to (m/s): 41.3123
+CANReader: Received speed: 7.718946 at 47729.334235
+CANReader: Received speed: 44.225674 at 47729.345149
+Speed set to (m/s): 7.71895
+Speed set to (m/s): 44.2257
+CANReader: Received speed: 55.863647 at 47729.354804
+Speed set to (m/s): 55.8636
+CANReader: Received speed: 35.475430 at 47729.365033
+Speed set to (m/s): 35.4754
+CANReader: Received speed: 86.618546 at 47729.375245
+Speed set to (m/s): 86.6185
+CANReader: Received speed: 27.717558 at 47729.385431
+CANReader: Received speed: 99.266647 at 47729.395749
+Speed set to (m/s): 27.7176
+Speed set to (m/s): 99.2666
+CANReader: Received speed: 34.147202 at 47729.405973
+Speed set to (m/s): 34.1472
+CANReader: Received speed: 28.761255 at 47729.416225
+Speed set to (m/s): 28.7613
+CANReader: Received speed: 60.110157 at 47729.426504
+Speed set to (m/s): 60.1102
+CANReader: Received speed: 73.986595 at 47729.436740
+Speed set to (m/s): 73.9866
+CANReader: Received speed: 10.242886 at 47729.447059
+Speed set to (m/s): 10.2429
+CANReader: Received speed: 67.860107 at 47729.457282
+Speed set to (m/s): 67.8601
+CANReader: Received speed: 9.542159 at 47729.467483
+CANReader: Received speed: 14.367557 at 47729.477769
+Speed set to (m/s): 9.54216
+Speed set to (m/s): 14.3676
+CANReader: Received speed: 94.205353 at 47729.487969
+Speed set to (m/s): 94.2054
+CANReader: Received speed: 64.809387 at 47729.498228
+Speed set to (m/s): 64.8094
+CANReader: Received speed: 82.467773 at 47729.508528
+Speed set to (m/s): 82.4678
+CANReader: Received speed: 28.494028 at 47729.518743
+Speed set to (m/s): 28.494
+CANReader: Received speed: 95.773643 at 47729.529058
+Speed set to (m/s): 95.7736
+CANReader: Received speed: 85.578445 at 47729.539209
+Speed set to (m/s): 85.5784
+CANReader: Received speed: 10.939672 at 47729.549428
+Speed set to (m/s): 10.9397
+CANReader: Received speed: 74.691368 at 47729.559690
+Speed set to (m/s): 74.6914
+CANReader: Received speed: 66.948387 at 47729.569825
+CANReader: Received speed: 55.265808 at 47729.580091
+Speed set to (m/s): 66.9484
+Speed set to (m/s): 55.2658
+CANReader: Received speed: 67.336227 at 47729.590301
+Speed set to (m/s): 67.3362
+CANReader: Received speed: 1.735755 at 47729.600472
+Speed set to (m/s): 1.73576
+CANReader: Received speed: 13.145267 at 47729.610606
+Speed set to (m/s): 13.1453
+CANReader: Received speed: 2.765553 at 47729.620760
+Speed set to (m/s): 2.76555
+CANReader: Received speed: 32.129505 at 47729.630962
+Speed set to (m/s): 32.1295
+CANReader: Received speed: 61.231308 at 47729.641116
+Speed set to (m/s): 61.2313
+CANReader: Received speed: 50.227493 at 47729.651230
+CANReader: Received speed: 73.142509 at 47729.661336
+Speed set to (m/s): 50.2275
+Speed set to (m/s): 73.1425
+CANReader: Received speed: 22.075113 at 47729.671421
+Speed set to (m/s): 22.0751
+CANReader: Received speed: 24.358379 at 47729.681488
+Speed set to (m/s): 24.3584
+CANReader: Received speed: 14.588070 at 47729.691583
+Speed set to (m/s): 14.5881
+CANReader: Received speed: 89.145500 at 47729.701652
+CANReader: Received speed: 8.317457 at 47729.711731
+Speed set to (m/s): 89.1455
+Speed set to (m/s): 8.31746
+CANReader: Received speed: 81.910194 at 47729.721833
+Speed set to (m/s): 81.9102
+CANReader: Received speed: 41.374100 at 47729.731964
+Speed set to (m/s): 41.3741
+CANReader: Received speed: 83.367035 at 47729.742229
+Speed set to (m/s): 83.367
+CANReader: Received speed: 11.307701 at 47729.752470
+CANReader: Received speed: 22.842838 at 47729.762763
+Speed set to (m/s): 11.3077
+Speed set to (m/s): 22.8428
+CANReader: Received speed: 36.886616 at 47729.772860
+Speed set to (m/s): 36.8866
+CANReader: Received speed: 11.922073 at 47729.783078
+Speed set to (m/s): 11.9221
+CANReader: Received speed: 68.602409 at 47729.793324
+Speed set to (m/s): 68.6024
+CANReader: Received speed: 1.846970 at 47729.803562
+Speed set to (m/s): 1.84697
+CANReader: Received speed: 94.932945 at 47729.813708
+Speed set to (m/s): 94.9329
+CANReader: Received speed: 83.407181 at 47729.823849
+Speed set to (m/s): 83.4072
+CANReader: Received speed: 10.037767 at 47729.834085
+CANReader: Received speed: 59.354591 at 47729.844306
+Speed set to (m/s): 10.0378
+Speed set to (m/s): 59.3546
+CANReader: Received speed: 77.766136 at 47729.854463
+Speed set to (m/s): 77.7661
+CANReader: Received speed: 18.985134 at 47729.864595
+Speed set to (m/s): 18.9851
+CANReader: Received speed: 91.677460 at 47729.874740
+Speed set to (m/s): 91.6775
+CANReader: Received speed: 76.573906 at 47729.884906
+CANReader: Received speed: 75.607574 at 47729.895212
+Speed set to (m/s): 76.5739
+Speed set to (m/s): 75.6076
+CANReader: Received speed: 98.754082 at 47729.905373
+Speed set to (m/s): 98.7541
+CANReader: Received speed: 74.237236 at 47729.915531
+Speed set to (m/s): 74.2372
+CANReader: Received speed: 2.685924 at 47729.925658
+Speed set to (m/s): 2.68592
+CANReader: Received speed: 72.104057 at 47729.935800
+Speed set to (m/s): 72.1041
+CANReader: Received speed: 19.325239 at 47729.945940
+Speed set to (m/s): 19.3252
+CANReader: Received speed: 15.071857 at 47729.955999
+Speed set to (m/s): 15.0719
+CANReader: Received speed: 72.078415 at 47729.966109
+Speed set to (m/s): 72.0784
+CANReader: Received speed: 71.321487 at 47729.976244
+Speed set to (m/s): 71.3215
+CANReader: Received speed: 71.690865 at 47729.986323
+Speed set to (m/s): 71.6909
+CANReader: Received speed: 63.797058 at 47729.996422
+Speed set to (m/s): 63.7971
+CANReader: Received speed: 6.401067 at 47730.006538
+Speed set to (m/s): 6.40107
+CANReader: Received speed: 6.670238 at 47730.016656
+Speed set to (m/s): 6.67024
+CANReader: Received speed: 93.478355 at 47730.026813
+Speed set to (m/s): 93.4784
+CANReader: Received speed: 67.263916 at 47730.036964
+Speed set to (m/s): 67.2639
+CANReader: Received speed: 31.459480 at 47730.047177
+Speed set to (m/s): 31.4595
+CANReader: Received speed: 8.416476 at 47730.057366
+Speed set to (m/s): 8.41648
+CANReader: Received speed: 8.314080 at 47730.067584
+CANReader: Received speed: 81.895668 at 47730.077776
+Speed set to (m/s): 8.31408
+Speed set to (m/s): 81.8957
+CANReader: Received speed: 22.719887 at 47730.087982
+Speed set to (m/s): 22.7199
+Speed set to (m/s): 51.3013
+CANReader: Received speed: 51.301350 at 47730.098157
+CANReader: Received speed: 6.100595 at 47730.108407
+Speed set to (m/s): 6.10059
+CANReader: Received speed: 81.220337 at 47730.118671
+Speed set to (m/s): 81.2203
+CANReader: Received speed: 36.374969 at 47730.128918
+Speed set to (m/s): 36.375
+CANReader: Received speed: 1.579894 at 47730.139115
+Speed set to (m/s): 1.57989
+CANReader: Received speed: 52.993290 at 47730.149382
+Speed set to (m/s): 52.9933
+CANReader: Received speed: 86.041504 at 47730.159538
+Speed set to (m/s): 86.0415
+CANReader: Received speed: 58.351772 at 47730.169744
+Speed set to (m/s): 58.3518
+CANReader: Received speed: 67.762428 at 47730.179876
+Speed set to (m/s): 67.7624
+CANReader: Received speed: 67.870750 at 47730.190157
+Speed set to (m/s): 67.8708
+CANReader: Received speed: 53.805714 at 47730.200284
+CANReader: Received speed: 57.141869 at 47730.210399
+Speed set to (m/s): 53.8057
+Speed set to (m/s): 57.1419
+CANReader: Received speed: 70.725143 at 47730.220568
+Speed set to (m/s): 70.7251
+CANReader: Received speed: 54.169327 at 47730.230678
+Speed set to (m/s): 54.1693
+CANReader: Received speed: 20.970837 at 47730.240821
+Speed set to (m/s): 20.9708
+CANReader: Received speed: 94.140785 at 47730.250932
+CANReader: Received speed: 60.362255 at 47730.261052
+Speed set to (m/s): 94.1408
+Speed set to (m/s): 60.3623
+CANReader: Received speed: 54.751854 at 47730.271274
+Speed set to (m/s): 54.7519
+Speed set to (m/s): 85.3829
+CANReader: Received speed: 85.382904 at 47730.281259
+CANReader: Received speed: 57.922058 at 47730.291334
+Speed set to (m/s): 57.9221
+CANReader: Received speed: 24.996025 at 47730.301399
+CANReader: Received speed: 34.479542 at 47730.311529
+Speed set to (m/s): 24.996
+Speed set to (m/s): 34.4795
+CANReader: Received speed: 39.564243 at 47730.321649
+Speed set to (m/s): 39.5642
+CANReader: Received speed: 8.065178 at 47730.331760
+Speed set to (m/s): 8.06518
+CANReader: Received speed: 51.593311 at 47730.341851
+Speed set to (m/s): 51.5933
+CANReader: Received speed: 50.972046 at 47730.351952
+CANReader: Received speed: 85.336823 at 47730.362066
+Speed set to (m/s): 50.972
+Speed set to (m/s): 85.3368
+CANReader: Received speed: 43.107597 at 47730.372186
+Speed set to (m/s): 43.1076
+CANReader: Received speed: 45.865173 at 47730.382265
+Speed set to (m/s): 45.8652
+CANReader: Received speed: 80.364281 at 47730.392333
+Speed set to (m/s): 80.3643
+CANReader: Received speed: 38.942631 at 47730.402398
+Speed set to (m/s): 38.9426
+CANReader: Received speed: 42.569942 at 47730.412514
+Speed set to (m/s): 42.5699
+CANReader: Received speed: 93.491348 at 47730.422608
+Speed set to (m/s): 93.4913
+CANReader: Received speed: 65.708855 at 47730.432826
+CANReader: Received speed: 21.298500 at 47730.443077
+Speed set to (m/s): 65.7089
+Speed set to (m/s): 21.2985
+CANReader: Received speed: 93.054588 at 47730.453312
+Speed set to (m/s): 93.0546
+CANReader: Received speed: 67.351028 at 47730.463443
+Speed set to (m/s): 67.351
+CANReader: Received speed: 16.017544 at 47730.473693
+Speed set to (m/s): 16.0175
+CANReader: Received speed: 68.793190 at 47730.483908
+CANReader: Received speed: 76.255196 at 47730.494226
+Speed set to (m/s): 68.7932
+Speed set to (m/s): 76.2552
+CANReader: Received speed: 16.232761 at 47730.504381
+Speed set to (m/s): 16.2328
+CANReader: Received speed: 71.957413 at 47730.514520
+Speed set to (m/s): 71.9574
+CANReader: Received speed: 87.372063 at 47730.524785
+Speed set to (m/s): 87.3721
+CANReader: Received speed: 44.413757 at 47730.535059
+Speed set to (m/s): 44.4138
+CANReader: Received speed: 79.309753 at 47730.545308
+Speed set to (m/s): 79.3098
+CANReader: Received speed: 93.874023 at 47730.555422
+Speed set to (m/s): 93.874
+CANReader: Received speed: 59.901119 at 47730.565655
+Speed set to (m/s): 59.9011
+CANReader: Received speed: 71.090988 at 47730.575991
+Speed set to (m/s): 71.091
+CANReader: Received speed: 65.213371 at 47730.586223
+Speed set to (m/s): 65.2134
+CANReader: Received speed: 72.839043 at 47730.596310
+Speed set to (m/s): 72.839
+CANReader: Received speed: 5.666083 at 47730.606453
+Speed set to (m/s): 5.66608
+CANReader: Received speed: 25.122213 at 47730.616698
+CANReader: Received speed: 45.060604 at 47730.626902
+Speed set to (m/s): 25.1222
+Speed set to (m/s): 45.0606
+CANReader: Received speed: 77.741562 at 47730.637141
+Speed set to (m/s): 77.7416
+CANReader: Received speed: 55.056145 at 47730.647210
+Speed set to (m/s): 55.0561
+CANReader: Received speed: 53.003407 at 47730.657461
+Speed set to (m/s): 53.0034
+CANReader: Received speed: 23.614466 at 47730.667721
+CANReader: Received speed: 93.045311 at 47730.677879
+Speed set to (m/s): 23.6145
+Speed set to (m/s): 93.0453
+CANReader: Received speed: 9.588089 at 47730.688107
+Speed set to (m/s): 9.58809
+CANReader: Received speed: 16.720137 at 47730.698278
+Speed set to (m/s): 16.7201
+CANReader: Received speed: 64.575455 at 47730.708546
+Speed set to (m/s): 64.5755
+CANReader: Received speed: 97.510925 at 47730.718771
+Speed set to (m/s): 97.5109
+Speed set to (m/s): 42.4785
+CANReader: Received speed: 42.478516 at 47730.728936
+CANReader: Received speed: 87.715950 at 47730.739165
+Speed set to (m/s): 87.716
+CANReader: Received speed: 80.113594 at 47730.749305
+CANReader: Received speed: 52.981663 at 47730.759487
+Speed set to (m/s): 80.1136
+Speed set to (m/s): 52.9817
+CANReader: Received speed: 49.443253 at 47730.769597
+Speed set to (m/s): 49.4433
+CANReader: Received speed: 75.688934 at 47730.779815
+Speed set to (m/s): 75.6889
+CANReader: Received speed: 55.437244 at 47730.790047
+Speed set to (m/s): 55.4372
+CANReader: Received speed: 65.424416 at 47730.800252
+CANReader: Received speed: 94.125931 at 47730.810504
+Speed set to (m/s): 65.4244
+Speed set to (m/s): 94.1259
+CANReader: Received speed: 40.631630 at 47730.820643
+Speed set to (m/s): 40.6316
+CANReader: Received speed: 52.183636 at 47730.830804
+Speed set to (m/s): 52.1836
+CANReader: Received speed: 27.622831 at 47730.841096
+Speed set to (m/s): 27.6228
+CANReader: Received speed: 48.712509 at 47730.851299
+Speed set to (m/s): 48.7125
+Speed set to (m/s): 70.3882
+CANReader: Received speed: 70.388161 at 47730.861518
+CANReader: Received speed: 13.144257 at 47730.871700
+Speed set to (m/s): 13.1443
+CANReader: Received speed: 84.933540 at 47730.881851
+Speed set to (m/s): 84.9335
+CANReader: Received speed: 47.533455 at 47730.892230
+Speed set to (m/s): 47.5335
+CANReader: Received speed: 54.171173 at 47730.902425
+Speed set to (m/s): 54.1712
+CANReader: Received speed: 96.836304 at 47730.912549
+Speed set to (m/s): 96.8363
+CANReader: Received speed: 10.923080 at 47730.922671
+Speed set to (m/s): 10.9231
+CANReader: Received speed: 20.769331 at 47730.932835
+CANReader: Received speed: 73.493324 at 47730.943097
+Speed set to (m/s): 20.7693
+Speed set to (m/s): 73.4933
+CANReader: Received speed: 93.483101 at 47730.953279
+Speed set to (m/s): 93.4831
+CANReader: Received speed: 4.515562 at 47730.963418
+Speed set to (m/s): 4.51556
+CANReader: Received speed: 72.273560 at 47730.973748
+Speed set to (m/s): 72.2736
+CANReader: Received speed: 38.066204 at 47730.983961
+CANReader: Received speed: 44.794254 at 47730.994229
+Speed set to (m/s): 38.0662
+Speed set to (m/s): 44.7943
+CANReader: Received speed: 93.548164 at 47731.004331
+Speed set to (m/s): 93.5482
+CANReader: Received speed: 80.415894 at 47731.014462
+Speed set to (m/s): 80.4159
+CANReader: Received speed: 74.465019 at 47731.024716
+Speed set to (m/s): 74.465
+CANReader: Received speed: 84.162094 at 47731.034861
+Speed set to (m/s): 84.1621
+CANReader: Received speed: 9.877522 at 47731.044960
+Speed set to (m/s): 9.87752
+CANReader: Received speed: 72.418503 at 47731.055138
+Speed set to (m/s): 72.4185
+CANReader: Received speed: 9.001199 at 47731.065350
+CANReader: Received speed: 39.765347 at 47731.075578
+Speed set to (m/s): 9.0012
+Speed set to (m/s): 39.7653
+CANReader: Received speed: 28.999598 at 47731.085800
+Speed set to (m/s): 28.9996
+CANReader: Received speed: 92.910736 at 47731.096248
+Speed set to (m/s): 92.9107
+CANReader: Received speed: 99.028610 at 47731.106379
+Speed set to (m/s): 99.0286
+CANReader: Received speed: 73.522430 at 47731.116532
+CANReader: Received speed: 45.611103 at 47731.126749
+Speed set to (m/s): 73.5224
+Speed set to (m/s): 45.6111
+CANReader: Received speed: 40.946110 at 47731.136961
+Speed set to (m/s): 40.9461
+CANReader: Received speed: 94.822021 at 47731.146983
+CANReader: Received speed: 10.256152 at 47731.157290
+Speed set to (m/s): 94.822
+Speed set to (m/s): 10.2562
+CANReader: Received speed: 24.971148 at 47731.167429
+Speed set to (m/s): 24.9711
+CANReader: Received speed: 98.679588 at 47731.177564
+Speed set to (m/s): 98.6796
+CANReader: Received speed: 2.969026 at 47731.187817
+Speed set to (m/s): 2.96903
+CANReader: Received speed: 87.019424 at 47731.198023
+Speed set to (m/s): 87.0194
+CANReader: Received speed: 29.998409 at 47731.208283
+Speed set to (m/s): 29.9984
+CANReader: Received speed: 40.804012 at 47731.218484
+Speed set to (m/s): 40.804
+CANReader: Received speed: 41.717693 at 47731.228721
+Speed set to (m/s): 41.7177
+CANReader: Received speed: 38.468834 at 47731.238980
+Speed set to (m/s): 38.4688
+CANReader: Received speed: 50.199867 at 47731.249283
+CANReader: Received speed: 56.999195 at 47731.259560
+Speed set to (m/s): 50.1999
+Speed set to (m/s): 56.9992
+CANReader: Received speed: 83.056496 at 47731.269928
+Speed set to (m/s): 83.0565
+CANReader: Received speed: 52.833015 at 47731.280180
+Speed set to (m/s): 52.833
+CANReader: Received speed: 6.705729 at 47731.290626
+Speed set to (m/s): 6.70573
+CANReader: Received speed: 30.756144 at 47731.300781
+Speed set to (m/s): 30.7561
+Speed set to (m/s): 22.6094
+CANReader: Received speed: 22.609367 at 47731.311022
+CANReader: Received speed: 53.341763 at 47731.321326
+Speed set to (m/s): 53.3418
+CANReader: Received speed: 49.754570 at 47731.331480
+Speed set to (m/s): 49.7546
+CANReader: Received speed: 69.081924 at 47731.341716
+Speed set to (m/s): 69.0819
+CANReader: Received speed: 59.630047 at 47731.351940
+Speed set to (m/s): 59.63
+CANReader: Received speed: 6.058499 at 47731.362066
+Speed set to (m/s): 6.0585
+CANReader: Received speed: 23.299582 at 47731.372149
+Speed set to (m/s): 23.2996
+CANReader: Received speed: 56.354683 at 47731.382314
+CANReader: Received speed: 41.116398 at 47731.392556
+Speed set to (m/s): 56.3547
+Speed set to (m/s): 41.1164
+CANReader: Received speed: 90.592163 at 47731.402700
+Speed set to (m/s): 90.5922
+CANReader: Received speed: 64.239426 at 47731.412872
+Speed set to (m/s): 64.2394
+CANReader: Received speed: 56.554665 at 47731.423088
+Speed set to (m/s): 56.5547
+CANReader: Received speed: 42.036160 at 47731.433312
+CANReader: Received speed: 42.344299 at 47731.443518
+Speed set to (m/s): 42.0362
+Speed set to (m/s): 42.3443
+CANReader: Received speed: 31.080505 at 47731.453774
+Speed set to (m/s): 31.0805
+CANReader: Received speed: 19.545565 at 47731.463998
+Speed set to (m/s): 19.5456
+CANReader: Received speed: 4.569848 at 47731.474408
+Speed set to (m/s): 4.56985
+CANReader: Received speed: 54.956963 at 47731.484492
+Speed set to (m/s): 54.957
+CANReader: Received speed: 9.728820 at 47731.494664
+Speed set to (m/s): 9.72882
+CANReader: Received speed: 69.500427 at 47731.504783
+Speed set to (m/s): 69.5004
+CANReader: Received speed: 34.204502 at 47731.515037
+CANReader: Received speed: 42.147419 at 47731.525272
+Speed set to (m/s): 34.2045
+Speed set to (m/s): 42.1474
+CANReader: Received speed: 8.530616 at 47731.535435
+Speed set to (m/s): 8.53062
+CANReader: Received speed: 53.599064 at 47731.545672
+Speed set to (m/s): 53.5991
+CANReader: Received speed: 66.988182 at 47731.555943
+Speed set to (m/s): 66.9882
+CANReader: Received speed: 74.875389 at 47731.566259
+CANReader: Received speed: 4.913762 at 47731.576530
+Speed set to (m/s): 74.8754
+Speed set to (m/s): 4.91376
+CANReader: Received speed: 60.737194 at 47731.586858
+Speed set to (m/s): 60.7372
+CANReader: Received speed: 97.958336 at 47731.597152
+Speed set to (m/s): 97.9583
+CANReader: Received speed: 53.928596 at 47731.607369
+Speed set to (m/s): 53.9286
+CANReader: Received speed: 63.959919 at 47731.617510
+Speed set to (m/s): 63.9599
+CANReader: Received speed: 52.641232 at 47731.627760
+Speed set to (m/s): 52.6412
+CANReader: Received speed: 89.553276 at 47731.638030
+Speed set to (m/s): 89.5533
+CANReader: Received speed: 4.131707 at 47731.648295
+CANReader: Received speed: 3.425936 at 47731.658527
+Speed set to (m/s): 4.13171
+Speed set to (m/s): 3.42594
+CANReader: Received speed: 74.715569 at 47731.668672
+Speed set to (m/s): 74.7156
+CANReader: Received speed: 2.452192 at 47731.678911
+Speed set to (m/s): 2.45219
+CANReader: Received speed: 57.064575 at 47731.689196
+Speed set to (m/s): 57.0646
+CANReader: Received speed: 66.771683 at 47731.699504
+CANReader: Received speed: 24.704283 at 47731.709643
+Speed set to (m/s): 66.7717
+Speed set to (m/s): 24.7043
+CANReader: Received speed: 65.454254 at 47731.719914
+Speed set to (m/s): 65.4543
+CANReader: Received speed: 22.307251 at 47731.730187
+Speed set to (m/s): 22.3073
+CANReader: Received speed: 13.055533 at 47731.740568
+Speed set to (m/s): 13.0555
+CANReader: Received speed: 80.373482 at 47731.750692
+Speed set to (m/s): 80.3735
+CANReader: Received speed: 8.228021 at 47731.760935
+Speed set to (m/s): 8.22802
+CANReader: Received speed: 68.794029 at 47731.771201
+Speed set to (m/s): 68.794
+CANReader: Received speed: 91.480980 at 47731.781317
+CANReader: Received speed: 60.047245 at 47731.791548
+Speed set to (m/s): 91.481
+Speed set to (m/s): 60.0472
+CANReader: Received speed: 40.568359 at 47731.801715
+Speed set to (m/s): 40.5684
+CANReader: Received speed: 50.341095 at 47731.811924
+Speed set to (m/s): 50.3411
+CANReader: Received speed: 90.353271 at 47731.822196
+Speed set to (m/s): 90.3533
+CANReader: Received speed: 24.108557 at 47731.832326
+CANReader: Received speed: 31.440723 at 47731.842462
+Speed set to (m/s): 24.1086
+Speed set to (m/s): 31.4407
+CANReader: Received speed: 32.256786 at 47731.852719
+Speed set to (m/s): 32.2568
+CANReader: Received speed: 56.197159 at 47731.862955
+Speed set to (m/s): 56.1972
+CANReader: Received speed: 4.732573 at 47731.873307
+Speed set to (m/s): 4.73257
+CANReader: Received speed: 94.667137 at 47731.883405
+Speed set to (m/s): 94.6671
+CANReader: Received speed: 35.655983 at 47731.893623
+Speed set to (m/s): 35.656
+CANReader: Received speed: 22.810312 at 47731.903935
+Speed set to (m/s): 22.8103
+CANReader: Received speed: 40.580051 at 47731.914167
+Speed set to (m/s): 40.5801
+CANReader: Received speed: 49.726765 at 47731.924368
+Speed set to (m/s): 49.7268
+CANReader: Received speed: 25.403494 at 47731.934516
+Speed set to (m/s): 25.4035
+CANReader: Received speed: 56.082546 at 47731.944570
+Speed set to (m/s): 56.0825
+CANReader: Received speed: 44.530342 at 47731.954769
+Speed set to (m/s): 44.5303
+CANReader: Received speed: 23.274126 at 47731.965104
+CANReader: Received speed: 13.608451 at 47731.975351
+Speed set to (m/s): 23.2741
+Speed set to (m/s): 13.6085
+CANReader: Received speed: 14.160219 at 47731.985440
+Speed set to (m/s): 14.1602
+CANReader: Received speed: 97.201500 at 47731.995574
+Speed set to (m/s): 97.2015
+CANReader: Received speed: 70.978348 at 47732.005803
+Speed set to (m/s): 70.9783
+CANReader: Received speed: 25.693094 at 47732.016069
+Speed set to (m/s): 25.6931
+CANReader: Received speed: 18.961926 at 47732.026310
+Speed set to (m/s): 18.9619
+CANReader: Received speed: 22.674843 at 47732.036483
+Speed set to (m/s): 22.6748
+CANReader: Received speed: 72.338097 at 47732.046730
+Speed set to (m/s): 72.3381
+CANReader: Received speed: 0.551582 at 47732.057182
+Speed set to (m/s): 0.551582
+CANReader: Received speed: 85.154053 at 47732.067395
+Speed set to (m/s): 85.1541
+CANReader: Received speed: 5.435701 at 47732.077692
+Speed set to (m/s): 5.4357
+CANReader: Received speed: 39.106495 at 47732.087962
+Speed set to (m/s): 39.1065
+CANReader: Received speed: 87.130356 at 47732.098257
+CANReader: Received speed: 16.355770 at 47732.108471
+Speed set to (m/s): 87.1304
+Speed set to (m/s): 16.3558
+CANReader: Received speed: 81.082146 at 47732.118741
+Speed set to (m/s): 81.0821
+CANReader: Received speed: 0.227839 at 47732.128969
+Speed set to (m/s): 0.227839
+CANReader: Received speed: 43.569740 at 47732.139227
+Speed set to (m/s): 43.5697
+CANReader: Received speed: 75.770500 at 47732.149384
+CANReader: Received speed: 68.697929 at 47732.159579
+Speed set to (m/s): 75.7705
+Speed set to (m/s): 68.6979
+CANReader: Received speed: 69.730553 at 47732.169712
+Speed set to (m/s): 69.7306
+CANReader: Received speed: 9.403951 at 47732.179885
+Speed set to (m/s): 9.40395
+CANReader: Received speed: 24.005791 at 47732.190058
+Speed set to (m/s): 24.0058
+CANReader: Received speed: 11.166434 at 47732.200158
+Speed set to (m/s): 11.1664
+CANReader: Received speed: 46.624165 at 47732.210262
+Speed set to (m/s): 46.6242
+CANReader: Received speed: 91.036278 at 47732.220303
+Speed set to (m/s): 91.0363
+CANReader: Received speed: 49.610188 at 47732.230418
+CANReader: Received speed: 13.108645 at 47732.240516
+Speed set to (m/s): 49.6102
+Speed set to (m/s): 13.1086
+CANReader: Received speed: 35.851418 at 47732.250574
+Speed set to (m/s): 35.8514
+CANReader: Received speed: 33.068672 at 47732.260691
+Speed set to (m/s): 33.0687
+CANReader: Received speed: 1.772250 at 47732.270801
+Speed set to (m/s): 1.77225
+CANReader: Received speed: 12.790842 at 47732.280884
+CANReader: Received speed: 55.769985 at 47732.290976
+Speed set to (m/s): 12.7908
+Speed set to (m/s): 55.77
+CANReader: Received speed: 14.870925 at 47732.301215
+Speed set to (m/s): 14.8709
+CANReader: Received speed: 33.985405 at 47732.311317
+Speed set to (m/s): 33.9854
+CANReader: Received speed: 45.455662 at 47732.321557
+Speed set to (m/s): 45.4557
+CANReader: Received speed: 78.539749 at 47732.331704
+CANReader: Received speed: 43.814484 at 47732.341951
+Speed set to (m/s): 78.5397
+Speed set to (m/s): 43.8145
+CANReader: Received speed: 43.614838 at 47732.352187
+Speed set to (m/s): 43.6148
+CANReader: Received speed: 23.654335 at 47732.362330
+Speed set to (m/s): 23.6543
+CANReader: Received speed: 54.412415 at 47732.372488
+Speed set to (m/s): 54.4124
+CANReader: Received speed: 3.931876 at 47732.382673
+Speed set to (m/s): 3.93188
+CANReader: Received speed: 32.484947 at 47732.392914
+Speed set to (m/s): 32.4849
+CANReader: Received speed: 98.125435 at 47732.403245
+Speed set to (m/s): 98.1254
+CANReader: Received speed: 68.318115 at 47732.413377
+Speed set to (m/s): 68.3181
+CANReader: Received speed: 32.667721 at 47732.423514
+Speed set to (m/s): 32.6677
+CANReader: Received speed: 48.892307 at 47732.433746
+Speed set to (m/s): 48.8923
+CANReader: Received speed: 61.863209 at 47732.444000
+Speed set to (m/s): 61.8632
+CANReader: Received speed: 55.582386 at 47732.454246
+Speed set to (m/s): 55.5824
+CANReader: Received speed: 89.777992 at 47732.464400
+CANReader: Received speed: 58.293808 at 47732.474517
+Speed set to (m/s): 89.778
+Speed set to (m/s): 58.2938
+CANReader: Received speed: 57.234131 at 47732.484789
+Speed set to (m/s): 57.2341
+CANReader: Received speed: 36.817379 at 47732.494993
+Speed set to (m/s): 36.8174
+CANReader: Received speed: 50.142334 at 47732.505262
+Speed set to (m/s): 50.1423
+CANReader: Received speed: 90.684059 at 47732.515390
+Speed set to (m/s): 90.6841
+CANReader: Received speed: 75.992607 at 47732.525700
+Speed set to (m/s): 75.9926
+CANReader: Received speed: 10.211407 at 47732.535845
+Speed set to (m/s): 10.2114
+CANReader: Received speed: 20.501938 at 47732.546179
+Speed set to (m/s): 20.5019
+CANReader: Received speed: 19.096828 at 47732.556511
+Speed set to (m/s): 19.0968
+CANReader: Received speed: 48.321293 at 47732.566926
+Speed set to (m/s): 48.3213
+CANReader: Received speed: 7.181210 at 47732.577105
+Speed set to (m/s): 7.18121
+CANReader: Received speed: 10.634480 at 47732.587414
+Speed set to (m/s): 10.6345
+CANReader: Received speed: 97.238876 at 47732.597517
+CANReader: Received speed: 63.165653 at 47732.607651
+Speed set to (m/s): 97.2389
+Speed set to (m/s): 63.1657
+CANReader: Received speed: 83.532158 at 47732.617779
+Speed set to (m/s): 83.5322
+CANReader: Received speed: 64.112724 at 47732.627909
+Speed set to (m/s): 64.1127
+CANReader: Received speed: 66.947586 at 47732.638061
+Speed set to (m/s): 66.9476
+CANReader: Received speed: 86.176041 at 47732.648159
+CANReader: Received speed: 84.066040 at 47732.658282
+Speed set to (m/s): 86.176
+Speed set to (m/s): 84.066
+CANReader: Received speed: 41.045944 at 47732.668368
+Speed set to (m/s): 41.0459
+CANReader: Received speed: 8.034328 at 47732.678399
+Speed set to (m/s): 8.03433
+CANReader: Received speed: 29.442793 at 47732.688796
+Speed set to (m/s): 29.4428
+CANReader: Received speed: 46.820679 at 47732.699057
+Speed set to (m/s): 46.8207
+CANReader: Received speed: 35.608990 at 47732.709190
+Speed set to (m/s): 35.609
+CANReader: Received speed: 67.917099 at 47732.719608
+Speed set to (m/s): 67.9171
+CANReader: Received speed: 20.396605 at 47732.729829
+Speed set to (m/s): 20.3966
+CANReader: Received speed: 87.016869 at 47732.740050
+Speed set to (m/s): 87.0169
+CANReader: Received speed: 12.670051 at 47732.750142
+Speed set to (m/s): 12.6701
+CANReader: Received speed: 79.369034 at 47732.760327
+Speed set to (m/s): 79.369
+CANReader: Received speed: 46.419788 at 47732.770440
+Speed set to (m/s): 46.4198
+CANReader: Received speed: 77.240822 at 47732.780567
+CANReader: Received speed: 42.065628 at 47732.790702
+Speed set to (m/s): 77.2408
+Speed set to (m/s): 42.0656
+CANReader: Received speed: 23.535929 at 47732.800777
+Speed set to (m/s): 23.5359
+CANReader: Received speed: 88.374329 at 47732.810890
+Speed set to (m/s): 88.3743
+CANReader: Received speed: 25.318417 at 47732.820997
+Speed set to (m/s): 25.3184
+CANReader: Received speed: 43.195538 at 47732.831074
+CANReader: Received speed: 83.868828 at 47732.841243
+Speed set to (m/s): 43.1955
+Speed set to (m/s): 83.8688
+CANReader: Received speed: 99.472984 at 47732.851393
+Speed set to (m/s): 99.473
+CANReader: Received speed: 41.459007 at 47732.861556
+Speed set to (m/s): 41.459
+CANReader: Received speed: 93.030472 at 47732.871719
+Speed set to (m/s): 93.0305
+CANReader: Received speed: 33.356373 at 47732.881851
+Speed set to (m/s): 33.3564
+CANReader: Received speed: 15.242699 at 47732.892047
+Speed set to (m/s): 15.2427
+CANReader: Received speed: 95.508148 at 47732.902172
+Speed set to (m/s): 95.5081
+CANReader: Received speed: 25.642824 at 47732.912305
+CANReader: Received speed: 49.899261 at 47732.922547
+Speed set to (m/s): 25.6428
+Speed set to (m/s): 49.8993
+CANReader: Received speed: 22.389013 at 47732.932696
+Speed set to (m/s): 22.389
+CANReader: Received speed: 4.385414 at 47732.942878
+Speed set to (m/s): 4.38541
+CANReader: Received speed: 65.460518 at 47732.953198
+Speed set to (m/s): 65.4605
+CANReader: Received speed: 11.583858 at 47732.963368
+CANReader: Received speed: 34.691002 at 47732.973544
+Speed set to (m/s): 11.5839
+Speed set to (m/s): 34.691
+CANReader: Received speed: 50.443523 at 47732.983693
+Speed set to (m/s): 50.4435
+CANReader: Received speed: 90.931175 at 47732.994163
+Speed set to (m/s): 90.9312
+CANReader: Received speed: 15.324375 at 47733.004418
+Speed set to (m/s): 15.3244
+CANReader: Received speed: 70.874580 at 47733.014791
+Speed set to (m/s): 70.8746
+CANReader: Received speed: 87.558678 at 47733.025054
+Speed set to (m/s): 87.5587
+CANReader: Received speed: 77.681419 at 47733.035314
+Speed set to (m/s): 77.6814
+CANReader: Received speed: 98.452469 at 47733.045510
+CANReader: Received speed: 3.360062 at 47733.055719
+Speed set to (m/s): 98.4525
+Speed set to (m/s): 3.36006
+CANReader: Received speed: 11.498606 at 47733.065973
+Speed set to (m/s): 11.4986
+CANReader: Received speed: 4.127059 at 47733.076220
+Speed set to (m/s): 4.12706
+CANReader: Received speed: 11.869378 at 47733.086582
+Speed set to (m/s): 11.8694
+CANReader: Received speed: 2.573975 at 47733.096749
+CANReader: Received speed: 50.088875 at 47733.107147
+Speed set to (m/s): 2.57398
+Speed set to (m/s): 50.0889
+CANReader: Received speed: 89.244263 at 47733.117469
+Speed set to (m/s): 89.2443
+CANReader: Received speed: 51.327602 at 47733.127640
+Speed set to (m/s): 51.3276
+CANReader: Received speed: 80.597221 at 47733.137961
+Speed set to (m/s): 80.5972
+CANReader: Received speed: 19.463991 at 47733.148288
+Speed set to (m/s): 19.464
+CANReader: Received speed: 45.665363 at 47733.158476
+Speed set to (m/s): 45.6654
+CANReader: Received speed: 52.429317 at 47733.168849
+Speed set to (m/s): 52.4293
+CANReader: Received speed: 47.753742 at 47733.179155
+CANReader: Received speed: 80.500542 at 47733.189484
+Speed set to (m/s): 47.7537
+Speed set to (m/s): 80.5005
+CANReader: Received speed: 95.421265 at 47733.199662
+Speed set to (m/s): 95.4213
+CANReader: Received speed: 71.187859 at 47733.209900
+Speed set to (m/s): 71.1879
+CANReader: Received speed: 83.136597 at 47733.220272
+Speed set to (m/s): 83.1366
+CANReader: Received speed: 55.872421 at 47733.230574
+CANReader: Received speed: 24.237595 at 47733.240838
+Speed set to (m/s): 55.8724
+Speed set to (m/s): 24.2376
+CANReader: Received speed: 63.440739 at 47733.251161
+Speed set to (m/s): 63.4407
+CANReader: Received speed: 57.005459 at 47733.261366
+Speed set to (m/s): 57.0055
+CANReader: Received speed: 31.809864 at 47733.271795
+Speed set to (m/s): 31.8099
+CANReader: Received speed: 66.748634 at 47733.282148
+Speed set to (m/s): 66.7486
+CANReader: Received speed: 64.665344 at 47733.292410
+Speed set to (m/s): 64.6653
+CANReader: Received speed: 92.715294 at 47733.302816
+Speed set to (m/s): 92.7153
+CANReader: Received speed: 12.496902 at 47733.313209
+CANReader: Received speed: 66.555664 at 47733.323573
+Speed set to (m/s): 12.4969
+Speed set to (m/s): 66.5557
+CANReader: Received speed: 16.040894 at 47733.333885
+Speed set to (m/s): 16.0409
+CANReader: Received speed: 37.116619 at 47733.344153
+Speed set to (m/s): 37.1166
+CANReader: Received speed: 72.665588 at 47733.354506
+Speed set to (m/s): 72.6656
+CANReader: Received speed: 83.330521 at 47733.364882
+Speed set to (m/s): 83.3305
+CANReader: Received speed: 92.414650 at 47733.375141
+Speed set to (m/s): 92.4146
+CANReader: Received speed: 3.552051 at 47733.385466
+Speed set to (m/s): 3.55205
+CANReader: Received speed: 21.584034 at 47733.395741
+CANReader: Received speed: 2.204787 at 47733.406146
+Speed set to (m/s): 21.584
+Speed set to (m/s): 2.20479
+CANReader: Received speed: 63.998199 at 47733.416557
+Speed set to (m/s): 63.9982
+CANReader: Received speed: 85.692612 at 47733.426758
+Speed set to (m/s): 85.6926
+CANReader: Received speed: 38.790092 at 47733.437048
+Speed set to (m/s): 38.7901
+CANReader: Received speed: 56.735439 at 47733.447276
+Speed set to (m/s): 56.7354

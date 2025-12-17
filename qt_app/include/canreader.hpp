@@ -9,6 +9,9 @@
 #include <QCanBus>
 #include <QCanBusDevice>
 #include <QCanBusFrame>
+#include <iostream>
+#include <ostream>
+#include <iomanip>
 
 class QSocketNotifier;
 
