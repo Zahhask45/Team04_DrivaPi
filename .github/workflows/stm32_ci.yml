@@ -1,4 +1,4 @@
-name: STM32 CI (QEMU Simulation - split strategy)
+name: STM32 CI
 
 on:
   push:
@@ -13,7 +13,7 @@ jobs:
       pull-requests: write
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Install ARM toolchain
         run: |
@@ -61,7 +61,7 @@ jobs:
 
       - name: Comment commit with build result (success)
         if: ${{ success() && github.event_name == 'push' }}
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         with:
           script: |
             await github.rest.repos.createCommitComment({
@@ -73,7 +73,7 @@ jobs:
 
       - name: Comment commit with build result (failure)
         if: ${{ failure() && github.event_name == 'push' }}
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         with:
           script: |
             await github.rest.repos.createCommitComment({
