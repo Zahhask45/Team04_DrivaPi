@@ -33,3 +33,18 @@ As defined in Spike #194, Section 5.2:
 
 Note: 16ms corresponds to a single frame at 60 FPS, ensuring UI responsiveness.
 
+
+**Result:**
+
+
+**Conclusion:** The migration satisfies the latency budget. The average overhead (~1.7ms) consumes only ~11% of a single 60Hz frame, leaving ample room for rendering.
+
+## 3. Experimental Setup
+
+* **Environment:** Linux Ubuntu with vcan0.
+* **Workload:** 1,000 floating-point speed values sent at 100 Hz (10ms interval).
+* **Components:**
+* **CAN Path:** Direct QCanBus read.
+* **Kuksa Path:** kuksa-can-provider (dbc2val) $\rightarrow$ Databroker $\rightarrow$ Client.
+
+
