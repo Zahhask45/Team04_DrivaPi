@@ -12,11 +12,6 @@ static inline uint16_t clamp_u16(int32_t v) {
     return (uint16_t)v;
 }
 
-static inline uint16_t sub_sat_u16(uint16_t a, uint16_t b) {
-    if (b >= a) return 0;
-    return (uint16_t)(a - b);
-}
-
 void Motor_Stop(void) {
     PCA9685_SetPWM(&MOTOR_I2C, PCA9685_ADDR_MOTOR, MOTOR_L_A, 0, 0);
     PCA9685_SetPWM(&MOTOR_I2C, PCA9685_ADDR_MOTOR, MOTOR_L_B, 0, 0);
@@ -171,24 +166,10 @@ VOID dc_motor(ULONG initial_input)
                 int32_t right_counts = 0;
                 memcpy(&left_counts, msg.data, sizeof(int32_t));
                 memcpy(&right_counts, msg.data + sizeof(int32_t), sizeof(int32_t));
-
-//                if (i2c_debug) {
-//                    char buf[96];
-//                    snprintf(buf, sizeof(buf), "DC Motor: left=%ld right=%ld\r\n", (long)left_counts, (long)right_counts);
-//                    HAL_UART_Transmit(&huart1, (uint8_t*)buf, strlen(buf), HAL_MAX_DELAY);
-//                }
-
                 Motor_SetPWM(left_counts, right_counts);
             } else if (msg.len >= 4) {
                 int32_t counts = 0;
                 memcpy(&counts, msg.data, sizeof(int32_t));
-
-//                if (i2c_debug) {
-//                    char buf[64];
-//                    snprintf(buf, sizeof(buf), "DC Motor: signed_counts=%ld\r\n", (long)counts);
-//                    HAL_UART_Transmit(&huart1, (uint8_t*)buf, strlen(buf), HAL_MAX_DELAY);
-//                }
-
                 Motor_SetPWM(counts, counts);
             } else {
             }
