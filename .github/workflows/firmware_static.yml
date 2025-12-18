@@ -90,7 +90,7 @@ jobs:
       # Upload SARIF as downloadable artifact
       - name: Upload CodeQL SARIF report
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: codeql-sarif-report
           path: results/cpp.sarif
