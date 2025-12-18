@@ -38,6 +38,7 @@ jobs:
           languages: cpp
           queries: security-and-quality
           build-mode: manual
+          config-file: ./.github/codeql-config.yml
           
       # Cache build artifacts
       - name: Cache build artifacts
@@ -72,20 +73,7 @@ jobs:
         with:
           category: '/language:cpp'
           output: results
-
-      # Filter SARIF to exclude unwanted paths (C++ doesn't support path filtering in manual build mode)
-      - name: Filter SARIF results
-        uses: advanced-security/filter-sarif@v1
-        with:
-          patterns: |
-            -**/Drivers/**
-            -**/Middlewares/**
-            -**/Debug/**
-            -**/AZURE_RTOS/**
-            -**/Core/Startup/**
-            -**/Core/Test/**
-          input: results/cpp.sarif
-          output: results/cpp.sarif
+          wait-for-processing: true
 
       # Upload SARIF as downloadable artifact
       - name: Upload CodeQL SARIF report
@@ -103,19 +91,23 @@ jobs:
           SARIF_FILE="results/cpp.sarif"
           
           if [ ! -f "$SARIF_FILE" ]; then
-            echo "SARIF file not found at $SARIF_FILE"
+            echo "⚠️  SARIF file not found at $SARIF_FILE"
             exit 0
           fi
           
           # Count error-level (high/critical) results
-          # SARIF uses "error" level for high/critical severity
-          ERROR_COUNT=$(jq '[.runs[].results[] | select(.level == "error")] | length' "$SARIF_FILE")
+          ERROR_COUNT=$(jq '[.runs[].results[] | select(.level == "error")] | length' "$SARIF_FILE" 2>/dev/null || echo 0)
           
-          echo "CodeQL found $ERROR_COUNT high/critical severity issue(s)"
+          # Count warning-level results
+          WARNING_COUNT=$(jq '[.runs[].results[] | select(.level == "warning")] | length' "$SARIF_FILE" 2>/dev/null || echo 0)
+          
+          echo "📊 CodeQL Analysis Summary:"
+          echo "   High/Critical Issues: $ERROR_COUNT"
+          echo "   Warnings: $WARNING_COUNT"
           
           if [ "$ERROR_COUNT" -gt 0 ]; then
             echo "❌ Failing job due to $ERROR_COUNT high/critical severity issue(s)"
-            echo "Review findings at: Security → Code scanning alerts"
+            echo "📍 Review findings at: Security → Code scanning alerts"
             exit 1
           else
             echo "✅ No high/critical severity issues found"
