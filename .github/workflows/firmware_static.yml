@@ -75,6 +75,20 @@ jobs:
           output: results
           wait-for-processing: true
 
+      # Filter SARIF to exclude unwanted paths (secondary safety net)
+      - name: Filter SARIF results
+        uses: advanced-security/filter-sarif@v1
+        with:
+          patterns: |
+            -**/Drivers/**
+            -**/Middlewares/**
+            -**/AZURE_RTOS/**
+            -**/Core/Startup/**
+            -**/Debug/**
+            -**/Release/**
+          input: results/cpp.sarif
+          output: results/cpp.sarif
+
       # Upload SARIF as downloadable artifact
       - name: Upload CodeQL SARIF report
         if: always()
