@@ -8,17 +8,17 @@ The project chose to base its verification and validation (V&V) activities on ro
 
 ### 1. Rationale for Discarding Commercial Tools
 
-Commercial solutions are known for providing comprehensive features like pre-certified Tool Qualification Kits for ISO 26262 and built-in support for metrics like MC/DC (Modified Condition/Decision Coverage).1 However, these solutions were discarded for the following reasons:
+Commercial solutions are known for providing comprehensive features like pre-certified Tool Qualification Kits for ISO 26262 and built-in support for metrics like MC/DC (Modified Condition/Decision Coverage). However, these solutions were discarded for the following reasons:
 
 - **Licensing Cost**: Commercial frameworks impose high, recurring licensing fees, which constrain resource allocation during development.
-- **Integration Complexity**: Large, proprietary toolchains can often be rigid and challenging to integrate seamlessly into a highly customized Linux/Yocto (AGL) build environment, contrasting with the modularity of OSS.3
+- **Integration Complexity**: Large, proprietary toolchains can often be rigid and challenging to integrate seamlessly into a highly customized Linux/Yocto (AGL) build environment, contrasting with the modularity of OSS.
 - **Vendor Lock-in**: The project prioritizes flexibility and long-term control over the entire toolchain stack, which is inherent in the OSS model.
 
 ### 2. Rationale for Selecting the OSS Toolchain
 
 The selected OSS toolchain ensures high agility, low resource overhead, and strong technical coherence between languages:
 
-- **Native Efficiency**: Choosing language-native tools (Unity for C, cargo for Rust) minimizes external dependencies and runtime overhead in embedded contexts.4
+- **Native Efficiency**: Choosing language-native tools (Unity for C, cargo for Rust) minimizes external dependencies and runtime overhead in embedded contexts.
 - **Focused Analysis**: The strategy centralizes the most demanding task—Static Analysis—in the high-powered CodeQL engine, ensuring uniform security enforcement across both C and Rust.
 
 ## II. Comparative Analysis and Tool Selections
