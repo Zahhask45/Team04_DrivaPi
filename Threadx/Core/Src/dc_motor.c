@@ -171,7 +171,6 @@ VOID dc_motor(ULONG initial_input)
                 int32_t counts = 0;
                 memcpy(&counts, msg.data, sizeof(int32_t));
                 Motor_SetPWM(counts, counts);
-            } else {
             }
 		}
         tx_thread_sleep(50);
