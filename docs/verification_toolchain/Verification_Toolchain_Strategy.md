@@ -43,12 +43,12 @@ Our Static Analysis strategy is built on depth and unified standards enforcement
 
 ### C. Code Coverage & Quality Gates
 
-The goal is to capture high-rigor structural coverage metrics using OSS tools that produce the universal LCOV format.
+The goal is to capture high-rigor structural coverage metrics using OSS tools that produce the universal Linux Coverage Visualizer (LCOV) format.
 
 | Tool | Language | Rationale | Automotive Standard Alignment |
 |------|----------|-----------|-------------------------------|
 | gcovr/lcov | C/C++ | Standard Metric Generation. Used to process execution data (.gcda files) and generate the industry-standard LCOV report. | Branch Coverage: We implement Branch Coverage (via gcovr --decisions) as the baseline structural metric, which is a key step towards satisfying the higher-rigor Modified Condition/Decision Coverage (MC/DC) required by ASIL-D. |
-| grcov | Rust | LCOV Aggregation. Processes LLVM profile data (.profraw) and aggregates the results into the LCOV format, ensuring compatibility with the C coverage reports and the SonarQube dashboard. | |
+| grcov | Rust | LCOV Aggregation. Processes Low Level Virtual Machine (LLVM) profile data (.profraw) and aggregates the results into the LCOV format, ensuring compatibility with the C coverage reports and the SonarQube dashboard. | |
 
 ## III. Project Architecture and CI/CD Implementation
 
@@ -60,6 +60,6 @@ The repository (/src, /lib/threadx, /test) is structured to support Requirements
 
 The seamless integration of the entire OSS toolchain is achieved using Ceedling (for C orchestration) and the SonarQube Community Edition as the central quality dashboard.
 
-- **Static Analysis Gating**: CodeQL is executed in GitHub Actions to scan the codebase. Its results (in SARIF format) are uploaded to SonarQube to enforce the quality gate, blocking any Pull Request that introduces new security vulnerabilities or major standards violations.
+- **Static Analysis Gating**: CodeQL is executed in GitHub Actions to scan the codebase. Its results (in Static Analysis Results Interchange Format (SARIF) format) are uploaded to SonarQube to enforce the quality gate, blocking any Pull Request that introduces new security vulnerabilities or major standards violations.
 - **Coverage Unification**: The Sonar Scanner CLI is configured to accept multiple LCOV reports (from gcovr and grcov). This allows the project to present a single, consolidated view of code coverage across both the C and Rust codebases.
 - **Automation**: The use of simple shell scripting automates the complex gcovr steps, ensuring the continuous integration pipeline delivers consistent and repeatable results for V&V evidence.
