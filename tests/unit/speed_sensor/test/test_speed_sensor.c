@@ -1,5 +1,4 @@
-#define UNITY_INCLUDE_FLOAT
-
+#include <setjmp.h> // Required for breaking the while(1) loop
 #include "unity.h"
 #include "speed_sensor.h"
 
@@ -9,6 +8,7 @@
 #include "mock_main.h"
 #include "mock_stm32u5xx_hal.h"
 
+
 // --------------------------------------------------------
 // GLOBAL VARIABLES DEFINITION
 // (The Linker needs these to exist in memory)
@@ -16,6 +16,7 @@
 TX_MUTEX speed_data_mutex;
 TX_EVENT_FLAGS_GROUP event_flags;
 float g_vehicle_speed;
+static jmp_buf test_break_jump;
 
 // --------------------------------------------------------
 // FAKE HARDWARE & GLOBALS
@@ -47,8 +48,41 @@ void setUp(void)
     // to your source code. For these tests, we assume a fresh start or we manage logic carefully.
 }
 
+/**
+ * Stub: Breaks the loop only on the SECOND call.
+ * This forces the while(1) loop to iterate once fully, ensuring coverage.
+ */
+UINT Stub_BreakLoop_OnSecondCall(TX_EVENT_FLAGS_GROUP *group_ptr, ULONG flags_to_set, UINT set_option, int cmock_num_calls)
+{
+    // If this is the second time we are called (Index 1), break the loop.
+    if (cmock_num_calls == 1)
+    {
+        longjmp(test_break_jump, 1);
+    }
+
+    // Otherwise (Index 0), just pretend we set the flags successfully
+    return TX_SUCCESS;
+}
+
 void tearDown(void)
 {
+}
+
+static jmp_buf test_break_jump;
+
+/**
+ * Custom Stub: Pretends to set event flags, but actually breaks the loop
+ * by jumping back to the test function.
+ */
+UINT Stub_BreakLoop_tx_event_flags_set(TX_EVENT_FLAGS_GROUP *group_ptr, ULONG flags_to_set, UINT set_option, int cmock_num_calls)
+{
+    // You can add assertions here if you want to verify the flags
+    // TEST_ASSERT_EQUAL(FLAG_SENSOR_UPDATE, flags_to_set);
+
+    // Jump back to the point where setjmp was called
+    longjmp(test_break_jump, 1);
+
+    return TX_SUCCESS; // This line is never reached
 }
 
 // --------------------------------------------------------
@@ -323,3 +357,48 @@ void test_Speed_Protection_Against_Tiny_TimeDelta(void)
     // Code has: if (dt <= 0.001f) return 0.0f;
     TEST_ASSERT_EQUAL_FLOAT(0.0f, speed);
 }
+
+/**
+ * Test: Speed Sensor Thread Entry
+ * Context:
+ * - Initializes hardware (Stop/Start Timer)
+ * - Enters infinite loop
+ * - Reads registers, prints debug, sleeps
+ * - Calls read_speed_sensor()
+ * - Updates global variable protected by Mutex
+ * - Sets Event Flags -> [WE BREAK LOOP HERE]
+ */
+void test_SpeedSensor_Thread_Should_LoopTwice(void)
+{
+    // ... Setup code ...
+    fake_tim1_registers.CNT = 500;
+    HAL_TIM_Base_Stop_Expect(&htim1);
+    HAL_TIM_Base_Start_Expect(&htim1);
+    HAL_UART_Transmit_Ignore();
+
+    // --- PASS 1 ---
+    tx_thread_sleep_ExpectAndReturn(100, TX_SUCCESS);
+    tx_time_get_ExpectAndReturn(1000);
+    tx_mutex_get_ExpectAndReturn(&speed_data_mutex, TX_WAIT_FOREVER, TX_SUCCESS);
+    tx_mutex_put_ExpectAndReturn(&speed_data_mutex, TX_SUCCESS);
+
+    // [CRITICAL] NO tx_event_flags_set_Expect HERE! Delete it if it exists.
+
+    // --- PASS 2 ---
+    tx_thread_sleep_ExpectAndReturn(100, TX_SUCCESS);
+    tx_time_get_ExpectAndReturn(1100);
+    tx_mutex_get_ExpectAndReturn(&speed_data_mutex, TX_WAIT_FOREVER, TX_SUCCESS);
+    tx_mutex_put_ExpectAndReturn(&speed_data_mutex, TX_SUCCESS);
+
+    // --- Stub Register ---
+    // This handles ALL calls. It doesn't check arguments unless you code it to.
+    tx_event_flags_set_Stub(Stub_BreakLoop_OnSecondCall);
+
+    // --- Execute ---
+    if (setjmp(test_break_jump) == 0)
+    {
+        speed_sensor(0);
+        TEST_FAIL_MESSAGE("Loop did not break!");
+    }
+}
+

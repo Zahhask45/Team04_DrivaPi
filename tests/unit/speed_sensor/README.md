@@ -27,6 +27,8 @@ The project separates source code from test logic. We use a **"Support"** folder
 
 ```text
 Project_Root/
+├── README.md (this file)
+├── run_speedtest.sh          # Automated script to run the tests and display results
 ├── project.yml               # Ceedling configuration file
 ├── src/                      # ACTUAL Source Code
 │   ├── speed_sensor.c
@@ -53,6 +55,13 @@ Since we cannot run `HAL_GPIO_WritePin` or `tx_time_get` on a PC, we use **Stub 
 * **`app_threadx.h`**: Defines `ULONG`, `UINT`, and RTOS prototypes.
 
 ## 4. Running Tests
+
+### Run ALL Tests and Cleanup with automated script
+```bash
+./run_speedtest.sh
+```
+
+### To run Ceedling manually, use:
 
 ### Run All Tests
 ```bash
@@ -130,3 +139,4 @@ void test_MyFunction_Should_ReadTimer(void) {
 | `undefined reference to speed_data_mutex` | Linker cannot find global var | Define the variable (e.g., `TX_MUTEX speed_data_mutex;`) at the top of the test file. |
 | `Unity Floating Point Disabled` | Unity config issue | Ensure `project.yml` has `:unity: :defines: [- UNITY_INCLUDE_FLOAT]`. |
 | `cannot open source file stm32u5xx_hal.h` | Missing stub | Ensure `test/support/stm32u5xx_hal.h` exists and paths are correct in `project.yml`. |
+| `cannot run run_speedtest.sh` | Permission issue | Ensure `run_speedtest.sh` exists and has excecute permissions with `chmod +x run_speedtest.sh`. |

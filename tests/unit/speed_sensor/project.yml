@@ -54,6 +54,7 @@
 :plugins:
   :load_paths: []
   :enabled:
+    - gcov
     #- beep                           # beeps when finished, so you don't waste time waiting for ceedling
     - module_generator                # handy for quickly creating source, header, and test templates
     #- gcov                           # test coverage using gcov. Requires gcc, gcov, and a coverage analyzer like gcovr
@@ -142,7 +143,7 @@
 
 # Configuration Options specific to CMock. See CMock docs for details
 :cmock:
-  # Core conffiguration
+  # Core configuration
   :plugins:                        # What plugins should be used by CMock?
     - :ignore
     - :callback

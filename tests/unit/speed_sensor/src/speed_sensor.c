@@ -80,7 +80,6 @@ void speed_sensor(ULONG initial_input)
 
     while (1)
     {
-
         uint32_t cr1_reg = htim1.Instance->CR1;
         uint32_t cnt_reg = htim1.Instance->CNT;
 
