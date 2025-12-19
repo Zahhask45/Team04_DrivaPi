@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pull-requests: write
   checks: write
 
@@ -142,22 +142,35 @@ jobs:
             `;
             }
             
-            // Post as PR comment or commit comment depending on event type
-            if (context.eventName === 'pull_request') {
-              github.rest.issues.createComment({
-                issue_number: context.issue.number,
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                body: testSummary || '🧪 Unit tests completed. Check logs for details.'
-              });
-            } else {
-              // For push events, create a commit comment
-              github.rest.repos.createCommitComment({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                commit_sha: context.sha,
-                body: testSummary || '🧪 Unit tests completed. Check logs for details.'
-              });
+            // Always add to job summary
+            await core.summary
+              .addHeading('🧪 Unit Test Results', 2)
+              .addRaw(testSummary || '🧪 Unit tests completed. Check logs for details.')
+              .write();
+            
+            // Try to post as comment (PR or commit)
+            try {
+              if (context.eventName === 'pull_request') {
+                await github.rest.issues.createComment({
+                  issue_number: context.issue.number,
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  body: testSummary || '🧪 Unit tests completed. Check logs for details.'
+                });
+                console.log('✅ Posted comment on PR');
+              } else {
+                // For push events, try to create a commit comment
+                await github.rest.repos.createCommitComment({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  commit_sha: context.sha,
+                  body: testSummary || '🧪 Unit tests completed. Check logs for details.'
+                });
+                console.log('✅ Posted comment on commit');
+              }
+            } catch (error) {
+              console.log('⚠️ Could not post comment (insufficient permissions), but results are in job summary');
+              console.log(error.message);
             }
 
       # - name: Upload Coverage Reports
@@ -177,9 +190,3 @@ jobs:
       #     name: test-logs
       #     path: ${{ env.BUILD_DIR }}/test_output.log
       #     retention-days: 30
-
-      - name: Fail if tests failed
-        if: failure()
-        run: |
-          echo "❌ Unit tests failed!"
-          exit 1
