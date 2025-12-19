@@ -177,7 +177,8 @@ generate_coverage() {
          '/usr/*' '*/test/*' '*/mock_*' '*/unity/*' '*/cmock/*' '*vendor*' \
          '*c_exception*' '*build/test/*' '*test/runners*' '*test/mocks*' '/var/lib/gems/*' \
          --output-file "${COVERAGE_DIR}/coverage_filtered.info" \
-         --rc lcov_branch_coverage=1
+         --rc lcov_branch_coverage=1 \
+         --ignore-errors unused 2>&1 | grep -v "WARNING" || true
     
     # HTML report
     genhtml "${COVERAGE_DIR}/coverage_filtered.info" \
