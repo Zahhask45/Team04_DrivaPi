@@ -133,12 +133,9 @@ jobs:
             
             - **Motor Servo Tests**: ${motorServoMatch ? motorServoMatch[1] : 'Unknown'} (160 tests)
             - **Speed Sensor Tests**: ${speedSensorMatch ? speedSensorMatch[1] : 'Unknown'} (11 tests)
-            - **Total Tests**: ${testPassed + testFailed}
-            - **Passed**: ✅ ${testPassed}
-            - **Failed**: ${testFailed > 0 ? '❌' : '✅'} ${testFailed}
             ${coverageInfo}
             ---
-            📦 Full coverage reports available in workflow artifacts
+            Full coverage reports available in workflow artifacts
             `;
             }
             
