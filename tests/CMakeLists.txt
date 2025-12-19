@@ -1,10 +1,9 @@
-# Host-side unit tests wrapper (runs Ceedling test suite via script)
-
+# Host-side unit tests wrapper (Ceedling suites)
 add_executable(unit_tests
     host/test_placeholder.c
 )
 
-add_test(NAME unit_tests 
+add_test(NAME unit_tests
     COMMAND unit_tests
     WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
 )
@@ -14,21 +13,18 @@ set_tests_properties(unit_tests PROPERTIES
     LABELS "ceedling"
 )
 
-
-# GoogleTest-based C++ tests for motor speed
-# Fetch GoogleTest if not already available
+# Ensure GoogleTest is available
 include(FetchContent)
 if(NOT TARGET GTest::gtest_main)
     FetchContent_Declare(
         googletest
         URL https://github.com/google/googletest/archive/refs/tags/v1.14.0.zip
     )
-    # On Linux this is not required, but harmless; mainly for MSVC
     set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
     FetchContent_MakeAvailable(googletest)
 endif()
 
-# Create the test executable
+# Create the GTest executable
 add_executable(motor_speed_test
     unit/test_motor_speed.cpp
 )
@@ -45,4 +41,3 @@ include(GoogleTest)
 gtest_discover_tests(motor_speed_test
     PROPERTIES LABELS "gtest"
 )
-
