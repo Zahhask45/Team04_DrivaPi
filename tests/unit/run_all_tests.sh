@@ -130,19 +130,22 @@ if [[ $MOTOR_SERVO_PASSED -eq 1 && $SPEED_SENSOR_PASSED -eq 1 ]]; then
         COMBINED="${MASTER_COVERAGE_DIR}/coverage_combined.info"
         FILTERED="${MASTER_COVERAGE_DIR}/coverage_filtered.info"
         
-        # Merge coverage files
+        # Merge coverage files (with branch coverage support)
         lcov -a "${MOTOR_SERVO_COVERAGE}" -a "${SPEED_SENSOR_COVERAGE}" \
-             -o "${COMBINED}" 2>/dev/null || true
+             -o "${COMBINED}" \
+             --rc lcov_branch_coverage=1 2>/dev/null || true
         
         # Extract source files only (no vendor, test runners, mocks, etc.)
         lcov --extract "${COMBINED}" \
              "*/motor_servo/src/*" "*/speed_sensor/src/*" \
-             -o "${FILTERED}" 2>/dev/null || \
+             -o "${FILTERED}" \
+             --rc lcov_branch_coverage=1 2>/dev/null || \
         # Fallback: comprehensive removal
         lcov -r "${COMBINED}" \
              '/usr/*' '*vendor*' '*cmock*' '*unity*' '*c_exception*' \
              '*build/test/*' '*test/runners*' '*test/mocks*' '/var/lib/gems/*' \
-             -o "${FILTERED}" 2>/dev/null || \
+             -o "${FILTERED}" \
+             --rc lcov_branch_coverage=1 2>/dev/null || \
         cp "${COMBINED}" "${FILTERED}"
         
         # Generate HTML
@@ -150,6 +153,9 @@ if [[ $MOTOR_SERVO_PASSED -eq 1 && $SPEED_SENSOR_PASSED -eq 1 ]]; then
             HTML="${MASTER_COVERAGE_DIR}/html"
             genhtml -o "${HTML}" "${FILTERED}" \
                 --title "DrivaPi - Unified Test Coverage" \
+                --branch-coverage \
+                --function-coverage \
+                --rc genhtml_branch_coverage=1 \
                 --demangle-cpp > /dev/null 2>&1 || true
             
             if [[ -f "${HTML}/index.html" ]]; then
