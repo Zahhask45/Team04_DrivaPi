@@ -11,6 +11,7 @@ add_test(NAME unit_tests
 
 set_tests_properties(unit_tests PROPERTIES
     ENVIRONMENT "COVERAGE_DIR=${CMAKE_SOURCE_DIR}/build/coverage"
+    LABELS "ceedling"
 )
 
 
@@ -41,5 +42,7 @@ target_link_libraries(motor_speed_test
 
 # Add the test to CTest (for the 'ctest' command)
 include(GoogleTest)
-gtest_discover_tests(motor_speed_test)
+gtest_discover_tests(motor_speed_test
+    PROPERTIES LABELS "gtest"
+)
 
