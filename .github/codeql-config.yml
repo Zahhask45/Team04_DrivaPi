@@ -19,8 +19,3 @@ disable-default-queries: false
 # Query packs for C++ - security and quality focused
 queries:
   - uses: security-and-quality
-
-# Capture more compile commands for better analysis
-advanced:
-  cpp:
-    dbscheme: cpp.dbscheme
