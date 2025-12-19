@@ -1,15 +1,14 @@
-# Create the test executable
-add_executable(motor_speed_test
-    unit/test_motor_speed.cpp
+# Host-side unit tests wrapper (runs Ceedling test suite via script)
+
+add_executable(unit_tests
+    host/test_placeholder.c
 )
 
-# Link our test executable against our library and GoogleTest
-target_link_libraries(motor_speed_test
-    PRIVATE
-        motor_sensor_lib
-        GTest::gtest_main # This target is created by FetchContent
+add_test(NAME unit_tests 
+    COMMAND unit_tests
+    WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
-# Add the test to CTest (for the 'ctest' command)
-include(GoogleTest)
-gtest_discover_tests(motor_speed_test)
+set_tests_properties(unit_tests PROPERTIES
+    ENVIRONMENT "COVERAGE_DIR=${CMAKE_SOURCE_DIR}/build/coverage"
+)

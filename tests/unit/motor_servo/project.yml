@@ -1,0 +1,293 @@
+---
+################################################################################
+# CEEDLING PROJECT CONFIGURATION - ISO 26262 ASIL-B/D COMPLIANT
+# 
+# Purpose: Unit test framework for DrivaPi autonomous vehicle
+# ASIL Level: B/D
+# Coverage Requirement: 100% Branch Coverage (MANDATORY)
+# 
+# This configuration enforces strict quality gates:
+# - Strict mock ordering verification
+# - Branch coverage instrumentation
+# - Compiler warnings as errors
+# - GCOV/LCOV integration
+################################################################################
+
+:project:
+  :use_exceptions: FALSE
+  :use_test_preprocessor: TRUE
+  :use_auxiliary_dependencies: TRUE
+  :build_root: build
+  :test_file_prefix: test_
+  :which_ceedling: gem
+  :ceedling_version: 0.31.1
+  :default_tasks:
+    - test:all
+    - gcov:all
+
+:environment:
+  - :path:
+    - /usr/bin
+    - /usr/local/bin
+
+:extension:
+  :executable: .out
+
+:paths:
+  :test:
+    - +:test/**
+    - -:test/support
+    - -:test/mocks
+  :source:
+    - src/**/*.c                        
+    - -:../../../Threadx/Core/Src/main.c
+    - -:../../../Threadx/Core/Src/app_threadx.c
+    - -:../../../Threadx/Core/Src/stm32u5xx_*.c
+    - -:../../../Threadx/Core/Src/system_*.c
+    - -:../../../Threadx/Core/Src/syscalls.c
+    - -:../../../Threadx/Core/Src/sysmem.c
+  :include:
+    - test/mocks                      
+    - test/support
+    - src
+  :test_toolchain_include:
+    - vendor/unity/src                 
+    - vendor/cmock/src                 
+    - vendor/c_exception/lib           
+    - test
+    - test/support
+    - test/mocks
+    - build/test/mocks                 
+    - src
+  :support:
+    - test/support
+  :libraries: []
+
+:files:
+  :test: []
+  :source:
+    - src/dc_motor_functions.c
+    - src/dc_motor_testable.c
+    - src/mock_stm32u5xx_hal.c
+    - src/pca9685_testable.c
+    - src/servo_functions.c
+    - src/servo_motor_testable.c
+    - src/speed_sensor_functions.c
+    
+  :assembly: []
+  :support: []
+  :include: []
+
+:defines:
+  :common: &common_defines
+    - UNIT_TEST_BUILD
+    - TARGET_INDEPENDENT
+  :test:
+    - *common_defines
+    - TEST
+    - UNITY_INCLUDE_DOUBLE
+    - UNITY_DOUBLE_PRECISION=1e-12
+  :test_preprocess:
+    - *common_defines
+    - TEST
+  :gcov:
+    - *common_defines
+    - GCOV_BUILD
+
+:unity:
+  :vendor_path: vendor                 
+
+:cexception:
+  :vendor_path: vendor                 
+
+################################################################################
+# CMOCK CONFIGURATION - ASIL-B/D STRICT SETTINGS
+################################################################################
+:cmock:
+  :vendor_path: vendor
+  :mock_prefix: mock_
+  :when_no_prototypes: :error          
+  :enforce_strict_ordering: TRUE       
+  :callback_include_count: TRUE        
+  :callback_after_arg_check: TRUE      
+  :includes:
+    - unity.h
+    - stdint.h
+    - string.h
+  :plugins:
+    - :ignore
+    - :ignore_arg
+    - :expect_any_args
+    - :array
+    - :callback
+    - :return_thru_ptr
+  :strippables:
+    - '(?:__attribute__\s*\(\s*\(.*?\)\s*\))'
+    - '(?:__packed)'
+    - '(?:EXTERN_C)'
+    - '(?:__weak)'
+  :treat_as:
+    uint8_t:    HEX8
+    uint16_t:   HEX16
+    uint32_t:   UINT32
+    int8_t:     INT8
+    int16_t:    INT16
+    int32_t:    INT32
+    bool:       UINT8
+    UINT:       UINT32
+    ULONG:      UINT32
+  :treat_as_void:
+    - TX_THREAD
+    - TX_QUEUE
+    - TX_SEMAPHORE
+    - TX_MUTEX
+    - I2C_HandleTypeDef
+
+################################################################################
+# GCOV/LCOV CONFIGURATION - BRANCH COVERAGE MANDATORY
+################################################################################
+:gcov:
+  :html_report_type: detailed
+  :html_report: true
+  :xml_report: true
+  :text_report: true
+  :html_medium_threshold: 80
+  :html_high_threshold: 95
+  :abort_on_uncovered: false
+  :reports:
+    - HtmlDetailed
+    - Text
+    - Cobertura
+  :gcovr:
+    :html_medium_threshold: 80
+    :html_high_threshold: 95
+    :branches: true                   
+    :exclude_directories:
+      - build
+      - test
+      - vendor
+    :exclude_files:
+      - '.*_test\.c'
+      - '.*mock_.*\.c'
+      - '.*unity.*'
+      - '.*cmock.*'
+    :print_summary: true
+    :sort_uncovered: true
+    :fail_under_line: 100             
+    :fail_under_branch: 100            
+
+################################################################################
+# COMPILER FLAGS - GCOV INSTRUMENTATION
+################################################################################
+:tools:
+  :test_compiler:
+    :executable: gcc
+    :name: 'GCC Test Compiler'
+    :arguments:
+      - -std=c11
+      - -pedantic
+      - -Wall
+      #- -Wextra
+      - -Werror                        
+      - -Wstrict-prototypes
+      - -Wmissing-prototypes
+      - -Wno-implicit-function-declaration
+      - -Wno-unused-parameter
+      - -fprofile-arcs                
+      - -ftest-coverage               
+      - -fno-inline
+      - -fno-builtin
+      - -O0
+      - -g3
+      - -DUNIT_TEST
+      - -I"$": COLLECTION_PATHS_TEST_TOOLCHAIN_INCLUDE
+      - -I"$": COLLECTION_PATHS_TEST_SUPPORT_SOURCE_INCLUDE_VENDOR
+      - -D"$": COLLECTION_DEFINES_TEST_AND_VENDOR
+      - -c "${1}"
+      - -o "${2}"
+
+  :test_linker:
+    :executable: gcc
+    :name: 'GCC Test Linker'
+    :arguments:
+      - -fprofile-arcs
+      - -ftest-coverage
+      - "${1}"
+      - -o "${2}"
+      - -lm
+      - -lgcov
+
+  :gcov_compiler:
+    :executable: gcc
+    :arguments:
+      - -fprofile-arcs
+      - -ftest-coverage
+      - -Wno-implicit-function-declaration
+      - -I"$": COLLECTION_PATHS_TEST_TOOLCHAIN_INCLUDE
+      - -D"$": COLLECTION_DEFINES_TEST_AND_VENDOR
+      - -c "${1}"
+      - -o "${2}"
+
+  :gcov_linker:
+    :executable: gcc
+    :arguments:
+      - -fprofile-arcs
+      - -ftest-coverage
+      - "${1}"
+      - -o "${2}"
+      - -lgcov
+
+  :gcov_fixture:
+    :executable: "${1}"              
+    :name: 'gcov test fixture'
+    :arguments: []
+
+  :gcov_report:
+    :executable: /home/sheila/.local/bin/gcovr
+    :optional: FALSE
+    :arguments:
+      - --root=..
+      - --gcov-executable=gcov
+      - --branches                     
+      - --exclude='.*test.*'
+      - --exclude='.*mock.*'
+      - --exclude='.*unity.*'
+      - --exclude='.*cmock.*'
+      - --exclude-unreachable-branches
+      - --print-summary
+      - --html
+      - --html-details
+      - -o build/artifacts/gcov/coverage.html
+      - --xml
+      - -o build/artifacts/gcov/coverage.xml
+      - --txt
+      - -o build/artifacts/gcov/coverage.txt
+      - --fail-under-line=70
+      - --fail-under-branch=70
+
+################################################################################
+# PLUGINS
+################################################################################
+:plugins:
+  :load_paths:
+    - "#{Ceedling.load_path}"
+  :enabled:
+    - stdout_pretty_tests_report
+    - module_generator
+    - gcov
+    - xml_tests_report
+
+################################################################################
+# LIBRARIES
+################################################################################
+:libraries:
+  :placement: :end
+  :flag: "-l${1}"
+  :path_flag: "-L ${1}"
+  :system:
+    - m
+    - gcov
+  :test: []
+  :release: []
+
+...

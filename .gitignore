@@ -138,3 +138,6 @@ secrets.yml
 *.project/
 *.mxproject/
 *.settings/
+# CMake build directories
+tests/build/
+build/
