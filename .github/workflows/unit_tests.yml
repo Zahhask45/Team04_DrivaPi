@@ -90,13 +90,12 @@ jobs:
             echo "⚠️ Coverage report not found" >> $GITHUB_STEP_SUMMARY
           fi
 
-      - name: Comment Test Results on PR
-        if: github.event_name == 'pull_request' && always()
+      - name: Post Test Results
+        if: always()
         uses: actions/github-script@v7
         with:
           script: |
             const fs = require('fs');
-            const testOutput = process.env.TEST_OUTPUT;
             
             // Extract test results
             let testPassed = 0;
@@ -112,39 +111,54 @@ jobs:
               
               if (passMatch && totalMatch) {
                 const total = parseInt(totalMatch[1]);
-                const passed = parseInt(totalMatch[1]) - (100 - parseInt(passMatch[1]));
-                testPassed = passed;
-                testFailed = total - passed;
+                const percentPassed = parseInt(passMatch[1]);
+                testPassed = Math.round(total * percentPassed / 100);
+                testFailed = total - testPassed;
               }
               
               // Extract Motor Servo and Speed Sensor results
               const motorServoMatch = logContent.match(/Motor Servo.*?(PASSED|FAILED)/);
               const speedSensorMatch = logContent.match(/Speed Sensor.*?(PASSED|FAILED)/);
               
+              // Check for coverage summary
+              const coverageMatch = logContent.match(/lines.*?(\d+\.\d+)%.*?functions.*?(\d+\.\d+)%/s);
+              const coverageInfo = coverageMatch ? 
+                `\n#### 📊 Coverage\n- **Lines**: ${coverageMatch[1]}%\n- **Functions**: ${coverageMatch[2]}%\n` :
+                '\n#### 📊 Coverage\nCoverage report available in artifacts.\n';
+              
               testSummary = `
             ### 🧪 Unit Test Results
             
             **Overall Status**: ${testPassed > 0 && testFailed === 0 ? '✅ PASSED' : '❌ FAILED'}
             
-            - **Motor Servo Tests**: ${motorServoMatch ? motorServoMatch[1] : 'Unknown'} 160 tests
-            - **Speed Sensor Tests**: ${speedSensorMatch ? speedSensorMatch[1] : 'Unknown'} 11 tests
+            - **Motor Servo Tests**: ${motorServoMatch ? motorServoMatch[1] : 'Unknown'} (160 tests)
+            - **Speed Sensor Tests**: ${speedSensorMatch ? speedSensorMatch[1] : 'Unknown'} (11 tests)
             - **Total Tests**: ${testPassed + testFailed}
-            - **Passed**: ${testPassed}
-            - **Failed**: ${testFailed}
-            
-            #### 📊 Coverage
-            
-            The aggregated coverage report for all tests is available in the build artifacts.
-            
+            - **Passed**: ✅ ${testPassed}
+            - **Failed**: ${testFailed > 0 ? '❌' : '✅'} ${testFailed}
+            ${coverageInfo}
+            ---
+            📦 Full coverage reports available in workflow artifacts
             `;
             }
             
-            github.rest.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: testSummary || '🧪 Unit tests completed. Check logs for details.'
-            });
+            // Post as PR comment or commit comment depending on event type
+            if (context.eventName === 'pull_request') {
+              github.rest.issues.createComment({
+                issue_number: context.issue.number,
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                body: testSummary || '🧪 Unit tests completed. Check logs for details.'
+              });
+            } else {
+              // For push events, create a commit comment
+              github.rest.repos.createCommitComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                commit_sha: context.sha,
+                body: testSummary || '🧪 Unit tests completed. Check logs for details.'
+              });
+            }
 
       # - name: Upload Coverage Reports
       #   if: always()
