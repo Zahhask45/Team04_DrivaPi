@@ -20,19 +20,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Checkout
       - name: Checkout repository
         uses: actions/checkout@v6
 
-      # Toolchain
       - name: Install ARM toolchain
         run: |
           sudo apt-get update
-          sudo apt-get install -y \
-            gcc-arm-none-eabi \
-            binutils-arm-none-eabi \
-            make \
-            jq
+          sudo apt-get install -y gcc-arm-none-eabi binutils-arm-none-eabi make
 
       - name: Show ARM toolchain version
         run: arm-none-eabi-gcc --version
@@ -44,82 +38,82 @@ jobs:
           languages: cpp
           queries: security-and-quality
           build-mode: manual
-          config-file: ./.github/codeql-config.yml
+          config: |
+            paths:
+              - Threadx/Core/Src
+              - Threadx/Core/Inc
+            paths-ignore:
+              - Threadx/Drivers
+              - Threadx/Middlewares
+              - Threadx/Debug
+              - Threadx/AZURE_RTOS
+              - Threadx/Core/Startup
+              - Threadx/Core/Test
 
-      # Build firmware
+      # Cache build artifacts
+      - name: Cache build artifacts
+        uses: actions/cache@v3
+        with:
+          path: Threadx/Debug/.build_cache
+          key: stm32-build-${{ github.sha }}
+
+      # Build project for CodeQL
       - name: Build project for CodeQL
         run: |
           set -e
           cd Threadx/Debug
+          echo "Building firmware for CodeQL analysis..."
+          
+          if ! make -f makefile main-build; then
+            echo "❌ Build failed - compilation errors detected"
+            echo "Fix compilation errors before analysis can proceed"
+            exit 1
+          fi
+          
+          if [ ! -f Threadx.elf ]; then
+            echo "❌ Build artifact missing - Threadx.elf not found"
+            exit 1
+          fi
+          
+          echo "✅ Build successful - proceeding with CodeQL analysis"
 
-          echo "🔨 Building firmware for CodeQL..."
-
-          make -f makefile main-build
-
-          test -f Threadx.elf
-
-          echo "✅ Build successful"
-
-      # Run CodeQL analysis (do not upload yet)
+      # Run CodeQL analysis
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v4
         with:
           category: '/language:cpp'
           output: results
-          upload: false
-          wait-for-processing: true
 
-      # Filter SARIF
-      - name: Filter SARIF results
-        uses: advanced-security/filter-sarif@v1
-        with:
-          # Generated code intentionally excluded
-          patterns: |
-            -**/Drivers/**
-            -**/Middlewares/**
-            -**/AZURE_RTOS/**
-            -**/Core/Startup/**
-            -**/Debug/**
-            -**/Release/**
-          input: results/cpp.sarif
-          output: results/cpp.sarif
-
-      # Upload FILTERED SARIF to GitHub Security
-      - name: Upload SARIF to GitHub Security
-        uses: github/codeql-action/upload-sarif@v4
-        with:
-          sarif_file: results/cpp.sarif
-
-      # Keep SARIF as artifact
-      - name: Upload SARIF artifact
+      # Upload SARIF as downloadable artifact
+      - name: Upload CodeQL SARIF report
         if: always()
         uses: actions/upload-artifact@v6
         with:
-          name: codeql-sarif-filtered
+          name: codeql-sarif-report
           path: results/cpp.sarif
           retention-days: 30
 
-      # Enforce security gate
-      - name: Fail on high or critical issues
+      # Fail job if high or critical severity issues found
+      - name: Check for high-severity issues
         if: always()
         run: |
-          SARIF="results/cpp.sarif"
-
-          if [ ! -f "$SARIF" ]; then
-            echo "⚠️ SARIF not found"
+          SARIF_FILE="results/cpp.sarif"
+          
+          if [ ! -f "$SARIF_FILE" ]; then
+            echo "SARIF file not found at $SARIF_FILE"
             exit 0
           fi
-
-          ERRORS=$(jq '[.runs[].results[] | select(.level=="error")] | length' "$SARIF")
-          WARNINGS=$(jq '[.runs[].results[] | select(.level=="warning")] | length' "$SARIF")
-
-          echo "📊 CodeQL results"
-          echo "   High/Critical: $ERRORS"
-          echo "   Warnings:      $WARNINGS"
-
-          if [ "$ERRORS" -gt 0 ]; then
-            echo "❌ Build failed due to high/critical issues"
+          
+          # Count error-level (high/critical) results
+          # SARIF uses "error" level for high/critical severity
+          ERROR_COUNT=$(jq '[.runs[].results[] | select(.level == "error")] | length' "$SARIF_FILE")
+          
+          echo "CodeQL found $ERROR_COUNT high/critical severity issue(s)"
+          
+          if [ "$ERROR_COUNT" -gt 0 ]; then
+            echo "❌ Failing job due to $ERROR_COUNT high/critical severity issue(s)"
+            echo "Review findings at: Security → Code scanning alerts"
             exit 1
+          else
+            echo "✅ No high/critical severity issues found"
           fi
-
-          echo "✅ No high/critical issues"

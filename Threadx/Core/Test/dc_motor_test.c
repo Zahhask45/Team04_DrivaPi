@@ -14,6 +14,9 @@ static void UART_Print(const char *s)
 }
 
 void Motor_Test_High(double speed) {
+    char buf[128];
+//    snprintf(buf, sizeof(buf), "Motor_Test_High: Starting high-power motor test (speed=%.2f)\r\n", speed);
+//    UART_Print(buf);
 
     UART_Print("-> FORWARD (1.5s)...\r\n");
     Motor_Forward(speed);
