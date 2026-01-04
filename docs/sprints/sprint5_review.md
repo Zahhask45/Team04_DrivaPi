@@ -1,5 +1,3 @@
----
-
 # Sprint 5 Review — Team04 DrivaPi
 
 **Date:** December 22, 2025
