@@ -54,15 +54,16 @@ Team highlights
 - Bernardo: CAN pin assignments, electrical sketch, speed sensor tests.
 - Melanie: KUKSA tests, Yocto/AGL setup, KuksaReader prototype, CI design.
 
+Team feedback (retrospective)
+----------------------------
+- The team is very proud of the technical results and the CI/test achievements; morale is high around the verification-first shift.
+- Several members reported feeling exhausted after this sprint. The current planning cadence tends to produce low measurable output in the first week (setup, cross-compilation, environment work) and much higher output in the second week — this creates bursts of high workload and fatigue.
+- Facilitators gave strong, positive feedback during the retrospective presentation: they were impressed by the work delivered and highlighted the (reported) 100% test coverage results shown during the demo.
+- Suggested adjustments from the team: rethink sprint planning and story sizing to smooth work across the sprint (reserve explicit setup/story time, cap WIP, add a mid-sprint check-in), and treat sustainability as a planning criterion alongside delivery.
+
 Outcome
 -------
 Sprint goal achieved: verification tooling and static analysis in place, CAN latency validated, and KUKSA integration validated for telemetry/display. The team moved from "make it work" to "prove it works." Ready to focus on coverage, remaining CodeQL issues, and final middleware integration in Sprint 6.
 
-Document prepared: December 22, 2025
-Next review: January 5, 2026
-
-
----
-
-**Document prepared on:** December 22, 2025
-**Next review:** Sprint 6 Review (January 5, 2026)
+-------
+**Next review:** Sprint 6 Review (January 19, 2026)
