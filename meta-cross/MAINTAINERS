@@ -1,0 +1,39 @@
+# meta-cross Layer Maintainers
+
+This file lists the maintainers of the meta-cross Yocto layer for the DrivaPi project.
+
+---
+
+## Team04 - DrivaPi
+
+**Organization:** SEAME Automotive Program  
+**Project:** Autonomous Vehicle (PiRacer Platform)
+
+### Team Members
+
+- **Hugo** - Hardware, Fabrication, QT Deployment
+- **João** - OS, Development Environment
+- **Bernardo** - Hardware Integration, Testing
+- **Miguel** - GitHub, Agile/Scrum
+- **Melanie** - GUI, Coordination, Requirements
+
+---
+
+## Layer Scope
+
+This layer provides cross-compilation support for Rust applications targeting Raspberry Pi 5 with Automotive Grade Linux (AGL).
+
+**Primary Focus:**
+- Rust application recipes for embedded control systems
+- Integration with AGL/Yocto build infrastructure
+- Raspberry Pi 5 (aarch64) target support
+
+---
+
+## Contact
+
+For questions or contributions related to this layer, please refer to the main project repository or contact the team through the SEAME program.
+
+---
+
+*Maintained by Team04 - SEAME Automotive Program*
