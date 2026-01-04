@@ -54,15 +54,13 @@ Sprint 5 moved the team to a verification-first approach: an OSS verification st
 2. Fix/triage CodeQL High/Medium findings and exclude ThreadX-generated code from scans.
 3. Complete KuksaReader gRPC client and test end-to-end: sensor → CAN → KUKSA → Qt.
 4. Test CAN at 1000 kbps and validate latency impact; document decision.
-5. Resolve RPi boot issues and rebuild AGL with QtSerialBus.
-6. Convert electrical sketches to structured diagrams (KiCAD/Fritzing) and publish pin table.
 
 ## Team highlights
 - **Hugo:** CAN latency study, CodeQL pipeline, CAN docs, STUB testing approach.
 - **Gaspar:** Dependabot/DNF server, Qt cross-compile docs, RPi boot investigation.
 - **Miguel:** Unit test integration on STM32, motor/servo tests, I2C3 migration.
 - **Bernardo:** CAN pin assignments, electrical sketch, speed sensor tests.
-- **Melanie:** KUKSA tests, Yocto/AGL setup, KuksaReader prototype, CI design.
+- **Melanie:** KUKSA tests, Yocto/AGL setup for Kuksa, KuksaReader prototype, Instrument Cluster design.
 
 ## Team feedback (retrospective)
 > The team is proud of the technical results and CI/test achievements. Facilitators praised the demo and the reported 100% coverage during the presentation.
