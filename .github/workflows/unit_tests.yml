@@ -47,7 +47,8 @@ jobs:
       - name: Install Ruby dependencies with Bundler
         run: |
           sudo gem install bundler
-          bundle install --deployment
+          bundle config set deployment true
+          bundle install
 
       - name: Install gcovr
         run: |
