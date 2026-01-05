@@ -28,6 +28,7 @@ lcov --capture --directory build --output-file coverage.info --rc branch_coverag
 echo "📋 Filtering coverage data..."
 lcov -r coverage.info '/usr/*' '*vendor*' '*cmock*' '*unity*' '*c_exception*' \
          '*build/test/*' '*test/runners*' '*test/mocks*' '/var/lib/gems/*' \
+         --ignore-errors unused \
          -o coverage_filtered.info --rc branch_coverage=1 --quiet || \
   cp coverage.info coverage_filtered.info
 
