@@ -28,6 +28,11 @@ ENV/
 env/
 .python-version
 
+# Ruby (Ceedling dependencies)
+.bundle/
+vendor/
+Gemfile.lock
+
 # IDEs
 .vscode/
 !.vscode/extensions.json
@@ -93,6 +98,17 @@ Makefile*
 .coverage
 htmlcov/
 *.log
+
+# Unit test coverage and reports (generated files with absolute paths)
+tests/unit/**/coverage/
+tests/unit/**/coverage_report/
+tests/unit/**/test_reports/
+tests/unit/**/build/
+
+# Generated mock files (Ceedling/CMock auto-generated)
+tests/unit/**/build/test/mocks/
+mock_*.c
+mock_*.h
 
 # Temporary files
 *.tmp
