@@ -29,6 +29,7 @@ readonly PROJECT_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
 readonly BUILD_DIR="${PROJECT_ROOT}/build"
 readonly COVERAGE_DIR="${BUILD_DIR}/artifacts/gcov"
 readonly REPORTS_DIR="${PROJECT_ROOT}/test_reports"
+readonly VENDOR_DIR="${PROJECT_ROOT}/vendor"
 
 # Coverage thresholds (temporarily reduced from 100% to allow incremental improvement)
 readonly MIN_LINE_COVERAGE=70
@@ -116,6 +117,25 @@ cleanup_build() {
     log_success "Cleanup complete"
 }
 
+# Ensure Ceedling vendor (Unity/CMock) exists; CI doesn't commit this folder
+ensure_vendor() {
+    if [[ -d "${VENDOR_DIR}/unity/src" ]]; then
+        return
+    fi
+
+    log_header "Restoring Ceedling vendor assets"
+    local gem_path
+    gem_path=$(ruby -e "spec = Gem.loaded_specs['ceedling']; puts spec.full_gem_path if spec" 2>/dev/null || true)
+
+    if [[ -n "$gem_path" && -d "$gem_path/vendor" ]]; then
+        cp -a "$gem_path/vendor" "$PROJECT_ROOT/"
+        log_success "Vendor copied from Ceedling gem"
+    else
+        log_fail "Could not locate Ceedling vendor directory"
+        exit 1
+    fi
+}
+
 # ============================================================================
 # RUN TESTS
 # ============================================================================
@@ -125,6 +145,8 @@ run_tests() {
     
     cd "${PROJECT_ROOT}"
     
+    ensure_vendor
+
     local log_file="${REPORTS_DIR}/test_output.log"
     
     if ceedling gcov:all 2>&1 | tee "$log_file"; then
