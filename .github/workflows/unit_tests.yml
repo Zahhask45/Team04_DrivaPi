@@ -44,13 +44,9 @@ jobs:
             python3 \
             python3-pip
 
-      - name: Install Ruby dependencies with Bundler
+      - name: Install Ceedling and gcovr
         run: |
-          sudo gem install bundler
-          bundle install
-
-      - name: Install gcovr
-        run: |
+          sudo gem install ceedling
           pip3 install gcovr
 
       - name: Verify tool versions
