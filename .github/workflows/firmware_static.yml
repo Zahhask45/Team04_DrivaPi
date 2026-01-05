@@ -38,10 +38,21 @@ jobs:
           languages: cpp
           queries: security-and-quality
           build-mode: manual
-          
+          config: |
+            paths:
+              - Threadx/Core/Src
+              - Threadx/Core/Inc
+            paths-ignore:
+              - Threadx/Drivers
+              - Threadx/Middlewares
+              - Threadx/Debug
+              - Threadx/AZURE_RTOS
+              - Threadx/Core/Startup
+              - Threadx/Core/Test
+
       # Cache build artifacts
       - name: Cache build artifacts
-        uses: actions/cache@v3
+        uses: actions/cache@v5
         with:
           path: Threadx/Debug/.build_cache
           key: stm32-build-${{ github.sha }}
@@ -72,20 +83,6 @@ jobs:
         with:
           category: '/language:cpp'
           output: results
-
-      # Filter SARIF to exclude unwanted paths (C++ doesn't support path filtering in manual build mode)
-      - name: Filter SARIF results
-        uses: advanced-security/filter-sarif@v1
-        with:
-          patterns: |
-            -**/Drivers/**
-            -**/Middlewares/**
-            -**/Debug/**
-            -**/AZURE_RTOS/**
-            -**/Core/Startup/**
-            -**/Core/Test/**
-          input: results/cpp.sarif
-          output: results/cpp.sarif
 
       # Upload SARIF as downloadable artifact
       - name: Upload CodeQL SARIF report

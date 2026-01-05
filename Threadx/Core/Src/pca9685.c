@@ -33,6 +33,13 @@ static void Software_Delay(uint32_t ms) {
     }
 }
 
+static HAL_StatusTypeDef PCA9685_SoftwareReset(I2C_HandleTypeDef *hi2c) {
+    uint8_t reset_cmd = 0x06;
+    HAL_StatusTypeDef status = HAL_I2C_Master_Transmit(hi2c, 0x00, &reset_cmd, 1, 500);
+    Software_Delay(10);
+    return status;
+}
+
 static HAL_StatusTypeDef PCA9685_WriteReg(I2C_HandleTypeDef *hi2c, uint8_t addr7, uint8_t reg, uint8_t val) {
     uint16_t devaddr = (uint16_t)(addr7 << 1);
     uint8_t data[2] = {reg, val};
@@ -61,6 +68,16 @@ HAL_StatusTypeDef PCA9685_Init_Device(I2C_HandleTypeDef *hi2c, uint8_t addr7, co
     char msg[128];
     snprintf(msg, sizeof(msg), "Init %s PCA9685 at 0x%02X with SWRST\r\n", name, addr7);
     UART_Print(msg);
+    
+    // UART_Print("  Issuing Software Reset (SWRST)...\r\n");
+    // ret = PCA9685_SoftwareReset(hi2c);
+    // if (ret != HAL_OK) {
+    //     snprintf(msg, sizeof(msg), "  SWRST failed: %d (continuing anyway)\r\n", ret);
+    //     UART_Print(msg);
+    // } else {
+    //     UART_Print("  SWRST OK!\r\n");
+    // }
+//    UART_Print("  Skipping SWRST (prevent hang)\r\n");
     ret = HAL_OK;
     Software_Delay(50);
 
