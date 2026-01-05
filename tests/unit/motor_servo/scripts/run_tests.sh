@@ -125,13 +125,13 @@ ensure_vendor() {
 
     log_header "Restoring Ceedling vendor assets"
     local gem_path
-    gem_path=$(ruby -e "spec = Gem.loaded_specs['ceedling']; puts spec.full_gem_path if spec" 2>/dev/null || true)
+    gem_path=$(ruby -r rubygems -e "spec = Gem::Specification.find_by_name('ceedling'); puts spec.full_gem_path if spec" 2>/dev/null || true)
 
     if [[ -n "$gem_path" && -d "$gem_path/vendor" ]]; then
         cp -a "$gem_path/vendor" "$PROJECT_ROOT/"
         log_success "Vendor copied from Ceedling gem"
     else
-        log_fail "Could not locate Ceedling vendor directory"
+        log_fail "Could not locate Ceedling vendor directory (gem path: '$gem_path')"
         exit 1
     fi
 }
