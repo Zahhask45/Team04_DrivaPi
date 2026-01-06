@@ -4,8 +4,6 @@
 #include "../src/mock_stm32u5xx_hal.c"
 /* Force compilation of PCA9685 testable implementation */
 #include "../src/pca9685_testable.c"
-/* Force compilation of servo motor implementation */
-#include "../src/servo_motor.c"
 
 static I2C_HandleTypeDef test_i2c;
 
