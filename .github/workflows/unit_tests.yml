@@ -105,20 +105,23 @@ jobs:
             if (fs.existsSync('${{ env.BUILD_DIR }}/test_output.log')) {
               const logContent = fs.readFileSync('${{ env.BUILD_DIR }}/test_output.log', 'utf8');
               
-              // Extract test counts
-              const passMatch = logContent.match(/(\d+)% tests passed/);
-              const totalMatch = logContent.match(/out of (\d+)/);
+              // Extract test counts dynamically
+              const passedMatch = logContent.match(/PASSED:\s+(\d+)/);
+              const failedMatch = logContent.match(/FAILED:\s+(\d+)/);
               
-              if (passMatch && totalMatch) {
-                const total = parseInt(totalMatch[1]);
-                const percentPassed = parseInt(passMatch[1]);
-                testPassed = Math.round(total * percentPassed / 100);
-                testFailed = total - testPassed;
+              if (passedMatch && failedMatch) {
+                testPassed = parseInt(passedMatch[1]);
+                testFailed = parseInt(failedMatch[1]);
               }
               
-              // Extract Motor Servo and Speed Sensor results
-              const motorServoMatch = logContent.match(/Motor Servo.*?(PASSED|FAILED)/);
-              const speedSensorMatch = logContent.match(/Speed Sensor.*?(PASSED|FAILED)/);
+              // Motor servo: Total tests - Speed Sensor tests (11)
+              // Speed sensor has fixed 11 tests
+              const motorServoCount = Math.max(0, testPassed - 11);
+              const speedSensorCount = 11;
+              
+              // Test status based on failures
+              const motorServoStatus = testFailed === 0 ? 'PASSED' : 'FAILED';
+              const speedSensorStatus = testFailed === 0 ? 'PASSED' : 'FAILED';
               
               // Check for coverage summary
               const coverageMatch = logContent.match(/lines.*?(\d+\.\d+)%.*?functions.*?(\d+\.\d+)%.*?branches.*?(\d+\.\d+)%/s);
@@ -131,8 +134,8 @@ jobs:
             
             **Overall Status**: ${testPassed > 0 && testFailed === 0 ? '✅ PASSED' : '❌ FAILED'}
             
-            - **Motor Servo Tests**: ${motorServoMatch ? motorServoMatch[1] : 'Unknown'} (160 tests)
-            - **Speed Sensor Tests**: ${speedSensorMatch ? speedSensorMatch[1] : 'Unknown'} (11 tests)
+            - **Motor Servo Tests**: ${motorServoStatus} (${motorServoCount} tests)
+            - **Speed Sensor Tests**: ${speedSensorStatus} (${speedSensorCount} tests)
             ${coverageInfo}
             ---
             Full coverage reports available in workflow artifacts
