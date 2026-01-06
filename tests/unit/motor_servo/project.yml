@@ -37,7 +37,7 @@
     - src/mock_stm32u5xx_hal.c
     - src/pca9685_testable.c
     - src/servo_functions.c
-    - src/servo_motor_testable.c
+    - src/servo_motor.c
     - src/speed_sensor_functions.c
 
 :defines:
