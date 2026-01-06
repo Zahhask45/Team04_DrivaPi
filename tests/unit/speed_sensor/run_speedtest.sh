@@ -44,21 +44,21 @@ fi
 
 echo ""
 echo "----------------------------------------------------------------"
-echo "✅ SUCCESS! Opening Report..."
+echo "✅ SUCCESS! Report available at: $PWD/coverage_report/index.html"
 echo "----------------------------------------------------------------"
+echo ""
 
-# 5. Open the report in the default browser
-xdg-open coverage_report/index.html
+# Note: Not opening browser automatically (headless CI environment)
 
 
 # 6. Cleanup
 echo ""
 echo "🧹 Cleaning up..."
 echo "Removing coverage.info..."
-rm coverage.info
+rm -f coverage.info || true
 echo "Running clobber.."
-ceedling clobber
+ceedling clobber || true
 
 echo ""
-echo "Cleanup done!"
-echo "Exiting speed sensor test..."
+echo "✓ Cleanup done!"
+echo "✓ Speed Sensor tests PASSED"
