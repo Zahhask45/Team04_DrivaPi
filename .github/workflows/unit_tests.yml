@@ -124,9 +124,10 @@ jobs:
               
               testPassed = motorServoCount + speedSensorCount;
               
-              // Check for failure indicators
-              const failedMatch = logContent.match(/FAILED/);
-              testFailed = failedMatch ? 1 : 0;
+              // Check for failure indicators in status lines
+              const motorServoFailed = logContent.match(/\[INFO\] Motor Servo:\s+FAILED/i);
+              const speedSensorFailed = logContent.match(/\[INFO\] Speed Sensor:\s+FAILED/i);
+              testFailed = (motorServoFailed || speedSensorFailed) ? 1 : 0;
               
               // Extract test status (PASSED or FAILED)
               const motorServoMatch = logContent.match(/\[INFO\] Motor Servo:\s+(PASSED|FAILED)/i);

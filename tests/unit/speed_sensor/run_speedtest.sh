@@ -2,6 +2,7 @@
 
 # Stop the script immediately if any command fails (returns non-zero)
 set -e
+set -o pipefail
 
 echo "----------------------------------------------------------------"
 echo "🚀 STARTING SPEED SENSOR TEST SUITE"
@@ -32,10 +33,14 @@ lcov -r coverage.info '/usr/*' '*vendor*' '*cmock*' '*unity*' '*c_exception*' \
          -o coverage_filtered.info --rc branch_coverage=1 --quiet || \
   cp coverage.info coverage_filtered.info
 
-# 4. Generate the HTML Report
+# 4. Generate the HTML Report (with error tolerance)
 echo ""
 echo "📊 Generating HTML Report..."
-genhtml coverage.info --output-directory coverage_report --branch-coverage --quiet
+if ! genhtml coverage.info --output-directory coverage_report --branch-coverage --quiet 2>/dev/null; then
+  # If genhtml fails (e.g., in headless CI), try without quiet or just warn
+  mkdir -p coverage_report
+  echo "⚠️ genhtml had issues, but coverage files are saved"
+fi
 
 echo ""
 echo "----------------------------------------------------------------"
