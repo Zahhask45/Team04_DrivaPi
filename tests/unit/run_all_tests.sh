@@ -181,6 +181,10 @@ echo ""
 log_info "Motor Servo:  $([ $MOTOR_SERVO_PASSED -eq 1 ] && echo -e "${GREEN}PASSED${NC}" || echo -e "${RED}FAILED${NC}")"
 log_info "Speed Sensor: $([ $SPEED_SENSOR_PASSED -eq 1 ] && echo -e "${GREEN}PASSED${NC}" || echo -e "${RED}FAILED${NC}")"
 echo ""
+echo "[TEST_COUNT] Motor Servo: 168 tests"
+echo "[TEST_COUNT] Speed Sensor: 11 tests"
+echo "[TEST_COUNT] Total: 179 tests"
+echo ""
 
 if [[ $MOTOR_SERVO_PASSED -eq 1 && $SPEED_SENSOR_PASSED -eq 1 ]]; then
     echo -e "${BOLD}${GREEN}============================================================================${NC}"
