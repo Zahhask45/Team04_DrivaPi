@@ -59,7 +59,10 @@ jobs:
           cd -
 
       - name: Install local validators
-        run: pip install -e .
+        run: pip install -e Dotstop
+
+      - name: Create temporary symlink to .dotstop.dot
+        run: ln -sf Dotstop/.dotstop.dot .dotstop.dot
 
       - name: Mark TSF items and links as reviewed
         run: |
