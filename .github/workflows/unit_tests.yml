@@ -121,9 +121,9 @@ jobs:
               const speedSensorMatch = logContent.match(/Speed Sensor.*?(PASSED|FAILED)/);
               
               // Check for coverage summary
-              const coverageMatch = logContent.match(/lines.*?(\d+\.\d+)%.*?functions.*?(\d+\.\d+)%/s);
+              const coverageMatch = logContent.match(/lines.*?(\d+\.\d+)%.*?functions.*?(\d+\.\d+)%.*?branches.*?(\d+\.\d+)%/s);
               const coverageInfo = coverageMatch ? 
-                `\n#### 📊 Coverage\n- **Lines**: ${coverageMatch[1]}%\n- **Functions**: ${coverageMatch[2]}%\n` :
+                `\n#### 📊 Coverage\n- **Lines**: ${coverageMatch[1]}%\n- **Functions**: ${coverageMatch[2]}%\n- **Branches**: ${coverageMatch[3]}%\n` :
                 '\n#### 📊 Coverage\nCoverage report available in artifacts.\n';
               
               testSummary = `

@@ -1,4 +1,4 @@
-/* Testable DC Motor functions from ThreadX */
+/* DC Motor functions - imported from ThreadX production code */
 #include "dc_motor_testable.h"
 
 static inline uint16_t clamp_u16(int32_t v) {
@@ -79,6 +79,7 @@ void Motor_SetMotor_Testable(I2C_HandleTypeDef *hi2c, double value) {
     }
 
     if (value > 0.0) {
+        // Forward
         PCA9685_SetPWM_Testable(hi2c, PCA9685_ADDR_MOTOR, MOTOR_L_A, 0, max);
         PCA9685_SetPWM_Testable(hi2c, PCA9685_ADDR_MOTOR, MOTOR_L_B, 0, 0);
         PCA9685_SetPWM_Testable(hi2c, PCA9685_ADDR_MOTOR, MOTOR_L_PWM, 0, pwm_val);
@@ -87,6 +88,7 @@ void Motor_SetMotor_Testable(I2C_HandleTypeDef *hi2c, double value) {
         PCA9685_SetPWM_Testable(hi2c, PCA9685_ADDR_MOTOR, MOTOR_R_B, 0, max);
         PCA9685_SetPWM_Testable(hi2c, PCA9685_ADDR_MOTOR, MOTOR_R_PWM, 0, pwm_val);
     } else {
+        // Backward
         PCA9685_SetPWM_Testable(hi2c, PCA9685_ADDR_MOTOR, MOTOR_L_A, 0, 0);
         PCA9685_SetPWM_Testable(hi2c, PCA9685_ADDR_MOTOR, MOTOR_L_B, 0, max);
         PCA9685_SetPWM_Testable(hi2c, PCA9685_ADDR_MOTOR, MOTOR_L_PWM, 0, pwm_val);
@@ -100,6 +102,7 @@ void Motor_SetMotor_Testable(I2C_HandleTypeDef *hi2c, double value) {
 void Motor_SetPWM_Testable(I2C_HandleTypeDef *hi2c, int32_t left_counts, int32_t right_counts) {
     const uint16_t max = (uint16_t)(PCA9685_COUNTS - 1u);
 
+    /* Left motor */
     if (left_counts > 0) {
         uint16_t pwm = clamp_u16(left_counts);
         PCA9685_SetPWM_Testable(hi2c, PCA9685_ADDR_MOTOR, MOTOR_L_A, 0, max);
@@ -116,6 +119,7 @@ void Motor_SetPWM_Testable(I2C_HandleTypeDef *hi2c, int32_t left_counts, int32_t
         PCA9685_SetPWM_Testable(hi2c, PCA9685_ADDR_MOTOR, MOTOR_L_PWM, 0, 0);
     }
 
+    /* Right motor */
     if (right_counts > 0) {
         uint16_t pwm = clamp_u16(right_counts);
         PCA9685_SetPWM_Testable(hi2c, PCA9685_ADDR_MOTOR, MOTOR_R_A, 0, 0);

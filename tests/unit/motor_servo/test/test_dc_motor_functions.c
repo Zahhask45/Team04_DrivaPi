@@ -75,6 +75,18 @@ void test_DC_Motor_ValidatePWM_ShouldAcceptZero(void) {
     TEST_ASSERT_EQUAL_INT(0, result);
 }
 
+void test_DC_Motor_ValidatePWM_ShouldRejectRightCountsOverflow(void) {
+    // Test right_counts overflow (line 27)
+    int result = DC_Motor_ValidatePWM(2000, 5000);
+    TEST_ASSERT_EQUAL_INT(-1, result);
+}
+
+void test_DC_Motor_ValidatePWM_ShouldRejectRightCountsUnderflow(void) {
+    // Test right_counts underflow (line 26)
+    int result = DC_Motor_ValidatePWM(2000, -5000);
+    TEST_ASSERT_EQUAL_INT(-1, result);
+}
+
 // Testes para DC_Motor_CalculatePWM
 void test_DC_Motor_CalculatePWM_ShouldReturnZeroForZeroSpeed(void) {
     uint16_t result = DC_Motor_CalculatePWM(0.0);

@@ -148,3 +148,32 @@ void test_Motor_Stop_ShouldContinueOnI2CTimeout(void) {
     
     TEST_ASSERT_EQUAL_UINT32(6, HAL_Mock_GetI2CWriteCallCount());
 }
+
+/* Edge Case Tests for clamp_u16 coverage */
+void test_Motor_Forward_ExtremeSpeedShouldClamp(void) {
+    // Test with speed > 1.0 to exercise clamping in dc_motor_testable
+    Motor_Forward_Testable(&test_i2c, 2.0);
+    
+    TEST_ASSERT_EQUAL_UINT32(6, HAL_Mock_GetI2CWriteCallCount());
+}
+
+void test_Motor_Backward_NegativeSpeedShouldClamp(void) {
+    // Test with negative speed to exercise lower bound clamping
+    Motor_Backward_Testable(&test_i2c, -0.5);
+    
+    TEST_ASSERT_EQUAL_UINT32(6, HAL_Mock_GetI2CWriteCallCount());
+}
+
+void test_Motor_SetPWM_NegativeLeftCounts_ShouldClamp(void) {
+    // Test with extreme negative value to exercise clamp_u16(v < 0) branch
+    Motor_SetPWM_Testable(&test_i2c, -5000, 2000);
+    
+    TEST_ASSERT_EQUAL_UINT32(6, HAL_Mock_GetI2CWriteCallCount());
+}
+
+void test_Motor_SetPWM_NegativeRightCounts_ShouldClamp(void) {
+    // Test with extreme negative value to exercise clamp_u16(v < 0) branch
+    Motor_SetPWM_Testable(&test_i2c, 2000, -5000);
+    
+    TEST_ASSERT_EQUAL_UINT32(6, HAL_Mock_GetI2CWriteCallCount());
+}
