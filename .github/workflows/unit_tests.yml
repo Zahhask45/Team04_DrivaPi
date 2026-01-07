@@ -184,21 +184,3 @@ jobs:
               console.log('⚠️ Could not post comment (insufficient permissions), but results are in job summary');
               console.log(error.message);
             }
-
-      # - name: Upload Coverage Reports
-      #   if: always()
-      #   uses: actions/upload-artifact@v6
-      #   with:
-      #     name: coverage-reports
-      #     path: |
-      #       ${{ env.COVERAGE_DIR }}/
-      #       ${{ env.BUILD_DIR }}/test_output.log
-      #     retention-days: 30
-
-      # - name: Upload Test Logs
-      #   if: always()
-      #   uses: actions/upload-artifact@v6
-      #   with:
-      #     name: test-logs
-      #     path: ${{ env.BUILD_DIR }}/test_output.log
-      #     retention-days: 30
