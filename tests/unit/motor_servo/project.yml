@@ -1,0 +1,102 @@
+---
+:project:
+  :use_exceptions: FALSE
+  :use_test_preprocessor: :none
+  :use_auxiliary_dependencies: TRUE
+  :build_root: build
+  :test_file_prefix: test_
+  :which_ceedling: gem
+  :ceedling_version: 0.31.1
+  :default_tasks:
+    - test:all
+    - gcov:all
+
+:extension:
+  :executable: .out
+
+:paths:
+  :test:
+    - +:test/**
+    - -:test/support
+    - -:test/mocks
+  :source:
+    - src
+  :include:
+    - test/mocks
+    - test/support
+    - src
+  :support:
+    - test/support
+  :libraries: []
+
+:defines:
+  :common: &common_defines
+    - UNIT_TEST_BUILD
+    - TARGET_INDEPENDENT
+  :test:
+    - *common_defines
+    - TEST
+    - UNITY_INCLUDE_DOUBLE
+    - UNITY_DOUBLE_PRECISION=1e-12
+  :test_preprocess:
+    - *common_defines
+    - TEST
+  :gcov:
+    - *common_defines
+    - GCOV_BUILD
+
+:unity:
+  :vendor_path: vendor
+
+:cexception:
+  :vendor_path: vendor
+
+:cmock:
+  :plugins:
+    - :ignore
+    - :callback
+  :verbosity: 2
+  :when_no_prototypes: :warn
+  :mock_prefix: 'mock_'
+  :mock_suffix: ''
+  :treat_as:
+    uint8_t: HEX8
+    uint16_t: HEX16
+    uint32_t: UINT32
+    int8_t: INT8
+    int16_t: INT16
+    int32_t: INT32
+    bool: UINT8
+  :memcmp_if_unknown: true
+  :when_ptr: :compare_data
+  :weak: ''
+  :enforce_strict_ordering: true
+  :fail_on_unexpected_calls: true
+  :callback_include_count: true
+  :callback_after_arg_check: false
+  :exclude_setjmp_h: false
+
+:plugins:
+  :enabled:
+    - gcov
+    - module_generator
+
+:gcov:
+  :summaries: TRUE
+  :report_task: FALSE
+  :utilities:
+    - gcovr
+  :reports:
+    - HtmlBasic
+  :gcovr:
+    :html_medium_threshold: 75
+    :html_high_threshold: 90
+
+:libraries:
+  :placement: :end
+  :flag: "-l${1}"
+  :path_flag: "-L ${1}"
+  :system: []
+  :test: []
+  :release: []
+
