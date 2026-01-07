@@ -8,7 +8,7 @@ void setUp(void) {
 void tearDown(void) {
 }
 
-// Testes para Speed_CalculateRotations
+// Tests for Speed_CalculateRotations
 void test_Speed_CalculateRotations_ShouldReturnOneForThirtyPulses(void) {
     float result = Speed_CalculateRotations(30);
     TEST_ASSERT_FLOAT_WITHIN(0.01, 1.0f, result);
@@ -29,7 +29,7 @@ void test_Speed_CalculateRotations_ShouldReturnHalfFor15Pulses(void) {
     TEST_ASSERT_FLOAT_WITHIN(0.01, 0.5f, result);
 }
 
-// Testes para Speed_CalculateDistance
+// Tests for Speed_CalculateDistance
 void test_Speed_CalculateDistance_ShouldReturnPerimeterForOneRotation(void) {
     float result = Speed_CalculateDistance(1.0f);
     TEST_ASSERT_FLOAT_WITHIN(0.001, 0.212f, result);
@@ -50,7 +50,7 @@ void test_Speed_CalculateDistance_ShouldHandleTenRotations(void) {
     TEST_ASSERT_FLOAT_WITHIN(0.01, 2.12f, result);
 }
 
-// Testes para Speed_CalculateVelocity
+// Tests for Speed_CalculateVelocity
 void test_Speed_CalculateVelocity_ShouldCalculateCorrectSpeed(void) {
     float result = Speed_CalculateVelocity(10.0f, 2.0f);
     TEST_ASSERT_FLOAT_WITHIN(0.01, 5.0f, result);
@@ -76,7 +76,7 @@ void test_Speed_CalculateVelocity_ShouldHandleLargeValues(void) {
     TEST_ASSERT_FLOAT_WITHIN(0.01, 10.0f, result);
 }
 
-// Testes para Speed_CalculatePulses
+// Tests for Speed_CalculatePulses
 void test_Speed_CalculatePulses_ShouldReturnDifferenceWhenNoOverflow(void) {
     uint32_t result = Speed_CalculatePulses(1000, 500);
     TEST_ASSERT_EQUAL_UINT32(500, result);
@@ -97,7 +97,7 @@ void test_Speed_CalculatePulses_ShouldHandleMaxOverflow(void) {
     TEST_ASSERT_EQUAL_UINT32(1, result);
 }
 
-// Testes para Speed_ValidateTimeDelta
+// Tests for Speed_ValidateTimeDelta
 void test_Speed_ValidateTimeDelta_ShouldAcceptValidTime(void) {
     int result = Speed_ValidateTimeDelta(1.0f);
     TEST_ASSERT_EQUAL_INT(0, result);
@@ -123,7 +123,7 @@ void test_Speed_ValidateTimeDelta_ShouldAcceptBoundary(void) {
     TEST_ASSERT_EQUAL_INT(0, result);
 }
 
-// Testes para Speed_TimeTicksToSeconds
+// Tests for Speed_TimeTicksToSeconds
 void test_Speed_TimeTicksToSeconds_ShouldConvert1000Ticks(void) {
     float result = Speed_TimeTicksToSeconds(1000, 1000);
     TEST_ASSERT_FLOAT_WITHIN(0.01, 1.0f, result);
@@ -144,7 +144,7 @@ void test_Speed_TimeTicksToSeconds_ShouldHandle2000Ticks(void) {
     TEST_ASSERT_FLOAT_WITHIN(0.01, 2.0f, result);
 }
 
-// Testes para Speed_CalculateSpeedMPS
+// Tests for Speed_CalculateSpeedMPS
 void test_Speed_CalculateSpeedMPS_ShouldCalculateCorrectSpeed(void) {
     float result = Speed_CalculateSpeedMPS(30, 1.0f);
     TEST_ASSERT_FLOAT_WITHIN(0.01, 0.212f, result);
