@@ -1,25 +1,16 @@
 name: TSF Validation (PR)
 
 on:
-  pull_request:
-  push:
-    branches: [ main, master]
-  pull_request_review:
-    types: [submitted]
+  workflow_run:
+    workflows: ["Unit Tests & TSF Artifacts"]
+    types:
+      - completed
 
 jobs:
-  generate-verification-artifacts:
-    uses: ./.github/workflows/generate_verification_artifacts.yml
-    with:
-      src_dirs: 'src'
-      junit_output: 'artifacts/verification/tests/LLTC-998-junit.xml'
-      coverage_output: 'artifacts/verification/coverage/coverage-SWD-998.xml'
-      cppcheck_output: 'artifacts/verification/static-analysis/cppcheck-SWD-998.xml'
-      build_dir: 'build'
-
   tsf-validation:
-    needs: generate-verification-artifacts
     runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    
     permissions:
       contents: write
       pull-requests: write
@@ -28,10 +19,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v6
 
-      - name: Download verification artifacts
-        uses: actions/download-artifact@v7
+      - name: Download Verification Artifacts
+        uses: actions/download-artifact@v4
         with:
           name: verification-artifacts
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           path: artifacts/verification
 
       - name: Set up Python 3.11
@@ -39,13 +32,13 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Cache pip
-        uses: actions/cache@v5
+      - name: Cache pip packages
+        uses: actions/cache@v4
         with:
           path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          key: ${{ runner.os }}-pip-trustable-${{ hashFiles('**/requirements.txt') }}
           restore-keys: |
-            ${{ runner.os }}-pip-
+            ${{ runner.os }}-pip-trustable-
 
       - name: Install official TSF tools
         run: |
@@ -66,24 +59,16 @@ jobs:
 
       - name: Mark TSF items and links as reviewed
         run: |
-          trudag manage set-link SWD-998 LLTC-998
-          trudag manage set-link SWD-998 LLTC-997
-          trudag manage set-link SWD-998 LLTC-996
-          trudag manage set-link SRD-998 SWD-998
-          trudag manage set-link URD-998 SRD-998
-          trudag manage set-item SWD-998
-          trudag manage set-item LLTC-998
-          trudag manage set-item LLTC-997
-          trudag manage set-item LLTC-996
-          trudag manage set-item SRD-998
-          trudag manage set-item URD-998
+          # --- SPEED SENSOR ---
+          
+          # --- SERVOMOTOR (Actuation) ---
 
       - name: Run trudag lint
         id: lint
         continue-on-error: true
         run: |
-          mkdir -p artifacts
-          if trudag manage lint 2>&1 | tee artifacts/trudag-lint.txt; then
+          mkdir -p artifacts/tsf
+          if trudag manage lint 2>&1 | tee artifacts/tsf/trudag-lint.txt; then
             echo "lint_ok=true" >> $GITHUB_OUTPUT
           else
             echo "lint_ok=false" >> $GITHUB_OUTPUT
@@ -92,9 +77,9 @@ jobs:
       - name: Get lint summary
         id: summary
         run: |
-          if [ -f artifacts/trudag-lint.txt ]; then
+          if [ -f artifacts/tsf/trudag-lint.txt ]; then
             echo "lint_summary<<EOF" >> $GITHUB_OUTPUT
-            head -c 500 artifacts/trudag-lint.txt >> $GITHUB_OUTPUT
+            head -c 500 artifacts/tsf/trudag-lint.txt >> $GITHUB_OUTPUT
             echo "" >> $GITHUB_OUTPUT
             echo "EOF" >> $GITHUB_OUTPUT
           else
@@ -105,7 +90,7 @@ jobs:
         id: scores
         continue-on-error: true
         run: |
-          if trudag score 2>&1 | tee artifacts/trudag-score.txt; then
+          if trudag score 2>&1 | tee artifacts/tsf/trudag-score.txt; then
             echo "score_ok=true" >> $GITHUB_OUTPUT
           else
             echo "score_ok=false" >> $GITHUB_OUTPUT
@@ -115,10 +100,10 @@ jobs:
         id: publish
         continue-on-error: true
         run: |
-          mkdir -p artifacts/trustable-report
-          if trudag publish --output-dir artifacts/trustable-report 2>&1; then
+          mkdir -p artifacts/tsf/trustable-report
+          if trudag publish --output-dir artifacts/tsf/trustable-report 2>&1; then
             echo "publish_ok=true" >> $GITHUB_OUTPUT
-          elif trudag publish --no-validate --output-dir artifacts/trustable-report 2>&1; then
+          elif trudag publish --no-validate --output-dir artifacts/tsf/trustable-report 2>&1; then
             echo "publish_ok=true" >> $GITHUB_OUTPUT
           else
             echo "publish_ok=false" >> $GITHUB_OUTPUT
@@ -130,16 +115,16 @@ jobs:
         with:
           name: tsf-validation-artifacts
           path: |
-            artifacts/
+            artifacts/tsf/
             .dotstop.dot
           retention-days: 30
 
       - name: Comment PR with validation results
-        if: github.event_name == 'pull_request'
+        if: github.event.workflow_run.pull_requests[0]
         uses: peter-evans/create-or-update-comment@v5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          issue-number: ${{ github.event.pull_request.number }}
+          issue-number: ${{ github.event.workflow_run.pull_requests[0].number }}
           body: |
             ## 🔍 TSF Validation Results
 
@@ -150,3 +135,8 @@ jobs:
             | **trudag publish** | ${{ steps.publish.outputs.publish_ok == 'true' && '✅ PASSED' || '❌ FAILED' }} |
 
             ### 📋 Lint Output (first 500 chars)
+            ```
+            ${{ steps.summary.outputs.lint_summary }}
+            ```
+
+            **Artifacts**: [TSF Validation Results](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})
