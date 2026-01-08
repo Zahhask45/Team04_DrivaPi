@@ -1,10 +1,8 @@
-name: "Unit Tests - CMake/Ceedling"
+name: "Unit Tests & TSF Artifacts"
 
 on:
   push:
-
   pull_request:
-
   workflow_dispatch:
 
 permissions:
@@ -18,7 +16,7 @@ concurrency:
 
 jobs:
   unit_tests:
-    name: Build and Run Unit Tests
+    name: Run Tests & Generate TSF Evidence
     runs-on: ubuntu-latest
     
     env:
@@ -34,7 +32,6 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y \
             build-essential \
-            cmake \
             lcov \
             ruby \
             ruby-dev \
@@ -56,37 +53,33 @@ jobs:
           lcov --version
           gcovr --version
 
-      - name: Configure CMake with tests enabled
+      - name: Run Tests (Master Script)
         run: |
-          mkdir -p ${{ env.BUILD_DIR }}
-          cd ${{ env.BUILD_DIR }}
-          cmake -DDRIVAPI_ENABLE_TESTS=ON ../..
+          chmod +x tests/unit/run_all_tests.sh
+          bash tests/unit/run_all_tests.sh 2>&1 | tee test_output.log
 
-      - name: Build CMake project
-        run: |
-          cd ${{ env.BUILD_DIR }}
-          cmake --build .
-
-      - name: Run tests with CTest
-        id: test_run
-        continue-on-error: true
-        run: |
-          cd ${{ env.BUILD_DIR }}
-          ctest -V --output-on-failure 2>&1 | tee test_output.log
-
-      - name: Generate Coverage Summary
-        id: coverage_summary
+      - name: Ensure verification artifacts directory exists
         if: always()
         run: |
-          if [[ -f "${{ env.COVERAGE_DIR }}/coverage_filtered.info" ]]; then
-            echo "## 📊 Coverage Summary" >> $GITHUB_STEP_SUMMARY
-            echo "" >> $GITHUB_STEP_SUMMARY
-            lcov --summary "${{ env.COVERAGE_DIR }}/coverage_filtered.info" 2>&1 | grep -E "lines|functions|branches" >> $GITHUB_STEP_SUMMARY
-            echo "" >> $GITHUB_STEP_SUMMARY
-            echo "✅ Coverage report generated" >> $GITHUB_STEP_SUMMARY
-          else
-            echo "⚠️ Coverage report not found" >> $GITHUB_STEP_SUMMARY
-          fi
+          mkdir -p artifacts/verification/tests
+          mkdir -p artifacts/verification/coverage
+          mkdir -p artifacts/verification/static-analysis
+
+      - name: Upload Verification Artifacts (TSF)
+        uses: actions/upload-artifact@v6
+        if: always()
+        with:
+          name: verification-artifacts
+          path: artifacts/verification
+          retention-days: 30
+
+      - name: Upload Coverage HTML
+        if: always()
+        uses: actions/upload-artifact@v6
+        with:
+          name: coverage-html
+          path: tests/unit/coverage/html
+          retention-days: 30
 
       - name: Post Test Results
         if: always()
@@ -102,8 +95,8 @@ jobs:
             let speedSensorCount = 0;
             let testSummary = '';
             
-            if (fs.existsSync('${{ env.BUILD_DIR }}/test_output.log')) {
-              const logContent = fs.readFileSync('${{ env.BUILD_DIR }}/test_output.log', 'utf8');
+            if (fs.existsSync('test_output.log')) {
+              const logContent = fs.readFileSync('test_output.log', 'utf8');
               
               // Extract test counts from [TEST_COUNT] markers
               const motorServoCountMatch = logContent.match(/\[TEST_COUNT\] Motor Servo:\s*(\d+)\s*tests/i);
